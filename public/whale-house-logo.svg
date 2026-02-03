@@ -1,0 +1,36 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="120" fill="#1e40af" stroke="#1e3a8a" stroke-width="4"/>
+  
+  <!-- Whale silhouette -->
+  <g transform="translate(128, 128)">
+    <!-- Whale body -->
+    <ellipse cx="0" cy="10" rx="80" ry="25" fill="#ffffff"/>
+    
+    <!-- Whale head -->
+    <ellipse cx="-60" cy="10" rx="30" ry="20" fill="#ffffff"/>
+    
+    <!-- Whale tail -->
+    <path d="M 70 10 L 90 -5 L 95 10 L 90 25 Z" fill="#ffffff"/>
+    
+    <!-- Whale fin -->
+    <path d="M -10 35 L 10 45 L 20 35 L 10 25 Z" fill="#ffffff"/>
+    
+    <!-- Eye -->
+    <circle cx="-70" cy="5" r="3" fill="#1e40af"/>
+    
+    <!-- Water waves -->
+    <path d="M -100 45 Q -90 40 -80 45 Q -70 50 -60 45 Q -50 40 -40 45 Q -30 50 -20 45 Q -10 40 0 45 Q 10 50 20 45 Q 30 40 40 45 Q 50 50 60 45 Q 70 40 80 45 Q 90 50 100 45" 
+          stroke="#ffffff" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="128" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    WHALE HOUSE
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="128" y="240" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">
+    Barra Cabanas
+  </text>
+</svg>

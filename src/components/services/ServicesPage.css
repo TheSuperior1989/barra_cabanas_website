@@ -1,0 +1,306 @@
+.services-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.services-hero {
+  height: 50vh;
+  min-height: 400px;
+  background-image: url('../../assets/images/Houses/balcony-deck-oceanview.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.services-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(26, 26, 46, 0.7) 100%);
+  z-index: 1;
+}
+
+.services-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.services-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.services-hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+
+.services-intro {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1a1a2e;
+  position: relative;
+  display: inline-block;
+}
+
+.intro-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-taupe);
+  border-radius: 10px;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 80px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+}
+
+.service-item.reverse {
+  direction: rtl;
+}
+
+.service-item.reverse .service-content {
+  direction: ltr;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-shell-white);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4a4a4a;
+  border-radius: 50%;
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.service-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-sage-green);
+  margin-bottom: 30px;
+}
+
+.service-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.service-details li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.service-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-sage-green);
+  font-weight: bold;
+}
+
+.service-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.services-cta {
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Scrolling Images Background */
+.scrolling-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.image-track {
+  display: flex;
+  width: calc(400px * 12); /* 12 images * 400px width */
+  height: 100%;
+  animation: scrollImages 30s linear infinite;
+}
+
+.image-track img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes scrollImages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 6)); /* Move by half the images for seamless loop */
+  }
+}
+
+/* CTA Overlay */
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 46, 0.85) 0%,
+    rgba(135, 167, 143, 0.75) 50%,
+    rgba(74, 124, 89, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .services-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .service-item {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 0;
+  }
+
+  .service-item.reverse {
+    direction: ltr;
+  }
+
+  .service-title {
+    font-size: 1.8rem;
+  }
+
+  .services-cta {
+    padding: 70px 20px;
+    min-height: 400px;
+  }
+
+  .image-track {
+    width: calc(300px * 12); /* Smaller images on mobile */
+  }
+
+  .image-track img {
+    width: 300px;
+  }
+
+  @keyframes scrollImages {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-300px * 6)); /* Adjust for mobile image width */
+    }
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
