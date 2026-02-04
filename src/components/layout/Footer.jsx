@@ -106,8 +106,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container container--mw1320">
           <div className="footer-bottom-content">
-            <p className="copyright">&copy; {currentYear}. All rights reserved.</p>
-            <p className="designed-by">Built by <a href="https://www.skillaxisdynamics.co.za" target="_blank" rel="noopener noreferrer">SkillAxis Dynamics</a></p>
+            <p className="copyright">&copy; {currentYear} Barra Cabanas. All rights reserved.</p>
           </div>
         </div>
       </div>
