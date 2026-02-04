@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import HouseRules from './HouseRules';
 import BorderCrossing from './BorderCrossing';
+import InfoSheetDownload from '../common/InfoSheetDownload';
 import balconyWalkwayOceanview from '../../assets/images/Houses/balcony-walkway-oceanview.jpg';
 import rooftopTerracePatio from '../../assets/images/Houses/rooftop-terrace-patio.jpg';
 import bedroomSuite10 from '../../assets/images/Houses/bedroom-suite-10.jpg';
@@ -207,6 +208,9 @@ const ServicesPage = () => {
           ))}
         </div>
       </section>
+
+      {/* Info Sheet Download Section */}
+      <InfoSheetDownload />
 
       {/* House Rules Section */}
       <HouseRules />

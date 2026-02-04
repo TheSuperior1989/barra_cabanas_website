@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeXmark, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
+import InfoSheetDownload from '../common/InfoSheetDownload';
 import './Hero.css';
 
 const Hero = () => {
@@ -163,9 +164,13 @@ const Hero = () => {
             <Link to="/booking" className="btn btn-secondary">
               Book Now
             </Link>
+            <InfoSheetDownload variant="compact" />
           </div>
         </motion.div>
       </div>
+
+      {/* Floating Download Button */}
+      <InfoSheetDownload variant="floating" />
     </section>
   );
 };

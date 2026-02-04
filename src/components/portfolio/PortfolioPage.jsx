@@ -2,15 +2,79 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './PortfolioPage.css';
+
+// Exterior & Beach Views
 import exteriorBeachfrontConstruction from '../../assets/images/Houses/exterior-beachfront-construction.jpg';
-import bedroomSuite05 from '../../assets/images/Houses/bedroom-suite-05.jpg';
 import beachPalmTreesView from '../../assets/images/Houses/beach-palm-trees-view.jpg';
-import loungeBalconyOceanview from '../../assets/images/Houses/lounge-balcony-oceanview.jpg';
-import gardenPathwayPebbles from '../../assets/images/Houses/garden-pathway-pebbles.jpg';
 import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
+import gardenPathwayPebbles from '../../assets/images/Houses/garden-pathway-pebbles.jpg';
+import mainCourtyardPaving from '../../assets/images/Houses/main-courtyard-paving.jpg';
+import poolDeckAerialView from '../../assets/images/Houses/pool-deck-aerial-view.jpg';
+
+// Balconies & Outdoor Spaces
+import balconyCornerBeachview from '../../assets/images/Houses/balcony-corner-beachview.jpg';
+import balconyDaybedOceanview from '../../assets/images/Houses/balcony-daybed-oceanview.jpg';
+import balconyDeckOceanview from '../../assets/images/Houses/balcony-deck-oceanview.jpg';
+import balconyDiningOceanview from '../../assets/images/Houses/balcony-dining-oceanview.jpg';
+import balconyExteriorDetail from '../../assets/images/Houses/balcony-exterior-detail.jpg';
+import balconyNarrowOceanview from '../../assets/images/Houses/balcony-narrow-oceanview.jpg';
+import balconyWalkwayOceanview from '../../assets/images/Houses/balcony-walkway-oceanview.jpg';
+import rooftopLoungeChairs from '../../assets/images/Houses/rooftop-lounge-chairs.jpg';
+import rooftopTerracePatio from '../../assets/images/Houses/rooftop-terrace-patio.jpg';
+
+// Bedrooms
+import bedroomSuite02 from '../../assets/images/Houses/bedroom-suite-02.jpg';
+import bedroomSuite03 from '../../assets/images/Houses/bedroom-suite-03.jpg';
+import bedroomSuite04 from '../../assets/images/Houses/bedroom-suite-04.jpg';
+import bedroomSuite05 from '../../assets/images/Houses/bedroom-suite-05.jpg';
+import bedroomSuite06 from '../../assets/images/Houses/bedroom-suite-06.jpg';
+import bedroomSuite07 from '../../assets/images/Houses/bedroom-suite-07.jpg';
+import bedroomSuite08 from '../../assets/images/Houses/bedroom-suite-08.jpg';
+import bedroomSuite09 from '../../assets/images/Houses/bedroom-suite-09.jpg';
+import bedroomSuite10 from '../../assets/images/Houses/bedroom-suite-10.jpg';
+import bedroomSuite11 from '../../assets/images/Houses/bedroom-suite-11.jpg';
+import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg';
+import bedroomSuiteTwin from '../../assets/images/Houses/bedroom-suite-twin.jpg';
+import bedroomHeadboardCloseup from '../../assets/images/Houses/bedroom-headboard-closeup.jpg';
+import bedroomStorageUnit from '../../assets/images/Houses/bedroom-storage-unit.jpg';
+
+// Living Spaces
+import loungeBalconyOceanview from '../../assets/images/Houses/lounge-balcony-oceanview.jpg';
+import livingRoomSofa02 from '../../assets/images/Houses/living-room-sofa-02.jpg';
+import livingRoomSofaShelving from '../../assets/images/Houses/living-room-sofa-shelving.jpg';
+import livingRoomTvLounge from '../../assets/images/Houses/living-room-tv-lounge.jpg';
+
+// Kitchen & Dining
+import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg';
+import kitchenBarGlassware from '../../assets/images/Houses/kitchen-bar-glassware.jpg';
+import kitchenDiningHallway from '../../assets/images/Houses/kitchen-dining-hallway.jpg';
+import kitchenHallwayModern from '../../assets/images/Houses/kitchen-hallway-modern.jpg';
+import diningKitchenOpenplan from '../../assets/images/Houses/dining-kitchen-openplan.jpg';
+import kitchenetteFridgeStorage from '../../assets/images/Houses/kitchenette-fridge-storage.jpg';
+import kitchenetteSinkWhite from '../../assets/images/Houses/kitchenette-sink-white.jpg';
+
+// Bathrooms
+import bathroomVanity01 from '../../assets/images/Houses/bathroom-vanity-01.jpg';
+import bathroomVanity02 from '../../assets/images/Houses/bathroom-vanity-02.jpg';
+import bathroomVanity03 from '../../assets/images/Houses/bathroom-vanity-03.jpg';
+import bathroomVanity04 from '../../assets/images/Houses/bathroom-vanity-04.jpg';
+import bathroomVanity05 from '../../assets/images/Houses/bathroom-vanity-05.jpg';
+import bathroomSinkCloseup from '../../assets/images/Houses/bathroom-sink-closeup.jpg';
+import bathroomToiletAerial from '../../assets/images/Houses/bathroom-toilet-aerial.jpg';
+import bathroomToiletOverhead from '../../assets/images/Houses/bathroom-toilet-overhead.jpg';
+import showerEnclosure02 from '../../assets/images/Houses/shower-enclosure-02.jpg';
+import showerEnclosureGlass from '../../assets/images/Houses/shower-enclosure-glass.jpg';
+
+// Corridors & Details
+import corridorExteriorLong from '../../assets/images/Houses/corridor-exterior-long.jpg';
+import corridorWhiteExterior from '../../assets/images/Houses/corridor-white-exterior.jpg';
+import entranceCorridorWhite from '../../assets/images/Houses/entrance-corridor-white.jpg';
+import shelfBeachDecor from '../../assets/images/Houses/shelf-beach-decor.jpg';
+import storageUnitMirror from '../../assets/images/Houses/storage-unit-mirror.jpg';
 
 // Gallery items showcasing Barra Cabanas accommodations and experiences
 const galleryItems = [
+  // Exterior & Beach Views
   {
     id: 1,
     title: 'Beachfront Paradise',
@@ -23,16 +87,6 @@ const galleryItems = [
   },
   {
     id: 2,
-    title: 'En-Suite Comfort',
-    category: 'Bedrooms',
-    image: bedroomSuite05,
-    description: 'Spacious en-suite bedrooms with air-conditioning, featuring 4 queen beds and 2 twin rooms. All bedrooms include modern amenities and elegant coastal design.',
-    location: 'Interior Bedrooms',
-    date: 'Accommodation',
-    tags: ['En-Suite', 'Air-Conditioned', 'Queen Beds']
-  },
-  {
-    id: 3,
     title: 'Pristine Beach Access',
     category: 'Beach & Views',
     image: beachPalmTreesView,
@@ -42,18 +96,18 @@ const galleryItems = [
     tags: ['Beach', 'Ocean Views', 'Palm Trees']
   },
   {
-    id: 4,
-    title: 'Ocean View Lounge',
-    category: 'Living Spaces',
-    image: loungeBalconyOceanview,
-    description: 'Covered lounge area with panoramic ocean views, Samsung 65" 4K Smart TV, and uncapped Starlink WiFi. Perfect for family gatherings.',
-    location: 'Living Area',
-    date: 'Entertainment',
-    tags: ['Ocean View', 'Smart TV', 'WiFi']
+    id: 3,
+    title: 'Beachfront Relaxation',
+    category: 'Beach & Views',
+    image: beachLoungersOceanfront,
+    description: 'Beach loungers with direct oceanfront views. Daily housekeeping service ensures your comfort throughout your stay.',
+    location: 'Beach Area',
+    date: 'Beach Facilities',
+    tags: ['Beach Loungers', 'Ocean', 'Relaxation']
   },
   {
-    id: 5,
-    title: 'Outdoor Pathways',
+    id: 4,
+    title: 'Garden Pathways',
     category: 'Outdoor Spaces',
     image: gardenPathwayPebbles,
     description: 'Beautiful pebblestone pathways connecting the property. Braai facilities on the veranda for outdoor dining experiences.',
@@ -62,25 +116,540 @@ const galleryItems = [
     tags: ['Garden', 'Braai', 'Outdoor']
   },
   {
+    id: 5,
+    title: 'Main Courtyard',
+    category: 'Outdoor Spaces',
+    image: mainCourtyardPaving,
+    description: 'Spacious courtyard with elegant paving, perfect for outdoor gatherings and relaxation.',
+    location: 'Courtyard',
+    date: 'Outdoor Space',
+    tags: ['Courtyard', 'Paving', 'Outdoor']
+  },
+  {
     id: 6,
-    title: 'Beachfront Relaxation',
-    category: 'Beach Amenities',
-    image: beachLoungersOceanfront,
-    description: 'Beach loungers with direct oceanfront views. Daily housekeeping service ensures your comfort throughout your stay.',
-    location: 'Beach Area',
-    date: 'Beach Facilities',
-    tags: ['Beach Loungers', 'Ocean', 'Relaxation']
+    title: 'Pool Deck Aerial View',
+    category: 'Outdoor Spaces',
+    image: poolDeckAerialView,
+    description: 'Stunning aerial view of the pool deck area with ocean views.',
+    location: 'Pool Area',
+    date: 'Pool Facilities',
+    tags: ['Pool', 'Deck', 'Aerial View']
+  },
+
+  // Balconies & Outdoor Spaces
+  {
+    id: 7,
+    title: 'Corner Beach View',
+    category: 'Balconies',
+    image: balconyCornerBeachview,
+    description: 'Corner balcony with stunning beachfront views.',
+    location: 'Balcony',
+    date: 'Ocean Views',
+    tags: ['Balcony', 'Beach View', 'Corner']
+  },
+  {
+    id: 8,
+    title: 'Daybed Ocean View',
+    category: 'Balconies',
+    image: balconyDaybedOceanview,
+    description: 'Relaxing daybed on the balcony with panoramic ocean views.',
+    location: 'Balcony',
+    date: 'Relaxation',
+    tags: ['Daybed', 'Ocean View', 'Balcony']
+  },
+  {
+    id: 9,
+    title: 'Deck Ocean View',
+    category: 'Balconies',
+    image: balconyDeckOceanview,
+    description: 'Spacious deck area with unobstructed ocean views.',
+    location: 'Deck',
+    date: 'Ocean Views',
+    tags: ['Deck', 'Ocean', 'Balcony']
+  },
+  {
+    id: 10,
+    title: 'Dining Ocean View',
+    category: 'Balconies',
+    image: balconyDiningOceanview,
+    description: 'Outdoor dining area on the balcony with breathtaking ocean views.',
+    location: 'Balcony Dining',
+    date: 'Outdoor Dining',
+    tags: ['Dining', 'Ocean View', 'Balcony']
+  },
+  {
+    id: 11,
+    title: 'Balcony Exterior Detail',
+    category: 'Balconies',
+    image: balconyExteriorDetail,
+    description: 'Architectural details of the exterior balcony design.',
+    location: 'Balcony',
+    date: 'Architecture',
+    tags: ['Balcony', 'Exterior', 'Design']
+  },
+  {
+    id: 12,
+    title: 'Narrow Ocean View',
+    category: 'Balconies',
+    image: balconyNarrowOceanview,
+    description: 'Intimate balcony space with ocean views.',
+    location: 'Balcony',
+    date: 'Ocean Views',
+    tags: ['Balcony', 'Ocean', 'Intimate']
+  },
+  {
+    id: 13,
+    title: 'Walkway Ocean View',
+    category: 'Balconies',
+    image: balconyWalkwayOceanview,
+    description: 'Balcony walkway with stunning ocean panoramas.',
+    location: 'Balcony Walkway',
+    date: 'Ocean Views',
+    tags: ['Walkway', 'Ocean', 'Balcony']
+  },
+  {
+    id: 14,
+    title: 'Rooftop Lounge Chairs',
+    category: 'Balconies',
+    image: rooftopLoungeChairs,
+    description: 'Rooftop lounge area with comfortable seating and ocean views.',
+    location: 'Rooftop',
+    date: 'Relaxation',
+    tags: ['Rooftop', 'Lounge', 'Ocean View']
+  },
+  {
+    id: 15,
+    title: 'Rooftop Terrace',
+    category: 'Balconies',
+    image: rooftopTerracePatio,
+    description: 'Spacious rooftop terrace patio for entertaining and relaxation.',
+    location: 'Rooftop Terrace',
+    date: 'Entertainment',
+    tags: ['Rooftop', 'Terrace', 'Patio']
+  },
+
+  // Bedrooms
+  {
+    id: 16,
+    title: 'En-Suite Bedroom 1',
+    category: 'Bedrooms',
+    image: bedroomSuite02,
+    description: 'Spacious en-suite bedroom with air-conditioning and elegant coastal design.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Air-Conditioned', 'Bedroom']
+  },
+  {
+    id: 17,
+    title: 'En-Suite Bedroom 2',
+    category: 'Bedrooms',
+    image: bedroomSuite03,
+    description: 'Comfortable en-suite bedroom with modern amenities.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Modern', 'Bedroom']
+  },
+  {
+    id: 18,
+    title: 'En-Suite Bedroom 3',
+    category: 'Bedrooms',
+    image: bedroomSuite04,
+    description: 'Beautifully appointed en-suite bedroom with queen bed.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Queen Bed', 'Bedroom']
+  },
+  {
+    id: 19,
+    title: 'En-Suite Bedroom 4',
+    category: 'Bedrooms',
+    image: bedroomSuite05,
+    description: 'Elegant en-suite bedroom with air-conditioning and coastal decor.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Air-Conditioned', 'Bedroom']
+  },
+  {
+    id: 20,
+    title: 'En-Suite Bedroom 5',
+    category: 'Bedrooms',
+    image: bedroomSuite06,
+    description: 'Spacious bedroom suite with modern furnishings.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Modern', 'Bedroom']
+  },
+  {
+    id: 21,
+    title: 'En-Suite Bedroom 6',
+    category: 'Bedrooms',
+    image: bedroomSuite07,
+    description: 'Comfortable bedroom with en-suite bathroom and air-conditioning.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Air-Conditioned', 'Bedroom']
+  },
+  {
+    id: 22,
+    title: 'En-Suite Bedroom 7',
+    category: 'Bedrooms',
+    image: bedroomSuite08,
+    description: 'Beautifully designed bedroom suite with coastal charm.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Coastal', 'Bedroom']
+  },
+  {
+    id: 23,
+    title: 'En-Suite Bedroom 8',
+    category: 'Bedrooms',
+    image: bedroomSuite09,
+    description: 'Elegant bedroom with modern amenities and en-suite bathroom.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Modern', 'Bedroom']
+  },
+  {
+    id: 24,
+    title: 'En-Suite Bedroom 9',
+    category: 'Bedrooms',
+    image: bedroomSuite10,
+    description: 'Spacious bedroom suite with air-conditioning.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Air-Conditioned', 'Bedroom']
+  },
+  {
+    id: 25,
+    title: 'En-Suite Bedroom 10',
+    category: 'Bedrooms',
+    image: bedroomSuite11,
+    description: 'Comfortable bedroom with elegant furnishings and en-suite bathroom.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['En-Suite', 'Elegant', 'Bedroom']
+  },
+  {
+    id: 26,
+    title: 'Bedroom Interior',
+    category: 'Bedrooms',
+    image: bedroomSuiteInterior,
+    description: 'Interior view of spacious bedroom suite.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['Interior', 'Spacious', 'Bedroom']
+  },
+  {
+    id: 27,
+    title: 'Twin Bedroom',
+    category: 'Bedrooms',
+    image: bedroomSuiteTwin,
+    description: 'Twin bedroom suite perfect for children or friends.',
+    location: 'Bedroom',
+    date: 'Accommodation',
+    tags: ['Twin Beds', 'En-Suite', 'Bedroom']
+  },
+  {
+    id: 28,
+    title: 'Bedroom Headboard Detail',
+    category: 'Bedrooms',
+    image: bedroomHeadboardCloseup,
+    description: 'Elegant headboard design detail.',
+    location: 'Bedroom',
+    date: 'Interior Design',
+    tags: ['Headboard', 'Design', 'Detail']
+  },
+  {
+    id: 29,
+    title: 'Bedroom Storage',
+    category: 'Bedrooms',
+    image: bedroomStorageUnit,
+    description: 'Built-in storage unit in bedroom.',
+    location: 'Bedroom',
+    date: 'Storage',
+    tags: ['Storage', 'Built-in', 'Bedroom']
+  },
+
+  // Living Spaces
+  {
+    id: 30,
+    title: 'Ocean View Lounge',
+    category: 'Living Spaces',
+    image: loungeBalconyOceanview,
+    description: 'Covered lounge area with panoramic ocean views, Samsung 65" 4K Smart TV, and uncapped Starlink WiFi.',
+    location: 'Living Area',
+    date: 'Entertainment',
+    tags: ['Ocean View', 'Smart TV', 'WiFi']
+  },
+  {
+    id: 31,
+    title: 'Living Room Sofa',
+    category: 'Living Spaces',
+    image: livingRoomSofa02,
+    description: 'Comfortable living room with modern sofa and coastal decor.',
+    location: 'Living Room',
+    date: 'Relaxation',
+    tags: ['Sofa', 'Living Room', 'Comfort']
+  },
+  {
+    id: 32,
+    title: 'Living Room with Shelving',
+    category: 'Living Spaces',
+    image: livingRoomSofaShelving,
+    description: 'Spacious living area with built-in shelving and comfortable seating.',
+    location: 'Living Room',
+    date: 'Entertainment',
+    tags: ['Shelving', 'Living Room', 'Storage']
+  },
+  {
+    id: 33,
+    title: 'TV Lounge',
+    category: 'Living Spaces',
+    image: livingRoomTvLounge,
+    description: 'Entertainment lounge with Samsung 65" 4K Smart TV and ocean views.',
+    location: 'TV Lounge',
+    date: 'Entertainment',
+    tags: ['TV', 'Lounge', 'Entertainment']
+  },
+
+  // Kitchen & Dining
+  {
+    id: 34,
+    title: 'Modern Kitchen',
+    category: 'Kitchen & Dining',
+    image: kitchenGalleyWhite,
+    description: 'Fully equipped modern kitchen with gas stove, airfryer, and all essentials.',
+    location: 'Kitchen',
+    date: 'Cooking',
+    tags: ['Kitchen', 'Modern', 'Fully Equipped']
+  },
+  {
+    id: 35,
+    title: 'Kitchen Bar',
+    category: 'Kitchen & Dining',
+    image: kitchenBarGlassware,
+    description: 'Kitchen bar area with glassware and serving space.',
+    location: 'Kitchen Bar',
+    date: 'Dining',
+    tags: ['Bar', 'Glassware', 'Kitchen']
+  },
+  {
+    id: 36,
+    title: 'Kitchen Dining Hallway',
+    category: 'Kitchen & Dining',
+    image: kitchenDiningHallway,
+    description: 'Open hallway connecting kitchen and dining areas.',
+    location: 'Kitchen Hallway',
+    date: 'Layout',
+    tags: ['Hallway', 'Kitchen', 'Dining']
+  },
+  {
+    id: 37,
+    title: 'Kitchen Hallway',
+    category: 'Kitchen & Dining',
+    image: kitchenHallwayModern,
+    description: 'Modern kitchen hallway with sleek design.',
+    location: 'Kitchen',
+    date: 'Design',
+    tags: ['Hallway', 'Modern', 'Kitchen']
+  },
+  {
+    id: 38,
+    title: 'Open Plan Dining',
+    category: 'Kitchen & Dining',
+    image: diningKitchenOpenplan,
+    description: 'Open plan kitchen and dining area perfect for family meals.',
+    location: 'Dining Area',
+    date: 'Dining',
+    tags: ['Open Plan', 'Dining', 'Kitchen']
+  },
+  {
+    id: 39,
+    title: 'Kitchenette Storage',
+    category: 'Kitchen & Dining',
+    image: kitchenetteFridgeStorage,
+    description: 'Kitchenette with fridge and storage space.',
+    location: 'Kitchenette',
+    date: 'Storage',
+    tags: ['Kitchenette', 'Fridge', 'Storage']
+  },
+  {
+    id: 40,
+    title: 'Kitchenette Sink',
+    category: 'Kitchen & Dining',
+    image: kitchenetteSinkWhite,
+    description: 'Clean white kitchenette sink area.',
+    location: 'Kitchenette',
+    date: 'Amenities',
+    tags: ['Sink', 'Kitchenette', 'White']
+  },
+
+  // Bathrooms
+  {
+    id: 41,
+    title: 'Bathroom Vanity 1',
+    category: 'Bathrooms',
+    image: bathroomVanity01,
+    description: 'Modern bathroom vanity with elegant fixtures.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Vanity', 'Bathroom', 'Modern']
+  },
+  {
+    id: 42,
+    title: 'Bathroom Vanity 2',
+    category: 'Bathrooms',
+    image: bathroomVanity02,
+    description: 'Stylish bathroom vanity with contemporary design.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Vanity', 'Bathroom', 'Contemporary']
+  },
+  {
+    id: 43,
+    title: 'Bathroom Vanity 3',
+    category: 'Bathrooms',
+    image: bathroomVanity03,
+    description: 'Elegant bathroom vanity with modern amenities.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Vanity', 'Bathroom', 'Elegant']
+  },
+  {
+    id: 44,
+    title: 'Bathroom Vanity 4',
+    category: 'Bathrooms',
+    image: bathroomVanity04,
+    description: 'Spacious bathroom vanity with storage.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Vanity', 'Bathroom', 'Storage']
+  },
+  {
+    id: 45,
+    title: 'Bathroom Vanity 5',
+    category: 'Bathrooms',
+    image: bathroomVanity05,
+    description: 'Modern bathroom vanity with sleek design.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Vanity', 'Bathroom', 'Sleek']
+  },
+  {
+    id: 46,
+    title: 'Bathroom Sink Detail',
+    category: 'Bathrooms',
+    image: bathroomSinkCloseup,
+    description: 'Close-up of modern bathroom sink fixtures.',
+    location: 'Bathroom',
+    date: 'Details',
+    tags: ['Sink', 'Bathroom', 'Detail']
+  },
+  {
+    id: 47,
+    title: 'Bathroom Aerial View',
+    category: 'Bathrooms',
+    image: bathroomToiletAerial,
+    description: 'Aerial view of bathroom layout.',
+    location: 'Bathroom',
+    date: 'Layout',
+    tags: ['Aerial', 'Bathroom', 'Layout']
+  },
+  {
+    id: 48,
+    title: 'Bathroom Overhead View',
+    category: 'Bathrooms',
+    image: bathroomToiletOverhead,
+    description: 'Overhead view of bathroom design.',
+    location: 'Bathroom',
+    date: 'Layout',
+    tags: ['Overhead', 'Bathroom', 'Design']
+  },
+  {
+    id: 49,
+    title: 'Shower Enclosure 1',
+    category: 'Bathrooms',
+    image: showerEnclosure02,
+    description: 'Modern shower enclosure with glass doors.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Shower', 'Bathroom', 'Modern']
+  },
+  {
+    id: 50,
+    title: 'Glass Shower Enclosure',
+    category: 'Bathrooms',
+    image: showerEnclosureGlass,
+    description: 'Elegant glass shower enclosure.',
+    location: 'Bathroom',
+    date: 'Amenities',
+    tags: ['Shower', 'Glass', 'Bathroom']
+  },
+
+  // Corridors & Details
+  {
+    id: 51,
+    title: 'Exterior Corridor',
+    category: 'Interior Details',
+    image: corridorExteriorLong,
+    description: 'Long exterior corridor connecting different areas.',
+    location: 'Corridor',
+    date: 'Architecture',
+    tags: ['Corridor', 'Exterior', 'Walkway']
+  },
+  {
+    id: 52,
+    title: 'White Exterior Corridor',
+    category: 'Interior Details',
+    image: corridorWhiteExterior,
+    description: 'Clean white exterior corridor design.',
+    location: 'Corridor',
+    date: 'Architecture',
+    tags: ['Corridor', 'White', 'Exterior']
+  },
+  {
+    id: 53,
+    title: 'Entrance Corridor',
+    category: 'Interior Details',
+    image: entranceCorridorWhite,
+    description: 'Welcoming entrance corridor with white walls.',
+    location: 'Entrance',
+    date: 'Architecture',
+    tags: ['Entrance', 'Corridor', 'White']
+  },
+  {
+    id: 54,
+    title: 'Beach Decor',
+    category: 'Interior Details',
+    image: shelfBeachDecor,
+    description: 'Coastal-themed decorative shelf with beach accents.',
+    location: 'Interior',
+    date: 'Decor',
+    tags: ['Decor', 'Beach', 'Shelf']
+  },
+  {
+    id: 55,
+    title: 'Storage Unit with Mirror',
+    category: 'Interior Details',
+    image: storageUnitMirror,
+    description: 'Functional storage unit with mirror.',
+    location: 'Interior',
+    date: 'Storage',
+    tags: ['Storage', 'Mirror', 'Unit']
   }
 ];
 
 const categories = [
   'All',
   'Exterior Views',
-  'Bedrooms',
   'Beach & Views',
-  'Living Spaces',
   'Outdoor Spaces',
-  'Beach Amenities'
+  'Balconies',
+  'Bedrooms',
+  'Living Spaces',
+  'Kitchen & Dining',
+  'Bathrooms',
+  'Interior Details'
 ];
 
 const PortfolioPage = () => {

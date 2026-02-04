@@ -83,6 +83,22 @@
 .hero-buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-buttons .info-sheet-compact {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-shell-white);
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .info-sheet-compact:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn {

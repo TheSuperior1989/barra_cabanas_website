@@ -8,48 +8,75 @@ import './Testimonials.css';
 const testimonials = [
   {
     id: 1,
-    name: 'Charlotte & Alexander Pemberton',
-    position: 'London, UK',
-    occasion: 'Honeymoon Suite - 7 nights',
+    name: 'Tracey Uren',
+    position: 'September 2025 on Google',
+    occasion: '',
     rating: 5,
-    content: 'Barra Cabanas exceeded every expectation for our honeymoon. The Honeymoon Suite was pure luxury - from the private infinity pool overlooking the Indian Ocean to the 24/7 butler service. The sunset dhow cruise and couples spa treatments were absolutely divine. This is paradise redefined.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+    content: 'The all inclusive package was a winner! We traveled lightly and arrived to a beautifully furnished, and well maintained beachfront villa. Anname had ensured our family (5yrs to 65yrs) had all the homely comforts. Brunch and dinners were served on our patio by chef Ernesto. Wow! Every meal was a hit with the whole family. The package included 4 days fishing with Jigalouw Fishing Adventures. What a memorable charter! From the top notch equipment they provide, to the ever friendly and helpful ghillie, Mavo. Skipper Ronaldo\'s experience and respect of the ocean, not only yielded great days fishing, but created an unforgettable experience. Thanks to the team at Barra-Inn, we were able to relax, take in all that Barra/Tofo has to offer and create beautiful memories! We will be back!',
+    initial: 'T'
   },
   {
     id: 2,
-    name: 'The Johannesburg Executive Family',
-    position: 'Johannesburg, South Africa',
-    occasion: 'Luxury Family Cabana - 10 nights',
+    name: 'Robert Uren',
+    position: 'September 2025 on Google',
+    occasion: '',
     rating: 5,
-    content: 'Our family of five had the most incredible holiday at Barra Cabanas. The Luxury Family Cabana was spacious and elegant, with direct beach access that the children adored. The private chef prepared exquisite meals daily, and the kids club activities were world-class. We felt like royalty throughout our stay.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face'
+    content: 'Unreal weeks stay with the Barra team! Accommodation and setting 10/10, you can see both sunrise and sunset which we weren\'t expecting but given the location it provides both! Ernest prepared incredible food, perfect variety of everything! Food catered option is the only way to go! Stress free and fresh meals! Jigalouw fishing charters captain by Ronaldo and assisted by Mavu was next level! Caught plenty fish with their guidance, Ronaldo has great respect for the marine life too which you won\'t find on many charters! We had 2 youngsters on the boat too and both Ronaldo and Mavu were great with them! On the second last day we book for 2026! Thanks Ronaldo and Anname, looking forward to seeing you all next year.',
+    initial: 'R'
   },
   {
     id: 3,
-    name: 'Dr. Marcus & Isabella Hartmann',
-    position: 'Munich, Germany',
-    occasion: 'Seaview Cabana - 14 nights',
+    name: 'Sudipta Banerjee',
+    position: 'February 2024 on Google',
+    occasion: '',
     rating: 5,
-    content: 'After years of luxury travel worldwide, Barra Cabanas stands in a league of its own. The Seaview Cabana offered unparalleled ocean vistas, and the attention to detail was extraordinary. From the daily housekeeping to the personalized excursions, every moment was crafted to perfection. We have already booked our return.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+    content: 'This was our second visit to this property. We stayed in the ground floor. The house is big, for 8 adults. A similar apartment is there in the first floor, but the entrance is completely separate. The kitchen is fully equipped. The house is serviced once in a day and to our surprise, even on a Sunday!!! The best part of the house is its LOCATION. It is right on the beach. No stair climbing or no sand bar in between. Barra beach is relatively empty and non commercial. Only 600 mtr road is non tar, but no necessity of 4×4. There are some small shops, but we carried everything from home. So do not know what is available locally.',
+    initial: 'S'
   },
   {
     id: 4,
-    name: 'Victoria & James Ashworth',
-    position: 'Sydney, Australia',
-    occasion: 'Ocean Breeze Bungalow - 5 nights',
+    name: 'Lisa Labuschagne',
+    position: 'February 2024 on Google',
+    occasion: '',
     rating: 5,
-    content: 'The Ocean Breeze Bungalow was our sanctuary for a much-needed escape. Waking up to the sound of waves and enjoying breakfast on our private deck was magical. The spa services were world-class, and the staff anticipated our every need. Barra Cabanas has set a new standard for luxury hospitality.',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
+    content: 'Stunning accommodation right on the beach, we absolutely loved our stay!',
+    initial: 'L'
   },
   {
     id: 5,
-    name: 'Ambassador Richard & Lady Catherine Montague',
-    position: 'Cape Town, South Africa',
-    occasion: 'Presidential Villa - 21 nights',
+    name: 'Kelvin Smit',
+    position: 'February 2024 on Google',
+    occasion: '',
     rating: 5,
-    content: 'Having stayed at the finest resorts across six continents, I can confidently say Barra Cabanas offers an unmatched level of luxury and service. The Presidential Villa was magnificent, with its private beach section and dedicated staff. The culinary experiences were Michelin-worthy, and the privacy was absolute. Simply extraordinary.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+    content: 'Great view, amazing place. Clean and modern',
+    initial: 'K'
+  },
+  {
+    id: 6,
+    name: 'Dibuweng Grace',
+    position: 'February 2024 on Google',
+    occasion: '',
+    rating: 5,
+    content: 'It was my first time I enjoy it so lovely, nice food',
+    initial: 'D'
+  },
+  {
+    id: 7,
+    name: 'Liliana Lemos',
+    position: 'February 2022 on Google',
+    occasion: '',
+    rating: 5,
+    content: 'Very nice rooms and facilities',
+    initial: 'L'
+  },
+  {
+    id: 8,
+    name: 'Augusto Da Albertina Cambula',
+    position: 'February 2025 on Google',
+    occasion: '',
+    rating: 5,
+    content: 'Very nice',
+    initial: 'A'
   }
 ];
 
@@ -120,12 +147,16 @@ const Testimonials = () => {
 
             <div className="testimonial-author">
               <div className="author-image">
-                <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].name} />
+                <div className="avatar-initial">
+                  {testimonials[currentIndex].initial}
+                </div>
               </div>
               <div className="author-info">
                 <h4 className="author-name">{testimonials[currentIndex].name}</h4>
                 <p className="author-position">{testimonials[currentIndex].position}</p>
-                <p className="author-occasion">{testimonials[currentIndex].occasion}</p>
+                {testimonials[currentIndex].occasion && (
+                  <p className="author-occasion">{testimonials[currentIndex].occasion}</p>
+                )}
               </div>
             </div>
           </div>
