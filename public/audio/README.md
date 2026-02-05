@@ -1,21 +1,25 @@
-# 432Hz Audio Files for Barra Cabanas
+# Audio Files for Barra Cabanas
 
-## Required Audio Files
+## 🎵 PLACEHOLDER AUDIO - FINAL AUDIO PENDING
 
-Place the following 432Hz tuned audio files in this directory:
+**Current Status**: Using placeholder audio file
+**Required Vibe**: Happy / Relaxed
+**Final Audio**: To be provided
 
-### Primary Audio File
-- **432hz-ambient-ocean.mp3** - Main ambient ocean sounds tuned to 432Hz
-- **432hz-ambient-ocean.ogg** - OGG format for better browser compatibility
+## Required Files
 
-## Audio Specifications
+### Placeholder Audio (TEMPORARY)
+- **placeholder-happy-relaxed.mp3** - Temporary placeholder file
+- Final file will replace this placeholder
 
-- **Frequency**: 432Hz tuning (instead of standard 440Hz)
-- **Format**: MP3 and OGG for cross-browser compatibility
-- **Duration**: 3-5 minutes (will loop seamlessly)
-- **Volume**: Optimized for background ambience (30% volume)
+## Audio Specifications for Final File
+
+- **Vibe**: Happy, relaxed, welcoming beach atmosphere
+- **Format**: MP3 (high quality, web-optimized)
+- **Duration**: 2-5 minutes (will loop seamlessly)
+- **Volume**: Optimized for background ambience (60% volume, adjustable)
 - **Content**: Instrumental only - no vocals
-- **Style**: Ocean waves, gentle ambient sounds, nature sounds
+- **Style**: Happy beach vibes, gentle ambient sounds, uplifting music
 
 ## Recommended Sources
 
@@ -38,4 +42,12 @@ Place the following 432Hz tuned audio files in this directory:
 
 ## Browser Autoplay Policy
 
-Due to browser autoplay restrictions, audio will only play after user interaction (clicking anywhere on the page). This is handled automatically by the Hero component.
+Due to browser autoplay restrictions, audio will only play after user interaction (clicking the audio toggle button). This is handled automatically by the Hero component.
+
+## Replacement Instructions
+
+When final audio is ready:
+1. Replace `placeholder-happy-relaxed.mp3` with final audio file
+2. Update filename in `src/components/home/Hero.jsx` (line ~129)
+3. Remove placeholder comments from Hero.jsx
+4. Test audio playback and volume levels

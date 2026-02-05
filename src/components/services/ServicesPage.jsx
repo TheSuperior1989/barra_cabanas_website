@@ -1,13 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
-  faHeart,
-  faUsers,
-  faBed,
-  faStar,
-  faUmbrellaBeach
+  faStar
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -16,7 +12,6 @@ import BorderCrossing from './BorderCrossing';
 import InfoSheetDownload from '../common/InfoSheetDownload';
 import balconyWalkwayOceanview from '../../assets/images/Houses/balcony-walkway-oceanview.jpg';
 import rooftopTerracePatio from '../../assets/images/Houses/rooftop-terrace-patio.jpg';
-import bedroomSuite10 from '../../assets/images/Houses/bedroom-suite-10.jpg';
 import beachPalmTreesView from '../../assets/images/Houses/beach-palm-trees-view.jpg';
 import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg';
 import balconyDeckOceanview from '../../assets/images/Houses/balcony-deck-oceanview.jpg';
@@ -32,10 +27,24 @@ import './ServicesPage.css';
 
 // Separate component for service items to fix React Hooks violation
 const ServiceItem = ({ service, index }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
+
+  // Image cycling effect
+  useEffect(() => {
+    if (service.images && service.images.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) =>
+          prevIndex === service.images.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 3000); // Change image every 3 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [service.images]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -74,7 +83,6 @@ const ServiceItem = ({ service, index }) => {
         </div>
         <h2 className="service-title">{service.title}</h2>
         <p className="service-description">{service.description}</p>
-        {service.price && <p className="service-price">{service.price}</p>}
         <ul className="service-details">
           {service.details.map((detail, i) => (
             <li key={i}>{detail}</li>
@@ -93,7 +101,17 @@ const ServiceItem = ({ service, index }) => {
         </a>
       </motion.div>
       <motion.div className="service-image" variants={itemVariants}>
-        <img src={service.image} alt={service.title} />
+        <img src={service.images[currentImageIndex]} alt={service.title} />
+        {service.images && service.images.length > 1 && (
+          <div className="service-image-indicators">
+            {service.images.map((_, index) => (
+              <span
+                key={index}
+                className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+              />
+            ))}
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );
@@ -105,8 +123,14 @@ const accommodations = [
     icon: faHome,
     title: 'Luxury Beachfront Holiday House',
     description: 'Spacious 6-bedroom beachfront house perfect for families and groups. Sleeps up to 12 guests with all modern amenities for an unforgettable beach getaway.',
-    image: balconyWalkwayOceanview,
-    price: 'From R700 per person per night (Out of Season)',
+    images: [
+      balconyWalkwayOceanview,
+      beachPalmTreesView,
+      balconyDeckOceanview,
+      bedroomSuiteInterior,
+      livingRoomTvLounge,
+      balconyDiningOceanview
+    ],
     details: [
       '6 En-suite bedrooms (4 queen beds, 2 twin rooms)',
       '5 Showers, 1 bath',
@@ -128,32 +152,19 @@ const accommodations = [
     icon: faStar,
     title: 'Premium Add-On Services',
     description: 'Enhance your stay with optional luxury services and experiences.',
-    image: rooftopTerracePatio,
-    price: 'Custom pricing available',
+    images: [
+      rooftopTerracePatio,
+      beachLoungersOceanfront,
+      livingRoomSofa02,
+      rooftopLoungeChairs
+    ],
     details: [
-      'Laundry service: 0-5 kg (400 Mts), 6-10 kg (600 Mts), 11-15 kg (800 Mts)',
+      'Laundry service available',
       'Airport transfers from Inhambane',
       'Local guided tours (snorkeling, diving, fishing)',
       'Sunset dhow cruises',
       'Massage & spa services',
       'Private chef / meal catering'
-    ]
-  },
-  {
-    id: 'seasonal-pricing',
-    icon: faBed,
-    title: 'Seasonal Rates 2026',
-    description: 'Flexible pricing throughout the year to suit your budget and travel plans.',
-    image: bedroomSuite10,
-    price: 'Seasonal rates apply',
-    details: [
-      'Out of Season (Feb, May, Aug, Nov): R700 per person per night',
-      'Mid Season (Apr, Jun, Jul, Sep, Oct SA School holidays): R9,000 per house per night',
-      'Peak Season (1-15 Dec): R10,000 per house per night',
-      'Peak Season (15 Dec - 15 Jan): R13,000 per house per night',
-      'Peak Season (15 Jan onwards): R10,000 per house per night',
-      'Minimum 14-night stay during 15 Dec - 15 Jan period',
-      'Additional guests: R500 per person per night (if exceeding 12 sleepers)'
     ]
   }
 ];
@@ -185,27 +196,51 @@ const ServicesPage = () => {
         </div>
       </div>
 
-
-
-      <section className="services-intro">
-        <div className="container">
-          <div className="intro-content">
-            <h2>How We Make Your Stay Special</h2>
-            <p>
-              At Barra Cabanas, every stay is more than just a holiday — it's a curated experience of barefoot luxury. Whether you're seeking relaxation, romance, or adventure, our wide range of accommodation options and personalized guest services ensure that every moment is memorable.
-            </p>
-            <p>
-              All stays include access to the beach, lush gardens, and optional concierge services for local excursions and amenities. Explore our accommodation options below to find your perfect escape.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="services-list">
         <div className="container">
           {accommodations.map((service, index) => (
             <ServiceItem key={service.id} service={service} index={index} />
           ))}
+        </div>
+      </section>
+
+      {/* PLACEHOLDER: Floor Plan Section */}
+      <section className="floor-plan-section">
+        <div className="container">
+          <h2 className="section-title">House Floor Plan</h2>
+          <p className="section-subtitle">
+            Explore the layout of our modern beachfront cabanas
+          </p>
+          <div className="floor-plan-container">
+            {/* PLACEHOLDER: Floor plan image to be provided */}
+            <div className="placeholder-floor-plan">
+              <p className="placeholder-text">📐 Floor Plan Image Placeholder</p>
+              <p className="placeholder-note">High-resolution floor plan image pending</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PLACEHOLDER: Beach Access Gate Section */}
+      <section className="beach-access-section">
+        <div className="container">
+          <h2 className="section-title">Direct Beach Access</h2>
+          <p className="section-subtitle">
+            Private gate access to pristine Barra Beach
+          </p>
+          <div className="beach-access-container">
+            {/* PLACEHOLDER: Beach access gate photo to be provided */}
+            <div className="placeholder-beach-access">
+              <p className="placeholder-text">🏖️ Beach Access Gate Photo Placeholder</p>
+              <p className="placeholder-note">Photo of beach access gate pending</p>
+            </div>
+            <div className="beach-access-description">
+              <p>
+                Each cabana features exclusive access to the beach through our private gate,
+                ensuring a seamless transition from your accommodation to the golden sands of Barra Beach.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -12,7 +12,8 @@ import {
   faUtensils,
   faBroom,
   faShirt,
-  faUsers
+  faUsers,
+  faInfoCircle
 } from '@fortawesome/free-solid-svg-icons';
 import './HouseRules.css';
 
@@ -62,7 +63,7 @@ const HouseRules = () => {
     {
       icon: faPaw,
       title: 'Pet Policy',
-      description: 'Pets are not allowed unless arranged in advance with management. Please contact us before bringing any animals.'
+      description: 'No pets allowed. Guide dogs only with prior arrangement.'
     },
     {
       icon: faUsers,
@@ -109,10 +110,12 @@ const HouseRules = () => {
         >
           <motion.h2 variants={itemVariants} className="section-title">
             House Rules & Policies
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              className="info-icon-tooltip"
+              title="Please read and respect our house rules to ensure a pleasant stay for everyone"
+            />
           </motion.h2>
-          <motion.p variants={itemVariants} className="section-subtitle">
-            Please read and respect our house rules to ensure a pleasant stay for everyone
-          </motion.p>
 
           <div className="rules-grid">
             {rules.map((rule, index) => (

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { sendContactForm } from '../../services/emailService';
@@ -133,12 +134,13 @@ const ContactPage = () => {
             </motion.div>
 
             <motion.div className="info-card" variants={itemVariants}>
-              <div className="info-icon">
-                <FontAwesomeIcon icon={faClock} />
+              <div className="info-icon social-icons-group">
+                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faInstagram} />
               </div>
-              <h3>Check-in / Check-out</h3>
-              <p>Check-in: from 2:00 PM</p>
-              <p>Check-out: by 10:00 AM</p>
+              <h3>Follow Us</h3>
+              <p><a href="https://www.facebook.com/Barra.Inn.Moz" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+              <p><a href="https://www.instagram.com/barra_inn.moz" target="_blank" rel="noopener noreferrer">Instagram</a></p>
             </motion.div>
           </motion.div>
         </div>
@@ -254,6 +256,28 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Google Maps Section */}
+      <section className="map-section">
+        <div className="container">
+          <h2 className="section-title">Find Us</h2>
+          <p className="section-subtitle">Visit us at Barra Beach, Inhambane, Mozambique</p>
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7!2d35.5!3d-23.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDUxJzAwLjAiUyAzNcKwMzAnMDAuMCJF!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0, borderRadius: '15px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Barra Cabanas Location"
+            ></iframe>
+            <p className="map-note">
+              📍 Note: This is a placeholder location. The exact coordinates will be updated with the actual property location.
+            </p>
+          </div>
+        </div>
+      </section>
 
     </div>
   );

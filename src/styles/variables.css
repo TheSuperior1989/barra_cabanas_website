@@ -1,32 +1,28 @@
-/* Barra Cabanas Brand Colors - Ocean & Sand Theme */
+/* Barra Cabanas Brand Colors - Beige & Black Theme */
 :root {
-  /* Primary Brand Colors - Warm Taupe Theme */
-  --color-primary-taupe: #a48e82;
+  /* Primary Brand Colors - Beige & Black */
+  --color-primary-beige: #F5E6D3;
+  --color-secondary-black: #1a1a1a;
   --color-sandy-beige: #F5E6D3;
-  --color-text-dark: #2f3941;
-  --color-palm-green: #4A7C59;
-  --color-sage-green: #87A78F;
+  --color-text-dark: #1a1a1a;
   --color-shell-white: #FFFFFF;
-  
-  /* Secondary Palette */
-  --color-deep-teal: #004B5C;
+
+  /* Secondary Palette - Beige Variations */
   --color-warm-sand: #E8D5B7;
-  --color-beach-glass: #B8E6E1;
+  --color-light-beige: #FAF3EB;
+  --color-dark-beige: #D4C4A3;
   --color-driftwood: #8B7355;
-  --color-sea-foam: #A8E6CF;
-  
+
   /* Neutral Grays */
   --color-charcoal: #2C3E50;
   --color-slate: #5A6C7D;
   --color-mist: #BDC3C7;
   --color-cloud: #F8F9FA;
   --color-light-grey: #F7F8FA;
-  
-  /* Gradients */
-  --gradient-taupe: linear-gradient(135deg, #87A78F 0%, #4A7C59 100%);
-  --gradient-taupe-light: linear-gradient(135deg, #A5BDAB 0%, #87A78F 100%);
-  --gradient-sage: linear-gradient(135deg, #87A78F 0%, #4A7C59 100%);
-  --gradient-sage-light: linear-gradient(135deg, #A5BDAB 0%, #87A78F 100%);
+
+  /* Gradients - Beige Based */
+  --gradient-beige: linear-gradient(135deg, #F5E6D3 0%, #E8D5B7 100%);
+  --gradient-beige-light: linear-gradient(135deg, #FAF3EB 0%, #F5E6D3 100%);
   --gradient-sand: linear-gradient(135deg, #F5E6D3 0%, #E8D5B7 100%);
   
   /* Typography */

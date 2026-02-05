@@ -61,9 +61,9 @@ const ContactCTA = () => {
         className="container"
       >
         <div className="cta-content">
-          <h2 className="cta-title">Ready to Experience Luxury Beach Accommodation?</h2>
+          <h2 className="cta-title">Experience Luxury Beach Houses</h2>
           <p className="cta-subtitle">
-            Contact us today to book your stay and discover the exceptional comfort and beauty of Barra Cabanas.
+            Welcome to our collection of nine modern beachfront cabanas, designed for memorable seaside stays. Each cabana features six en-suite, air-conditioned bedrooms, a private pool, and relaxed modern interiors—perfect for families and groups. From sunrise over the ocean to sunset by the pool, there's space for everyone to truly unwind, with easy access—no 4x4 needed.
           </p>
           <div className="cta-buttons">
             <Link to="/booking" className="btn btn-primary">

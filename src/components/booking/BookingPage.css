@@ -46,8 +46,49 @@
 
 .booking-form-section {
   padding: 80px 0 120px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
   min-height: 100vh;
+}
+
+.booking-form-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.booking-form-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--color-secondary-black);
+}
+
+.form-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .booking-form-container {
@@ -72,6 +113,10 @@
   color: #1a1a2e;
 }
 
+.simplified-booking-form {
+  width: 100%;
+}
+
 .form-group {
   margin-bottom: 30px;
 }
@@ -82,11 +127,12 @@
   gap: 10px;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #1a1a2e;
+  color: var(--color-secondary-black);
   font-size: 1.1rem;
 }
 
-.property-select {
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 15px 20px;
   border: 2px solid #e0e0e0;
@@ -94,12 +140,65 @@
   font-size: 1rem;
   background-color: #fff;
   transition: all 0.3s ease;
+  font-family: var(--font-body);
 }
 
-.property-select:focus {
-  border-color: var(--color-sage-green);
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-primary-beige);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(135, 167, 143, 0.2);
+  box-shadow: 0 0 0 3px rgba(245, 230, 211, 0.3);
+}
+
+.form-hint {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.guest-selector-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: var(--color-light-beige);
+  border-radius: 10px;
+}
+
+.guest-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary-beige);
+  background-color: #fff;
+  color: var(--color-secondary-black);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guest-btn:hover:not(:disabled) {
+  background-color: var(--color-primary-beige);
+  transform: scale(1.1);
+}
+
+.guest-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.guest-count {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-secondary-black);
+  min-width: 120px;
+  text-align: center;
 }
 
 .date-selection {
@@ -254,13 +353,92 @@
   padding-top: 15px;
 }
 
-.booking-btn {
+.submit-btn {
   width: 100%;
   padding: 18px;
   font-size: 1.2rem;
   font-weight: 700;
   border-radius: 10px;
   margin: 30px 0 20px 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Info Sidebar */
+.booking-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-secondary-black);
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.info-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-steps li {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.info-steps li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 28px;
+  height: 28px;
+  background-image: url('../../assets/images/NewBarraLogo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-detail {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.contact-detail strong {
+  color: var(--color-secondary-black);
+  margin-right: 8px;
 }
 
 /* Calendar Modal */
@@ -712,5 +890,51 @@
     grid-template-columns: 1fr;
     padding: 30px 20px;
     gap: 20px;
+  }
+
+  .booking-form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .booking-form-card {
+    padding: 30px 20px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+
+  .form-subtitle {
+    font-size: 1rem;
+  }
+
+  .guest-selector-inline {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .guest-count {
+    min-width: 100px;
+    font-size: 1.1rem;
+  }
+
+  .info-card {
+    padding: 25px 20px;
+  }
+
+  .info-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .booking-form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .booking-form-card {
+    padding: 40px 30px;
   }
 }

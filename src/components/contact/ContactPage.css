@@ -97,6 +97,47 @@
   margin-bottom: 5px;
 }
 
+/* Map link styling */
+.map-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary-beige);
+  color: var(--color-secondary-black);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.map-link:hover {
+  background: var(--color-shell-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Social icons group */
+.social-icons-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons-group svg {
+  font-size: 1.5rem;
+}
+
+/* Placeholder note styling */
+.placeholder-note {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(245, 230, 211, 0.2);
+  border-left: 3px solid var(--color-primary-beige);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
 /* Contact links styling */
 .info-card p a {
   color: var(--color-sage-green);
@@ -275,4 +316,43 @@
   background-color: #ccc !important;
   cursor: not-allowed;
   transform: none !important;
+}
+
+/* Map Section */
+.map-section {
+  padding: 80px 0;
+  background-color: var(--color-light-beige);
+}
+
+.map-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--color-secondary-black);
+}
+
+.map-section .section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-note {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  border-top: 1px solid #e0e0e0;
 }

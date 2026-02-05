@@ -140,7 +140,7 @@
 .service-price {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--color-sage-green);
+  color: var(--color-secondary-black);
   margin-bottom: 30px;
 }
 
@@ -152,30 +152,180 @@
 
 .service-details li {
   position: relative;
-  padding-left: 30px;
+  padding-left: 40px;
   margin-bottom: 15px;
   line-height: 1.6;
   color: #444;
 }
 
+/* Custom icon bullets using NewBarraLogo.svg */
 .service-details li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
-  color: var(--color-sage-green);
-  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  background-image: url('../../assets/images/NewBarraLogo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0px;
 }
 
 .service-image {
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 500px; /* Fixed height to prevent jumping */
 }
 
 .service-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover; /* Ensures images fill the container while maintaining aspect ratio */
+}
+
+.service-image-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.service-image-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-image-indicators .indicator.active {
+  background: var(--color-primary-beige);
+  transform: scale(1.2);
+}
+
+/* Floor Plan Section */
+.floor-plan-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.floor-plan-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-secondary-black);
+}
+
+.floor-plan-section .section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.floor-plan-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.placeholder-floor-plan {
+  background-color: #f8f9fa;
+  border: 2px dashed var(--color-primary-beige);
+  border-radius: var(--radius-lg);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.placeholder-floor-plan .placeholder-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-secondary-black);
+  margin-bottom: 10px;
+}
+
+.placeholder-floor-plan .placeholder-note {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Beach Access Section */
+.beach-access-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.beach-access-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-secondary-black);
+}
+
+.beach-access-section .section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beach-access-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.placeholder-beach-access {
+  background-color: #fff;
+  border: 2px dashed var(--color-primary-beige);
+  border-radius: var(--radius-lg);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.placeholder-beach-access .placeholder-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-secondary-black);
+  margin-bottom: 10px;
+}
+
+.placeholder-beach-access .placeholder-note {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.beach-access-description {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.beach-access-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin: 0;
 }
 
 .services-cta {
@@ -276,6 +426,10 @@
 
   .service-title {
     font-size: 1.8rem;
+  }
+
+  .service-image {
+    height: 350px; /* Smaller height for mobile */
   }
 
   .services-cta {

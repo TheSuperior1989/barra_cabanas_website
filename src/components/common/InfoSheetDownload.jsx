@@ -80,22 +80,27 @@ const InfoSheetDownload = ({ variant = 'full' }) => {
               Complete Property Information
             </h2>
             <p className="info-sheet-description">
-              Download our comprehensive info sheet with everything you need to know about Barra Cabanas - 
-              including detailed amenities, pricing, house rules, local attractions, and booking information.
+              Download our comprehensive info sheet with everything you need to know about Barra Cabanas -
+              including detailed amenities, house rules, local attractions, and booking information.
             </p>
-            
+
+            {/* PLACEHOLDER: PDF content note */}
+            <div className="placeholder-note-pdf">
+              <p>📄 <strong>Note:</strong> Final PDF will not include pricing - contact us for rates</p>
+            </div>
+
             <div className="info-sheet-features">
               <div className="feature-item">
                 <span className="feature-icon">📋</span>
                 <span>Complete Amenities List</span>
               </div>
               <div className="feature-item">
-                <span className="feature-icon">💰</span>
-                <span>Detailed Pricing & Packages</span>
-              </div>
-              <div className="feature-item">
                 <span className="feature-icon">🏖️</span>
                 <span>Local Area Guide</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">🎯</span>
+                <span>Activities & Attractions</span>
               </div>
               <div className="feature-item">
                 <span className="feature-icon">📞</span>
@@ -106,7 +111,7 @@ const InfoSheetDownload = ({ variant = 'full' }) => {
             <motion.button
               className="info-sheet-download-btn"
               onClick={handleDownload}
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(164, 142, 130, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(245, 230, 211, 0.3)" }}
               whileTap={{ scale: 0.95 }}
             >
               <FontAwesomeIcon icon={faFileDownload} />

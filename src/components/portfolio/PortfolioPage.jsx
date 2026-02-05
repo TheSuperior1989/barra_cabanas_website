@@ -19,7 +19,6 @@ import beachAccessPalmtree from '../../assets/images/Houses/beach-access-palmtre
 import beachBarPalmtrees from '../../assets/images/Houses/beach-bar-palmtrees.jpg';
 import gardenPathwayPebbles from '../../assets/images/Houses/garden-pathway-pebbles.jpg';
 import mainCourtyardPaving from '../../assets/images/Houses/main-courtyard-paving.jpg';
-import poolDeckAerialView from '../../assets/images/Houses/pool-deck-aerial-view.jpg';
 
 // Entrance & Reception
 import entranceCourtyardDusk from '../../assets/images/Houses/entrance-courtyard-dusk.jpg';
@@ -169,20 +168,10 @@ const galleryItems = [
     date: 'Outdoor Space',
     tags: ['Courtyard', 'Paving', 'Outdoor']
   },
-  {
-    id: 6,
-    title: 'Pool Deck Aerial View',
-    category: 'Outdoor Spaces',
-    image: poolDeckAerialView,
-    description: 'Stunning aerial view of the pool deck area with ocean views.',
-    location: 'Pool Area',
-    date: 'Pool Facilities',
-    tags: ['Pool', 'Deck', 'Aerial View']
-  },
 
   // Balconies & Outdoor Spaces
   {
-    id: 7,
+    id: 6,
     title: 'Corner Beach View',
     category: 'Balconies',
     image: balconyCornerBeachview,
@@ -1173,7 +1162,7 @@ const PortfolioPage = () => {
             ref={ref}
             variants={containerVariants}
             initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            animate="visible"
             className="portfolio-grid"
           >
             <AnimatePresence>
@@ -1181,6 +1170,9 @@ const PortfolioPage = () => {
                 <motion.div
                   key={item.id}
                   variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
                   layout
                   className="portfolio-item"
                   onClick={() => openGalleryDetails(item)}

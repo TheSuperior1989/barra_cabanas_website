@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import barraCabanasLogo from '../../assets/images/BarraCabanas_Logo_Rearranged.svg';
+import barraCabanasLogo from '../../assets/images/Website LOGO in BLACK with text in WHITE.svg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -81,8 +81,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog" className={location.pathname === '/blog' ? 'nav-link active' : 'nav-link'}>
-              Blog
+            <Link to="/activities" className={location.pathname === '/activities' ? 'nav-link active' : 'nav-link'}>
+              Activities
             </Link>
           </li>
           <li className="nav-item">

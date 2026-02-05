@@ -1,6 +1,6 @@
 import Hero from './Hero';
 import ServicesOverview from './ServicesOverview';
-import FeaturedProjects from './FeaturedProjects';
+import HouseFeatures from './HouseFeatures';
 import Testimonials from './Testimonials';
 import ContactCTA from './ContactCTA';
 import './HomePage.css';
@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Hero />
-      <FeaturedProjects />
+      <HouseFeatures />
       <ServicesOverview />
       <Testimonials />
       <ContactCTA />

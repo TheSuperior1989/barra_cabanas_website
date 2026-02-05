@@ -116,7 +116,8 @@ const Hero = () => {
         </video>
       )}
 
-      {/* 432Hz Audio Background - Only on desktop */}
+      {/* PLACEHOLDER: Background Audio - Happy/Relaxed Vibe (Final audio pending) */}
+      {/* Desktop only - Subtle, low volume background music */}
       {!isMobile && audioLoaded && (
         <audio
           ref={audioRef}
@@ -124,8 +125,9 @@ const Hero = () => {
           preload="metadata"
           style={{ display: 'none' }}
         >
+          {/* TODO: Replace with final happy/relaxed vibe audio file */}
           <source
-            src="/audio/432hz-ambient-ocean.mp3"
+            src="/audio/placeholder-happy-relaxed.mp3"
             type="audio/mpeg"
           />
         </audio>
@@ -152,7 +154,7 @@ const Hero = () => {
           className="hero-text"
         >
           <h1 className="hero-title">
-            Experience Luxury <span className="highlight sage-green">Beach Houses</span>
+            Experience Luxury <span className="highlight beige">Beach Houses</span>
           </h1>
           <p className="hero-subtitle">
             Experience barefoot luxury at its finest. Nestled on the pristine shores of Mozambique, Barra Cabanas offers exclusive beachside accomodation with panoramic ocean views, elegant design, and unmatched comfort — your ultimate tropical escape awaits.

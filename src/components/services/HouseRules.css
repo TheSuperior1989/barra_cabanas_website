@@ -12,8 +12,75 @@
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   color: #1F1F1F;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.info-icon-tooltip {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  color: var(--color-primary-beige);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.info-icon-tooltip:hover {
+  color: var(--color-secondary-black);
+  transform: scale(1.1);
+}
+
+/* Custom tooltip */
+.section-title {
+  position: relative;
+}
+
+.info-icon-tooltip::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: var(--color-secondary-black);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  font-weight: 400;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon-tooltip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Tooltip arrow */
+.info-icon-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0px);
+  border: 6px solid transparent;
+  border-top-color: var(--color-secondary-black);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1001;
+}
+
+.info-icon-tooltip:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
 }
 
 .section-subtitle {
@@ -99,7 +166,7 @@
 
 .info-card ul li {
   padding: 0.75rem 0;
-  padding-left: 1.5rem;
+  padding-left: 2.5rem;
   position: relative;
   color: #555;
   line-height: 1.6;
@@ -111,11 +178,16 @@
 }
 
 .info-card ul li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
-  color: #6B7D6D;
-  font-weight: bold;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  background-image: url('../../assets/images/NewBarraLogo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Responsive Design */

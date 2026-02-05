@@ -60,17 +60,17 @@
 }
 
 .hero-title .highlight {
-  background: var(--gradient-taupe);
+  background: var(--gradient-beige);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.hero-title .highlight.sage-green {
+.hero-title .highlight.beige {
   background: none;
   -webkit-background-clip: unset;
   background-clip: unset;
-  color: #87A78F; /* Sage green color */
+  color: #F5E6D3; /* Beige color */
 }
 
 .hero-subtitle {
@@ -114,16 +114,16 @@
 }
 
 .btn-primary {
-  background-color: var(--color-sage-green) !important;
-  color: var(--color-shell-white) !important;
+  background-color: var(--color-primary-beige) !important;
+  color: var(--color-secondary-black) !important;
   border: none;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(135, 167, 143, 0.3);
-  filter: brightness(1.05);
-  background-color: var(--color-palm-green) !important;
+  box-shadow: 0 4px 12px rgba(245, 230, 211, 0.4);
+  filter: brightness(0.95);
+  background-color: var(--color-warm-sand) !important;
 }
 
 .btn-secondary {
@@ -135,7 +135,7 @@
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
-  border-color: var(--color-sage-green);
+  border-color: var(--color-primary-beige);
 }
 
 /* Audio Toggle Button */
@@ -146,10 +146,10 @@
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(245, 230, 211, 0.9);
   border: none;
   border-radius: 50%;
-  color: var(--color-sage-green);
+  color: var(--color-secondary-black);
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -159,7 +159,7 @@
 }
 
 .audio-toggle-btn:hover {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(245, 230, 211, 1);
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
@@ -178,7 +178,7 @@
     backface-visibility: hidden;
   }
 
-  .hero-title .highlight.sage-green {
+  .hero-title .highlight.beige {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

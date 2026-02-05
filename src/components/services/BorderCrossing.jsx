@@ -9,8 +9,10 @@ import {
   faMobileAlt,
   faShieldAlt,
   faMapMarkedAlt,
-  faInfoCircle
+  faInfoCircle,
+  faComments
 } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import './BorderCrossing.css';
 
 const BorderCrossing = () => {
@@ -70,6 +72,19 @@ const BorderCrossing = () => {
       icon: faMapMarkedAlt,
       title: 'Border Crossing Tips',
       description: 'Arrive early to avoid long queues. Be patient and polite with officials. Keep all receipts and documents organized. The border can be busy during peak seasons and holidays.'
+    },
+    {
+      icon: faFacebook,
+      title: 'DriveMoz Community',
+      description: 'Join the DriveMoz Facebook page for real-time updates, road conditions, and community support from fellow travelers.',
+      link: '#', // PLACEHOLDER: Replace with actual DriveMoz Facebook page URL
+      linkText: 'Visit DriveMoz Facebook Page'
+    },
+    {
+      icon: faComments,
+      title: 'Zello Communication',
+      description: 'For real-time communication and safety updates, consider using the Zello app. Join the recommended channel for travelers to Mozambique.',
+      note: 'PLACEHOLDER: Specific Zello channel name to be provided'
     }
   ];
 
@@ -78,7 +93,6 @@ const BorderCrossing = () => {
     'Children must have their own passports',
     'Keep all border crossing receipts for your return journey',
     'Road conditions in Mozambique can vary - drive carefully',
-    'Fuel stations may be limited - fill up when you can',
     'Always carry some cash in Meticais for small purchases'
   ];
 
@@ -94,10 +108,12 @@ const BorderCrossing = () => {
         >
           <motion.h2 variants={itemVariants} className="section-title">
             Border Crossing Information
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              className="info-icon-tooltip"
+              title="Essential information for crossing from South Africa to Mozambique"
+            />
           </motion.h2>
-          <motion.p variants={itemVariants} className="section-subtitle">
-            Essential information for crossing from South Africa to Mozambique
-          </motion.p>
 
           <div className="border-info-grid">
             {borderInfo.map((info, index) => (
@@ -107,6 +123,14 @@ const BorderCrossing = () => {
                 </div>
                 <h3 className="border-title">{info.title}</h3>
                 <p className="border-description">{info.description}</p>
+                {info.link && (
+                  <a href={info.link} className="border-link" target="_blank" rel="noopener noreferrer">
+                    {info.linkText}
+                  </a>
+                )}
+                {info.note && (
+                  <p className="border-note"><em>{info.note}</em></p>
+                )}
               </motion.div>
             ))}
           </div>
