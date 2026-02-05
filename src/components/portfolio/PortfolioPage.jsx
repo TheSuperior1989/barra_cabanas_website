@@ -3,13 +3,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './PortfolioPage.css';
 
+// Aerial Views
+import aerialBeachfrontResort from '../../assets/images/Houses/aerial-beachfront-resort.jpg';
+import aerialOceanfrontComplex from '../../assets/images/Houses/aerial-oceanfront-complex.jpg';
+import aerialPoolBalconies from '../../assets/images/Houses/aerial-pool-balconies.jpg';
+import aerialRooftopPools from '../../assets/images/Houses/aerial-rooftop-pools.jpg';
+
 // Exterior & Beach Views
 import exteriorBeachfrontConstruction from '../../assets/images/Houses/exterior-beachfront-construction.jpg';
+import exteriorBalconiesPools from '../../assets/images/Houses/exterior-balconies-pools.jpg';
+import exteriorReceptionEntrance from '../../assets/images/Houses/exterior-reception-entrance.jpg';
 import beachPalmTreesView from '../../assets/images/Houses/beach-palm-trees-view.jpg';
 import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
+import beachAccessPalmtree from '../../assets/images/Houses/beach-access-palmtree.jpg';
+import beachBarPalmtrees from '../../assets/images/Houses/beach-bar-palmtrees.jpg';
 import gardenPathwayPebbles from '../../assets/images/Houses/garden-pathway-pebbles.jpg';
 import mainCourtyardPaving from '../../assets/images/Houses/main-courtyard-paving.jpg';
 import poolDeckAerialView from '../../assets/images/Houses/pool-deck-aerial-view.jpg';
+
+// Entrance & Reception
+import entranceCourtyardDusk from '../../assets/images/Houses/entrance-courtyard-dusk.jpg';
+import entranceCourtyardPlants from '../../assets/images/Houses/entrance-courtyard-plants.jpg';
+import entranceGateSign from '../../assets/images/Houses/entrance-gate-sign.jpg';
+import entranceWalkwayTropical from '../../assets/images/Houses/entrance-walkway-tropical.jpg';
+import receptionDeskDetail from '../../assets/images/Houses/reception-desk-detail.jpg';
+import receptionLobbyInterior from '../../assets/images/Houses/reception-lobby-interior.jpg';
+import receptionSignExterior from '../../assets/images/Houses/reception-sign-exterior.jpg';
 
 // Balconies & Outdoor Spaces
 import balconyCornerBeachview from '../../assets/images/Houses/balcony-corner-beachview.jpg';
@@ -21,6 +40,12 @@ import balconyNarrowOceanview from '../../assets/images/Houses/balcony-narrow-oc
 import balconyWalkwayOceanview from '../../assets/images/Houses/balcony-walkway-oceanview.jpg';
 import rooftopLoungeChairs from '../../assets/images/Houses/rooftop-lounge-chairs.jpg';
 import rooftopTerracePatio from '../../assets/images/Houses/rooftop-terrace-patio.jpg';
+import rooftopDiningOceanview from '../../assets/images/Houses/rooftop-dining-oceanview.jpg';
+
+// Pools
+import infinityPoolOceanview from '../../assets/images/Houses/infinity-pool-oceanview.jpg';
+import poolCourtyardLoungers from '../../assets/images/Houses/pool-courtyard-loungers.jpg';
+import poolInteriorCourtyard from '../../assets/images/Houses/pool-interior-courtyard.jpg';
 
 // Bedrooms
 import bedroomSuite02 from '../../assets/images/Houses/bedroom-suite-02.jpg';
@@ -33,16 +58,24 @@ import bedroomSuite08 from '../../assets/images/Houses/bedroom-suite-08.jpg';
 import bedroomSuite09 from '../../assets/images/Houses/bedroom-suite-09.jpg';
 import bedroomSuite10 from '../../assets/images/Houses/bedroom-suite-10.jpg';
 import bedroomSuite11 from '../../assets/images/Houses/bedroom-suite-11.jpg';
+import bedroomSuite12 from '../../assets/images/Houses/bedroom-suite-12.jpg';
+import bedroomSuite13 from '../../assets/images/Houses/bedroom-suite-13.jpg';
+import bedroomSuite14 from '../../assets/images/Houses/bedroom-suite-14.jpg';
+import bedroomSuite15 from '../../assets/images/Houses/bedroom-suite-15.jpg';
 import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg';
 import bedroomSuiteTwin from '../../assets/images/Houses/bedroom-suite-twin.jpg';
 import bedroomHeadboardCloseup from '../../assets/images/Houses/bedroom-headboard-closeup.jpg';
 import bedroomStorageUnit from '../../assets/images/Houses/bedroom-storage-unit.jpg';
+import beddingDetailWhite from '../../assets/images/Houses/bedding-detail-white.jpg';
 
 // Living Spaces
 import loungeBalconyOceanview from '../../assets/images/Houses/lounge-balcony-oceanview.jpg';
+import loungeTerraceOceanview from '../../assets/images/Houses/lounge-terrace-oceanview.jpg';
 import livingRoomSofa02 from '../../assets/images/Houses/living-room-sofa-02.jpg';
 import livingRoomSofaShelving from '../../assets/images/Houses/living-room-sofa-shelving.jpg';
 import livingRoomTvLounge from '../../assets/images/Houses/living-room-tv-lounge.jpg';
+import livingRoomLounge03 from '../../assets/images/Houses/iving-room-lounge-03.jpg';
+import livingDiningOpenplan from '../../assets/images/Houses/living-dining-openplan.jpg';
 
 // Kitchen & Dining
 import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg';
@@ -50,8 +83,13 @@ import kitchenBarGlassware from '../../assets/images/Houses/kitchen-bar-glasswar
 import kitchenDiningHallway from '../../assets/images/Houses/kitchen-dining-hallway.jpg';
 import kitchenHallwayModern from '../../assets/images/Houses/kitchen-hallway-modern.jpg';
 import diningKitchenOpenplan from '../../assets/images/Houses/dining-kitchen-openplan.jpg';
+import diningKitchenBarstool from '../../assets/images/Houses/dining-kitchen-barstool.jpg';
+import diningKitchenRustic from '../../assets/images/Houses/dining-kitchen-rustic.jpg';
+import kitchenDiningIsland from '../../assets/images/Houses/kitchen-dining-island.jpg';
 import kitchenetteFridgeStorage from '../../assets/images/Houses/kitchenette-fridge-storage.jpg';
 import kitchenetteSinkWhite from '../../assets/images/Houses/kitchenette-sink-white.jpg';
+import kitchenetteCompactWhite from '../../assets/images/Houses/kitchenette-compact-white.jpg';
+import kitchenetteMinimalWhite from '../../assets/images/Houses/kitchenette-minimal-white.jpg';
 
 // Bathrooms
 import bathroomVanity01 from '../../assets/images/Houses/bathroom-vanity-01.jpg';
@@ -59,11 +97,17 @@ import bathroomVanity02 from '../../assets/images/Houses/bathroom-vanity-02.jpg'
 import bathroomVanity03 from '../../assets/images/Houses/bathroom-vanity-03.jpg';
 import bathroomVanity04 from '../../assets/images/Houses/bathroom-vanity-04.jpg';
 import bathroomVanity05 from '../../assets/images/Houses/bathroom-vanity-05.jpg';
+import bathroomVanity06 from '../../assets/images/Houses/bathroom-vanity-06.jpg';
+import bathroomVanity07 from '../../assets/images/Houses/bathroom-vanity-07.jpg';
+import bathroomVanity08 from '../../assets/images/Houses/bathroom-vanity-08.jpg';
+import bathroomVanity09 from '../../assets/images/Houses/bathroom-vanity-09.jpg';
+import bathroomVanity10 from '../../assets/images/Houses/bathroom-vanity-10.jpg';
 import bathroomSinkCloseup from '../../assets/images/Houses/bathroom-sink-closeup.jpg';
 import bathroomToiletAerial from '../../assets/images/Houses/bathroom-toilet-aerial.jpg';
 import bathroomToiletOverhead from '../../assets/images/Houses/bathroom-toilet-overhead.jpg';
 import showerEnclosure02 from '../../assets/images/Houses/shower-enclosure-02.jpg';
 import showerEnclosureGlass from '../../assets/images/Houses/shower-enclosure-glass.jpg';
+import showerBathroomAngle from '../../assets/images/Houses/shower-bathroom-angle.jpg';
 
 // Corridors & Details
 import corridorExteriorLong from '../../assets/images/Houses/corridor-exterior-long.jpg';
@@ -636,15 +680,408 @@ const galleryItems = [
     location: 'Interior',
     date: 'Storage',
     tags: ['Storage', 'Mirror', 'Unit']
+  },
+  // NEW AERIAL VIEWS
+  {
+    id: 56,
+    title: 'Aerial Beachfront Resort',
+    category: 'Aerial Views',
+    image: aerialBeachfrontResort,
+    description: 'Stunning aerial view of the beachfront resort with turquoise water.',
+    location: 'Barra Beach',
+    date: 'Aerial Photography',
+    tags: ['Aerial', 'Beachfront', 'Ocean']
+  },
+  {
+    id: 57,
+    title: 'Aerial Oceanfront Complex',
+    category: 'Aerial Views',
+    image: aerialOceanfrontComplex,
+    description: 'Aerial perspective of the resort complex along the pristine coastline.',
+    location: 'Barra Beach',
+    date: 'Aerial Photography',
+    tags: ['Aerial', 'Complex', 'Coastline']
+  },
+  {
+    id: 58,
+    title: 'Aerial Pool Balconies',
+    category: 'Aerial Views',
+    image: aerialPoolBalconies,
+    description: 'Aerial angle showcasing multiple pool balconies.',
+    location: 'Resort',
+    date: 'Aerial Photography',
+    tags: ['Aerial', 'Pools', 'Balconies']
+  },
+  {
+    id: 59,
+    title: 'Aerial Rooftop Pools',
+    category: 'Aerial Views',
+    image: aerialRooftopPools,
+    description: 'Overhead aerial view of building rooftops with pools.',
+    location: 'Resort',
+    date: 'Aerial Photography',
+    tags: ['Aerial', 'Rooftop', 'Pools']
+  },
+  // NEW EXTERIOR VIEWS
+  {
+    id: 60,
+    title: 'Exterior Balconies & Pools',
+    category: 'Exterior Views',
+    image: exteriorBalconiesPools,
+    description: 'Multi-level building with stunning blue balcony pools.',
+    location: 'Resort',
+    date: 'Exterior',
+    tags: ['Exterior', 'Balconies', 'Pools']
+  },
+  {
+    id: 61,
+    title: 'Reception Entrance',
+    category: 'Exterior Views',
+    image: exteriorReceptionEntrance,
+    description: 'White exterior building with reception entrance and balconies.',
+    location: 'Reception',
+    date: 'Exterior',
+    tags: ['Exterior', 'Reception', 'Entrance']
+  },
+  // NEW BEACH AREAS
+  {
+    id: 62,
+    title: 'Beach Access with Palm Tree',
+    category: 'Beach & Views',
+    image: beachAccessPalmtree,
+    description: 'Beach access walkway with palm tree and ocean view.',
+    location: 'Beach Access',
+    date: 'Beach',
+    tags: ['Beach', 'Palm Tree', 'Ocean']
+  },
+  {
+    id: 63,
+    title: 'Beachfront Bar',
+    category: 'Beach & Views',
+    image: beachBarPalmtrees,
+    description: 'Beachfront bar area with palm trees and thatched roof.',
+    location: 'Beach Bar',
+    date: 'Beach',
+    tags: ['Beach', 'Bar', 'Palm Trees']
+  },
+  // NEW ENTRANCE & RECEPTION
+  {
+    id: 64,
+    title: 'Entrance Courtyard at Dusk',
+    category: 'Entrance & Reception',
+    image: entranceCourtyardDusk,
+    description: 'Entrance courtyard area at dusk with palm trees and thatched structures.',
+    location: 'Entrance',
+    date: 'Courtyard',
+    tags: ['Entrance', 'Courtyard', 'Dusk']
+  },
+  {
+    id: 65,
+    title: 'Entrance Courtyard with Plants',
+    category: 'Entrance & Reception',
+    image: entranceCourtyardPlants,
+    description: 'Entrance courtyard with green plants and thatched roof pavilion.',
+    location: 'Entrance',
+    date: 'Courtyard',
+    tags: ['Entrance', 'Plants', 'Courtyard']
+  },
+  {
+    id: 66,
+    title: 'Barra Cabanas Entrance Gate',
+    category: 'Entrance & Reception',
+    image: entranceGateSign,
+    description: 'Entrance gate with BARRA CABANAS signage and palm tree.',
+    location: 'Main Entrance',
+    date: 'Entrance',
+    tags: ['Entrance', 'Gate', 'Signage']
+  },
+  {
+    id: 67,
+    title: 'Tropical Entrance Walkway',
+    category: 'Entrance & Reception',
+    image: entranceWalkwayTropical,
+    description: 'Entrance walkway with tropical landscaping and thatched roof structure.',
+    location: 'Entrance',
+    date: 'Walkway',
+    tags: ['Entrance', 'Tropical', 'Walkway']
+  },
+  {
+    id: 68,
+    title: 'Reception Desk Detail',
+    category: 'Entrance & Reception',
+    image: receptionDeskDetail,
+    description: 'Reception desk area with artwork and wooden accents.',
+    location: 'Reception',
+    date: 'Interior',
+    tags: ['Reception', 'Desk', 'Interior']
+  },
+  {
+    id: 69,
+    title: 'Reception Lobby',
+    category: 'Entrance & Reception',
+    image: receptionLobbyInterior,
+    description: 'Reception lobby with wooden counter and pendant lighting.',
+    location: 'Reception',
+    date: 'Lobby',
+    tags: ['Reception', 'Lobby', 'Interior']
+  },
+  {
+    id: 70,
+    title: 'Reception Signage',
+    category: 'Entrance & Reception',
+    image: receptionSignExterior,
+    description: 'Exterior reception area with RECEPTION signage.',
+    location: 'Reception',
+    date: 'Exterior',
+    tags: ['Reception', 'Signage', 'Exterior']
+  },
+  // NEW POOLS
+  {
+    id: 71,
+    title: 'Infinity Pool with Ocean View',
+    category: 'Pools',
+    image: infinityPoolOceanview,
+    description: 'Stunning infinity pool with ocean view and palm trees.',
+    location: 'Pool Area',
+    date: 'Pool',
+    tags: ['Pool', 'Infinity', 'Ocean View']
+  },
+  {
+    id: 72,
+    title: 'Courtyard Pool with Loungers',
+    category: 'Pools',
+    image: poolCourtyardLoungers,
+    description: 'Courtyard pool area with white loungers and modern architecture.',
+    location: 'Courtyard',
+    date: 'Pool',
+    tags: ['Pool', 'Courtyard', 'Loungers']
+  },
+  {
+    id: 73,
+    title: 'Interior Courtyard Pool',
+    category: 'Pools',
+    image: poolInteriorCourtyard,
+    description: 'Interior courtyard pool with white walls and lounge chairs.',
+    location: 'Courtyard',
+    date: 'Pool',
+    tags: ['Pool', 'Interior', 'Courtyard']
+  },
+  // NEW BALCONIES
+  {
+    id: 74,
+    title: 'Rooftop Dining with Ocean View',
+    category: 'Balconies',
+    image: rooftopDiningOceanview,
+    description: 'Rooftop dining area with ocean view and modern furniture.',
+    location: 'Rooftop',
+    date: 'Dining',
+    tags: ['Rooftop', 'Dining', 'Ocean View']
+  },
+  // NEW BEDROOMS
+  {
+    id: 75,
+    title: 'Bedroom Suite 12',
+    category: 'Bedrooms',
+    image: bedroomSuite12,
+    description: 'Bedroom with wooden slatted headboard and white bedding.',
+    location: 'Bedroom',
+    date: 'Suite',
+    tags: ['Bedroom', 'Suite', 'Modern']
+  },
+  {
+    id: 76,
+    title: 'Bedroom Suite 13',
+    category: 'Bedrooms',
+    image: bedroomSuite13,
+    description: 'Bedroom with wooden headboard and modern minimalist design.',
+    location: 'Bedroom',
+    date: 'Suite',
+    tags: ['Bedroom', 'Suite', 'Minimalist']
+  },
+  {
+    id: 77,
+    title: 'Bedroom Suite 14',
+    category: 'Bedrooms',
+    image: bedroomSuite14,
+    description: 'Bedroom with wooden slatted headboard and shelving unit.',
+    location: 'Bedroom',
+    date: 'Suite',
+    tags: ['Bedroom', 'Suite', 'Storage']
+  },
+  {
+    id: 78,
+    title: 'Bedroom Suite 15',
+    category: 'Bedrooms',
+    image: bedroomSuite15,
+    description: 'Bedroom with wooden headboard and gray textured bedding.',
+    location: 'Bedroom',
+    date: 'Suite',
+    tags: ['Bedroom', 'Suite', 'Textured']
+  },
+  {
+    id: 79,
+    title: 'Bedding Detail',
+    category: 'Bedrooms',
+    image: beddingDetailWhite,
+    description: 'Close-up detail of white bedding and pillows.',
+    location: 'Bedroom',
+    date: 'Detail',
+    tags: ['Bedding', 'Detail', 'White']
+  },
+  // NEW LIVING SPACES
+  {
+    id: 80,
+    title: 'Lounge Terrace with Ocean View',
+    category: 'Living Spaces',
+    image: loungeTerraceOceanview,
+    description: 'Covered terrace lounge with ocean view and blue sofa.',
+    location: 'Terrace',
+    date: 'Lounge',
+    tags: ['Lounge', 'Terrace', 'Ocean View']
+  },
+  {
+    id: 81,
+    title: 'Living Room Lounge',
+    category: 'Living Spaces',
+    image: livingRoomLounge03,
+    description: 'Living room with gray sofa and wooden coffee table.',
+    location: 'Living Room',
+    date: 'Lounge',
+    tags: ['Living Room', 'Sofa', 'Modern']
+  },
+  {
+    id: 82,
+    title: 'Open Plan Living & Dining',
+    category: 'Living Spaces',
+    image: livingDiningOpenplan,
+    description: 'Open plan living and dining room with gray sofa.',
+    location: 'Living Area',
+    date: 'Open Plan',
+    tags: ['Living Room', 'Dining', 'Open Plan']
+  },
+  // NEW KITCHEN & DINING
+  {
+    id: 83,
+    title: 'Dining & Kitchen with Bar Stools',
+    category: 'Kitchen & Dining',
+    image: diningKitchenBarstool,
+    description: 'Dining area and kitchen with bar stools and wooden table.',
+    location: 'Kitchen',
+    date: 'Dining',
+    tags: ['Kitchen', 'Dining', 'Bar Stools']
+  },
+  {
+    id: 84,
+    title: 'Rustic Dining & Kitchen',
+    category: 'Kitchen & Dining',
+    image: diningKitchenRustic,
+    description: 'Rustic dining area and kitchen with wooden table.',
+    location: 'Kitchen',
+    date: 'Dining',
+    tags: ['Kitchen', 'Dining', 'Rustic']
+  },
+  {
+    id: 85,
+    title: 'Kitchen with Dining Island',
+    category: 'Kitchen & Dining',
+    image: kitchenDiningIsland,
+    description: 'Kitchen and dining area with wooden island and pendant lights.',
+    location: 'Kitchen',
+    date: 'Island',
+    tags: ['Kitchen', 'Island', 'Pendant Lights']
+  },
+  {
+    id: 86,
+    title: 'Compact White Kitchenette',
+    category: 'Kitchen & Dining',
+    image: kitchenetteCompactWhite,
+    description: 'Compact white kitchenette with modern fixtures.',
+    location: 'Kitchenette',
+    date: 'Compact',
+    tags: ['Kitchenette', 'Compact', 'White']
+  },
+  {
+    id: 87,
+    title: 'Minimal White Kitchenette',
+    category: 'Kitchen & Dining',
+    image: kitchenetteMinimalWhite,
+    description: 'Minimal white kitchenette with sink and cabinets.',
+    location: 'Kitchenette',
+    date: 'Minimal',
+    tags: ['Kitchenette', 'Minimal', 'White']
+  },
+  // NEW BATHROOMS
+  {
+    id: 88,
+    title: 'Bathroom Vanity 06',
+    category: 'Bathrooms',
+    image: bathroomVanity06,
+    description: 'Bathroom with wooden vanity and glass shower enclosure.',
+    location: 'Bathroom',
+    date: 'Vanity',
+    tags: ['Bathroom', 'Vanity', 'Shower']
+  },
+  {
+    id: 89,
+    title: 'Bathroom Vanity 07',
+    category: 'Bathrooms',
+    image: bathroomVanity07,
+    description: 'Bathroom vanity with wooden frame mirror and glass shower.',
+    location: 'Bathroom',
+    date: 'Vanity',
+    tags: ['Bathroom', 'Vanity', 'Mirror']
+  },
+  {
+    id: 90,
+    title: 'Bathroom Vanity 08',
+    category: 'Bathrooms',
+    image: bathroomVanity08,
+    description: 'Bathroom with wooden vanity, mirror and glass shower.',
+    location: 'Bathroom',
+    date: 'Vanity',
+    tags: ['Bathroom', 'Vanity', 'Glass']
+  },
+  {
+    id: 91,
+    title: 'Bathroom Vanity 09',
+    category: 'Bathrooms',
+    image: bathroomVanity09,
+    description: 'Bathroom vanity with wooden cabinet and glass partition.',
+    location: 'Bathroom',
+    date: 'Vanity',
+    tags: ['Bathroom', 'Vanity', 'Cabinet']
+  },
+  {
+    id: 92,
+    title: 'Bathroom Vanity 10',
+    category: 'Bathrooms',
+    image: bathroomVanity10,
+    description: 'Bathroom with wooden vanity and glass shower enclosure.',
+    location: 'Bathroom',
+    date: 'Vanity',
+    tags: ['Bathroom', 'Vanity', 'Enclosure']
+  },
+  {
+    id: 93,
+    title: 'Shower & Bathroom Angle',
+    category: 'Bathrooms',
+    image: showerBathroomAngle,
+    description: 'Angled view of bathroom with glass shower and wooden vanity.',
+    location: 'Bathroom',
+    date: 'Shower',
+    tags: ['Bathroom', 'Shower', 'Angle']
   }
 ];
 
 const categories = [
   'All',
+  'Aerial Views',
   'Exterior Views',
   'Beach & Views',
+  'Entrance & Reception',
   'Outdoor Spaces',
   'Balconies',
+  'Pools',
   'Bedrooms',
   'Living Spaces',
   'Kitchen & Dining',
