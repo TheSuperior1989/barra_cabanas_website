@@ -116,7 +116,7 @@ const Hero = () => {
         </video>
       )}
 
-      {/* PLACEHOLDER: Background Audio - Happy/Relaxed Vibe (Final audio pending) */}
+      {/* Background Audio - Soft Gravity */}
       {/* Desktop only - Subtle, low volume background music */}
       {!isMobile && audioLoaded && (
         <audio
@@ -125,9 +125,8 @@ const Hero = () => {
           preload="metadata"
           style={{ display: 'none' }}
         >
-          {/* TODO: Replace with final happy/relaxed vibe audio file */}
           <source
-            src="/audio/placeholder-happy-relaxed.mp3"
+            src="/audio/soft-gravity.mp3"
             type="audio/mpeg"
           />
         </audio>
