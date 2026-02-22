@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './FeaturedProjects.css';
-import exteriorBeachfront from '../../assets/images/Houses/exterior-beachfront-construction.jpg';
+import exteriorBeachfront from '../../assets/images/Houses/exterior-balconies-pools.jpg';
 import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg';
 import bedroomSuite11 from '../../assets/images/Houses/bedroom-suite-11.jpg';
 
