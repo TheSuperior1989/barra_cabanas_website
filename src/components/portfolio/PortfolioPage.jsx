@@ -7,34 +7,23 @@ import './PortfolioPage.css';
 import aerialBeachfrontResort from '../../assets/images/Houses/aerial-beachfront-resort.jpg';
 import aerialOceanfrontComplex from '../../assets/images/Houses/aerial-oceanfront-complex.jpg';
 import aerialPoolBalconies from '../../assets/images/Houses/aerial-pool-balconies.jpg';
-import aerialRooftopPools from '../../assets/images/Houses/aerial-rooftop-pools.jpg';
 
 // Exterior & Beach Views
-import exteriorBeachfrontConstruction from '../../assets/images/Houses/exterior-beachfront-construction.jpg';
 import exteriorBalconiesPools from '../../assets/images/Houses/exterior-balconies-pools.jpg';
 import exteriorReceptionEntrance from '../../assets/images/Houses/exterior-reception-entrance.jpg';
 import beachPalmTreesView from '../../assets/images/Houses/beach-palm-trees-view.jpg';
 import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
 import beachAccessPalmtree from '../../assets/images/Houses/beach-access-palmtree.jpg';
 import beachBarPalmtrees from '../../assets/images/Houses/beach-bar-palmtrees.jpg';
-import gardenPathwayPebbles from '../../assets/images/Houses/garden-pathway-pebbles.jpg';
-import mainCourtyardPaving from '../../assets/images/Houses/main-courtyard-paving.jpg';
 
 // Entrance & Reception
 import entranceCourtyardDusk from '../../assets/images/Houses/entrance-courtyard-dusk.jpg';
-import entranceCourtyardPlants from '../../assets/images/Houses/entrance-courtyard-plants.jpg';
 import entranceGateSign from '../../assets/images/Houses/entrance-gate-sign.jpg';
-import entranceWalkwayTropical from '../../assets/images/Houses/entrance-walkway-tropical.jpg';
 import receptionDeskDetail from '../../assets/images/Houses/reception-desk-detail.jpg';
 import receptionLobbyInterior from '../../assets/images/Houses/reception-lobby-interior.jpg';
 import receptionSignExterior from '../../assets/images/Houses/reception-sign-exterior.jpg';
 
 // Balconies & Outdoor Spaces
-import balconyCornerBeachview from '../../assets/images/Houses/balcony-corner-beachview.jpg';
-import balconyDaybedOceanview from '../../assets/images/Houses/balcony-daybed-oceanview.jpg';
-import balconyDeckOceanview from '../../assets/images/Houses/balcony-deck-oceanview.jpg';
-import balconyDiningOceanview from '../../assets/images/Houses/balcony-dining-oceanview.jpg';
-import balconyExteriorDetail from '../../assets/images/Houses/balcony-exterior-detail.jpg';
 import balconyNarrowOceanview from '../../assets/images/Houses/balcony-narrow-oceanview.jpg';
 import balconyWalkwayOceanview from '../../assets/images/Houses/balcony-walkway-oceanview.jpg';
 import rooftopLoungeChairs from '../../assets/images/Houses/rooftop-lounge-chairs.jpg';
@@ -109,25 +98,19 @@ import showerEnclosureGlass from '../../assets/images/Houses/shower-enclosure-gl
 import showerBathroomAngle from '../../assets/images/Houses/shower-bathroom-angle.jpg';
 
 // Corridors & Details
-import corridorExteriorLong from '../../assets/images/Houses/corridor-exterior-long.jpg';
-import corridorWhiteExterior from '../../assets/images/Houses/corridor-white-exterior.jpg';
-import entranceCorridorWhite from '../../assets/images/Houses/entrance-corridor-white.jpg';
 import shelfBeachDecor from '../../assets/images/Houses/shelf-beach-decor.jpg';
 import storageUnitMirror from '../../assets/images/Houses/storage-unit-mirror.jpg';
+
+// Facilities & Parking
+import kitchenetteWithMat from '../../assets/images/Houses/kitchenette-branded-mat.jpg';
+import parkingCarportsOverhead from '../../assets/images/Houses/parking-carports-overhead.jpg';
+import jetskiStorageShelter from '../../assets/images/Houses/jetski-storage-shelter.jpg';
+import boatStorageShelter from '../../assets/images/Houses/boat-storage-shelter.jpg';
+import entranceSignParking from '../../assets/images/Houses/entrance-sign-parking.jpg';
 
 // Gallery items showcasing Barra Cabanas accommodations and experiences
 const galleryItems = [
   // Exterior & Beach Views
-  {
-    id: 1,
-    title: 'Beachfront Paradise',
-    category: 'Exterior Views',
-    image: exteriorBeachfrontConstruction,
-    description: '6-bedroom luxury beachfront holiday house with private splash pool, under-cover parking, and boat launch access. No 4x4 needed.',
-    location: 'Barra, Mozambique',
-    date: 'Beachfront Property',
-    tags: ['Beachfront', '6 Bedrooms', 'Pool']
-  },
   {
     id: 2,
     title: 'Pristine Beach Access',
@@ -148,78 +131,7 @@ const galleryItems = [
     date: 'Beach Facilities',
     tags: ['Beach Loungers', 'Ocean', 'Relaxation']
   },
-  {
-    id: 4,
-    title: 'Garden Pathways',
-    category: 'Outdoor Spaces',
-    image: gardenPathwayPebbles,
-    description: 'Beautiful pebblestone pathways connecting the property. Braai facilities on the veranda for outdoor dining experiences.',
-    location: 'Garden & Outdoor',
-    date: 'Outdoor Amenities',
-    tags: ['Garden', 'Braai', 'Outdoor']
-  },
-  {
-    id: 5,
-    title: 'Main Courtyard',
-    category: 'Outdoor Spaces',
-    image: mainCourtyardPaving,
-    description: 'Spacious courtyard with elegant paving, perfect for outdoor gatherings and relaxation.',
-    location: 'Courtyard',
-    date: 'Outdoor Space',
-    tags: ['Courtyard', 'Paving', 'Outdoor']
-  },
-
   // Balconies & Outdoor Spaces
-  {
-    id: 6,
-    title: 'Corner Beach View',
-    category: 'Balconies',
-    image: balconyCornerBeachview,
-    description: 'Corner balcony with stunning beachfront views.',
-    location: 'Balcony',
-    date: 'Ocean Views',
-    tags: ['Balcony', 'Beach View', 'Corner']
-  },
-  {
-    id: 8,
-    title: 'Daybed Ocean View',
-    category: 'Balconies',
-    image: balconyDaybedOceanview,
-    description: 'Relaxing daybed on the balcony with panoramic ocean views.',
-    location: 'Balcony',
-    date: 'Relaxation',
-    tags: ['Daybed', 'Ocean View', 'Balcony']
-  },
-  {
-    id: 9,
-    title: 'Deck Ocean View',
-    category: 'Balconies',
-    image: balconyDeckOceanview,
-    description: 'Spacious deck area with unobstructed ocean views.',
-    location: 'Deck',
-    date: 'Ocean Views',
-    tags: ['Deck', 'Ocean', 'Balcony']
-  },
-  {
-    id: 10,
-    title: 'Dining Ocean View',
-    category: 'Balconies',
-    image: balconyDiningOceanview,
-    description: 'Outdoor dining area on the balcony with breathtaking ocean views.',
-    location: 'Balcony Dining',
-    date: 'Outdoor Dining',
-    tags: ['Dining', 'Ocean View', 'Balcony']
-  },
-  {
-    id: 11,
-    title: 'Balcony Exterior Detail',
-    category: 'Balconies',
-    image: balconyExteriorDetail,
-    description: 'Architectural details of the exterior balcony design.',
-    location: 'Balcony',
-    date: 'Architecture',
-    tags: ['Balcony', 'Exterior', 'Design']
-  },
   {
     id: 12,
     title: 'Narrow Ocean View',
@@ -264,7 +176,7 @@ const galleryItems = [
   // Bedrooms
   {
     id: 16,
-    title: 'En-Suite Bedroom 1',
+    title: 'Luxury En-Suite Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite02,
     description: 'Spacious en-suite bedroom with air-conditioning and elegant coastal design.',
@@ -274,7 +186,7 @@ const galleryItems = [
   },
   {
     id: 17,
-    title: 'En-Suite Bedroom 2',
+    title: 'Modern En-Suite Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite03,
     description: 'Comfortable en-suite bedroom with modern amenities.',
@@ -284,7 +196,7 @@ const galleryItems = [
   },
   {
     id: 18,
-    title: 'En-Suite Bedroom 3',
+    title: 'Queen Bed En-Suite',
     category: 'Bedrooms',
     image: bedroomSuite04,
     description: 'Beautifully appointed en-suite bedroom with queen bed.',
@@ -294,7 +206,7 @@ const galleryItems = [
   },
   {
     id: 19,
-    title: 'En-Suite Bedroom 4',
+    title: 'Coastal Bedroom Suite',
     category: 'Bedrooms',
     image: bedroomSuite05,
     description: 'Elegant en-suite bedroom with air-conditioning and coastal decor.',
@@ -304,7 +216,7 @@ const galleryItems = [
   },
   {
     id: 20,
-    title: 'En-Suite Bedroom 5',
+    title: 'Spacious Bedroom Suite',
     category: 'Bedrooms',
     image: bedroomSuite06,
     description: 'Spacious bedroom suite with modern furnishings.',
@@ -314,7 +226,7 @@ const galleryItems = [
   },
   {
     id: 21,
-    title: 'En-Suite Bedroom 6',
+    title: 'Air-Conditioned En-Suite',
     category: 'Bedrooms',
     image: bedroomSuite07,
     description: 'Comfortable bedroom with en-suite bathroom and air-conditioning.',
@@ -324,7 +236,7 @@ const galleryItems = [
   },
   {
     id: 22,
-    title: 'En-Suite Bedroom 7',
+    title: 'Coastal Charm Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite08,
     description: 'Beautifully designed bedroom suite with coastal charm.',
@@ -334,7 +246,7 @@ const galleryItems = [
   },
   {
     id: 23,
-    title: 'En-Suite Bedroom 8',
+    title: 'Elegant En-Suite Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite09,
     description: 'Elegant bedroom with modern amenities and en-suite bathroom.',
@@ -344,7 +256,7 @@ const galleryItems = [
   },
   {
     id: 24,
-    title: 'En-Suite Bedroom 9',
+    title: 'Breezy Bedroom Suite',
     category: 'Bedrooms',
     image: bedroomSuite10,
     description: 'Spacious bedroom suite with air-conditioning.',
@@ -354,7 +266,7 @@ const galleryItems = [
   },
   {
     id: 25,
-    title: 'En-Suite Bedroom 10',
+    title: 'Deluxe En-Suite Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite11,
     description: 'Comfortable bedroom with elegant furnishings and en-suite bathroom.',
@@ -520,7 +432,7 @@ const galleryItems = [
   // Bathrooms
   {
     id: 41,
-    title: 'Bathroom Vanity 1',
+    title: 'Elegant Bathroom Vanity',
     category: 'Bathrooms',
     image: bathroomVanity01,
     description: 'Modern bathroom vanity with elegant fixtures.',
@@ -530,7 +442,7 @@ const galleryItems = [
   },
   {
     id: 42,
-    title: 'Bathroom Vanity 2',
+    title: 'Contemporary Bathroom',
     category: 'Bathrooms',
     image: bathroomVanity02,
     description: 'Stylish bathroom vanity with contemporary design.',
@@ -540,7 +452,7 @@ const galleryItems = [
   },
   {
     id: 43,
-    title: 'Bathroom Vanity 3',
+    title: 'Modern Bathroom Suite',
     category: 'Bathrooms',
     image: bathroomVanity03,
     description: 'Elegant bathroom vanity with modern amenities.',
@@ -550,7 +462,7 @@ const galleryItems = [
   },
   {
     id: 44,
-    title: 'Bathroom Vanity 4',
+    title: 'Spacious Bathroom',
     category: 'Bathrooms',
     image: bathroomVanity04,
     description: 'Spacious bathroom vanity with storage.',
@@ -560,7 +472,7 @@ const galleryItems = [
   },
   {
     id: 45,
-    title: 'Bathroom Vanity 5',
+    title: 'Sleek Bathroom Vanity',
     category: 'Bathrooms',
     image: bathroomVanity05,
     description: 'Modern bathroom vanity with sleek design.',
@@ -600,7 +512,7 @@ const galleryItems = [
   },
   {
     id: 49,
-    title: 'Shower Enclosure 1',
+    title: 'Walk-in Shower',
     category: 'Bathrooms',
     image: showerEnclosure02,
     description: 'Modern shower enclosure with glass doors.',
@@ -620,36 +532,6 @@ const galleryItems = [
   },
 
   // Corridors & Details
-  {
-    id: 51,
-    title: 'Exterior Corridor',
-    category: 'Interior Details',
-    image: corridorExteriorLong,
-    description: 'Long exterior corridor connecting different areas.',
-    location: 'Corridor',
-    date: 'Architecture',
-    tags: ['Corridor', 'Exterior', 'Walkway']
-  },
-  {
-    id: 52,
-    title: 'White Exterior Corridor',
-    category: 'Interior Details',
-    image: corridorWhiteExterior,
-    description: 'Clean white exterior corridor design.',
-    location: 'Corridor',
-    date: 'Architecture',
-    tags: ['Corridor', 'White', 'Exterior']
-  },
-  {
-    id: 53,
-    title: 'Entrance Corridor',
-    category: 'Interior Details',
-    image: entranceCorridorWhite,
-    description: 'Welcoming entrance corridor with white walls.',
-    location: 'Entrance',
-    date: 'Architecture',
-    tags: ['Entrance', 'Corridor', 'White']
-  },
   {
     id: 54,
     title: 'Beach Decor',
@@ -700,16 +582,6 @@ const galleryItems = [
     location: 'Resort',
     date: 'Aerial Photography',
     tags: ['Aerial', 'Pools', 'Balconies']
-  },
-  {
-    id: 59,
-    title: 'Aerial Rooftop Pools',
-    category: 'Aerial Views',
-    image: aerialRooftopPools,
-    description: 'Overhead aerial view of building rooftops with pools.',
-    location: 'Resort',
-    date: 'Aerial Photography',
-    tags: ['Aerial', 'Rooftop', 'Pools']
   },
   // NEW EXTERIOR VIEWS
   {
@@ -765,16 +637,6 @@ const galleryItems = [
     tags: ['Entrance', 'Courtyard', 'Dusk']
   },
   {
-    id: 65,
-    title: 'Entrance Courtyard with Plants',
-    category: 'Entrance & Reception',
-    image: entranceCourtyardPlants,
-    description: 'Entrance courtyard with green plants and thatched roof pavilion.',
-    location: 'Entrance',
-    date: 'Courtyard',
-    tags: ['Entrance', 'Plants', 'Courtyard']
-  },
-  {
     id: 66,
     title: 'Barra Cabanas Entrance Gate',
     category: 'Entrance & Reception',
@@ -783,16 +645,6 @@ const galleryItems = [
     location: 'Main Entrance',
     date: 'Entrance',
     tags: ['Entrance', 'Gate', 'Signage']
-  },
-  {
-    id: 67,
-    title: 'Tropical Entrance Walkway',
-    category: 'Entrance & Reception',
-    image: entranceWalkwayTropical,
-    description: 'Entrance walkway with tropical landscaping and thatched roof structure.',
-    location: 'Entrance',
-    date: 'Walkway',
-    tags: ['Entrance', 'Tropical', 'Walkway']
   },
   {
     id: 68,
@@ -869,7 +721,7 @@ const galleryItems = [
   // NEW BEDROOMS
   {
     id: 75,
-    title: 'Bedroom Suite 12',
+    title: 'Slatted Headboard Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite12,
     description: 'Bedroom with wooden slatted headboard and white bedding.',
@@ -879,7 +731,7 @@ const galleryItems = [
   },
   {
     id: 76,
-    title: 'Bedroom Suite 13',
+    title: 'Minimalist Bedroom Suite',
     category: 'Bedrooms',
     image: bedroomSuite13,
     description: 'Bedroom with wooden headboard and modern minimalist design.',
@@ -889,7 +741,7 @@ const galleryItems = [
   },
   {
     id: 77,
-    title: 'Bedroom Suite 14',
+    title: 'Bedroom with Built-in Storage',
     category: 'Bedrooms',
     image: bedroomSuite14,
     description: 'Bedroom with wooden slatted headboard and shelving unit.',
@@ -899,7 +751,7 @@ const galleryItems = [
   },
   {
     id: 78,
-    title: 'Bedroom Suite 15',
+    title: 'Textured Linen Bedroom',
     category: 'Bedrooms',
     image: bedroomSuite15,
     description: 'Bedroom with wooden headboard and gray textured bedding.',
@@ -1002,7 +854,7 @@ const galleryItems = [
   // NEW BATHROOMS
   {
     id: 88,
-    title: 'Bathroom Vanity 06',
+    title: 'Wooden Vanity Bathroom',
     category: 'Bathrooms',
     image: bathroomVanity06,
     description: 'Bathroom with wooden vanity and glass shower enclosure.',
@@ -1012,7 +864,7 @@ const galleryItems = [
   },
   {
     id: 89,
-    title: 'Bathroom Vanity 07',
+    title: 'Mirror Frame Bathroom',
     category: 'Bathrooms',
     image: bathroomVanity07,
     description: 'Bathroom vanity with wooden frame mirror and glass shower.',
@@ -1022,7 +874,7 @@ const galleryItems = [
   },
   {
     id: 90,
-    title: 'Bathroom Vanity 08',
+    title: 'Glass & Wood Bathroom',
     category: 'Bathrooms',
     image: bathroomVanity08,
     description: 'Bathroom with wooden vanity, mirror and glass shower.',
@@ -1032,7 +884,7 @@ const galleryItems = [
   },
   {
     id: 91,
-    title: 'Bathroom Vanity 09',
+    title: 'Cabinet Vanity Bathroom',
     category: 'Bathrooms',
     image: bathroomVanity09,
     description: 'Bathroom vanity with wooden cabinet and glass partition.',
@@ -1042,7 +894,7 @@ const galleryItems = [
   },
   {
     id: 92,
-    title: 'Bathroom Vanity 10',
+    title: 'Deluxe Bathroom Suite',
     category: 'Bathrooms',
     image: bathroomVanity10,
     description: 'Bathroom with wooden vanity and glass shower enclosure.',
@@ -1059,6 +911,57 @@ const galleryItems = [
     location: 'Bathroom',
     date: 'Shower',
     tags: ['Bathroom', 'Shower', 'Angle']
+  },
+  // Facilities & Parking
+  {
+    id: 94,
+    title: 'Kitchenette with Branded Mat',
+    category: 'Kitchen & Dining',
+    image: kitchenetteWithMat,
+    description: 'Compact kitchenette with white cabinetry, black matte sink, granite countertop, and Barra Cabanas branded floor mat.',
+    location: 'Kitchenette',
+    date: 'Amenities',
+    tags: ['Kitchenette', 'Kitchen', 'Branded']
+  },
+  {
+    id: 95,
+    title: 'Covered Parking & Carports',
+    category: 'Facilities',
+    image: parkingCarportsOverhead,
+    description: 'Spacious covered parking area with multiple carport bays for vehicles and boats, set among palm trees.',
+    location: 'Parking Area',
+    date: 'Facilities',
+    tags: ['Parking', 'Carports', 'Covered']
+  },
+  {
+    id: 96,
+    title: 'Jet Ski Storage',
+    category: 'Facilities',
+    image: jetskiStorageShelter,
+    description: 'Secure covered storage for multiple jet skis on trailers, available for guests.',
+    location: 'Storage Shelter',
+    date: 'Water Sports',
+    tags: ['Jet Ski', 'Storage', 'Water Sports']
+  },
+  {
+    id: 97,
+    title: 'Boat Storage',
+    category: 'Facilities',
+    image: boatStorageShelter,
+    description: 'Covered boat storage with secure shelter for motorboats and RIBs, with direct boat launch access.',
+    location: 'Storage Shelter',
+    date: 'Boating',
+    tags: ['Boat', 'Storage', 'Boat Launch']
+  },
+  {
+    id: 98,
+    title: 'Entrance Sign & Parking',
+    category: 'Entrance & Reception',
+    image: entranceSignParking,
+    description: 'Barra Cabanas entrance wall with branded logo signage, spacious paved parking, and covered carports behind.',
+    location: 'Main Entrance',
+    date: 'Entrance',
+    tags: ['Entrance', 'Signage', 'Parking']
   }
 ];
 
@@ -1068,7 +971,7 @@ const categories = [
   'Exterior Views',
   'Beach & Views',
   'Entrance & Reception',
-  'Outdoor Spaces',
+  'Facilities',
   'Balconies',
   'Pools',
   'Bedrooms',
@@ -1098,7 +1001,7 @@ const PortfolioPage = () => {
     setSelectedProject(null);
   };
 
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });

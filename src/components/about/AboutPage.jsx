@@ -1,48 +1,22 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faUserTie, faGlobe, faEye, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUserTie, faBed, faWater, faPersonSwimming, faWifi, faTv, faFire, faAnchor, faBroom } from '@fortawesome/free-solid-svg-icons';
 import './AboutPage.css';
-import livingRoomTvLounge from '../../assets/images/Houses/living-room-tv-lounge.jpg';
+import loungeBalconyOceanview from '../../assets/images/Houses/lounge-balcony-oceanview.jpg';
 import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg';
 import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg';
 
-// Word Carousel Component
-const WordCarousel = ({ title, words, icon }) => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [words]);
-
-  return (
-    <motion.div className="word-carousel-card" variants={{
-      hidden: { y: 50, opacity: 0 },
-      visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
-    }}>
-      <div className="carousel-icon">
-        <FontAwesomeIcon icon={icon} />
-      </div>
-      <h3 className="carousel-title">{title}</h3>
-      <div className="animated-word-container">
-        <motion.p
-          key={index}
-          className="animated-word"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-        >
-          {words[index]}
-        </motion.p>
-      </div>
-    </motion.div>
-  );
-};
+const propertyStats = [
+  { icon: faBed, number: '6', label: 'En-Suite Bedrooms', desc: 'Air-conditioned & fully furnished' },
+  { icon: faWater, number: 'Direct', label: 'Beachfront Access', desc: '100m to pristine white sand' },
+  { icon: faPersonSwimming, number: 'Private', label: 'Splash Pool', desc: 'On the covered deck' },
+  { icon: faWifi, number: 'Uncapped', label: 'Starlink WiFi', desc: 'High-speed satellite internet' },
+  { icon: faTv, number: '65"', label: 'Samsung 4K TV', desc: 'Smart TV in the living area' },
+  { icon: faFire, number: 'Braai', label: 'Facilities', desc: 'Outdoor dining on the veranda' },
+  { icon: faAnchor, number: 'Boat', label: 'Launch Access', desc: 'No 4×4 required' },
+  { icon: faBroom, number: 'Daily', label: 'Housekeeping', desc: 'Full cleaning service included' },
+];
 
 const AboutPage = () => {
   const [ref, inView] = useInView({
@@ -141,9 +115,9 @@ const AboutPage = () => {
             <motion.div className="story-gallery" variants={itemVariants}>
               <div className="gallery-grid">
                 <div className="gallery-item gallery-large">
-                  <img src={livingRoomTvLounge} alt="Living room with Samsung 65 inch 4K Smart TV and ocean views" />
+                  <img src={loungeBalconyOceanview} alt="Covered lounge area with panoramic ocean views" />
                   <div className="gallery-overlay">
-                    <span className="gallery-caption">Smart TV & Ocean Views</span>
+                    <span className="gallery-caption">Ocean View Lounge</span>
                   </div>
                 </div>
                 <div className="gallery-item">
@@ -166,32 +140,36 @@ const AboutPage = () => {
 
       <section className="about-mission">
         <div className="container">
+          <div className="stats-header">
+            <h2 className="stats-section-title">Why Stay at Barra Cabanas?</h2>
+            <p className="stats-section-subtitle">Everything you need for the ultimate Mozambique escape</p>
+          </div>
           <motion.div
             variants={{
               hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+              visible: { opacity: 1, transition: { staggerChildren: 0.08 } }
             }}
             initial="hidden"
             animate="visible"
-            className="word-carousel-grid"
+            className="stats-grid"
           >
-            <WordCarousel
-              title="Our Mission"
-              words={["Celebrate", "Promote", "Deliver"]}
-              icon={faGlobe}
-            />
-
-            <WordCarousel
-              title="Our Vision"
-              words={["Excellence", "Luxury", "Sustainability"]}
-              icon={faEye}
-            />
-
-            <WordCarousel
-              title="Our Values"
-              words={["Authenticity", "Warmth", "Elegance", "Excellence", "Sustainability"]}
-              icon={faHeart}
-            />
+            {propertyStats.map((stat, i) => (
+              <motion.div
+                key={i}
+                className="stat-card"
+                variants={{
+                  hidden: { y: 40, opacity: 0 },
+                  visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+                }}
+              >
+                <div className="stat-icon-wrap">
+                  <FontAwesomeIcon icon={stat.icon} />
+                </div>
+                <div className="stat-number">{stat.number}</div>
+                <div className="stat-label">{stat.label}</div>
+                <div className="stat-desc">{stat.desc}</div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
