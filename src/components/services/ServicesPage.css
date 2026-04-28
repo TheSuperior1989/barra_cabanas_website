@@ -240,25 +240,13 @@
   margin: 0 auto;
 }
 
-.placeholder-floor-plan {
-  background-color: #f8f9fa;
-  border: 2px dashed var(--color-primary-beige);
+.floor-plan-image {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
   border-radius: var(--radius-lg);
-  padding: 80px 40px;
-  text-align: center;
-}
-
-.placeholder-floor-plan .placeholder-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-secondary-black);
-  margin-bottom: 10px;
-}
-
-.placeholder-floor-plan .placeholder-note {
-  font-size: 1rem;
-  color: #666;
-  font-style: italic;
+  box-shadow: var(--shadow-lg);
 }
 
 /* Beach Access Section */
@@ -293,25 +281,12 @@
   gap: 30px;
 }
 
-.placeholder-beach-access {
-  background-color: #fff;
-  border: 2px dashed var(--color-primary-beige);
+.beach-access-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
   border-radius: var(--radius-lg);
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.placeholder-beach-access .placeholder-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-secondary-black);
-  margin-bottom: 10px;
-}
-
-.placeholder-beach-access .placeholder-note {
-  font-size: 1rem;
-  color: #666;
-  font-style: italic;
+  box-shadow: var(--shadow-md);
 }
 
 .beach-access-description {

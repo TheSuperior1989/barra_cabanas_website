@@ -4,21 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import './ActivitiesPage.css';
 
-import newBeachAccessPalmtree from '../../assets/images/Houses/new-beach-access-palmtree.jpg';
-import newAerialBeachfrontOcean from '../../assets/images/Houses/new-aerial-beachfront-ocean.jpg';
-import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
-import newOutdoorPatioBraai from '../../assets/images/Houses/new-outdoor-patio-braai-ocean.jpg';
-import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
-import beachAccessPalmtree from '../../assets/images/Houses/beach-access-palmtree.jpg';
-import newPatioDiningOcean from '../../assets/images/Houses/new-patio-dining-ocean.jpg';
-import newAerialResortPools from '../../assets/images/Houses/new-aerial-resort-pools.jpg';
+import activityScubaDiving from '../../assets/images/Activities/activity-scuba-diving.jpg';
+import activityDeepSeaFishing from '../../assets/images/Activities/activity-deep-sea-fishing.jpg';
+import activityDolphins from '../../assets/images/Activities/activity-dolphins.jpg';
+import activityKayaking from '../../assets/images/Activities/activity-kayaking.jpg';
+import activityDhowCruise from '../../assets/images/Activities/activity-dhow-cruise.jpg';
+import activityVillageTour from '../../assets/images/Activities/activity-village-tour.jpg';
+import activityBeachVolleyball from '../../assets/images/Activities/activity-beach-volleyball.jpg';
+import activityQuadBiking from '../../assets/images/Activities/activity-quad-biking.jpg';
 
 const activities = [
   {
     id: 1,
     name: 'Scuba Diving & Snorkeling',
     emoji: '🤿',
-    image: newAerialBeachfrontOcean,
+    image: activityScubaDiving,
     highlights: ['World-class reef diving', 'Marine life encounters', 'Beginner & advanced trips', 'Professional dive operators'],
     description: 'The waters around Barra are among the best in Mozambique for diving and snorkelling. Explore vibrant coral reefs teeming with tropical fish, turtles, rays, and whale sharks in season. Local dive operators offer full equipment hire, guided dives, and PADI courses for all levels.'
   },
@@ -26,7 +26,7 @@ const activities = [
     id: 2,
     name: 'Deep Sea Fishing',
     emoji: '🎣',
-    image: newBeachAccessPalmtree,
+    image: activityDeepSeaFishing,
     highlights: ['Marlin, sailfish & tuna', 'Half & full-day charters', 'Experienced skippers', 'Catch-and-release available'],
     description: 'Barra is renowned for world-class big game fishing. The warm Mozambique Channel is home to marlin, sailfish, dorado, yellowfin tuna, and kingfish. Charter a fully equipped boat with an experienced skipper and crew for an unforgettable day on the water.'
   },
@@ -34,7 +34,7 @@ const activities = [
     id: 3,
     name: 'Dolphin & Whale Watching',
     emoji: '🐬',
-    image: newAerialResortPools,
+    image: activityDolphins,
     highlights: ['Bottlenose & spinner dolphins', 'Humpback whales (Jul–Nov)', 'Guided boat tours', 'Incredible photo opportunities'],
     description: 'Barra is blessed with resident pods of bottlenose and spinner dolphins that can often be seen from the shore or on short boat trips. From July to November, humpback whales migrate through the channel — one of nature\'s most spectacular shows. Boat tours can be arranged locally.'
   },
@@ -42,7 +42,7 @@ const activities = [
     id: 4,
     name: 'Kayaking & Paddleboarding',
     emoji: '🚣',
-    image: newPoolOceanView,
+    image: activityKayaking,
     highlights: ['Calm lagoon paddling', 'Ocean kayaking', 'Equipment hire available', 'Suitable for all ages'],
     description: 'Explore the calm waters and hidden coves along the coastline at your own pace. Rent kayaks or paddleboards from local operators and paddle through the tranquil lagoon or along the pristine beachfront. Ideal for families and a wonderful way to connect with nature.'
   },
@@ -50,7 +50,7 @@ const activities = [
     id: 5,
     name: 'Sunset Dhow Cruises',
     emoji: '⛵',
-    image: newOutdoorPatioBraai,
+    image: activityDhowCruise,
     highlights: ['Traditional wooden dhow', 'Sunset views over the channel', 'Refreshments included', 'Romantic & group options'],
     description: 'Drift across the Indian Ocean on a traditional dhow sailboat and watch the sun melt into the horizon. These magical sunset cruises are a Barra tradition and an absolute highlight of any visit. Sundowners, snacks, and spectacular views are guaranteed.'
   },
@@ -58,7 +58,7 @@ const activities = [
     id: 6,
     name: 'Cultural Village Tours',
     emoji: '🏡',
-    image: beachLoungersOceanfront,
+    image: activityVillageTour,
     highlights: ['Local village experiences', 'Traditional crafts & food', 'Guided local tours', 'Photography opportunities'],
     description: 'Step beyond the beach and discover the authentic culture of Inhambane Province. Guided village tours introduce you to local Mozambican life, traditional fishing communities, vibrant markets, and the warm hospitality that makes this region so special.'
   },
@@ -66,7 +66,7 @@ const activities = [
     id: 7,
     name: 'Beach Volleyball & Water Sports',
     emoji: '🏐',
-    image: beachAccessPalmtree,
+    image: activityBeachVolleyball,
     highlights: ['Beach volleyball court', 'Surfing & bodyboarding', 'Sandboarding the dunes', 'Right on your doorstep'],
     description: 'The beach in front of Barra Cabanas is perfect for a variety of watersports and beach activities. Play beach volleyball, try your hand at surfing the Indian Ocean swells, or explore the magnificent sand dunes that line this stretch of coastline.'
   },
@@ -74,7 +74,7 @@ const activities = [
     id: 8,
     name: 'Quad Biking & 4x4 Trails',
     emoji: '🏍️',
-    image: newPatioDiningOcean,
+    image: activityQuadBiking,
     highlights: ['Coastal dune trails', 'Guided & self-guided rides', 'Suitable for beginners', 'Beach & bush routes'],
     description: 'Explore the dramatic sand dunes, bush tracks, and coastal paths around Barra on quad bikes or in a 4x4 vehicle. Local operators offer guided tours that take you through spectacular scenery — from sweeping ocean vistas to remote bush trails teeming with wildlife.'
   }

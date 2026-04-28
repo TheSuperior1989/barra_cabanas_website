@@ -10,19 +10,23 @@ import { useInView } from 'react-intersection-observer';
 import HouseRules from './HouseRules';
 import BorderCrossing from './BorderCrossing';
 import InfoSheetDownload from '../common/InfoSheetDownload';
-import balconyWalkwayOceanview from '../../assets/images/Houses/balcony-walkway-oceanview.jpg';
-import rooftopTerracePatio from '../../assets/images/Houses/rooftop-terrace-patio.jpg';
-import beachPalmTreesView from '../../assets/images/Houses/beach-palm-trees-view.jpg';
-import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg';
-import balconyDeckOceanview from '../../assets/images/Houses/balcony-deck-oceanview.jpg';
-import livingRoomTvLounge from '../../assets/images/Houses/living-room-tv-lounge.jpg';
-import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg';
-import bathroomVanity01 from '../../assets/images/Houses/bathroom-vanity-01.jpg';
-import balconyDiningOceanview from '../../assets/images/Houses/balcony-dining-oceanview.jpg';
-import bedroomSuite09 from '../../assets/images/Houses/bedroom-suite-09.jpg';
+import floorPlan from '../../assets/images/floor_plan.jpeg';
+import beachAccessPhoto from '../../assets/images/beach_access_photo.jpeg';
+import newHouseBeachfrontPool from '../../assets/images/Houses/new-house-beachfront-pool.jpg';
+import newHousePoolPatio from '../../assets/images/Houses/new-house-pool-patio-exterior.jpg';
+import newAerialResortPools from '../../assets/images/Houses/new-aerial-resort-pools.jpg';
+import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
+import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
+import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
+import newLivingKitchenOpenplan from '../../assets/images/Houses/new-living-kitchen-openplan.jpg';
+import newLivingSofaLounge from '../../assets/images/Houses/new-living-sofa-lounge.jpg';
+import newKitchenIslandPendants from '../../assets/images/Houses/new-kitchen-island-pendants.jpg';
+import newKitchenOceanDoors from '../../assets/images/Houses/new-kitchen-ocean-doors.jpg';
+import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
+import newOutdoorPatioBraai from '../../assets/images/Houses/new-outdoor-patio-braai-ocean.jpg';
+import newPatioDiningOcean from '../../assets/images/Houses/new-patio-dining-ocean.jpg';
+import newReceptionExterior from '../../assets/images/Houses/new-reception-exterior.jpg';
 import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
-import livingRoomSofa02 from '../../assets/images/Houses/living-room-sofa-02.jpg';
-import rooftopLoungeChairs from '../../assets/images/Houses/rooftop-lounge-chairs.jpg';
 import './ServicesPage.css';
 
 // Separate component for service items to fix React Hooks violation
@@ -124,12 +128,12 @@ const accommodations = [
     title: 'Luxury Beachfront Holiday House',
     description: 'Spacious 6-bedroom beachfront house perfect for families and groups. Sleeps up to 12 guests with all modern amenities for an unforgettable beach getaway.',
     images: [
-      balconyWalkwayOceanview,
-      beachPalmTreesView,
-      balconyDeckOceanview,
-      bedroomSuiteInterior,
-      livingRoomTvLounge,
-      balconyDiningOceanview
+      newHouseBeachfrontPool,
+      newAerialResortPools,
+      newPoolOceanView,
+      newBedroomQueenSuite,
+      newLivingKitchenOpenplan,
+      newOutdoorPatioBraai,
     ],
     details: [
       '6 En-suite bedrooms (4 queen beds, 2 twin rooms)',
@@ -153,10 +157,11 @@ const accommodations = [
     title: 'Premium Add-On Services',
     description: 'Enhance your stay with optional luxury services and experiences.',
     images: [
-      rooftopTerracePatio,
+      newPatioDiningOcean,
+      newLivingSofaLounge,
+      newKitchenOceanDoors,
+      newBathroomBathVanity,
       beachLoungersOceanfront,
-      livingRoomSofa02,
-      rooftopLoungeChairs
     ],
     details: [
       'Laundry service available',
@@ -204,7 +209,6 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* PLACEHOLDER: Floor Plan Section */}
       <section className="floor-plan-section">
         <div className="container">
           <h2 className="section-title">House Floor Plan</h2>
@@ -212,16 +216,11 @@ const ServicesPage = () => {
             Explore the layout of our modern beachfront cabanas
           </p>
           <div className="floor-plan-container">
-            {/* PLACEHOLDER: Floor plan image to be provided */}
-            <div className="placeholder-floor-plan">
-              <p className="placeholder-text">📐 Floor Plan Image Placeholder</p>
-              <p className="placeholder-note">High-resolution floor plan image pending</p>
-            </div>
+            <img src={floorPlan} alt="Barra Cabanas Floor Plan" className="floor-plan-image" />
           </div>
         </div>
       </section>
 
-      {/* PLACEHOLDER: Beach Access Gate Section */}
       <section className="beach-access-section">
         <div className="container">
           <h2 className="section-title">Direct Beach Access</h2>
@@ -229,11 +228,7 @@ const ServicesPage = () => {
             Private gate access to pristine Barra Beach
           </p>
           <div className="beach-access-container">
-            {/* PLACEHOLDER: Beach access gate photo to be provided */}
-            <div className="placeholder-beach-access">
-              <p className="placeholder-text">🏖️ Beach Access Gate Photo Placeholder</p>
-              <p className="placeholder-note">Photo of beach access gate pending</p>
-            </div>
+            <img src={beachAccessPhoto} alt="Direct beach access gate" className="beach-access-image" />
             <div className="beach-access-description">
               <p>
                 Each cabana features exclusive access to the beach through our private gate,
@@ -257,18 +252,18 @@ const ServicesPage = () => {
         {/* Scrolling Images Background */}
         <div className="scrolling-images">
           <div className="image-track">
-            <img src={beachPalmTreesView} alt="Pristine Barra beach with palm trees" />
-            <img src={bedroomSuiteInterior} alt="En-suite bedroom with air-conditioning" />
-            <img src={balconyDeckOceanview} alt="Balcony deck with ocean views" />
-            <img src={livingRoomTvLounge} alt="Living room with Samsung 65 inch Smart TV" />
-            <img src={kitchenGalleyWhite} alt="Modern kitchen with gas stove and appliances" />
-            <img src={bathroomVanity01} alt="Bathroom with modern vanity and fixtures" />
-            <img src={balconyDiningOceanview} alt="Balcony dining area with ocean view" />
-            <img src={bedroomSuite09} alt="Spacious bedroom suite with ambient lighting" />
+            <img src={newHouseBeachfrontPool} alt="Beachfront house with pool" />
+            <img src={newBedroomQueenSuite} alt="En-suite queen bedroom" />
+            <img src={newPoolOceanView} alt="Pool with ocean view" />
+            <img src={newLivingKitchenOpenplan} alt="Open plan living and kitchen" />
+            <img src={newKitchenIslandPendants} alt="Modern kitchen with island" />
+            <img src={newBathroomBathVanity} alt="Bathroom with bath and vanity" />
+            <img src={newPatioDiningOcean} alt="Outdoor dining with ocean view" />
+            <img src={newBedroomTwinSuite} alt="Twin bedroom suite" />
             <img src={beachLoungersOceanfront} alt="Beach loungers on oceanfront" />
-            <img src={livingRoomSofa02} alt="Living room with comfortable seating" />
-            <img src={rooftopLoungeChairs} alt="Rooftop terrace with lounge chairs" />
-            <img src={balconyWalkwayOceanview} alt="Balcony walkway with ocean panorama" />
+            <img src={newLivingSofaLounge} alt="Living room with sofa lounge" />
+            <img src={newAerialResortPools} alt="Aerial view of resort pools" />
+            <img src={newReceptionExterior} alt="Resort reception exterior" />
           </div>
         </div>
 

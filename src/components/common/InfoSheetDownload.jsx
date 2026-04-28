@@ -84,11 +84,6 @@ const InfoSheetDownload = ({ variant = 'full' }) => {
               including detailed amenities, house rules, local attractions, and booking information.
             </p>
 
-            {/* PLACEHOLDER: PDF content note */}
-            <div className="placeholder-note-pdf">
-              <p>📄 <strong>Note:</strong> Final PDF will not include pricing - contact us for rates</p>
-            </div>
-
             <div className="info-sheet-features">
               <div className="feature-item">
                 <span className="feature-icon">📋</span>
