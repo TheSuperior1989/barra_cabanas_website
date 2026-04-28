@@ -87,7 +87,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link to="/booking" className={location.pathname === '/booking' ? 'nav-link active' : 'nav-link'}>
-              Book Now
+              Request a Quotation
             </Link>
           </li>
           <li className="nav-item">

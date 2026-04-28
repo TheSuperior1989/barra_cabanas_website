@@ -6,20 +6,20 @@ import './HouseFeatures.css';
 
 // Beachfront with Pool images
 import infinityPoolOceanview from '../../assets/images/Houses/infinity-pool-oceanview.jpg';
-import poolCourtyardLoungers from '../../assets/images/Houses/pool-courtyard-loungers.jpg';
-import balconyDeckOceanview from '../../assets/images/Houses/balcony-deck-oceanview.jpg';
+import newHousePoolPatio from '../../assets/images/Houses/new-house-pool-patio-exterior.jpg';
+import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
 
-// 6 Air-conditioned Bedrooms images - PLACEHOLDERS (queen beds, single beds, wardrobe)
-import bedroomSuite02 from '../../assets/images/Houses/bedroom-suite-02.jpg';
+// 6 Air-conditioned Bedrooms images
+import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
 import bedroomSuite03 from '../../assets/images/Houses/bedroom-suite-03.jpg';
 import bedroomSuite04 from '../../assets/images/Houses/bedroom-suite-04.jpg';
-import bedroomSuite09 from '../../assets/images/Houses/bedroom-suite-09.jpg';
+import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
 import bedroomSuite10 from '../../assets/images/Houses/bedroom-suite-10.jpg';
 import bedroomSuite11 from '../../assets/images/Houses/bedroom-suite-11.jpg';
 
-// En-suite Bathrooms images - PLACEHOLDERS (bath, shower)
-import bathroomVanity01 from '../../assets/images/Houses/bathroom-vanity-01.jpg';
-import bathroomVanity02 from '../../assets/images/Houses/bathroom-vanity-02.jpg';
+// En-suite Bathrooms images
+import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
+import newBathroomVanityShower from '../../assets/images/Houses/new-bathroom-vanity-shower.jpg';
 import bathroomVanity03 from '../../assets/images/Houses/bathroom-vanity-03.jpg';
 
 // House features with rotating images
@@ -28,7 +28,7 @@ const features = [
     id: 1,
     title: 'Beachfront with Pool',
     category: 'Outdoor Living',
-    images: [infinityPoolOceanview, poolCourtyardLoungers, balconyDeckOceanview],
+    images: [infinityPoolOceanview, newHousePoolPatio, newPoolOceanView],
     description: 'Private splash pool with ocean views, perfect for relaxing under the African sun. Direct beach access for morning swims.',
     link: '/services#barra-cabanas-house'
   },
@@ -36,7 +36,7 @@ const features = [
     id: 2,
     title: '6 Air-conditioned Bedrooms',
     category: 'Comfortable Accommodation',
-    images: [bedroomSuite02, bedroomSuite03, bedroomSuite04, bedroomSuite09, bedroomSuite10, bedroomSuite11],
+    images: [newBedroomQueenSuite, bedroomSuite03, bedroomSuite04, newBedroomTwinSuite, bedroomSuite10, bedroomSuite11],
     description: 'Spacious en-suite bedrooms with air-conditioning. Mix of queen and twin beds to accommodate families and groups up to 12 guests.',
     link: '/services#barra-cabanas-house'
   },
@@ -44,7 +44,7 @@ const features = [
     id: 3,
     title: 'En-suite Bathrooms',
     category: 'Modern Amenities',
-    images: [bathroomVanity01, bathroomVanity02, bathroomVanity03],
+    images: [newBathroomBathVanity, newBathroomVanityShower, bathroomVanity03],
     description: 'Every bedroom features a private en-suite bathroom with modern fixtures, showers, and elegant coastal design.',
     link: '/services#barra-cabanas-house'
   }

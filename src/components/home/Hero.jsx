@@ -163,7 +163,7 @@ const Hero = () => {
               View Our Properties
             </Link>
             <Link to="/booking" className="btn btn-secondary">
-              Book Now
+              Request a Quotation
             </Link>
             <InfoSheetDownload variant="compact" />
           </div>

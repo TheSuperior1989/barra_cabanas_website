@@ -71,9 +71,9 @@ const BookingPage = () => {
       <div className="booking-hero">
         <div className="booking-hero-overlay"></div>
         <div className="container">
-          <h1 className="booking-hero-title">Book Your Stay</h1>
+          <h1 className="booking-hero-title">Request a Quotation</h1>
           <p className="booking-hero-subtitle">
-            Reserve your beachfront cabana at Barra
+            Request a quotation for your beachfront stay at Barra Cabanas
           </p>
         </div>
       </div>
@@ -87,14 +87,14 @@ const BookingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="form-title">Reservation Request</h2>
+              <h2 className="form-title">Quotation Request</h2>
               <p className="form-subtitle">
                 Fill in your details and we'll get back to you with availability and pricing
               </p>
 
               {submitSuccess && (
                 <div className="success-message">
-                  ✓ Thank you! We'll contact you shortly to confirm your reservation.
+                  ✓ Thank you! We'll contact you shortly with your quotation.
                 </div>
               )}
 
@@ -192,7 +192,7 @@ const BookingPage = () => {
                   className="btn btn-primary submit-btn"
                   disabled={submitting}
                 >
-                  {submitting ? 'Submitting...' : 'Request Reservation'}
+                  {submitting ? 'Submitting...' : 'Request a Quotation'}
                 </button>
 
                 <p className="form-note">
@@ -211,7 +211,7 @@ const BookingPage = () => {
               <div className="info-card">
                 <h3>What Happens Next?</h3>
                 <ol className="info-steps">
-                  <li>Submit your reservation request</li>
+                  <li>Submit your quotation request</li>
                   <li>We'll check availability for your dates</li>
                   <li>Receive a personalized quote via email or phone</li>
                   <li>Confirm your booking and payment details</li>

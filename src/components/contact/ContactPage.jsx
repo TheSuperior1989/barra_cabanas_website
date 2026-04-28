@@ -150,7 +150,7 @@ const ContactPage = () => {
         <div className="container">
           <div className="form-container">
             <div className="form-header">
-              <h2>Book Your Stay</h2>
+              <h2>Request a Quotation</h2>
               <p>
                 Fill out the form below to inquire about availability and we'll get back to you as soon as possible.
               </p>
