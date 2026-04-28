@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import './ActivitiesPage.css';
+import infoSheetPDF from '../../assets/documents/barra-cabanas-info-sheet.pdf';
 
 import activityScubaDiving from '../../assets/images/Activities/activity-scuba-diving.jpg';
 import activityDeepSeaFishing from '../../assets/images/Activities/activity-deep-sea-fishing.jpg';
@@ -148,9 +149,8 @@ const ActivitiesPage = () => {
               <p>Download our comprehensive info sheet for detailed pricing, contact information, and booking details for all activities.</p>
             </div>
             <a
-              href="/src/assets/documents/barra-cabanas-info-sheet.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={infoSheetPDF}
+              download="Barra-Cabanas-Info-Sheet.pdf"
               className="btn-download"
             >
               Download Info Sheet
