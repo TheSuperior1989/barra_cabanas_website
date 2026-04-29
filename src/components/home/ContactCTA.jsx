@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './ContactCTA.css';
-import balconyCornerBeachview from '../../assets/images/Houses/balcony-corner-beachview.jpg';
-import bedroomSuite02 from '../../assets/images/Houses/bedroom-suite-02.jpg';
-import bathroomVanity02 from '../../assets/images/Houses/bathroom-vanity-02.jpg';
-import livingRoomSofaShelving from '../../assets/images/Houses/living-room-sofa-shelving.jpg';
-import balconyDaybedOceanview from '../../assets/images/Houses/balcony-daybed-oceanview.jpg';
-import bedroomSuite03 from '../../assets/images/Houses/bedroom-suite-03.jpg';
-import diningKitchenOpenplan from '../../assets/images/Houses/dining-kitchen-openplan.jpg';
-import poolDeckAerialView from '../../assets/images/Houses/pool-deck-aerial-view.jpg';
-import balconyNarrowOceanview from '../../assets/images/Houses/balcony-narrow-oceanview.jpg';
-import bedroomSuite04 from '../../assets/images/Houses/bedroom-suite-04.jpg';
-import bathroomVanity03 from '../../assets/images/Houses/bathroom-vanity-03.jpg';
-import rooftopTerracePatio from '../../assets/images/Houses/rooftop-terrace-patio.jpg';
+import newAerialResortPools from '../../assets/images/Houses/new-aerial-resort-pools.jpg';
+import newHouseBeachfrontPool from '../../assets/images/Houses/new-house-beachfront-pool.jpg';
+import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
+import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
+import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
+import newLivingKitchenOpenplan from '../../assets/images/Houses/new-living-kitchen-openplan.jpg';
+import newLivingSofaLounge from '../../assets/images/Houses/new-living-sofa-lounge.jpg';
+import newKitchenIslandPendants from '../../assets/images/Houses/new-kitchen-island-pendants.jpg';
+import newKitchenOceanDoors from '../../assets/images/Houses/new-kitchen-ocean-doors.jpg';
+import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
+import newOutdoorPatioBraai from '../../assets/images/Houses/new-outdoor-patio-braai-ocean.jpg';
+import newPatioDiningOcean from '../../assets/images/Houses/new-patio-dining-ocean.jpg';
 
 const ContactCTA = () => {
   const [ref, inView] = useInView({
@@ -36,18 +36,18 @@ const ContactCTA = () => {
       {/* Scrolling Images Background */}
       <div className="scrolling-images">
         <div className="image-track">
-          <img src={balconyCornerBeachview} alt="Corner balcony with beachfront views" />
-          <img src={bedroomSuite02} alt="En-suite bedroom with queen bed" />
-          <img src={bathroomVanity02} alt="Modern bathroom with vanity" />
-          <img src={livingRoomSofaShelving} alt="Living room with comfortable sofa and shelving" />
-          <img src={balconyDaybedOceanview} alt="Balcony daybed with ocean panorama" />
-          <img src={bedroomSuite03} alt="Spacious bedroom suite" />
-          <img src={diningKitchenOpenplan} alt="Open plan dining and kitchen area" />
-          <img src={poolDeckAerialView} alt="Private splash pool aerial view" />
-          <img src={balconyNarrowOceanview} alt="Balcony with ocean view" />
-          <img src={bedroomSuite04} alt="Elegant bedroom with coastal design" />
-          <img src={bathroomVanity03} alt="Bathroom with modern fixtures" />
-          <img src={rooftopTerracePatio} alt="Rooftop terrace patio area" />
+          <img src={newAerialResortPools} alt="Aerial view of resort pools" />
+          <img src={newHouseBeachfrontPool} alt="Beachfront house with pool" />
+          <img src={newPoolOceanView} alt="Pool with ocean view" />
+          <img src={newBedroomQueenSuite} alt="Queen bedroom suite" />
+          <img src={newBedroomTwinSuite} alt="Twin bedroom suite" />
+          <img src={newLivingKitchenOpenplan} alt="Open plan living and kitchen" />
+          <img src={newLivingSofaLounge} alt="Living room sofa lounge" />
+          <img src={newKitchenIslandPendants} alt="Kitchen with island and pendants" />
+          <img src={newKitchenOceanDoors} alt="Kitchen with ocean doors" />
+          <img src={newBathroomBathVanity} alt="Bathroom with bath and vanity" />
+          <img src={newOutdoorPatioBraai} alt="Outdoor patio with braai" />
+          <img src={newPatioDiningOcean} alt="Patio dining with ocean view" />
         </div>
       </div>
 
