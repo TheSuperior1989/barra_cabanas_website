@@ -1,9 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import './ActivitiesPage.css';
-import infoSheetPDF from '../../assets/documents/barra-cabanas-info-sheet.pdf';
+import { sendContactForm } from '../../services/emailService';
 
 import activityScubaDiving from '../../assets/images/Activities/activity-scuba-diving.jpg';
 import activityDeepSeaFishing from '../../assets/images/Activities/activity-deep-sea-fishing.jpg';
@@ -81,8 +80,22 @@ const activities = [
   }
 ];
 
+const EMPTY_FORM = {
+  name: '',
+  email: '',
+  phone: '',
+  activity: '',
+  dates: '',
+  guests: '',
+  message: ''
+};
+
 const ActivitiesPage = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -92,6 +105,31 @@ const ActivitiesPage = () => {
   const itemVariants = {
     hidden: { y: 40, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage('');
+    const result = await sendContactForm({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: `Activities Enquiry${formData.activity ? ` – ${formData.activity}` : ''}`,
+      message: `Activity of interest: ${formData.activity || 'Not specified'}\nPreferred dates: ${formData.dates || 'Not specified'}\nGroup size: ${formData.guests || 'Not specified'}\n\n${formData.message}`,
+      service: 'activities-enquiry'
+    });
+    setIsSubmitting(false);
+    if (result.success) {
+      setSubmitted(true);
+      setFormData(EMPTY_FORM);
+    } else {
+      setErrorMessage(result.message);
+    }
   };
 
   return (
@@ -137,26 +175,84 @@ const ActivitiesPage = () => {
             ))}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="activities-pdf-section"
-          >
-            <FontAwesomeIcon icon={faFileDownload} className="pdf-icon" />
-            <div>
-              <h3>Full Activities Guide</h3>
-              <p>Download our comprehensive info sheet for detailed pricing, contact information, and booking details for all activities.</p>
-            </div>
-            <a
-              href={infoSheetPDF}
-              download="Barra-Cabanas-Info-Sheet.pdf"
-              className="btn-download"
-            >
-              Download Info Sheet
-            </a>
-          </motion.div>
+        </div>
+      </section>
 
+      <section className="activities-enquiry-section">
+        <div className="container">
+          <div className="activities-enquiry-header">
+            <h2>Enquire About Activities</h2>
+            <p>Interested in booking an activity or want more information? Send us a message and we'll get back to you with details and pricing.</p>
+          </div>
+
+          {submitted ? (
+            <div className="activities-enquiry-success">
+              <h3>Thank You!</h3>
+              <p>Your enquiry has been sent. We'll be in touch shortly with more details.</p>
+              <button className="btn btn-primary" onClick={() => setSubmitted(false)}>
+                Send Another Enquiry
+              </button>
+            </div>
+          ) : (
+            <form className="activities-enquiry-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Full Name *</label>
+                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address *</label>
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="guests">Group Size</label>
+                  <input type="number" id="guests" name="guests" min="1" value={formData.guests} onChange={handleChange} placeholder="Number of people" />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="activity">Activity of Interest</label>
+                  <select id="activity" name="activity" value={formData.activity} onChange={handleChange}>
+                    <option value="">Select an activity</option>
+                    <option value="Scuba Diving & Snorkeling">Scuba Diving & Snorkeling</option>
+                    <option value="Deep Sea Fishing">Deep Sea Fishing</option>
+                    <option value="Dolphin & Whale Watching">Dolphin & Whale Watching</option>
+                    <option value="Kayaking & Paddleboarding">Kayaking & Paddleboarding</option>
+                    <option value="Sunset Dhow Cruises">Sunset Dhow Cruises</option>
+                    <option value="Cultural Village Tours">Cultural Village Tours</option>
+                    <option value="Beach Volleyball & Water Sports">Beach Volleyball & Water Sports</option>
+                    <option value="Quad Biking & 4x4 Trails">Quad Biking & 4x4 Trails</option>
+                    <option value="Multiple Activities">Multiple Activities</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="dates">Preferred Dates</label>
+                  <input type="text" id="dates" name="dates" value={formData.dates} onChange={handleChange} placeholder="e.g. 15–22 July 2026" />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message *</label>
+                <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange} required placeholder="Tell us what you're looking for..." />
+              </div>
+
+              {errorMessage && (
+                <div className="form-message error">{errorMessage}</div>
+              )}
+
+              <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+              </button>
+            </form>
+          )}
         </div>
       </section>
     </div>

@@ -143,54 +143,113 @@
   border-radius: 20px;
 }
 
-/* PDF Download Section */
-.activities-pdf-section {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  background: white;
-  border-radius: 14px;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid var(--color-primary-beige);
+/* Activities Enquiry Section */
+.activities-enquiry-section {
+  padding: 80px 0;
+  background-color: #fff;
 }
 
-.activities-pdf-section .pdf-icon {
-  font-size: 2.5rem;
-  color: var(--color-primary-beige);
-  flex-shrink: 0;
+.activities-enquiry-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
-.activities-pdf-section h3 {
-  font-size: 1.3rem;
+.activities-enquiry-header h2 {
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
   color: var(--color-secondary-black);
+  margin-bottom: 12px;
 }
 
-.activities-pdf-section p {
-  font-size: 0.95rem;
+.activities-enquiry-header p {
+  font-size: 1.05rem;
   color: #666;
-  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.btn-download {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--color-primary-beige);
-  color: var(--color-secondary-black);
-  border: none;
-  border-radius: 8px;
+.activities-enquiry-form {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.activities-enquiry-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.activities-enquiry-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.activities-enquiry-form label {
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  white-space: nowrap;
-  text-decoration: none;
-  transition: background 0.2s ease;
+  color: var(--color-secondary-black);
 }
 
-.btn-download:hover {
-  background: #d4a96a;
+.activities-enquiry-form input,
+.activities-enquiry-form select,
+.activities-enquiry-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--color-secondary-black);
+  background: #fafafa;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.activities-enquiry-form input:focus,
+.activities-enquiry-form select:focus,
+.activities-enquiry-form textarea:focus {
+  border-color: var(--color-primary-beige);
+  background: #fff;
+}
+
+.activities-enquiry-form textarea {
+  resize: vertical;
+}
+
+.activities-enquiry-form .form-message.error {
+  background: #fff3f3;
+  border: 1px solid #ffcccc;
+  color: #cc0000;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.activities-enquiry-success {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  background: #f0f9f4;
+  border-radius: 14px;
+  border: 1px solid #b2dfdb;
+}
+
+.activities-enquiry-success h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-secondary-black);
+  margin-bottom: 12px;
+}
+
+.activities-enquiry-success p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
 }
 
 /* Responsive */
@@ -207,13 +266,7 @@
     grid-template-columns: 1fr;
   }
 
-  .activities-pdf-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .btn-download {
-    width: 100%;
-    text-align: center;
+  .activities-enquiry-form .form-row {
+    grid-template-columns: 1fr;
   }
 }
