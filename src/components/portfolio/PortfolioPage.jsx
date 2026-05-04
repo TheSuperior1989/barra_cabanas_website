@@ -12,17 +12,13 @@ import gal06 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg';
 import gal07 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg';
 import gal08 from '../../assets/images/Newest/NewestPhotosToUse/DSC05352.jpg';
 import gal09 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg';
-import gal10 from '../../assets/images/Newest/NewestPhotosToUse/DSC05356.jpg';
-import gal11 from '../../assets/images/Newest/NewestPhotosToUse/DSC05357.jpg';
 import gal12 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg';
 import gal13 from '../../assets/images/Newest/NewestPhotosToUse/DSC05363.jpg';
 import gal14 from '../../assets/images/Newest/NewestPhotosToUse/DSC05370.jpg';
 import gal15 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg';
 import gal16 from '../../assets/images/Newest/NewestPhotosToUse/DSC05377.jpg';
 import gal17 from '../../assets/images/Newest/NewestPhotosToUse/DSC05379.jpg';
-import gal18 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg';
 import gal19 from '../../assets/images/Newest/NewestPhotosToUse/DSC05383.jpg';
-import gal20 from '../../assets/images/Newest/NewestPhotosToUse/DSC05386.jpg';
 import gal21 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg';
 import gal22 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg';
 import gal23 from '../../assets/images/Newest/NewestPhotosToUse/DSC05420.jpg';
@@ -55,8 +51,8 @@ import gal49 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_177442801
 import gal50 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428014952.jpg';
 
 const galleryItems = [
-  gal01,gal02,gal03,gal04,gal05,gal06,gal07,gal08,gal09,gal10,
-  gal11,gal12,gal13,gal14,gal15,gal16,gal17,gal18,gal19,gal20,
+  gal01,gal02,gal03,gal04,gal05,gal06,gal07,gal08,gal09,
+  gal12,gal13,gal14,gal15,gal16,gal17,gal19,
   gal21,gal22,gal23,gal24,gal25,gal26,gal27,gal28,gal29,gal30,
   gal31,gal32,gal33,gal34,gal35,gal36,gal37,gal38,gal39,gal40,
   gal41,gal42,gal43,gal44,gal45,gal46,gal47,gal48,gal49,gal50,
