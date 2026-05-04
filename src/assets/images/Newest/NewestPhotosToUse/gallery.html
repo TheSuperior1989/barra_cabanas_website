@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { font-family: Arial; background: #111; color: #fff; margin: 0; padding: 10px; }
+.grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.item { text-align: center; }
+.item img { width: 100%; height: 160px; object-fit: cover; border: 1px solid #333; }
+.item p { font-size: 9px; margin: 2px 0; word-break: break-all; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="grid" id="g"></div>
+<script>
+const imgs = ["20251121_105920.jpg","20251121_111904.jpg","20251121_111943.jpg","20251121_151137.jpg","20251125_171323.jpg","20251125_171508.jpg","20251125_173816.jpg","20251127_094111.jpg","20251127_094221.jpg","20251127_094232.jpg","20251127_094318.jpg","20251127_094429.jpg","20251127_122605.jpg","20251127_173816.jpg","20251127_173825.jpg","20251127_173830.jpg","20251209_122827.jpg","20251209_122905.jpg","20251209_173937.jpg","20251209_174703.jpg","20251211_090703.jpg","20251211_144511.jpg","20251212_183413.jpg","20260123_124540.jpg","20260123_124542.jpg","20260123_124556.jpg","20260123_124605.jpg","20260123_124606.jpg","20260123_124610.jpg","20260123_124619(1).jpg","20260123_124619.jpg","20260123_124622.jpg","20260123_162449.jpg","20260123_163922.jpg","20260123_163933.jpg","20260123_164043(1).jpg","20260123_164043.jpg","20260123_164125.jpg","20260123_164201.jpg","20260123_164203.jpg","20260123_164223.jpg","20260123_164238.jpg","20260123_164245.jpg","20260123_164409.jpg","20260123_164412.jpg","20260123_164432.jpg","20260123_164445.jpg","20260123_164448.jpg","20260123_164452.jpg","20260123_164456.jpg","20260123_164513.jpg","20260123_164605.jpg","20260123_165959.jpg","20260123_170004(1).jpg","20260123_170004.jpg","20260123_170011.jpg","20260123_170018.jpg","20260123_170107.jpg","20260123_170112(1).jpg","20260123_170112.jpg","20260123_170131.jpg","20260123_171533.jpg","20260123_171537.jpg","20260123_171726.jpg","20260123_171729.jpg","20260123_172119.jpg","20260123_172122.jpg","20260408_092403.jpg","DJI_0116.jpg","DJI_0118.jpg","DJI_0141.jpg","DJI_0144.jpg","DSC05343.jpg","DSC05351.jpg","DSC05352.jpg","DSC05355.jpg","DSC05356.jpg","DSC05357.jpg","DSC05361.jpg","DSC05363.jpg","DSC05370.jpg","DSC05376.jpg","DSC05377.jpg","DSC05379.jpg","DSC05382.jpg","DSC05383.jpg","DSC05386.jpg","DSC05397.jpg","DSC05412.jpg","DSC05420.jpg","DSC05426.jpg","DSC05433.jpg","DSC05437.jpg","DSC05441.jpg","DSC05442.jpg","DSC05445.jpg","DSC05451.jpg","DSC05454.jpg","DSC05459.jpg","DSC05462.jpg","DSC05465.jpg","DSC05477.jpg","DSC05480.jpg","DSC05482.jpg","DSC05485.jpg","FB_IMG_1774428008107.jpg","FB_IMG_1774428010370.jpg","FB_IMG_1774428014952.jpg","IMG-20251121-WA0058.jpg","IMG-20251125-WA0088.jpg","IMG-20251125-WA0091.jpg","IMG-20251125-WA0094.jpg","IMG-20251125-WA0095.jpg","IMG-20251125-WA0102.jpg","IMG-20251125-WA0105.jpg","IMG-20251125-WA0106.jpg","IMG-20251125-WA0109.jpg","IMG-20251125-WA0129.jpg","IMG-20251125-WA0130.jpg","IMG-20251125-WA0131.jpg","IMG-20251125-WA0134.jpg","IMG-20251125-WA0137.jpg","IMG-20251125-WA0140.jpg","Top_View.jpg"];
+const g = document.getElementById('g');
+imgs.forEach(n => {
+  const d = document.createElement('div'); d.className='item';
+  const i = document.createElement('img'); i.src = n; i.alt=n;
+  const p = document.createElement('p'); p.textContent = n;
+  d.appendChild(i); d.appendChild(p); g.appendChild(d);
+});
+</script>
+</body></html>
