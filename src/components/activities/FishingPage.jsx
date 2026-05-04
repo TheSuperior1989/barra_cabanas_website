@@ -142,17 +142,35 @@ const FishingPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setErrorMessage('');
-    const result = await sendContactForm({
+
+    // Send email copy to Bookings@barracabanas.com
+    await sendContactForm({
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
       subject: `Fishing Charter Enquiry${formData.charter ? ` – ${formData.charter}` : ''}`,
-      message: `Charter: ${formData.charter || 'Not specified'}\nDates: ${formData.dates || 'Not specified'}\nGroup: ${formData.guests || 'Not specified'}\n\n${formData.message}`,
+      message: `Charter: ${formData.charter || 'Not specified'}\nDates: ${formData.dates || 'Not specified'}\nAnglers: ${formData.guests || 'Not specified'}\n\n${formData.message}`,
       service: 'fishing-enquiry',
     });
+
+    // Open WhatsApp with pre-filled message to Jigalouw (+258 87 998 6165)
+    const waText = [
+      `🎣 *Fishing Charter Enquiry – Barra Cabanas*`,
+      ``,
+      `*Name:* ${formData.name}`,
+      `*Email:* ${formData.email}`,
+      formData.phone ? `*Phone:* ${formData.phone}` : null,
+      formData.charter ? `*Charter:* ${formData.charter}` : null,
+      formData.guests ? `*Anglers:* ${formData.guests}` : null,
+      formData.dates ? `*Dates:* ${formData.dates}` : null,
+      formData.message ? `\n*Notes:* ${formData.message}` : null,
+    ].filter(Boolean).join('\n');
+
+    window.open(`https://wa.me/258879986165?text=${encodeURIComponent(waText)}`, '_blank');
+
     setIsSubmitting(false);
-    if (result.success) { setSubmitted(true); setFormData(EMPTY_FORM); }
-    else setErrorMessage(result.message);
+    setSubmitted(true);
+    setFormData(EMPTY_FORM);
   };
 
   const containerVariants = {
@@ -384,12 +402,12 @@ const FishingPage = () => {
         </div>
       </section>
 
-      {/* ── DEPOSITS & BANKING ─────────────────────────────────── */}
+      {/* ── DEPOSITS & CONTACT ─────────────────────────────────── */}
       <section className="fp-booking" id="booking-info">
         <div className="container">
           <motion.div
             ref={bookingRef}
-            className="fp-booking-grid"
+            className="fp-booking-grid fp-booking-grid--two"
             variants={containerVariants}
             initial="hidden"
             animate={bookingInView ? 'visible' : 'hidden'}
@@ -403,21 +421,6 @@ const FishingPage = () => {
                 <li>All charters subject to weather conditions.</li>
                 <li>Cancellations by us: alternative date offered or <strong>full refund</strong>.</li>
               </ul>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="fp-info-card fp-info-card--dark">
-              <div className="fp-info-icon">🏦</div>
-              <h3>Banking Details</h3>
-              <p className="fp-banking-entity">JIGALOUW ADVENTURES (PTY) LTD</p>
-              <table className="fp-banking-table">
-                <tbody>
-                  <tr><td>Bank</td><td>FNB Business Account</td></tr>
-                  <tr><td>Account No</td><td>63197721319</td></tr>
-                  <tr><td>Branch Code</td><td>255355</td></tr>
-                  <tr><td>Swift Code</td><td>FIRNZAJJ</td></tr>
-                  <tr><td>Reference</td><td>Your Name & Surname</td></tr>
-                </tbody>
-              </table>
             </motion.div>
 
             <motion.div variants={itemVariants} className="fp-info-card fp-info-card--contact">

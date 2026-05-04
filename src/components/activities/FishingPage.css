@@ -679,6 +679,12 @@
   gap: 1.75rem;
 }
 
+.fp-booking-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
 .fp-info-card {
   background: var(--color-light-beige);
   border-radius: 18px;
@@ -723,44 +729,6 @@
   font-weight: 700;
 }
 
-.fp-info-card--dark {
-  background: var(--color-secondary-black);
-  border-color: transparent;
-}
-
-.fp-info-card--dark h3 {
-  color: #fff;
-}
-
-.fp-banking-entity {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  color: var(--color-primary-beige);
-  margin-bottom: 16px;
-}
-
-.fp-banking-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.fp-banking-table td {
-  padding: 7px 0;
-  font-size: 0.88rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.fp-banking-table td:first-child {
-  color: rgba(255,255,255,0.5);
-  width: 42%;
-  font-weight: 500;
-}
-
-.fp-banking-table td:last-child {
-  color: #fff;
-  font-weight: 600;
-}
 
 .fp-info-card--contact {
   background: var(--color-light-beige);
