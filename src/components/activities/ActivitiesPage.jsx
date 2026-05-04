@@ -18,6 +18,10 @@ import restTikiBar from '../../assets/images/Activities/Restaurants/tiki-bar.jpe
 import restPaladar from '../../assets/images/Activities/Restaurants/paladar-restaurant-bar.jpeg';
 import restNeptunes from '../../assets/images/Activities/Restaurants/neptunes-lodge-beach-bar.jpeg';
 import restWhiteSands from '../../assets/images/Activities/Restaurants/white-sands.jpg';
+import restBrankos from '../../assets/images/Activities/Restaurants/brankos.jpg';
+import restKumbaLodge from '../../assets/images/Activities/Restaurants/kumba-lodge.jpg';
+import restMangoBeach from '../../assets/images/Activities/Restaurants/mango-beach.jpg';
+import restSumiBar from '../../assets/images/Activities/Restaurants/sumi-bar-kitchen.jpg';
 
 const activities = [
   {
@@ -143,7 +147,7 @@ const restaurants = [
     emoji: '🍕',
     description: 'Consistently rated #1 in Tofo. Famous for wood-fired pizzas, hot stone tuna and seafood. Budget-friendly and legendary.',
     highlight: true,
-    image: null,
+    image: restBrankos,
     link: 'https://www.google.com/search?q=Brankos+Tofo',
   },
   {
@@ -151,7 +155,7 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🍱',
     description: 'Authentic Japanese sushi and cuisine in stunning tropical surrounds.',
-    image: null,
+    image: restSumiBar,
     link: 'https://www.google.com/search?q=Sumi+Bar+Tofo',
   },
   {
@@ -175,7 +179,7 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🥭',
     description: 'Beachfront dining in Tofo with fresh local cuisine, cold drinks, and ocean views.',
-    image: null,
+    image: restMangoBeach,
     link: 'https://www.facebook.com/mangobeachtofo',
   },
   {
@@ -199,7 +203,7 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🏡',
     description: 'Restaurant at Kumba Lodge offering a relaxed dining experience in the heart of Tofo.',
-    image: null,
+    image: restKumbaLodge,
     link: 'https://www.google.com/search?q=Kumba+Lodge+Tofo',
   },
   {
