@@ -12,12 +12,12 @@ import activityDhowCruise from '../../assets/images/Activities/activity-dhow-cru
 import activityVillageTour from '../../assets/images/Activities/activity-village-tour.jpg';
 import activityQuadBiking from '../../assets/images/Activities/activity-quad-biking.jpg';
 
-import restThirstyParrot from '../../assets/images/Activities/Restaurants/Thirsty Parrot.jpeg';
-import restCaptainsTable from '../../assets/images/Activities/Restaurants/The Captains Table.jpeg';
-import restTikiBar from '../../assets/images/Activities/Restaurants/Tiki Bar.jpeg';
-import restPaladar from '../../assets/images/Activities/Restaurants/Paladar Restaurant & Bar.jpeg';
-import restNeptunes from "../../assets/images/Activities/Restaurants/Neptune's Lodge and Beach Bar.jpeg";
-import restWhiteSands from '../../assets/images/Activities/Restaurants/White Sands.jpg';
+import restThirstyParrot from '../../assets/images/Activities/Restaurants/thirsty-parrot.jpeg';
+import restCaptainsTable from '../../assets/images/Activities/Restaurants/the-captains-table.jpeg';
+import restTikiBar from '../../assets/images/Activities/Restaurants/tiki-bar.jpeg';
+import restPaladar from '../../assets/images/Activities/Restaurants/paladar-restaurant-bar.jpeg';
+import restNeptunes from '../../assets/images/Activities/Restaurants/neptunes-lodge-beach-bar.jpeg';
+import restWhiteSands from '../../assets/images/Activities/Restaurants/white-sands.jpg';
 
 const activities = [
   {
