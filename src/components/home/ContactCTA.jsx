@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './ContactCTA.css';
-import newAerialResortPools from '../../assets/images/Houses/new-aerial-resort-pools.jpg';
-import newHouseBeachfrontPool from '../../assets/images/Houses/new-house-beachfront-pool.jpg';
-import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
-import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
-import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
-import newLivingKitchenOpenplan from '../../assets/images/Houses/new-living-kitchen-openplan.jpg';
-import newLivingSofaLounge from '../../assets/images/Houses/new-living-sofa-lounge.jpg';
-import newKitchenIslandPendants from '../../assets/images/Houses/new-kitchen-island-pendants.jpg';
-import newKitchenOceanDoors from '../../assets/images/Houses/new-kitchen-ocean-doors.jpg';
-import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
-import newOutdoorPatioBraai from '../../assets/images/Houses/new-outdoor-patio-braai-ocean.jpg';
-import newPatioDiningOcean from '../../assets/images/Houses/new-patio-dining-ocean.jpg';
+import cta01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
+import cta02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg';
+import cta03 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg';
+import cta04 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
+import cta05 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg';
+import cta06 from '../../assets/images/Newest/NewestPhotosToUse/20260123_124540.jpg';
+import cta07 from '../../assets/images/Newest/NewestPhotosToUse/20260123_124556.jpg';
+import cta08 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164201.jpg';
+import cta09 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164223.jpg';
+import cta10 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164432.jpg';
+import cta11 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428008107.jpg';
+import cta12 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428010370.jpg';
 
 const ContactCTA = () => {
   const [ref, inView] = useInView({
@@ -36,18 +36,18 @@ const ContactCTA = () => {
       {/* Scrolling Images Background */}
       <div className="scrolling-images">
         <div className="image-track">
-          <img src={newAerialResortPools} alt="Aerial view of resort pools" />
-          <img src={newHouseBeachfrontPool} alt="Beachfront house with pool" />
-          <img src={newPoolOceanView} alt="Pool with ocean view" />
-          <img src={newBedroomQueenSuite} alt="Queen bedroom suite" />
-          <img src={newBedroomTwinSuite} alt="Twin bedroom suite" />
-          <img src={newLivingKitchenOpenplan} alt="Open plan living and kitchen" />
-          <img src={newLivingSofaLounge} alt="Living room sofa lounge" />
-          <img src={newKitchenIslandPendants} alt="Kitchen with island and pendants" />
-          <img src={newKitchenOceanDoors} alt="Kitchen with ocean doors" />
-          <img src={newBathroomBathVanity} alt="Bathroom with bath and vanity" />
-          <img src={newOutdoorPatioBraai} alt="Outdoor patio with braai" />
-          <img src={newPatioDiningOcean} alt="Patio dining with ocean view" />
+          <img src={cta01} alt="Aerial drone view" />
+          <img src={cta02} alt="Aerial resort view" />
+          <img src={cta03} alt="Overhead aerial shot" />
+          <img src={cta04} alt="Drone beachfront view" />
+          <img src={cta05} alt="Top aerial view" />
+          <img src={cta06} alt="Barra Cabanas exterior" />
+          <img src={cta07} alt="Beachfront property" />
+          <img src={cta08} alt="Interior living space" />
+          <img src={cta09} alt="Accommodation interior" />
+          <img src={cta10} alt="Property outdoor area" />
+          <img src={cta11} alt="Barra Cabanas" />
+          <img src={cta12} alt="Barra Cabanas property" />
         </div>
       </div>
 

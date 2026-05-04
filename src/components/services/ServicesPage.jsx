@@ -12,21 +12,28 @@ import BorderCrossing from './BorderCrossing';
 import InfoSheetDownload from '../common/InfoSheetDownload';
 import floorPlan from '../../assets/images/floor_plan.jpeg';
 import beachAccessPhoto from '../../assets/images/beach_access_photo.jpeg';
-import newHouseBeachfrontPool from '../../assets/images/Houses/new-house-beachfront-pool.jpg';
-import newHousePoolPatio from '../../assets/images/Houses/new-house-pool-patio-exterior.jpg';
-import newAerialResortPools from '../../assets/images/Houses/new-aerial-resort-pools.jpg';
-import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
-import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
-import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
-import newLivingKitchenOpenplan from '../../assets/images/Houses/new-living-kitchen-openplan.jpg';
-import newLivingSofaLounge from '../../assets/images/Houses/new-living-sofa-lounge.jpg';
-import newKitchenIslandPendants from '../../assets/images/Houses/new-kitchen-island-pendants.jpg';
-import newKitchenOceanDoors from '../../assets/images/Houses/new-kitchen-ocean-doors.jpg';
-import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
-import newOutdoorPatioBraai from '../../assets/images/Houses/new-outdoor-patio-braai-ocean.jpg';
-import newPatioDiningOcean from '../../assets/images/Houses/new-patio-dining-ocean.jpg';
-import newReceptionExterior from '../../assets/images/Houses/new-reception-exterior.jpg';
-import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
+import sv01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
+import sv02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg';
+import sv03 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg';
+import sv04 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg';
+import sv05 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg';
+import sv06 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg';
+import sv07 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg';
+import sv08 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg';
+import sv09 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg';
+import sv10 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg';
+import sv11 from '../../assets/images/Newest/NewestPhotosToUse/DSC05426.jpg';
+import sv12 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg';
+import sv13 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg';
+import sv14 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
+import sv15 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg';
+import sv16 from '../../assets/images/Newest/NewestPhotosToUse/DSC05433.jpg';
+import sv17 from '../../assets/images/Newest/NewestPhotosToUse/DSC05437.jpg';
+import sv18 from '../../assets/images/Newest/NewestPhotosToUse/DSC05441.jpg';
+import sv19 from '../../assets/images/Newest/NewestPhotosToUse/DSC05442.jpg';
+import sv20 from '../../assets/images/Newest/NewestPhotosToUse/DSC05445.jpg';
+import sv21 from '../../assets/images/Newest/NewestPhotosToUse/DSC05451.jpg';
+import sv22 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg';
 import './ServicesPage.css';
 
 // Separate component for service items to fix React Hooks violation
@@ -127,14 +134,7 @@ const accommodations = [
     icon: faHome,
     title: 'Luxury Beachfront Holiday House',
     description: 'Spacious 6-bedroom beachfront house perfect for families and groups. Sleeps up to 12 guests with all modern amenities for an unforgettable beach getaway.',
-    images: [
-      newHouseBeachfrontPool,
-      newAerialResortPools,
-      newPoolOceanView,
-      newBedroomQueenSuite,
-      newLivingKitchenOpenplan,
-      newOutdoorPatioBraai,
-    ],
+    images: [sv01, sv02, sv03, sv04, sv05, sv06],
     details: [
       '6 En-suite bedrooms (4 queen beds, 2 twin rooms)',
       '5 Showers, 1 bath',
@@ -156,13 +156,7 @@ const accommodations = [
     icon: faStar,
     title: 'Premium Add-On Services',
     description: 'Enhance your stay with optional luxury services and experiences.',
-    images: [
-      newPatioDiningOcean,
-      newLivingSofaLounge,
-      newKitchenOceanDoors,
-      newBathroomBathVanity,
-      beachLoungersOceanfront,
-    ],
+    images: [sv07, sv08, sv09, sv10, sv11, sv12],
     details: [
       'Laundry service available',
       'Airport transfers from Inhambane',
@@ -252,18 +246,18 @@ const ServicesPage = () => {
         {/* Scrolling Images Background */}
         <div className="scrolling-images">
           <div className="image-track">
-            <img src={newHouseBeachfrontPool} alt="Beachfront house with pool" />
-            <img src={newBedroomQueenSuite} alt="En-suite queen bedroom" />
-            <img src={newPoolOceanView} alt="Pool with ocean view" />
-            <img src={newLivingKitchenOpenplan} alt="Open plan living and kitchen" />
-            <img src={newKitchenIslandPendants} alt="Modern kitchen with island" />
-            <img src={newBathroomBathVanity} alt="Bathroom with bath and vanity" />
-            <img src={newPatioDiningOcean} alt="Outdoor dining with ocean view" />
-            <img src={newBedroomTwinSuite} alt="Twin bedroom suite" />
-            <img src={beachLoungersOceanfront} alt="Beach loungers on oceanfront" />
-            <img src={newLivingSofaLounge} alt="Living room with sofa lounge" />
-            <img src={newAerialResortPools} alt="Aerial view of resort pools" />
-            <img src={newReceptionExterior} alt="Resort reception exterior" />
+            <img src={sv13} alt="Aerial view" />
+            <img src={sv14} alt="Drone beachfront" />
+            <img src={sv15} alt="Top view" />
+            <img src={sv16} alt="Property interior" />
+            <img src={sv17} alt="Living space" />
+            <img src={sv18} alt="Accommodation" />
+            <img src={sv19} alt="Interior detail" />
+            <img src={sv20} alt="Property room" />
+            <img src={sv21} alt="Luxury interior" />
+            <img src={sv22} alt="Outdoor area" />
+            <img src={sv01} alt="Aerial drone" />
+            <img src={sv02} alt="Overhead view" />
           </div>
         </div>
 

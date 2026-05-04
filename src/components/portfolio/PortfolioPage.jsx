@@ -3,55 +3,64 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './PortfolioPage.css';
 
-import newAerialResortPools from '../../assets/images/Houses/new-aerial-resort-pools.jpg';
-import newAerialBeachfrontOcean from '../../assets/images/Houses/new-aerial-beachfront-ocean.jpg';
-import newAerialResortOverhead from '../../assets/images/Houses/new-aerial-resort-overhead.jpg';
-import newHouseBeachfrontPool from '../../assets/images/Houses/new-house-beachfront-pool.jpg';
-import newHousePoolPatio from '../../assets/images/Houses/new-house-pool-patio-exterior.jpg';
-import newBeachAccessPalmtree from '../../assets/images/Houses/new-beach-access-palmtree.jpg';
-import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
-import beachLoungersOceanfront from '../../assets/images/Houses/beach-loungers-oceanfront.jpg';
-import beachAccessPalmtree from '../../assets/images/Houses/beach-access-palmtree.jpg';
-import newOutdoorPatioBraai from '../../assets/images/Houses/new-outdoor-patio-braai-ocean.jpg';
-import newPatioDiningOcean from '../../assets/images/Houses/new-patio-dining-ocean.jpg';
-import newReceptionExterior from '../../assets/images/Houses/new-reception-exterior.jpg';
-import newReceptionInterior from '../../assets/images/Houses/new-reception-interior.jpg';
-import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
-import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
-import newLivingKitchenOpenplan from '../../assets/images/Houses/new-living-kitchen-openplan.jpg';
-import newLivingSofaLounge from '../../assets/images/Houses/new-living-sofa-lounge.jpg';
-import newKitchenIslandPendants from '../../assets/images/Houses/new-kitchen-island-pendants.jpg';
-import newKitchenOceanDoors from '../../assets/images/Houses/new-kitchen-ocean-doors.jpg';
-import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
-import newBathroomVanityShower from '../../assets/images/Houses/new-bathroom-vanity-shower.jpg';
-import parkingCarportsOverhead from '../../assets/images/Houses/parking-carports-overhead.jpg';
-import jetskiStorageShelter from '../../assets/images/Houses/jetski-storage-shelter.jpg';
+import gal01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
+import gal02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg';
+import gal03 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg';
+import gal04 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
+import gal05 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg';
+import gal06 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg';
+import gal07 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg';
+import gal08 from '../../assets/images/Newest/NewestPhotosToUse/DSC05352.jpg';
+import gal09 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg';
+import gal10 from '../../assets/images/Newest/NewestPhotosToUse/DSC05356.jpg';
+import gal11 from '../../assets/images/Newest/NewestPhotosToUse/DSC05357.jpg';
+import gal12 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg';
+import gal13 from '../../assets/images/Newest/NewestPhotosToUse/DSC05363.jpg';
+import gal14 from '../../assets/images/Newest/NewestPhotosToUse/DSC05370.jpg';
+import gal15 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg';
+import gal16 from '../../assets/images/Newest/NewestPhotosToUse/DSC05377.jpg';
+import gal17 from '../../assets/images/Newest/NewestPhotosToUse/DSC05379.jpg';
+import gal18 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg';
+import gal19 from '../../assets/images/Newest/NewestPhotosToUse/DSC05383.jpg';
+import gal20 from '../../assets/images/Newest/NewestPhotosToUse/DSC05386.jpg';
+import gal21 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg';
+import gal22 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg';
+import gal23 from '../../assets/images/Newest/NewestPhotosToUse/DSC05420.jpg';
+import gal24 from '../../assets/images/Newest/NewestPhotosToUse/DSC05426.jpg';
+import gal25 from '../../assets/images/Newest/NewestPhotosToUse/DSC05433.jpg';
+import gal26 from '../../assets/images/Newest/NewestPhotosToUse/DSC05437.jpg';
+import gal27 from '../../assets/images/Newest/NewestPhotosToUse/DSC05441.jpg';
+import gal28 from '../../assets/images/Newest/NewestPhotosToUse/DSC05442.jpg';
+import gal29 from '../../assets/images/Newest/NewestPhotosToUse/DSC05445.jpg';
+import gal30 from '../../assets/images/Newest/NewestPhotosToUse/DSC05451.jpg';
+import gal31 from '../../assets/images/Newest/NewestPhotosToUse/DSC05454.jpg';
+import gal32 from '../../assets/images/Newest/NewestPhotosToUse/DSC05459.jpg';
+import gal33 from '../../assets/images/Newest/NewestPhotosToUse/DSC05462.jpg';
+import gal34 from '../../assets/images/Newest/NewestPhotosToUse/DSC05465.jpg';
+import gal35 from '../../assets/images/Newest/NewestPhotosToUse/DSC05477.jpg';
+import gal36 from '../../assets/images/Newest/NewestPhotosToUse/DSC05480.jpg';
+import gal37 from '../../assets/images/Newest/NewestPhotosToUse/DSC05482.jpg';
+import gal38 from '../../assets/images/Newest/NewestPhotosToUse/DSC05485.jpg';
+import gal39 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg';
+import gal40 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg';
+import gal41 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163933.jpg';
+import gal42 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164043.jpg';
+import gal43 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164125.jpg';
+import gal44 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164201.jpg';
+import gal45 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164223.jpg';
+import gal46 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164432.jpg';
+import gal47 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164605.jpg';
+import gal48 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428008107.jpg';
+import gal49 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428010370.jpg';
+import gal50 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428014952.jpg';
 
 const galleryItems = [
-  { id: 1, image: newAerialResortPools },
-  { id: 2, image: newAerialBeachfrontOcean },
-  { id: 3, image: newAerialResortOverhead },
-  { id: 4, image: newHouseBeachfrontPool },
-  { id: 5, image: newHousePoolPatio },
-  { id: 6, image: newBeachAccessPalmtree },
-  { id: 7, image: newPoolOceanView },
-  { id: 8, image: beachLoungersOceanfront },
-  { id: 9, image: beachAccessPalmtree },
-  { id: 10, image: newOutdoorPatioBraai },
-  { id: 11, image: newPatioDiningOcean },
-  { id: 12, image: newReceptionExterior },
-  { id: 13, image: newReceptionInterior },
-  { id: 14, image: newBedroomQueenSuite },
-  { id: 15, image: newBedroomTwinSuite },
-  { id: 16, image: newLivingKitchenOpenplan },
-  { id: 17, image: newLivingSofaLounge },
-  { id: 18, image: newKitchenIslandPendants },
-  { id: 19, image: newKitchenOceanDoors },
-  { id: 20, image: newBathroomBathVanity },
-  { id: 21, image: newBathroomVanityShower },
-  { id: 22, image: parkingCarportsOverhead },
-  { id: 23, image: jetskiStorageShelter },
-];
+  gal01,gal02,gal03,gal04,gal05,gal06,gal07,gal08,gal09,gal10,
+  gal11,gal12,gal13,gal14,gal15,gal16,gal17,gal18,gal19,gal20,
+  gal21,gal22,gal23,gal24,gal25,gal26,gal27,gal28,gal29,gal30,
+  gal31,gal32,gal33,gal34,gal35,gal36,gal37,gal38,gal39,gal40,
+  gal41,gal42,gal43,gal44,gal45,gal46,gal47,gal48,gal49,gal50,
+].map((image, i) => ({ id: i + 1, image }));
 
 const PortfolioPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);

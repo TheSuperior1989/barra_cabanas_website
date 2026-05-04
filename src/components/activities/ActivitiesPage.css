@@ -48,7 +48,7 @@
 
 .activities-content {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 /* Activities Grid */
@@ -190,7 +190,7 @@
 /* Restaurant suggestions */
 .activities-restaurants-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: var(--color-light-beige);
 }
 
 .restaurants-grid {

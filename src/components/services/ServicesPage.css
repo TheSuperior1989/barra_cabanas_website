@@ -86,7 +86,7 @@
 
 .services-list {
   padding: 50px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .service-item {
@@ -252,7 +252,7 @@
 /* Beach Access Section */
 .beach-access-section {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .beach-access-section .section-title {

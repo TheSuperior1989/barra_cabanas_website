@@ -4,31 +4,31 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './HouseFeatures.css';
 
-// Beachfront with Pool images
-import infinityPoolOceanview from '../../assets/images/Houses/infinity-pool-oceanview.jpg';
-import newHousePoolPatio from '../../assets/images/Houses/new-house-pool-patio-exterior.jpg';
-import newPoolOceanView from '../../assets/images/Houses/new-pool-ocean-view.jpg';
+// Beachfront / Outdoor
+import hf_pool1 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
+import hf_pool2 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
+import hf_pool3 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg';
+import hf_pool4 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg';
 
-// 6 Air-conditioned Bedrooms images
-import newBedroomQueenSuite from '../../assets/images/Houses/new-bedroom-queen-suite.jpg';
-import bedroomSuite03 from '../../assets/images/Houses/bedroom-suite-03.jpg';
-import bedroomSuite04 from '../../assets/images/Houses/bedroom-suite-04.jpg';
-import newBedroomTwinSuite from '../../assets/images/Houses/new-bedroom-twin-suite.jpg';
-import bedroomSuite10 from '../../assets/images/Houses/bedroom-suite-10.jpg';
-import bedroomSuite11 from '../../assets/images/Houses/bedroom-suite-11.jpg';
+// Bedrooms
+import hf_bed1 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg';
+import hf_bed2 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg';
+import hf_bed3 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg';
+import hf_bed4 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg';
+import hf_bed5 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg';
+import hf_bed6 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg';
 
-// En-suite Bathrooms images
-import newBathroomBathVanity from '../../assets/images/Houses/new-bathroom-bath-vanity.jpg';
-import newBathroomVanityShower from '../../assets/images/Houses/new-bathroom-vanity-shower.jpg';
-import bathroomVanity03 from '../../assets/images/Houses/bathroom-vanity-03.jpg';
+// Bathrooms / Interior
+import hf_bath1 from '../../assets/images/Newest/NewestPhotosToUse/DSC05386.jpg';
+import hf_bath2 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg';
+import hf_bath3 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg';
 
-// House features with rotating images
 const features = [
   {
     id: 1,
     title: 'Beachfront with Pool',
     category: 'Outdoor Living',
-    images: [infinityPoolOceanview, newHousePoolPatio, newPoolOceanView],
+    images: [hf_pool1, hf_pool2, hf_pool3, hf_pool4],
     description: 'Private splash pool with ocean views, perfect for relaxing under the African sun. Direct beach access for morning swims.',
     link: '/services#barra-cabanas-house'
   },
@@ -36,7 +36,7 @@ const features = [
     id: 2,
     title: '6 Air-conditioned Bedrooms',
     category: 'Comfortable Accommodation',
-    images: [newBedroomQueenSuite, bedroomSuite03, bedroomSuite04, newBedroomTwinSuite, bedroomSuite10, bedroomSuite11],
+    images: [hf_bed1, hf_bed2, hf_bed3, hf_bed4, hf_bed5, hf_bed6],
     description: 'Spacious en-suite bedrooms with air-conditioning. Mix of queen and twin beds to accommodate families and groups up to 12 guests.',
     link: '/services#barra-cabanas-house'
   },
@@ -44,7 +44,7 @@ const features = [
     id: 3,
     title: 'En-suite Bathrooms',
     category: 'Modern Amenities',
-    images: [newBathroomBathVanity, newBathroomVanityShower, bathroomVanity03],
+    images: [hf_bath1, hf_bath2, hf_bath3],
     description: 'Every bedroom features a private en-suite bathroom with modern fixtures, showers, and elegant coastal design.',
     link: '/services#barra-cabanas-house'
   }
