@@ -107,6 +107,7 @@ const Footer = () => {
         <div className="container container--mw1320">
           <div className="footer-bottom-content">
             <p className="copyright">&copy; {currentYear} Barra Cabanas. All rights reserved.</p>
+            <p className="built-by">Built by SkillAxis Dynamics</p>
           </div>
         </div>
       </div>
