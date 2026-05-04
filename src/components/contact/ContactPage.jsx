@@ -260,21 +260,22 @@ const ContactPage = () => {
       <section className="map-section">
         <div className="container">
           <h2 className="section-title">Find Us</h2>
-          <p className="section-subtitle">Visit us at Barra Beach, Inhambane, Mozambique</p>
-          <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7!2d35.5!3d-23.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDUxJzAwLjAiUyAzNcKwMzAnMDAuMCJF!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-              width="100%"
-              height="450"
-              style={{ border: 0, borderRadius: '15px' }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Barra Cabanas Location"
-            ></iframe>
-            <p className="map-note">
-              📍 Note: This is a placeholder location. The exact coordinates will be updated with the actual property location.
-            </p>
+          <p className="section-subtitle">Barra Beach, Inhambane, Mozambique</p>
+          <div className="map-directions-card">
+            <div className="map-directions-icon">📍</div>
+            <div className="map-directions-info">
+              <h3>Barra Cabanas</h3>
+              <p>Barra Beach, Inhambane, Mozambique</p>
+              <p className="map-directions-note">Follow the Google Maps pin for accurate turn-by-turn directions to our property — including the beach track approach.</p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/bVWy8sWu5vnhugQj8?g_st=aw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary map-directions-btn"
+            >
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </section>

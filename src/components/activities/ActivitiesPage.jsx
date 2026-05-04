@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './ActivitiesPage.css';
@@ -28,7 +29,9 @@ const activities = [
     emoji: '🎣',
     image: activityDeepSeaFishing,
     highlights: ['Marlin, sailfish & tuna', 'Half & full-day charters', 'Experienced skippers', 'Catch-and-release available'],
-    description: 'Barra is renowned for world-class big game fishing. The warm Mozambique Channel is home to marlin, sailfish, dorado, yellowfin tuna, and kingfish. Charter a fully equipped boat with an experienced skipper and crew for an unforgettable day on the water.'
+    description: 'Barra is renowned for world-class big game fishing. The warm Mozambique Channel is home to marlin, sailfish, dorado, yellowfin tuna, and kingfish. Charter a fully equipped boat with an experienced skipper and crew for an unforgettable day on the water.',
+    featuredLink: '/activities/fishing',
+    featuredLinkText: 'View Charter Packages →'
   },
   {
     id: 3,
@@ -78,6 +81,109 @@ const activities = [
     highlights: ['Coastal dune trails', 'Guided & self-guided rides', 'Suitable for beginners', 'Beach & bush routes'],
     description: 'Explore the dramatic sand dunes, bush tracks, and coastal paths around Barra on quad bikes or in a 4x4 vehicle. Local operators offer guided tours that take you through spectacular scenery — from sweeping ocean vistas to remote bush trails teeming with wildlife.'
   }
+];
+
+const operators = [
+  {
+    name: 'Kape Kape Tours',
+    activity: 'Quad Biking',
+    emoji: '🏍️',
+    description: 'Guided quad bike tours along Barra\'s dramatic coastal dunes and beach tracks.',
+    link: 'https://share.google/dCxF0XI6NwFOaIxy2',
+    linkLabel: 'View on Google Maps',
+    initials: 'KK',
+    color: '#D4C4A3',
+  },
+  {
+    name: 'Aquaholics Barra',
+    activity: 'Scuba Diving & Snorkeling',
+    emoji: '🤿',
+    description: 'PADI-certified dive centre at Barra Beach. Reef dives, freediving, courses, kayak hire & ocean safaris.',
+    link: 'https://www.barrascuba.com',
+    linkLabel: 'Visit Website',
+    initials: 'AB',
+    color: '#A5BDAB',
+  },
+  {
+    name: 'SEE Activity Center',
+    activity: 'Watersports & Activities',
+    emoji: '🌊',
+    description: 'Dolphin & whale watching, dhow cruises, mangrove kayaking, and guided ocean safaris from Barra.',
+    link: 'https://www.facebook.com/SEEActivityCenter',
+    linkLabel: 'Find on Facebook',
+    initials: 'SEE',
+    color: '#87A78F',
+  },
+  {
+    name: 'Coco Adventure Village',
+    activity: 'Cultural Tours',
+    emoji: '🏡',
+    description: 'Authentic cultural village experiences — meet local Mozambican communities and explore traditional life.',
+    link: 'https://share.google/L2xeRcYt4XeqRiK9a',
+    linkLabel: 'View on Google Maps',
+    initials: 'CA',
+    color: '#E8D5B7',
+  },
+  {
+    name: 'Barra Vida',
+    activity: 'Island Excursions',
+    emoji: '⛵',
+    description: 'Estuary & island boat trips — Pansy Island, Linga Linga village, sunset cruises & BBQ charters.',
+    link: 'https://www.facebook.com/share/1LUn5VWGeo/',
+    linkLabel: 'Find on Facebook',
+    initials: 'BV',
+    color: '#C8B8AF',
+  },
+];
+
+const restaurants = [
+  {
+    name: "Branko's",
+    location: 'Tofo — 22 km',
+    emoji: '🍕',
+    description: 'Consistently rated #1 in Tofo. Famous for wood-fired pizzas, hot stone tuna and seafood. Budget-friendly and legendary.',
+    phone: '+258 84 066 6470',
+    whatsapp: 'https://wa.me/258840666470',
+    highlight: true,
+  },
+  {
+    name: "Dino's Beach Bar & Restaurant",
+    location: 'Tofo — 22 km',
+    emoji: '🍹',
+    description: 'Tofo\'s landmark beachfront bar since 1999. Pizzas, seafood, cocktails, live music and DJs. Open Thu–Tue.',
+    facebook: 'https://www.facebook.com/DinosBeachBar',
+  },
+  {
+    name: 'Sumi Bar & Kitchen',
+    location: 'Tofo — 22 km',
+    emoji: '🍱',
+    description: 'Authentic Japanese sushi and cuisine in stunning tropical surrounds. TripAdvisor 4.6/5.',
+    phone: '+258 84 564 6554',
+    whatsapp: 'https://wa.me/258845646554',
+    facebook: 'https://www.facebook.com/sumibarandkitchen',
+  },
+  {
+    name: 'Bistro O Pescador',
+    location: 'Inhambane — 25 km',
+    emoji: '🦐',
+    description: 'Seafood, curries and pizzas at the old port of Inhambane with beautiful harbour views.',
+    facebook: 'https://www.facebook.com/people/Bistro-O-Pescador/100051397136209',
+  },
+  {
+    name: 'Restaurante Ponte Cais',
+    location: 'Inhambane — 25 km',
+    emoji: '🌊',
+    description: 'Bay-view restaurant at the pier — best seafood and pizza in Inhambane town. 4.1/5 on Google (321 reviews).',
+    phone: '+258 84 629 3189',
+    whatsapp: 'https://wa.me/258846293189',
+  },
+  {
+    name: "Verdinho's",
+    location: 'Inhambane — 25 km',
+    emoji: '🍽️',
+    description: 'Popular local café and pizzeria. Affordable, delicious and a genuine local favourite.',
+    facebook: 'https://www.facebook.com/Verdinhos.Inhambane',
+  },
 ];
 
 const EMPTY_FORM = {
@@ -155,12 +261,15 @@ const ActivitiesPage = () => {
             className="activities-grid"
           >
             {activities.map((activity) => (
-              <motion.div key={activity.id} className="activity-card" variants={itemVariants}>
+              <motion.div key={activity.id} className={`activity-card${activity.featuredLink ? ' activity-card--featured' : ''}`} variants={itemVariants}>
                 <div className="activity-image">
                   <img src={activity.image} alt={activity.name} />
                   <div className="activity-image-overlay">
                     <span className="activity-emoji">{activity.emoji}</span>
                   </div>
+                  {activity.featuredLink && (
+                    <div className="activity-lodge-badge">Offered at the Lodge</div>
+                  )}
                 </div>
                 <div className="activity-body">
                   <h2 className="activity-name">{activity.name}</h2>
@@ -170,11 +279,86 @@ const ActivitiesPage = () => {
                       <li key={i}>{h}</li>
                     ))}
                   </ul>
+                  {activity.featuredLink && (
+                    <Link to={activity.featuredLink} className="activity-featured-link">
+                      {activity.featuredLinkText}
+                    </Link>
+                  )}
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
+        </div>
+      </section>
+
+      {/* Local Operators */}
+      <section className="activities-operators-section">
+        <div className="container">
+          <div className="activities-enquiry-header">
+            <h2>Activity Operators</h2>
+            <p>Trusted local operators we recommend to our guests. Click any card to visit their page and book directly.</p>
+          </div>
+          <div className="operator-logo-grid">
+            {operators.map((op) => (
+              <a
+                key={op.name}
+                href={op.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="operator-logo-card"
+              >
+                {/* Drop a logo image file at src/assets/images/Partners/<name>.png to replace this block */}
+                <div className="operator-logo-placeholder" style={{ background: op.color }}>
+                  <span className="operator-logo-initials">{op.initials}</span>
+                  <span className="operator-logo-emoji">{op.emoji}</span>
+                </div>
+                <div className="operator-logo-body">
+                  <span className="operator-logo-tag">{op.activity}</span>
+                  <h4 className="operator-logo-name">{op.name}</h4>
+                  <p className="operator-logo-desc">{op.description}</p>
+                  <span className="operator-logo-cta">{op.linkLabel} →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Restaurant Suggestions */}
+      <section className="activities-restaurants-section">
+        <div className="container">
+          <div className="activities-enquiry-header">
+            <h2>Where to Eat Nearby</h2>
+            <p>From beachfront bars to authentic Japanese cuisine — here are our favourite restaurants within easy reach of Barra Cabanas.</p>
+          </div>
+          <div className="restaurants-grid">
+            {restaurants.map((r) => (
+              <div key={r.name} className={`restaurant-card${r.highlight ? ' restaurant-card--highlight' : ''}`}>
+                {r.highlight && <div className="restaurant-badge">Guest Favourite</div>}
+                <div className="restaurant-header">
+                  <span className="restaurant-emoji">{r.emoji}</span>
+                  <div>
+                    <h4 className="restaurant-name">{r.name}</h4>
+                    <span className="restaurant-location">📍 {r.location}</span>
+                  </div>
+                </div>
+                <p className="restaurant-description">{r.description}</p>
+                <div className="operator-links">
+                  {r.whatsapp && (
+                    <a href={r.whatsapp} className="operator-link operator-link--whatsapp" target="_blank" rel="noopener noreferrer">
+                      💬 {r.phone}
+                    </a>
+                  )}
+                  {r.facebook && (
+                    <a href={r.facebook} className="operator-link operator-link--fb" target="_blank" rel="noopener noreferrer">
+                      Facebook
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

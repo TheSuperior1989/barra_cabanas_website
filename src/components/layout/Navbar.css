@@ -147,11 +147,11 @@
     left: -100%;
     opacity: 0;
     transition: all 0.3s ease;
-    background-color: rgba(74, 74, 74, 0.98);
+    background-color: rgba(250, 243, 235, 0.98);
     backdrop-filter: blur(20px);
     z-index: 998;
     padding-top: 2rem;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
   }
 
   .nav-menu.active {
@@ -167,28 +167,28 @@
   }
 
   .nav-link {
-    color: var(--color-shell-white) !important;
+    color: var(--color-secondary-black) !important;
     text-align: center;
     padding: 1.5rem 2rem;
     width: 100%;
     display: block;
     font-size: 1.1rem;
     font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-warm-sand);
     transition: all 0.3s ease;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
   }
 
   .nav-link:hover {
-    color: var(--color-shell-white) !important;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-secondary-black) !important;
+    background-color: rgba(245, 230, 211, 0.5);
     transform: translateX(10px);
   }
 
   .nav-link.active {
-    color: var(--color-shell-white) !important;
-    background-color: rgba(255, 255, 255, 0.15);
-    font-weight: 600;
+    color: var(--color-secondary-black) !important;
+    background-color: rgba(245, 230, 211, 0.6);
+    font-weight: 700;
   }
 
   .nav-link.active::after {

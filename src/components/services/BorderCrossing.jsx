@@ -9,8 +9,7 @@ import {
   faMobileAlt,
   faShieldAlt,
   faMapMarkedAlt,
-  faInfoCircle,
-  faComments
+  faInfoCircle
 } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import './BorderCrossing.css';
@@ -76,15 +75,9 @@ const BorderCrossing = () => {
     {
       icon: faFacebook,
       title: 'DriveMoz Community',
-      description: 'Join the DriveMoz Facebook page for real-time updates, road conditions, and community support from fellow travelers.',
-      link: '#', // PLACEHOLDER: Replace with actual DriveMoz Facebook page URL
-      linkText: 'Visit DriveMoz Facebook Page'
-    },
-    {
-      icon: faComments,
-      title: 'Zello Communication',
-      description: 'For real-time communication and safety updates, consider using the Zello app. Join the recommended channel for travelers to Mozambique.',
-      note: 'PLACEHOLDER: Specific Zello channel name to be provided'
+      description: 'Join the DriveMoz Facebook group for real-time updates, road conditions, and community support from fellow travelers heading to Mozambique.',
+      link: 'https://www.facebook.com/groups/DriveMoz/?ref=share&mibextid=NSMWBT',
+      linkText: 'Visit DriveMoz Facebook Group'
     }
   ];
 

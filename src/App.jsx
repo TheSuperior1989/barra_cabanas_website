@@ -5,6 +5,7 @@ import AboutPage from './components/about/AboutPage';
 import ServicesPage from './components/services/ServicesPage';
 import PortfolioPage from './components/portfolio/PortfolioPage';
 import ActivitiesPage from './components/activities/ActivitiesPage';
+import FishingPage from './components/activities/FishingPage';
 import ContactPage from './components/contact/ContactPage';
 import QuotingPage from './components/quoting/QuotingPage';
 import BookingPage from './components/booking/BookingPage';
@@ -23,6 +24,7 @@ function App() {
           <Route path="services" element={<ServicesPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route path="activities" element={<ActivitiesPage />} />
+          <Route path="activities/fishing" element={<FishingPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="quote" element={<QuotingPage />} />
           <Route path="booking" element={<BookingPage />} />

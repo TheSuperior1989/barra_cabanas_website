@@ -25,6 +25,12 @@
   --gradient-beige-light: linear-gradient(135deg, #FAF3EB 0%, #F5E6D3 100%);
   --gradient-sand: linear-gradient(135deg, #F5E6D3 0%, #E8D5B7 100%);
   
+  /* Accent Colours (used across components) */
+  --color-sage-green: #6B9E77;
+  --color-palm-green: #4A7C59;
+  --color-primary-taupe: #A48E82;
+  --color-ocean-900: #1a2e3b;
+
   /* Typography */
   --font-primary: Raleway, Helvetica, Arial, sans-serif;
   --font-display: var(--font-primary);
