@@ -12,6 +12,13 @@ import activityDhowCruise from '../../assets/images/Activities/activity-dhow-cru
 import activityVillageTour from '../../assets/images/Activities/activity-village-tour.jpg';
 import activityQuadBiking from '../../assets/images/Activities/activity-quad-biking.jpg';
 
+import restThirstyParrot from '../../assets/images/Activities/Restaurants/Thirsty Parrot.jpeg';
+import restCaptainsTable from '../../assets/images/Activities/Restaurants/The Captains Table.jpeg';
+import restTikiBar from '../../assets/images/Activities/Restaurants/Tiki Bar.jpeg';
+import restPaladar from '../../assets/images/Activities/Restaurants/Paladar Restaurant & Bar.jpeg';
+import restNeptunes from "../../assets/images/Activities/Restaurants/Neptune's Lodge and Beach Bar.jpeg";
+import restWhiteSands from '../../assets/images/Activities/Restaurants/White Sands.jpg';
+
 const activities = [
   {
     id: 1,
@@ -79,42 +86,40 @@ const restaurants = [
     location: 'Barra',
     emoji: '🦜',
     description: 'Popular beachside bar and restaurant right in Barra — great drinks, food, and a relaxed atmosphere.',
-    image: null, link: null,
+    image: restThirstyParrot,
+    link: 'https://share.google/FkKpi4RDcXRjy1Qjl',
   },
   {
     name: "The Captain's Table",
     location: 'Barra',
     emoji: '⚓',
     description: 'A Barra favourite for fresh seafood and great meals in a casual setting close to the water.',
-    image: null, link: null,
-  },
-  {
-    name: 'Tikki Bar',
-    location: 'Barra',
-    emoji: '🌴',
-    description: 'Laid-back tiki bar in Barra — the perfect spot for sundowners and light bites after a beach day.',
-    image: null, link: null,
+    image: restCaptainsTable,
+    link: 'https://share.google/AuWRLEA4Nn6k1P8Md',
   },
   {
     name: 'Paladar at Sentidos',
     location: 'Barra',
     emoji: '🍽️',
     description: 'Restaurant at Sentidos resort offering a relaxed dining experience with beautiful surroundings.',
-    image: null, link: null,
+    image: restPaladar,
+    link: 'https://share.google/YN39AzHfnwNbKcLfg',
   },
   {
-    name: 'Neptunes',
+    name: "Neptune's Lodge & Beach Bar",
     location: 'Barra',
     emoji: '🔱',
-    description: 'Beachfront dining in Barra with fresh seafood and a great ocean atmosphere.',
-    image: null, link: null,
+    description: 'Beachfront lodge and bar in Barra with fresh seafood and a great ocean atmosphere.',
+    image: restNeptunes,
+    link: 'https://www.google.com/search?kgmid=%2Fg%2F1vtt_08z&q=Neptune%E2%80%99s+Lodge+%26+Beach+Bar',
   },
   {
     name: 'White Sands',
     location: 'Barra',
     emoji: '🏖️',
     description: 'Relaxed restaurant and bar on the Barra beachfront — great for lunch and dinner.',
-    image: null, link: null,
+    image: restWhiteSands,
+    link: 'https://www.google.com/search?kgmid=%2Fg%2F11cn5q3676&q=White+Sands+Mozambique',
   },
   {
     name: 'Far Away',
@@ -124,6 +129,14 @@ const restaurants = [
     image: null, link: null,
   },
   // ── Tofo ───────────────────────────────────────────────
+  {
+    name: 'Tiki Bar',
+    location: 'Tofo — 22 km',
+    emoji: '🌴',
+    description: 'Laid-back tiki bar on Tofo Beach — the perfect spot for sundowners and light bites after a beach day.',
+    image: restTikiBar,
+    link: 'https://share.google/aTicCD5XG70ZUxPNm',
+  },
   {
     name: "Branko's",
     location: 'Tofo — 22 km',
