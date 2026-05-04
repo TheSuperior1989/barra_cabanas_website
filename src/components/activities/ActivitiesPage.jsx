@@ -73,52 +73,120 @@ const activities = [
 ];
 
 const restaurants = [
+  // ── Barra ──────────────────────────────────────────────
+  {
+    name: 'Thirsty Parrot',
+    location: 'Barra',
+    emoji: '🦜',
+    description: 'Popular beachside bar and restaurant right in Barra — great drinks, food, and a relaxed atmosphere.',
+    image: null, link: null,
+  },
+  {
+    name: "The Captain's Table",
+    location: 'Barra',
+    emoji: '⚓',
+    description: 'A Barra favourite for fresh seafood and great meals in a casual setting close to the water.',
+    image: null, link: null,
+  },
+  {
+    name: 'Tikki Bar',
+    location: 'Barra',
+    emoji: '🌴',
+    description: 'Laid-back tiki bar in Barra — the perfect spot for sundowners and light bites after a beach day.',
+    image: null, link: null,
+  },
+  {
+    name: 'Paladar at Sentidos',
+    location: 'Barra',
+    emoji: '🍽️',
+    description: 'Restaurant at Sentidos resort offering a relaxed dining experience with beautiful surroundings.',
+    image: null, link: null,
+  },
+  {
+    name: 'Neptunes',
+    location: 'Barra',
+    emoji: '🔱',
+    description: 'Beachfront dining in Barra with fresh seafood and a great ocean atmosphere.',
+    image: null, link: null,
+  },
+  {
+    name: 'White Sands',
+    location: 'Barra',
+    emoji: '🏖️',
+    description: 'Relaxed restaurant and bar on the Barra beachfront — great for lunch and dinner.',
+    image: null, link: null,
+  },
+  {
+    name: 'Far Away',
+    location: 'Barra',
+    emoji: '🌅',
+    description: 'A chilled Barra spot to escape and unwind with good food and drinks.',
+    image: null, link: null,
+  },
+  // ── Tofo ───────────────────────────────────────────────
   {
     name: "Branko's",
     location: 'Tofo — 22 km',
     emoji: '🍕',
     description: 'Consistently rated #1 in Tofo. Famous for wood-fired pizzas, hot stone tuna and seafood. Budget-friendly and legendary.',
-    phone: '+258 84 066 6470',
-    whatsapp: 'https://wa.me/258840666470',
     highlight: true,
-  },
-  {
-    name: "Dino's Beach Bar & Restaurant",
-    location: 'Tofo — 22 km',
-    emoji: '🍹',
-    description: 'Tofo\'s landmark beachfront bar since 1999. Pizzas, seafood, cocktails, live music and DJs. Open Thu–Tue.',
-    facebook: 'https://www.facebook.com/DinosBeachBar',
+    image: null, link: null,
   },
   {
     name: 'Sumi Bar & Kitchen',
     location: 'Tofo — 22 km',
     emoji: '🍱',
-    description: 'Authentic Japanese sushi and cuisine in stunning tropical surrounds. TripAdvisor 4.6/5.',
-    phone: '+258 84 564 6554',
-    whatsapp: 'https://wa.me/258845646554',
-    facebook: 'https://www.facebook.com/sumibarandkitchen',
+    description: 'Authentic Japanese sushi and cuisine in stunning tropical surrounds.',
+    image: null, link: null,
   },
   {
-    name: 'Bistro O Pescador',
-    location: 'Inhambane — 25 km',
-    emoji: '🦐',
-    description: 'Seafood, curries and pizzas at the old port of Inhambane with beautiful harbour views.',
-    facebook: 'https://www.facebook.com/people/Bistro-O-Pescador/100051397136209',
+    name: 'What You Want',
+    location: 'Tofo — 22 km',
+    emoji: '🍴',
+    description: 'Casual and laid-back dining spot in Tofo — a local favourite for good food and good vibes.',
+    image: null, link: null,
   },
   {
-    name: 'Restaurante Ponte Cais',
-    location: 'Inhambane — 25 km',
-    emoji: '🌊',
-    description: 'Bay-view restaurant at the pier — best seafood and pizza in Inhambane town. 4.1/5 on Google (321 reviews).',
-    phone: '+258 84 629 3189',
-    whatsapp: 'https://wa.me/258846293189',
+    name: 'Maracuja',
+    location: 'Tofo — 22 km',
+    emoji: '🌺',
+    description: 'Popular Tofo restaurant known for fresh food and a welcoming tropical atmosphere.',
+    image: null, link: null,
   },
   {
-    name: "Verdinho's",
-    location: 'Inhambane — 25 km',
-    emoji: '🍽️',
-    description: 'Popular local café and pizzeria. Affordable, delicious and a genuine local favourite.',
-    facebook: 'https://www.facebook.com/Verdinhos.Inhambane',
+    name: 'Mango Beach',
+    location: 'Tofo — 22 km',
+    emoji: '🥭',
+    description: 'Beachfront dining in Tofo with fresh local cuisine, cold drinks, and ocean views.',
+    image: null, link: null,
+  },
+  {
+    name: 'Datongo',
+    location: 'Tofo — 22 km',
+    emoji: '🐟',
+    description: 'Local Tofo restaurant serving fresh catches and traditional Mozambican flavours.',
+    image: null, link: null,
+  },
+  {
+    name: 'Taco & Friends',
+    location: 'Tofo — 22 km',
+    emoji: '🌮',
+    description: 'Fun and casual taco spot in Tofo — great for a quick, tasty and affordable meal.',
+    image: null, link: null,
+  },
+  {
+    name: 'Kumba Lodge',
+    location: 'Tofo — 22 km',
+    emoji: '🏡',
+    description: 'Restaurant at Kumba Lodge offering a relaxed dining experience in the heart of Tofo.',
+    image: null, link: null,
+  },
+  {
+    name: 'Cabana Lodge',
+    location: 'Tofo — 22 km',
+    emoji: '🌿',
+    description: 'Dining at Cabana Lodge — a Tofo institution with great food in a lush, relaxed setting.',
+    image: null, link: null,
   },
 ];
 
@@ -131,6 +199,30 @@ const EMPTY_FORM = {
   guests: '',
   message: ''
 };
+
+const RestaurantCard = ({ r }) => (
+  <div className={`restaurant-card${r.highlight ? ' restaurant-card--highlight' : ''}`}>
+    {r.highlight && <div className="restaurant-badge">Guest Favourite</div>}
+    {r.image && (
+      <div className="restaurant-photo">
+        <img src={r.image} alt={r.name} />
+      </div>
+    )}
+    <div className="restaurant-header">
+      <span className="restaurant-emoji">{r.emoji}</span>
+      <div>
+        <h4 className="restaurant-name">{r.name}</h4>
+        <span className="restaurant-location">📍 {r.location}</span>
+      </div>
+    </div>
+    <p className="restaurant-description">{r.description}</p>
+    {r.link && (
+      <a href={r.link} className="restaurant-link" target="_blank" rel="noopener noreferrer">
+        Visit →
+      </a>
+    )}
+  </div>
+);
 
 const ActivitiesPage = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -242,33 +334,20 @@ const ActivitiesPage = () => {
         <div className="container">
           <div className="activities-enquiry-header">
             <h2>Where to Eat Nearby</h2>
-            <p>From beachfront bars to authentic Japanese cuisine — here are our favourite restaurants within easy reach of Barra Cabanas.</p>
+            <p>From Barra's beachside bars to Tofo's legendary restaurants — here are our favourite spots within easy reach of Barra Cabanas.</p>
           </div>
+
+          <h3 className="restaurants-area-heading">📍 Barra</h3>
           <div className="restaurants-grid">
-            {restaurants.map((r) => (
-              <div key={r.name} className={`restaurant-card${r.highlight ? ' restaurant-card--highlight' : ''}`}>
-                {r.highlight && <div className="restaurant-badge">Guest Favourite</div>}
-                <div className="restaurant-header">
-                  <span className="restaurant-emoji">{r.emoji}</span>
-                  <div>
-                    <h4 className="restaurant-name">{r.name}</h4>
-                    <span className="restaurant-location">📍 {r.location}</span>
-                  </div>
-                </div>
-                <p className="restaurant-description">{r.description}</p>
-                <div className="operator-links">
-                  {r.whatsapp && (
-                    <a href={r.whatsapp} className="operator-link operator-link--whatsapp" target="_blank" rel="noopener noreferrer">
-                      💬 {r.phone}
-                    </a>
-                  )}
-                  {r.facebook && (
-                    <a href={r.facebook} className="operator-link operator-link--fb" target="_blank" rel="noopener noreferrer">
-                      Facebook
-                    </a>
-                  )}
-                </div>
-              </div>
+            {restaurants.filter(r => r.location === 'Barra').map((r) => (
+              <RestaurantCard key={r.name} r={r} />
+            ))}
+          </div>
+
+          <h3 className="restaurants-area-heading">📍 Tofo <span className="restaurants-area-sub">— 22 km</span></h3>
+          <div className="restaurants-grid">
+            {restaurants.filter(r => r.location !== 'Barra').map((r) => (
+              <RestaurantCard key={r.name} r={r} />
             ))}
           </div>
         </div>
