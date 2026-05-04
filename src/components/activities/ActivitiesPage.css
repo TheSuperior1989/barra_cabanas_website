@@ -110,6 +110,16 @@
   padding: 1.5rem;
 }
 
+.activity-operator-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sage-green);
+  margin-bottom: 6px;
+}
+
 .activity-name {
   font-size: 1.3rem;
   font-weight: 700;
@@ -176,102 +186,6 @@
   color: var(--color-secondary-black);
 }
 
-/* Local Operators section */
-.activities-operators-section {
-  padding: 80px 0;
-  background: #fff;
-}
-
-/* 5-card operator logo grid */
-.operator-logo-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
-}
-
-.operator-logo-card {
-  background: #fff;
-  border: 1px solid var(--color-warm-sand);
-  border-radius: 16px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  cursor: pointer;
-}
-
-.operator-logo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  border-color: var(--color-primary-beige);
-}
-
-.operator-logo-placeholder {
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  position: relative;
-}
-
-.operator-logo-initials {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: rgba(0,0,0,0.45);
-  letter-spacing: 0.04em;
-  line-height: 1;
-}
-
-.operator-logo-emoji {
-  font-size: 1.4rem;
-}
-
-.operator-logo-body {
-  padding: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-}
-
-.operator-logo-tag {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-sage-green);
-}
-
-.operator-logo-name {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--color-secondary-black);
-  margin-bottom: 4px;
-  line-height: 1.2;
-}
-
-.operator-logo-desc {
-  font-size: 0.8rem;
-  color: #777;
-  line-height: 1.55;
-  flex: 1;
-  margin-bottom: 10px;
-}
-
-.operator-logo-cta {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-sage-green);
-  transition: color 0.2s ease;
-}
-
-.operator-logo-card:hover .operator-logo-cta {
-  color: var(--color-secondary-black);
-}
 
 /* Restaurant suggestions */
 .activities-restaurants-section {
@@ -455,12 +369,6 @@
 }
 
 /* Responsive */
-@media (max-width: 1100px) {
-  .operator-logo-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .activities-hero-title {
     font-size: 2rem;
@@ -475,16 +383,6 @@
   }
 
   .activities-enquiry-form .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .operator-logo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .operator-logo-grid {
     grid-template-columns: 1fr;
   }
 }
