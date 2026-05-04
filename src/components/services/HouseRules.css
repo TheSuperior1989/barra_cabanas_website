@@ -1,6 +1,6 @@
 .house-rules-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #F5F2EC 0%, #6B7D6D 100%);
+  background-color: var(--color-light-beige);
 }
 
 .house-rules-content {

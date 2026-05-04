@@ -46,7 +46,7 @@
 
 .blog-content {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .blog-content .container {

@@ -59,7 +59,7 @@
 }
 
 .info-card {
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
@@ -154,7 +154,7 @@
 
 .contact-form-section {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .form-container {
@@ -242,7 +242,7 @@
 
 .contact-map {
   height: 400px;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .map-container {

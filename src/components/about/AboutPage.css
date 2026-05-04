@@ -46,7 +46,7 @@
 
 .about-story {
   padding: 120px 0;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-light-beige);
   position: relative;
   overflow: hidden;
 }
@@ -515,7 +515,7 @@
 
 .about-team {
   padding: 120px 0;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-light-beige);
 }
 
 .team-grid {

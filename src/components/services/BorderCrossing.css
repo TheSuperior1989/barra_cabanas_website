@@ -1,7 +1,6 @@
 .border-crossing-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #6B7D6D 0%, #8A5A44 100%);
-  color: white;
+  background-color: var(--color-light-beige);
 }
 
 .border-crossing-content {
@@ -14,7 +13,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: white;
+  color: var(--color-secondary-black);
   position: relative;
   display: inline-block;
   width: 100%;
@@ -30,7 +29,7 @@
 }
 
 .info-icon-tooltip:hover {
-  color: white;
+  color: var(--color-secondary-black);
   transform: scale(1.1);
 }
 
@@ -45,8 +44,8 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background-color: white;
-  color: var(--color-secondary-black);
+  background-color: var(--color-secondary-black);
+  color: white;
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -72,7 +71,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(0px);
   border: 6px solid transparent;
-  border-top-color: white;
+  border-top-color: var(--color-secondary-black);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -87,7 +86,7 @@
 .section-subtitle {
   font-size: 1.1rem;
   text-align: center;
-  color: white;
+  color: #666;
   margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;
@@ -102,22 +101,22 @@
 }
 
 .border-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: white;
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .border-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .border-icon {
   font-size: 2.5rem;
-  color: #F5F2EC;
+  color: var(--color-sage-green);
   margin-bottom: 1rem;
 }
 
@@ -125,13 +124,13 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: white;
+  color: var(--color-secondary-black);
 }
 
 .border-description {
   font-size: 1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: #666;
 }
 
 .border-link {
@@ -155,11 +154,11 @@
 .border-note {
   margin-top: 0.75rem;
   padding: 0.75rem;
-  background: rgba(245, 230, 211, 0.2);
+  background: rgba(245, 230, 211, 0.4);
   border-left: 3px solid var(--color-primary-beige);
   border-radius: 4px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #555;
 }
 
 .important-notes-card {
@@ -217,22 +216,22 @@
 
 .border-cta {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: white;
   padding: 2.5rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .cta-text {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #444;
 }
 
 .border-cta .btn {
-  background: white;
-  color: #6B7D6D;
+  background: var(--color-sage-green);
+  color: white;
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -245,8 +244,8 @@
 }
 
 .border-cta .btn:hover {
-  background: #F5F2EC;
-  color: #1F1F1F;
+  background: var(--color-secondary-black);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }

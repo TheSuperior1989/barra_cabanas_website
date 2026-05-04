@@ -84,7 +84,7 @@
 
 .quoting-faq {
   padding: 100px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .quoting-faq .section-title {
@@ -137,7 +137,7 @@
 
 .quoting-cta {
   padding: 100px 0;
-  background-color: #1a1a2e;
+  background-color: var(--color-secondary-black);
   color: #fff;
   text-align: center;
 }

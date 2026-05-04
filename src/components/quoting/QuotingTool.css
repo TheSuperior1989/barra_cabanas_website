@@ -1,7 +1,7 @@
 .quoting-tool {
   width: 100%;
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
 }
 
 .quoting-container {
@@ -278,7 +278,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
   border-radius: 8px;
   flex-wrap: wrap;
   gap: 15px;
@@ -484,7 +484,7 @@
 }
 
 .quote-summary-preview {
-  background-color: #f8f9fa;
+  background-color: var(--color-light-beige);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 25px;

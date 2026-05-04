@@ -603,7 +603,7 @@
 /* Yearly Calendar Section */
 .yearly-calendar-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background-color: var(--color-light-beige);
 }
 
 .yearly-calendar-container {
@@ -618,7 +618,7 @@
 .yearly-calendar-header {
   padding: 40px 50px;
   text-align: center;
-  background: #4a4a4a;
+  background: var(--color-secondary-black);
   color: white;
 }
 
