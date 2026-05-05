@@ -308,11 +308,15 @@ const FishingPage = () => {
               Jigalouw Fishing Adventures is the <strong>exclusive fishing charter partner of Barra Cabanas</strong> — the only activity we offer directly at the lodge. The name <em>Jigalouw</em> honours both the art of jigging and the Louw family name behind this passionate operation.
             </p>
             <p>
-              Based right here at Barra Inn, Jigalouw puts you on the water with experienced local skippers who know the Mozambique Channel intimately. Whether you're a seasoned angler chasing marlin or a first-timer hoping to land a yellowfin tuna, the crew ensures an unforgettable day offshore.
+              Based right here at Barra Inn, Jigalouw puts you on the water with experienced Skipper Captain Ronaldo Louw and Ghillie Mavo, a local fisherman who grew up in the waters of Mozambique. Whether you're a seasoned angler chasing marlin or a first-timer hoping to land a yellowfin tuna, the crew ensures an unforgettable day offshore.
             </p>
             <a href="https://wa.me/258879986165" className="fp-btn fp-btn--dark" target="_blank" rel="noopener noreferrer">
               💬 WhatsApp: +258 87 998 6165
             </a>
+            <div className="fp-social-links">
+              <a href="https://www.facebook.com/share/1C5Zvzy6wC/" className="fp-social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/jigalouw_fishing_adventures?igsh=cXIwY2FwNXVwaWNl" className="fp-social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
           </motion.div>
 
           <motion.div
@@ -333,30 +337,6 @@ const FishingPage = () => {
               <li>Maximum 5 anglers per trip</li>
               <li>All tackle & gear supplied</li>
             </ul>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── TARGETED SPECIES ───────────────────────────────────── */}
-      <section className="fp-species">
-        <div className="container">
-          <div className="fp-species-header">
-            <span className="fp-section-label fp-section-label--light">What's Biting</span>
-            <h2>Targeted Species</h2>
-            <p>The warm Mozambique Channel is home to some of the world's most prized sport fish</p>
-          </div>
-          <motion.div
-            className="fp-species-grid"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            {TARGETED_SPECIES.map(name => (
-              <motion.div key={name} variants={itemVariants} className="fp-species-pill">
-                🐟 {name}
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </section>

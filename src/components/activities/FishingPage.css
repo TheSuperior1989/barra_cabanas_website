@@ -68,6 +68,23 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
+.fp-social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.fp-social-link {
+  color: var(--color-sage-green);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.fp-social-link:hover {
+  text-decoration: underline;
+}
+
 /* ── VIDEO HERO ─────────────────────────────────────────── */
 .fp-hero {
   position: relative;
@@ -256,7 +273,8 @@
 .fp-slide-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #1a2e3b;
 }
 
 .fp-slide-placeholder {

@@ -7,10 +7,10 @@ import { sendContactForm } from '../../services/emailService';
 
 import activityScubaDiving from '../../assets/images/Activities/activity-scuba-diving.jpg';
 import activityDeepSeaFishing from '../../assets/images/Activities/activity-deep-sea-fishing.jpg';
-import activityDolphins from '../../assets/images/Activities/activity-dolphins.jpg';
-import activityDhowCruise from '../../assets/images/Activities/activity-dhow-cruise.jpg';
-import activityVillageTour from '../../assets/images/Activities/activity-village-tour.jpg';
-import activityQuadBiking from '../../assets/images/Activities/activity-quad-biking.jpg';
+import activityWatersports from '../../assets/images/Activities/watersports-and-activities.jpeg';
+import activityBarraVida from '../../assets/images/Activities/barra-vida-boat-tours.jpeg';
+import activityCocoVillage from '../../assets/images/Activities/coco-adventure-village.jpeg';
+import activityKapeKape from '../../assets/images/Activities/kape-kape-tours.jpeg';
 
 import restThirstyParrot from '../../assets/images/Activities/Restaurants/thirsty-parrot.jpeg';
 import restCaptainsTable from '../../assets/images/Activities/Restaurants/the-captains-table.jpeg';
@@ -22,6 +22,12 @@ import restBrankos from '../../assets/images/Activities/Restaurants/brankos.jpg'
 import restKumbaLodge from '../../assets/images/Activities/Restaurants/kumba-lodge.jpg';
 import restMangoBeach from '../../assets/images/Activities/Restaurants/mango-beach.jpg';
 import restSumiBar from '../../assets/images/Activities/Restaurants/sumi-bar-kitchen.jpg';
+import restCabanaLodge from '../../assets/images/Activities/Restaurants/cabana-lodge-tofo.jpeg';
+import restDatango from '../../assets/images/Activities/Restaurants/datonga.jpeg';
+import restFarawayLodge from '../../assets/images/Activities/Restaurants/faraway-lodge.jpeg';
+import restMaracuja from '../../assets/images/Activities/Restaurants/maracuja.jpeg';
+import restTacosAndFriends from '../../assets/images/Activities/Restaurants/tacos-and-friends.jpeg';
+import restWhatYouWant from '../../assets/images/Activities/Restaurants/what-you-want.jpeg';
 
 const activities = [
   {
@@ -49,7 +55,7 @@ const activities = [
     id: 3,
     name: 'Watersports & Ocean Activities',
     emoji: '🌊',
-    image: activityDolphins,
+    image: activityWatersports,
     highlights: ['Dolphin & whale watching', 'Mangrove kayaking', 'Sunset dhow cruises', 'Guided ocean safaris'],
     description: 'From dolphin and whale watching to mangrove kayaking and guided ocean safaris, SEE Activity Center offers a full range of ocean experiences right from Barra. Humpback whales migrate through the channel July–November — one of the most spectacular natural events on Earth.',
     operator: { name: 'SEE Activity Center', link: 'https://www.facebook.com/SEEActivityCenter', linkLabel: 'Find on Facebook' },
@@ -58,7 +64,7 @@ const activities = [
     id: 4,
     name: 'Island Excursions & Sunset Cruises',
     emoji: '⛵',
-    image: activityDhowCruise,
+    image: activityBarraVida,
     highlights: ['Pansy Island day trips', 'Linga Linga village', 'Sunset BBQ charters', 'Estuary boat tours'],
     description: 'Explore the stunning estuary and offshore islands around Inhambane with Barra Vida. From Pansy Island day trips to Linga Linga village visits and sunset BBQ cruises, these boat adventures reveal a side of Mozambique most visitors never see.',
     operator: { name: 'Barra Vida', link: 'https://www.facebook.com/share/1LUn5VWGeo/', linkLabel: 'Find on Facebook' },
@@ -67,7 +73,7 @@ const activities = [
     id: 5,
     name: 'Cultural Village Tours',
     emoji: '🏡',
-    image: activityVillageTour,
+    image: activityCocoVillage,
     highlights: ['Local village experiences', 'Traditional crafts & food', 'Guided local tours', 'Photography opportunities'],
     description: 'Step beyond the beach and discover the authentic culture of Inhambane Province. Coco Adventure Village guides you through local Mozambican life, traditional fishing communities, vibrant markets, and the warm hospitality that makes this region so special.',
     operator: { name: 'Coco Adventure Village', link: 'https://share.google/L2xeRcYt4XeqRiK9a', linkLabel: 'View on Google Maps' },
@@ -76,7 +82,7 @@ const activities = [
     id: 6,
     name: 'Quad Biking & Dune Trails',
     emoji: '🏍️',
-    image: activityQuadBiking,
+    image: activityKapeKape,
     highlights: ['Coastal dune trails', 'Guided & self-guided rides', 'Suitable for beginners', 'Beach & bush routes'],
     description: 'Explore the dramatic sand dunes, bush tracks, and coastal paths around Barra on quad bikes. Kape Kape Tours offer guided rides that take you through spectacular scenery — from sweeping ocean vistas to remote bush trails. Based at Tofo Beach, just 15 minutes away.',
     operator: { name: 'Kape Kape Tours', link: 'https://share.google/dCxF0XI6NwFOaIxy2', linkLabel: 'View on Google Maps' },
@@ -126,11 +132,12 @@ const restaurants = [
     link: 'https://www.google.com/search?kgmid=%2Fg%2F11cn5q3676&q=White+Sands+Mozambique',
   },
   {
-    name: 'Far Away',
+    name: 'Faraway Lodge, Restaurant & Bar',
     location: 'Barra',
     emoji: '🌅',
     description: 'A chilled Barra spot to escape and unwind with good food and drinks.',
-    image: null, link: null,
+    image: restFarawayLodge,
+    link: 'https://www.google.com/search?client=ms-android-vf-za-rvc3&hs=0jpp&sca_esv=279264206e6ccbef&hl=en-ZA&cs=1&sxsrf=ANbL-n4z2CIvctaKZwTZKQKxUY7mFbMrhg:1777982584233&kgmid=/g/11hdwxwlv6&q=Faraway+Lodge+and+Camping&shem=dlvs1,rimspwouoe&shndl=30&source=sh/x/loc/uni/m1/4&kgs=e1d3bd5ac0538027',
   },
   // ── Tofo ───────────────────────────────────────────────
   {
@@ -163,16 +170,16 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🍴',
     description: 'Casual and laid-back dining spot in Tofo — a local favourite for good food and good vibes.',
-    image: null,
+    image: restWhatYouWant,
     link: 'https://www.google.com/search?q=What+You+Want+Tofo',
   },
   {
-    name: 'Maracuja',
+    name: 'Maracujá',
     location: 'Tofo — 22 km',
     emoji: '🌺',
     description: 'Popular Tofo restaurant known for fresh food and a welcoming tropical atmosphere.',
-    image: null,
-    link: 'https://www.google.com/search?q=Maracuja+Tofo',
+    image: restMaracuja,
+    link: 'https://www.google.com/search?client=ms-android-vf-za-rvc3&hs=m4U&sa=X&bih=698&hl=en-ZA&biw=384&cs=1&sca_esv=279264206e6ccbef&sxsrf=ANbL-n5aRBJbsb-uu-5Bqs_B8t7LxQJxtA:1777982852678&kgmid=/g/11ll1nhx8s&q=MARACUJ%C3%81&shem=rimspwouoe&shndl=30&source=sh/x/loc/act/m1/4&kgs=f1ccb3957b850f65',
   },
   {
     name: 'Mango Beach',
@@ -187,7 +194,7 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🐟',
     description: 'Local Tofo restaurant serving fresh catches and traditional Mozambican flavours.',
-    image: null,
+    image: restDatango,
     link: 'https://www.google.com/search?q=Datongo+Tofo',
   },
   {
@@ -195,7 +202,7 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🌮',
     description: 'Fun and casual taco spot in Tofo — great for a quick, tasty and affordable meal.',
-    image: null,
+    image: restTacosAndFriends,
     link: 'https://www.google.com/search?q=Taco+Friends+Tofo',
   },
   {
@@ -211,7 +218,7 @@ const restaurants = [
     location: 'Tofo — 22 km',
     emoji: '🌿',
     description: 'Dining at Cabana Lodge — a Tofo institution with great food in a lush, relaxed setting.',
-    image: null,
+    image: restCabanaLodge,
     link: 'https://www.google.com/search?q=Cabana+Lodge+Tofo',
   },
 ];

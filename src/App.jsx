@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './components/home/HomePage';
-import AboutPage from './components/about/AboutPage';
 import ServicesPage from './components/services/ServicesPage';
 import PortfolioPage from './components/portfolio/PortfolioPage';
 import ActivitiesPage from './components/activities/ActivitiesPage';
@@ -20,8 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="services" element={<ServicesPage />} />
+<Route path="services" element={<ServicesPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route path="activities" element={<ActivitiesPage />} />
           <Route path="activities/fishing" element={<FishingPage />} />

@@ -64,8 +64,7 @@ const Footer = () => {
               <h3 className="footer-title">Quick Links</h3>
               <ul className="footer-links">
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/'); }}>Home</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/about'); }}>About</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/services'); }}>Accommodation</a></li>
+<li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/services'); }}>Accommodation</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/portfolio'); }}>Gallery</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>Contact</a></li>
               </ul>
