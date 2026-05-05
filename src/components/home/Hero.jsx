@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeXmark, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import InfoSheetDownload from '../common/InfoSheetDownload';
-import barraCabanasLogo from '../../assets/images/Website LOGO in BLACK with text in WHITE.svg';
 import './Hero.css';
 
 const Hero = () => {
@@ -153,7 +152,6 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="hero-text"
         >
-          <img src={barraCabanasLogo} alt="Barra Cabanas" className="hero-logo" />
           <h1 className="hero-title">
             Experience Luxury <span className="highlight beige">Beach Houses</span>
           </h1>
