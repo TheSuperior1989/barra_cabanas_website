@@ -250,7 +250,6 @@ const FishingPage = () => {
                     <span className="fp-slide-placeholder-label">Photo coming soon</span>
                   </div>
                 )}
-                <div className="fp-slide-caption">{slide.caption}</div>
               </div>
             ))}
 
@@ -337,6 +336,30 @@ const FishingPage = () => {
               <li>Maximum 5 anglers per trip</li>
               <li>All tackle & gear supplied</li>
             </ul>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── TARGETED SPECIES ───────────────────────────────────── */}
+      <section className="fp-species">
+        <div className="container">
+          <div className="fp-species-header">
+            <span className="fp-section-label fp-section-label--light">What's Biting</span>
+            <h2>Targeted Species</h2>
+            <p>The warm Mozambique Channel is home to some of the world's most prized sport fish</p>
+          </div>
+          <motion.div
+            className="fp-species-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {TARGETED_SPECIES.map(name => (
+              <motion.div key={name} variants={itemVariants} className="fp-species-pill">
+                🐟 {name}
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>

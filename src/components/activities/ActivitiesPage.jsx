@@ -18,10 +18,10 @@ import restTikiBar from '../../assets/images/Activities/Restaurants/tiki-bar.jpe
 import restPaladar from '../../assets/images/Activities/Restaurants/paladar-restaurant-bar.jpeg';
 import restNeptunes from '../../assets/images/Activities/Restaurants/neptunes-lodge-beach-bar.jpeg';
 import restWhiteSands from '../../assets/images/Activities/Restaurants/white-sands.jpg';
-import restBrankos from '../../assets/images/Activities/Restaurants/brankos.jpg';
-import restKumbaLodge from '../../assets/images/Activities/Restaurants/kumba-lodge.jpg';
-import restMangoBeach from '../../assets/images/Activities/Restaurants/mango-beach.jpg';
-import restSumiBar from '../../assets/images/Activities/Restaurants/sumi-bar-kitchen.jpg';
+import restBrankos from '../../assets/images/Activities/Restaurants/brankos-new.jpeg';
+import restKumbaLodge from '../../assets/images/Activities/Restaurants/kumba-lodge-new.jpeg';
+import restMangoBeach from '../../assets/images/Activities/Restaurants/mango-beach-new.jpeg';
+import restSumiBar from '../../assets/images/Activities/Restaurants/sumi-new.jpeg';
 import restCabanaLodge from '../../assets/images/Activities/Restaurants/cabana-lodge-tofo.jpeg';
 import restDatango from '../../assets/images/Activities/Restaurants/datonga.jpeg';
 import restFarawayLodge from '../../assets/images/Activities/Restaurants/faraway-lodge.jpeg';
