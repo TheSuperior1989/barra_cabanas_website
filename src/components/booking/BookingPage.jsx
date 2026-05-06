@@ -225,7 +225,7 @@ const BookingPage = () => {
                   <strong>Email:</strong> info@barracabanas.com
                 </p>
                 <p className="contact-detail">
-                  <strong>Phone:</strong> +27 XX XXX XXXX
+                  <strong>Phone:</strong> +27 66 205 7229
                 </p>
               </div>
             </motion.div>

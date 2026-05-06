@@ -70,7 +70,7 @@ IMPORTANT NOTES:
 
 If you have any questions, please contact us:
 📧 Email: info@barracabanas.com
-📞 Phone: +27 XX XXX XXXX
+📞 Phone: +27 66 205 7229
 
 Thank you for choosing Barra Cabanas!
 
