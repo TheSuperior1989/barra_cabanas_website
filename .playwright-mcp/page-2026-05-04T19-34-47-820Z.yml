@@ -1,0 +1,1485 @@
+- generic [ref=e2]:
+  - button "Skip to main content" [ref=e4] [cursor=pointer]:
+    - generic [ref=e5]: Skip to main content
+  - banner [ref=e8]:
+    - navigation [ref=e10]:
+      - link "Tripadvisor" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - img "Tripadvisor" [ref=e14]
+      - search [ref=e18]:
+        - generic [ref=e20]:
+          - button "Search" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+          - searchbox "Search" [ref=e26]
+      - generic [ref=e27]:
+        - button "Plan with AI" [ref=e29] [cursor=pointer]:
+          - generic [ref=e31]: Plan with AI
+        - generic [ref=e34]:
+          - link "Rewards" [ref=e36] [cursor=pointer]:
+            - /url: /Rewards
+          - button "Discover" [ref=e39] [cursor=pointer]
+          - button "Review" [ref=e42] [cursor=pointer]
+        - generic [ref=e43]:
+          - button "Select region or currency, currently United States and USD" [ref=e45] [cursor=pointer]:
+            - generic "Select region or currency, currently United States and USD" [ref=e47]:
+              - img [ref=e48]
+              - text: USD
+          - link "Sign in" [ref=e52] [cursor=pointer]:
+            - /url: /RegistrationController?flow=sign_up_and_save&returnTo=%2FRestaurant_Review-g1574945-d2238938-Reviews-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html&fullscreen=true&flowOrigin=login&hideNavigation=true&isLithium=true
+            - generic [ref=e54]: Sign in
+    - generic [ref=e60]:
+      - tablist [ref=e63]:
+        - tab "Montegrosso d'Asti" [ref=e64] [cursor=pointer]:
+          - link "Montegrosso d'Asti" [ref=e66]:
+            - /url: /Tourism-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont-Vacations.html
+            - img [ref=e67]
+            - text: Montegrosso d'Asti
+        - tab "Hotels" [ref=e70] [cursor=pointer]:
+          - link "Hotels" [ref=e72]:
+            - /url: /Hotels-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont-Hotels.html
+        - tab "Things to Do" [ref=e73] [cursor=pointer]:
+          - link "Things to Do" [ref=e75]:
+            - /url: /Attractions-g1574945-Activities-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+        - tab "Restaurants" [selected] [ref=e76] [cursor=pointer]:
+          - link "Restaurants" [ref=e78]:
+            - /url: /Restaurants-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+        - tab "Cruises" [ref=e79] [cursor=pointer]:
+          - link "Cruises" [ref=e81]:
+            - /url: /Cruises
+        - tab "Forums" [ref=e82] [cursor=pointer]:
+          - link "Forums" [ref=e84]:
+            - /url: /ShowForum-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+      - generic:
+        - generic:
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - button:
+              - img
+  - main [ref=e86]:
+    - generic [ref=e88]:
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - link "Europe" [ref=e93] [cursor=pointer]:
+            - /url: /Tourism-g4-Europe-Vacations.html
+            - generic [ref=e94]: Europe
+          - img [ref=e96]
+        - generic [ref=e98]:
+          - link "Italy" [ref=e99] [cursor=pointer]:
+            - /url: /Tourism-g187768-Italy-Vacations.html
+            - generic [ref=e100]: Italy
+          - img [ref=e102]
+        - generic [ref=e104]:
+          - link "Piedmont" [ref=e105] [cursor=pointer]:
+            - /url: /Tourism-g187851-Piedmont-Vacations.html
+            - generic [ref=e106]: Piedmont
+          - img [ref=e108]
+        - generic [ref=e110]:
+          - link "Province of Asti" [ref=e111] [cursor=pointer]:
+            - /url: /Tourism-g2345982-Province_of_Asti_Piedmont-Vacations.html
+            - generic [ref=e112]: Province of Asti
+          - img [ref=e114]
+        - generic [ref=e116]:
+          - link "Montegrosso d'Asti" [ref=e117] [cursor=pointer]:
+            - /url: /Tourism-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont-Vacations.html
+            - generic [ref=e118]: Montegrosso d'Asti
+          - img [ref=e120]
+        - generic [ref=e122]:
+          - link "Montegrosso d'Asti Restaurants" [ref=e123] [cursor=pointer]:
+            - /url: /Restaurants-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+            - generic [ref=e124]: Montegrosso d'Asti Restaurants
+          - img [ref=e126]
+        - generic [ref=e129]: Agriturismo Assiuolo
+      - generic [ref=e130]:
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - heading "Agriturismo Assiuolo" [level=1] [ref=e136]
+              - button "Someone from this business manages this listing. Learn More" [ref=e139] [cursor=pointer]:
+                - generic [ref=e140]:
+                  - img [ref=e141]
+                  - generic [ref=e143]: Claimed
+            - generic [ref=e144]:
+              - button "Save" [ref=e145] [cursor=pointer]:
+                - generic [ref=e147]:
+                  - img [ref=e148]
+                  - text: Save
+              - link "Review" [ref=e150] [cursor=pointer]:
+                - /url: /ClientLink?value=emd0Xy9Vc2VyUmV2aWV3RWRpdC1nMTU3NDk0NS1kMjIzODkzOC1BZ3JpdHVyaXNtb19Bc3NpdW9sby1Nb250ZWdyb3Nzb19kX0FzdGlfUHJvdmluY2Vfb2ZfQXN0aV9QaWVkbW9udC5odG1sX05SOA%3D%3D
+                - generic [ref=e152]:
+                  - img [ref=e153]
+                  - text: Review
+          - generic [ref=e155]:
+            - generic [ref=e159]:
+              - generic [ref=e161]: "4.7"
+              - generic [ref=e162]:
+                - img "4.7 of 5 bubbles" [ref=e163]
+                - link "(148 reviews)" [ref=e170] [cursor=pointer]:
+                  - /url: "#REVIEWS"
+                  - generic [ref=e172]: (148 reviews)
+            - link "#2 of 11 Restaurants in Montegrosso d'Asti" [ref=e174] [cursor=pointer]:
+              - /url: /Restaurants-g1574945-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+            - generic [ref=e175]:
+              - link "Italian" [ref=e177] [cursor=pointer]:
+                - /url: /Restaurants-g1574945-c26-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+              - text: ","
+              - link "Vegetarian friendly" [ref=e179] [cursor=pointer]:
+                - /url: /Restaurants-g1574945-zfz10665-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+              - text: ","
+              - link "$$ - $$$" [ref=e181] [cursor=pointer]:
+                - /url: /Restaurants-g1574945-zfp10955-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+        - generic [ref=e185]:
+          - generic "Carousel of images" [ref=e188]:
+            - button "La sala ristorante" [ref=e191] [cursor=pointer]:
+              - img "La sala ristorante" [ref=e194]
+            - button "83" [ref=e196] [cursor=pointer]:
+              - generic [ref=e197]:
+                - img [ref=e198]
+                - text: "83"
+            - generic:
+              - generic:
+                - button "What is Travelers’ Choice? Tripadvisor gives a Travelers’ Choice award to accommodations, attractions and restaurants that consistently earn great reviews from travelers and are ranked within the top 10% of properties on Tripadvisor."
+          - generic [ref=e202]:
+            - button "Interior Interior 6" [ref=e203]:
+              - img "Interior" [ref=e205]
+              - generic [ref=e206]:
+                - generic [ref=e207]: Interior
+                - generic [ref=e208]: "6"
+            - button "Food Food 54" [ref=e209]:
+              - img "Food" [ref=e211]
+              - generic [ref=e212]:
+                - generic [ref=e213]: Food
+                - generic [ref=e214]: "54"
+            - button "Menu Menu 1" [ref=e215]:
+              - img "Menu" [ref=e217]
+              - generic [ref=e218]:
+                - generic [ref=e219]: Menu
+                - generic [ref=e220]: "1"
+        - generic [ref=e221]:
+          - generic [ref=e222]:
+            - generic [ref=e224]: Agriturismo Assiuolo
+            - generic [ref=e225]:
+              - button [ref=e226] [cursor=pointer]:
+                - img [ref=e230]
+              - link "Review" [ref=e232] [cursor=pointer]:
+                - /url: /ClientLink?value=emd0Xy9Vc2VyUmV2aWV3RWRpdC1nMTU3NDk0NS1kMjIzODkzOC1BZ3JpdHVyaXNtb19Bc3NpdW9sby1Nb250ZWdyb3Nzb19kX0FzdGlfUHJvdmluY2Vfb2ZfQXN0aV9QaWVkbW9udC5odG1sX05SOA%3D%3D
+                - img [ref=e233]
+          - tablist [ref=e237]:
+            - tab "Photos" [selected] [ref=e238] [cursor=pointer]
+            - tab "Overview" [ref=e239] [cursor=pointer]
+            - tab "Hours" [ref=e240] [cursor=pointer]
+            - tab "Location" [ref=e241] [cursor=pointer]
+            - tab "Reviews" [ref=e242] [cursor=pointer]
+        - tablist [ref=e244]:
+          - tab "Overview" [selected] [ref=e245] [cursor=pointer]
+          - tab "Hours" [ref=e246] [cursor=pointer]
+          - tab "Location" [ref=e247] [cursor=pointer]
+          - tab "Reviews" [ref=e248] [cursor=pointer]
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - generic [ref=e253]: At a glance
+            - generic [ref=e254]:
+              - link "+ Add hours" [ref=e256] [cursor=pointer]:
+                - /url: /ImproveListing-d2238938.html
+              - generic [ref=e257]:
+                - img [ref=e258]
+                - button "Fraz. Molisso, 5, 14048 Montegrosso d'Asti Italy" [ref=e260] [cursor=pointer]
+            - generic [ref=e261]:
+              - link "+39 347 005 4098" [ref=e262] [cursor=pointer]:
+                - /url: tel:+39 347 005 4098
+                - img [ref=e264]
+                - generic [ref=e266]: +39 347 005 4098
+              - link "Email" [ref=e267] [cursor=pointer]:
+                - /url: mailto:bellicosorino@gmail.com
+                - img [ref=e269]
+                - generic [ref=e271]: Email
+              - link "Improve this listing" [ref=e274] [cursor=pointer]:
+                - /url: /ImproveListing-d2238938.html
+          - generic [ref=e276]:
+            - generic [ref=e277]: About
+            - generic [ref=e279]:
+              - generic [ref=e281]: Features
+              - button "See all features" [ref=e283] [cursor=pointer]:
+                - generic [ref=e284]: See all features
+              - generic [ref=e286]:
+                - generic [ref=e288]:
+                  - img [ref=e291]
+                  - generic [ref=e294]: Vegetarian friendly, Gluten free options
+                - generic [ref=e296]:
+                  - img [ref=e299]
+                  - generic [ref=e302]: Lunch, Dinner
+                - generic [ref=e304]:
+                  - img [ref=e307]
+                  - generic [ref=e310]: Table Service
+          - generic [ref=e313]:
+            - generic [ref=e314]: Location
+            - generic [ref=e315]:
+              - button [ref=e316] [cursor=pointer]
+              - generic [ref=e319]:
+                - generic [ref=e320]:
+                  - img [ref=e322]
+                  - link "Fraz. Molisso, 5, 14048 Montegrosso d'Asti Italy" [ref=e325] [cursor=pointer]:
+                    - /url: https://maps.google.com/maps?saddr=&daddr=Fraz. Molisso, 5, 14048 Montegrosso d'Asti Italy@44.80689,8.257219
+                    - generic [ref=e326]:
+                      - generic [ref=e328]: Fraz. Molisso, 5, 14048 Montegrosso d'Asti Italy
+                      - img [ref=e330]
+                - generic [ref=e332]:
+                  - img [ref=e334]
+                  - generic [ref=e339]: Parking Available, Validated Parking
+          - generic [ref=e341]:
+            - generic [ref=e344]: Does this restaurant serve Lombard food?
+            - radiogroup [ref=e345]:
+              - generic [ref=e347]:
+                - checkbox "Yes" [ref=e349] [cursor=pointer]
+                - generic [ref=e352] [cursor=pointer]: "Yes"
+              - generic [ref=e354]:
+                - checkbox "No" [ref=e356] [cursor=pointer]
+                - generic [ref=e359] [cursor=pointer]: "No"
+              - generic [ref=e361]:
+                - checkbox "Unsure" [ref=e363] [cursor=pointer]
+                - generic [ref=e366] [cursor=pointer]: Unsure
+        - generic [ref=e367]:
+          - generic [ref=e369]:
+            - generic [ref=e370]: Save this restaurant
+            - button "Save" [ref=e371] [cursor=pointer]:
+              - generic [ref=e373]:
+                - img [ref=e375]
+                - text: Save
+          - generic [ref=e378]:
+            - generic [ref=e379]:
+              - generic [ref=e380]: Hours
+              - link "Add hours" [ref=e382] [cursor=pointer]:
+                - /url: /ImproveListing-d2238938.html
+                - img [ref=e384]
+                - generic [ref=e386]: Add hours
+            - generic [ref=e387]: No hours available
+      - generic [ref=e390]:
+        - generic [ref=e393]:
+          - generic [ref=e395]:
+            - generic [ref=e396]:
+              - heading "Reviews" [level=2] [ref=e398]
+              - generic [ref=e399]:
+                - button "Tips/Q&A (4)" [ref=e400] [cursor=pointer]:
+                  - generic [ref=e401]: Tips/Q&A (4)
+                - button "All reviews (148)" [ref=e402] [cursor=pointer]:
+                  - generic [ref=e403]: All reviews (148)
+            - link "Write a review" [ref=e404] [cursor=pointer]:
+              - /url: /ClientLink?value=UlRxXy9Vc2VyUmV2aWV3RWRpdC1nMTU3NDk0NS1kMjIzODkzOC1BZ3JpdHVyaXNtb19Bc3NpdW9sby1Nb250ZWdyb3Nzb19kX0FzdGlfUHJvdmluY2Vfb2ZfQXN0aV9QaWVkbW9udC5odG1sX3dmTw%3D%3D
+              - generic [ref=e406]:
+                - img [ref=e407]
+                - text: Write a review
+          - generic [ref=e409]:
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e413]: "4.7"
+                - generic [ref=e414]: Very Good
+                - generic [ref=e418]:
+                  - img "4.7 of 5 bubbles" [ref=e419]
+                  - generic [ref=e427]: (148)
+              - generic [ref=e429]:
+                - generic [ref=e430]:
+                  - generic [ref=e433]: Excellent
+                  - generic [ref=e437]: "112"
+                - generic [ref=e438]:
+                  - generic [ref=e441]: Good
+                  - generic [ref=e445]: "28"
+                - generic [ref=e446]:
+                  - generic [ref=e449]: Average
+                  - generic [ref=e453]: "5"
+                - generic [ref=e454]:
+                  - generic [ref=e457]: Poor
+                  - generic [ref=e461]: "1"
+                - generic [ref=e462]:
+                  - generic [ref=e465]: Terrible
+                  - generic [ref=e469]: "2"
+            - generic [ref=e473]:
+              - generic [ref=e477]:
+                - generic [ref=e478]:
+                  - generic [ref=e479]: Service
+                  - generic [ref=e485]: "4.7"
+                - generic [ref=e486]:
+                  - generic [ref=e487]: Food
+                  - generic [ref=e493]: "4.7"
+                - generic [ref=e494]:
+                  - generic [ref=e495]: Value
+                  - generic [ref=e501]: "4.5"
+                - generic [ref=e502]:
+                  - generic [ref=e503]: Atmosphere
+                  - generic [ref=e509]: "4.5"
+              - generic:
+                - generic:
+                  - generic:
+                    - button:
+                      - img
+                - generic:
+                  - generic:
+                    - button:
+                      - img
+        - generic [ref=e512]:
+          - generic [ref=e513]:
+            - generic [ref=e514]:
+              - generic [ref=e515]: Traveler photos (83)
+              - link "Add photos" [ref=e516] [cursor=pointer]:
+                - /url: /ClientLink?value=OW1YXy9Qb3N0UGhvdG9zLWQyMjM4OTM4X1RCYQ%3D%3D
+                - generic [ref=e517]: Add photos
+            - generic [ref=e519]:
+              - generic [ref=e555] [cursor=pointer]: See all photos
+              - generic:
+                - generic:
+                  - generic:
+                    - button:
+                      - img
+                - button [ref=e557] [cursor=pointer]:
+                  - img [ref=e558]
+          - generic [ref=e562]:
+            - generic [ref=e563]:
+              - generic [ref=e564]:
+                - generic [ref=e567]: All reviews (148)
+                - link "Write a review" [ref=e568] [cursor=pointer]:
+                  - /url: /ClientLink?value=UlRxXy9Vc2VyUmV2aWV3RWRpdC1nMTU3NDk0NS1kMjIzODkzOC1BZ3JpdHVyaXNtb19Bc3NpdW9sby1Nb250ZWdyb3Nzb19kX0FzdGlfUHJvdmluY2Vfb2ZfQXN0aV9QaWVkbW9udC5odG1sX3dmTw%3D%3D
+                  - generic [ref=e570]:
+                    - img [ref=e571]
+                    - text: Write a review
+              - generic [ref=e573]:
+                - text: Reviews are the subjective opinion of Tripadvisor members and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                - link "transparency report" [ref=e574] [cursor=pointer]:
+                  - /url: /TransparencyReport2025
+                - text: to learn more.
+            - generic [ref=e575]:
+              - button "Click to open the filter" [ref=e576] [cursor=pointer]:
+                - generic [ref=e577]:
+                  - img [ref=e579]
+                  - generic [ref=e582]: Filters (1)
+              - generic [ref=e583]:
+                - 'button "Sort by: Most recent" [ref=e585] [cursor=pointer]':
+                  - generic [ref=e586]:
+                    - generic [ref=e587]: "Sort by: Most recent"
+                    - img [ref=e589]
+                - button "Most recent Reviews ordered by most recent publish date in descending order. Detailed reviews Reviews ordered by recency and descriptiveness of user-identified themes such as wait time, length of visit, general tips, and location information." [ref=e592] [cursor=pointer]:
+                  - img [ref=e593]
+              - generic [ref=e597]:
+                - button "Search" [ref=e598] [cursor=pointer]:
+                  - img [ref=e599]
+                - searchbox "Search" [ref=e603]
+            - generic [ref=e605]:
+              - generic [ref=e607]:
+                - generic [ref=e608]:
+                  - generic [ref=e609]:
+                    - generic [ref=e610]:
+                      - link [ref=e617] [cursor=pointer]:
+                        - /url: /Profile/francoalessios
+                      - generic [ref=e620]:
+                        - link "FRANCO ALESSIO S" [ref=e622] [cursor=pointer]:
+                          - /url: /Profile/francoalessios
+                        - generic [ref=e626]: 1 contribution
+                    - generic [ref=e627]:
+                      - button "Click to add helpful vote" [ref=e628] [cursor=pointer]:
+                        - img [ref=e629]
+                        - generic [ref=e631]: "0"
+                      - button "Open Options Menu" [ref=e634] [cursor=pointer]:
+                        - img [ref=e635]
+                  - generic [ref=e637]:
+                    - img "5 of 5 bubbles" [ref=e642]
+                    - heading "Farmhouse top" [level=3] [ref=e648]:
+                      - link "Farmhouse top" [ref=e651] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1052082013-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e653]: Jan 2026 • Friends
+                    - generic [ref=e655]:
+                      - generic [ref=e658] [cursor=pointer]: We stayed at the Assiuolo with friends (including 2 Belgian nationals) for dinner on New Year's Eve (2025) and we spent a beautiful evening enjoying appetizers, first courses, main courses and desserts really tasty and quality, all prepared with great care. The same can be said for the wines brought to the table (own production and even awarded for several consecutive years by various wine guides). We returned with other people at the end of January and the choice was confirmed great! Next week we will return with the children and their companions and we will certainly make a good impression in all respects. The managers of the farm are really kind and caring people and put the utmost effort to provide a service that makes a difference. Congratulations! Franco and Paola
+                      - button "Read more" [ref=e660] [cursor=pointer]:
+                        - generic [ref=e661]: Read more
+                        - img [ref=e663]
+                  - generic [ref=e665]:
+                    - generic [ref=e666]:
+                      - generic [ref=e667]: Value
+                      - img "5 of 5 bubbles" [ref=e671]
+                    - generic [ref=e677]:
+                      - generic [ref=e678]: Service
+                      - img "5 of 5 bubbles" [ref=e682]
+                    - generic [ref=e688]:
+                      - generic [ref=e689]: Food
+                      - img "5 of 5 bubbles" [ref=e693]
+                    - generic [ref=e699]:
+                      - generic [ref=e700]: Atmosphere
+                      - img "5 of 5 bubbles" [ref=e704]
+                  - generic [ref=e710]:
+                    - generic [ref=e713]: Machine Translated
+                    - button "Show original" [ref=e715] [cursor=pointer]:
+                      - generic [ref=e716]: Show original
+                  - generic [ref=e717]:
+                    - generic [ref=e718]: Written March 6, 2026
+                    - generic [ref=e720]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e721] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e722]:
+                  - generic [ref=e723]:
+                    - generic [ref=e724]:
+                      - link [ref=e731] [cursor=pointer]:
+                        - /url: /Profile/179gretad
+                      - generic [ref=e734]:
+                        - link "Greta D" [ref=e736] [cursor=pointer]:
+                          - /url: /Profile/179gretad
+                        - generic [ref=e738]:
+                          - text: Asti, Italy
+                          - generic [ref=e739]:
+                            - text: •
+                            - generic [ref=e740]: 1 contribution
+                    - generic [ref=e741]:
+                      - button "Click to add helpful vote" [ref=e742] [cursor=pointer]:
+                        - img [ref=e743]
+                        - generic [ref=e745]: "0"
+                      - button "Open Options Menu" [ref=e748] [cursor=pointer]:
+                        - img [ref=e749]
+                  - generic [ref=e751]:
+                    - img "5 of 5 bubbles" [ref=e756]
+                    - heading "That's great! TO TRY!" [level=3] [ref=e762]:
+                      - link "That's great! TO TRY!" [ref=e765] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1045519197-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e767]: Jan 2026 • Family
+                    - generic [ref=e772]: "Finally a restaurant different from the usual chaos: a warm and welcoming family-run place, where you immediately feel at home. Really excellent food, great wines and simply amazing value for money. To return absolutely!"
+                  - generic [ref=e773]:
+                    - generic [ref=e776]: Machine Translated
+                    - button "Show original" [ref=e778] [cursor=pointer]:
+                      - generic [ref=e779]: Show original
+                  - generic [ref=e780]:
+                    - generic [ref=e781]: Written January 9, 2026
+                    - generic [ref=e783]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e784] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e785]:
+                  - generic [ref=e786]:
+                    - generic [ref=e787]:
+                      - link [ref=e794] [cursor=pointer]:
+                        - /url: /Profile/giovannimC5894KA
+                      - generic [ref=e797]:
+                        - link "Giovanni M" [ref=e799] [cursor=pointer]:
+                          - /url: /Profile/giovannimC5894KA
+                        - generic [ref=e801]:
+                          - text: Asti, Italy
+                          - generic [ref=e802]:
+                            - text: •
+                            - generic [ref=e803]: 12 contributions
+                    - generic [ref=e804]:
+                      - button "Click to add helpful vote" [ref=e805] [cursor=pointer]:
+                        - img [ref=e806]
+                        - generic [ref=e808]: "0"
+                      - button "Open Options Menu" [ref=e811] [cursor=pointer]:
+                        - img [ref=e812]
+                  - generic [ref=e814]:
+                    - img "5 of 5 bubbles" [ref=e819]
+                    - heading "Christmas lunch with family and relatives" [level=3] [ref=e825]:
+                      - link "Christmas lunch with family and relatives" [ref=e828] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1043652109-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e830]: Dec 2025 • Family
+                    - generic [ref=e835]: Today Christmas lunch with family and relatives, great food” great service, excellence are the wines, especially the grignolino “domine vites” and the barbera doc “merum”
+                  - generic [ref=e836]:
+                    - button "See full review image" [ref=e837] [cursor=pointer]
+                    - button "See full review image" [ref=e839] [cursor=pointer]
+                  - generic [ref=e841]:
+                    - generic [ref=e844]: Machine Translated
+                    - button "Show original" [ref=e846] [cursor=pointer]:
+                      - generic [ref=e847]: Show original
+                  - generic [ref=e848]:
+                    - generic [ref=e849]: Written December 25, 2025
+                    - generic [ref=e851]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e852] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e853]:
+                  - generic [ref=e854]:
+                    - generic [ref=e855]:
+                      - link [ref=e862] [cursor=pointer]:
+                        - /url: /Profile/G9587GFandread
+                      - generic [ref=e865]:
+                        - link "andrea d" [ref=e867] [cursor=pointer]:
+                          - /url: /Profile/G9587GFandread
+                        - generic [ref=e871]: 10 contributions
+                    - generic [ref=e872]:
+                      - button "Click to add helpful vote" [ref=e873] [cursor=pointer]:
+                        - img [ref=e874]
+                        - generic [ref=e876]: "0"
+                      - button "Open Options Menu" [ref=e879] [cursor=pointer]:
+                        - img [ref=e880]
+                  - generic [ref=e882]:
+                    - img "5 of 5 bubbles" [ref=e887]
+                    - heading "Excellent throughout" [level=3] [ref=e893]:
+                      - link "Excellent throughout" [ref=e896] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1041667313-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e898]: Dec 2025 • Couples
+                    - generic [ref=e903]: We returned after a few years, what about the owner Rino always welcoming and very kind as well as being a great cook, sublime experience class cuisine mime materials at the top, simple dishes well balanced tasty and never heavy, top class wine, we are happy with your reopening.
+                  - generic [ref=e904]:
+                    - generic [ref=e905]:
+                      - generic [ref=e906]: Value
+                      - img "5 of 5 bubbles" [ref=e910]
+                    - generic [ref=e916]:
+                      - generic [ref=e917]: Service
+                      - img "5 of 5 bubbles" [ref=e921]
+                    - generic [ref=e927]:
+                      - generic [ref=e928]: Food
+                      - img "5 of 5 bubbles" [ref=e932]
+                    - generic [ref=e938]:
+                      - generic [ref=e939]: Atmosphere
+                      - img "5 of 5 bubbles" [ref=e943]
+                  - generic [ref=e949]:
+                    - button "See full review image" [ref=e950] [cursor=pointer]
+                    - button "See full review image" [ref=e952] [cursor=pointer]
+                    - button "See full review image" [ref=e954] [cursor=pointer]
+                    - button "See full review image" [ref=e956] [cursor=pointer]
+                    - button "See full review image" [ref=e958] [cursor=pointer]
+                    - button "See full review image" [ref=e960] [cursor=pointer]
+                    - button "See full review image" [ref=e962] [cursor=pointer]
+                    - button "See full review image" [ref=e964] [cursor=pointer]
+                    - button "See full review image" [ref=e966] [cursor=pointer]
+                  - generic [ref=e968]:
+                    - generic [ref=e971]: Machine Translated
+                    - button "Show original" [ref=e973] [cursor=pointer]:
+                      - generic [ref=e974]: Show original
+                  - generic [ref=e975]:
+                    - generic [ref=e976]: Written December 7, 2025
+                    - generic [ref=e978]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e979] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e980]:
+                  - generic [ref=e981]:
+                    - generic [ref=e982]:
+                      - link [ref=e989] [cursor=pointer]:
+                        - /url: /Profile/836enzom
+                      - generic [ref=e992]:
+                        - link "enzo m" [ref=e994] [cursor=pointer]:
+                          - /url: /Profile/836enzom
+                        - generic [ref=e998]: 14 contributions
+                    - generic [ref=e999]:
+                      - button "Click to add helpful vote" [ref=e1000] [cursor=pointer]:
+                        - img [ref=e1001]
+                        - generic [ref=e1003]: "0"
+                      - button "Open Options Menu" [ref=e1006] [cursor=pointer]:
+                        - img [ref=e1007]
+                  - generic [ref=e1009]:
+                    - img "4 of 5 bubbles" [ref=e1014]
+                    - heading "Monferrato autumn dinner" [level=3] [ref=e1020]:
+                      - link "Monferrato autumn dinner" [ref=e1023] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1040852973-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1025]: Nov 2025 • Couples
+                    - generic [ref=e1027]:
+                      - generic [ref=e1030] [cursor=pointer]: As usual at least 2/3 times a year we go to this fantastic land to buy excellent wines and enjoy the beautiful landscapes, we were there to see the Christmas market of Govone and intrigued by the name and reviews of other users we followed the road signs we found ourselves in front of an ancient farmhouse nestled in the hills very well-kept and particular dishes we chose as wine a very good grignolino d'asti unique prices more than acceptable only defect a little 'waiting between courses but it is worth waiting finally very nice owners who make you feel at home.
+                      - button "Read more" [ref=e1032] [cursor=pointer]:
+                        - generic [ref=e1033]: Read more
+                        - img [ref=e1035]
+                  - generic [ref=e1037]:
+                    - generic [ref=e1038]:
+                      - generic [ref=e1039]: Value
+                      - img "4 of 5 bubbles" [ref=e1043]
+                    - generic [ref=e1049]:
+                      - generic [ref=e1050]: Service
+                      - img "4 of 5 bubbles" [ref=e1054]
+                    - generic [ref=e1060]:
+                      - generic [ref=e1061]: Food
+                      - img "4 of 5 bubbles" [ref=e1065]
+                    - generic [ref=e1071]:
+                      - generic [ref=e1072]: Atmosphere
+                      - img "4 of 5 bubbles" [ref=e1076]
+                  - generic [ref=e1082]:
+                    - generic [ref=e1085]: Machine Translated
+                    - button "Show original" [ref=e1087] [cursor=pointer]:
+                      - generic [ref=e1088]: Show original
+                  - generic [ref=e1089]:
+                    - generic [ref=e1090]: Written November 30, 2025
+                    - generic [ref=e1092]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1093] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1094]:
+                  - generic [ref=e1095]:
+                    - generic [ref=e1096]:
+                      - link [ref=e1103] [cursor=pointer]:
+                        - /url: /Profile/Cristina29366
+                      - generic [ref=e1106]:
+                        - link "Cristina29366" [ref=e1108] [cursor=pointer]:
+                          - /url: /Profile/Cristina29366
+                        - generic [ref=e1110]:
+                          - text: Padua, Italy
+                          - generic [ref=e1111]:
+                            - text: •
+                            - generic [ref=e1112]: 1 contribution
+                    - generic [ref=e1113]:
+                      - button "Click to add helpful vote" [ref=e1114] [cursor=pointer]:
+                        - img [ref=e1115]
+                        - generic [ref=e1117]: "0"
+                      - button "Open Options Menu" [ref=e1120] [cursor=pointer]:
+                        - img [ref=e1121]
+                  - generic [ref=e1123]:
+                    - img "5 of 5 bubbles" [ref=e1128]
+                    - heading "Wonderful quality of Service, food and atmosphere." [level=3] [ref=e1134]:
+                      - link "Wonderful quality of Service, food and atmosphere." [ref=e1137] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1035528190-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1139]: Oct 2025 • Couples
+                    - generic [ref=e1141]:
+                      - generic [ref=e1144] [cursor=pointer]: Don’t go to the assiuolo if you are in a hurry and want to eat the usual things. Here you live a space made of things thought and elaborated with love, created with raw materials that tell a story. The scent and taste of a sage leaf on a broccoli and anchovy mousse can make you close your eyes and take you far. They welcome you as at home and treat you with courtesy and attention. And maybe the price you pay for all this (40€) is too little. The menu is set and very rich with 3 starters, 2 first courses, 1 second course and 2 desserts and includes water and wine. All refined dishes and never banal.
+                      - button "Read more" [ref=e1146] [cursor=pointer]:
+                        - generic [ref=e1147]: Read more
+                        - img [ref=e1149]
+                  - generic [ref=e1151]:
+                    - generic [ref=e1154]: Machine Translated
+                    - button "Show original" [ref=e1156] [cursor=pointer]:
+                      - generic [ref=e1157]: Show original
+                  - generic [ref=e1158]:
+                    - generic [ref=e1159]: Written October 19, 2025
+                    - generic [ref=e1161]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1162] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1163]:
+                  - generic [ref=e1164]:
+                    - generic [ref=e1165]:
+                      - link [ref=e1172] [cursor=pointer]:
+                        - /url: /Profile/163martav
+                      - generic [ref=e1175]:
+                        - link "Svariopinta" [ref=e1177] [cursor=pointer]:
+                          - /url: /Profile/163martav
+                        - generic [ref=e1181]: 15 contributions
+                    - generic [ref=e1182]:
+                      - button "Click to add helpful vote" [ref=e1183] [cursor=pointer]:
+                        - img [ref=e1184]
+                        - generic [ref=e1186]: "0"
+                      - button "Open Options Menu" [ref=e1189] [cursor=pointer]:
+                        - img [ref=e1190]
+                  - generic [ref=e1192]:
+                    - img "5 of 5 bubbles" [ref=e1197]
+                    - heading "How beautiful! We had a really good time ☺️" [level=3] [ref=e1203]:
+                      - link "How beautiful! We had a really good time ☺️" [ref=e1206] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1021374626-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1208]: Jul 2025 • Family
+                    - generic [ref=e1210]:
+                      - generic [ref=e1213] [cursor=pointer]: A really pleasant discovery! We do not live far away, we have seen the sign a thousand times .. but we have never ventured... well, we did wrong! The place is really relaxing and quiet. We ate under the beautiful porch with the high roof near a nice brick wood-burning oven. The menu is a perfect mix of traditional dishes to which special "touches" are expertly added (for example black olives and mint with potato pie and Parmesan cream). The owners are nice and sympathetic and have really pampered us. We will definitely be back!
+                      - button "Read more" [ref=e1215] [cursor=pointer]:
+                        - generic [ref=e1216]: Read more
+                        - img [ref=e1218]
+                  - generic [ref=e1220]:
+                    - generic [ref=e1221]:
+                      - generic [ref=e1222]: Value
+                      - img "5 of 5 bubbles" [ref=e1226]
+                    - generic [ref=e1232]:
+                      - generic [ref=e1233]: Service
+                      - img "5 of 5 bubbles" [ref=e1237]
+                    - generic [ref=e1243]:
+                      - generic [ref=e1244]: Food
+                      - img "5 of 5 bubbles" [ref=e1248]
+                    - generic [ref=e1254]:
+                      - generic [ref=e1255]: Atmosphere
+                      - img "5 of 5 bubbles" [ref=e1259]
+                  - generic [ref=e1265]:
+                    - generic [ref=e1268]: Machine Translated
+                    - button "Show original" [ref=e1270] [cursor=pointer]:
+                      - generic [ref=e1271]: Show original
+                  - generic [ref=e1272]:
+                    - generic [ref=e1273]: Written July 28, 2025
+                    - generic [ref=e1275]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1276] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1277]:
+                  - generic [ref=e1278]:
+                    - generic [ref=e1279]:
+                      - link [ref=e1286] [cursor=pointer]:
+                        - /url: /Profile/vinoevita
+                      - generic [ref=e1289]:
+                        - link "vinoevita" [ref=e1291] [cursor=pointer]:
+                          - /url: /Profile/vinoevita
+                        - generic [ref=e1293]:
+                          - text: Asti, Italy
+                          - generic [ref=e1294]:
+                            - text: •
+                            - generic [ref=e1295]: 7 contributions
+                    - generic [ref=e1296]:
+                      - button "Click to add helpful vote" [ref=e1297] [cursor=pointer]:
+                        - img [ref=e1298]
+                        - generic [ref=e1300]: "0"
+                      - button "Open Options Menu" [ref=e1303] [cursor=pointer]:
+                        - img [ref=e1304]
+                  - generic [ref=e1306]:
+                    - img "5 of 5 bubbles" [ref=e1311]
+                    - heading "A nice reconfirmation" [level=3] [ref=e1317]:
+                      - link "A nice reconfirmation" [ref=e1320] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1017486463-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1322]: Jul 2025 • Family
+                    - generic [ref=e1324]:
+                      - generic [ref=e1327] [cursor=pointer]: "Good morning to all users. Last Sunday with my wife and son we went to this nice restaurant. It was already a few years since I had the pleasure of coming...... I must say that what I like most about this place is its beauty in its simplicity, nothing is built or forced, but everything is in perfect harmony with the magnificent nature that surrounds it. The result is a magnificent lunch made in tranquility, in a peace and serenity that can not be found elsewhere...... Specifically, the lunch consisted of a set menu consisting of three appetizers, two first courses, the second and, of course, the dessert. Personally I really enjoyed a wonderful raw meat bar served as anticipated and the second consisting of pork shank and veal scoop: both of an unparalleled softness. During the meal we drank a bottle of Barbera called Merum, a truly exceptional wine, even best Italian wine in the Yearbook of the best Italian wines. All for 40,00 euros wine and drinks including, in addition, a small discount for my 15-year-old son. I think it's more difficult to want. Living very far from Montegrosso d 'Asti I do not know when I can return, but, of course, I would recommend everyone to do it"
+                      - button "Read more" [ref=e1329] [cursor=pointer]:
+                        - generic [ref=e1330]: Read more
+                        - img [ref=e1332]
+                  - generic [ref=e1334]:
+                    - generic [ref=e1337]: Machine Translated
+                    - button "Show original" [ref=e1339] [cursor=pointer]:
+                      - generic [ref=e1340]: Show original
+                  - generic [ref=e1341]:
+                    - generic [ref=e1342]: Written July 10, 2025
+                    - generic [ref=e1344]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1345] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1346]:
+                  - generic [ref=e1347]:
+                    - generic [ref=e1348]:
+                      - link [ref=e1355] [cursor=pointer]:
+                        - /url: /Profile/Tintindesy
+                        - img [ref=e1357]
+                      - generic [ref=e1361]:
+                        - link "Desiree M" [ref=e1363] [cursor=pointer]:
+                          - /url: /Profile/Tintindesy
+                        - generic [ref=e1367]: 4 contributions
+                    - generic [ref=e1368]:
+                      - button "Click to add helpful vote" [ref=e1369] [cursor=pointer]:
+                        - img [ref=e1370]
+                        - generic [ref=e1372]: "0"
+                      - button "Open Options Menu" [ref=e1375] [cursor=pointer]:
+                        - img [ref=e1376]
+                  - generic [ref=e1378]:
+                    - img "1 of 5 bubbles" [ref=e1383]
+                    - heading "A REALLY FLOP EVENING!" [level=3] [ref=e1389]:
+                      - link "A REALLY FLOP EVENING!" [ref=e1392] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1015958468-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1394]: May 2025 • Friends
+                    - generic [ref=e1399]: Tonight we organized an end of school year dinner in this "farm". Bad night.... We have agreed on 2 types of menu, one normal and one vegan... The latter ate little and nothing, moreover the dishes proposed were trivial, not very rich (both creative inspiration and quantity) and really poor even in quality. The rest of the menu had no element that deserves to be remembered or positively reviewed. Even the table service and location was poor and poorly cared for. In short, an evening to forget and not to try again. Too bad.
+                  - generic [ref=e1400]:
+                    - generic [ref=e1401]:
+                      - generic [ref=e1402]: Value
+                      - img "1 of 5 bubbles" [ref=e1406]
+                    - generic [ref=e1412]:
+                      - generic [ref=e1413]: Service
+                      - img "1 of 5 bubbles" [ref=e1417]
+                    - generic [ref=e1423]:
+                      - generic [ref=e1424]: Food
+                      - img "2 of 5 bubbles" [ref=e1428]
+                    - generic [ref=e1434]:
+                      - generic [ref=e1435]: Atmosphere
+                      - img "1 of 5 bubbles" [ref=e1439]
+                  - generic [ref=e1445]:
+                    - generic [ref=e1448]: Machine Translated
+                    - button "Show original" [ref=e1450] [cursor=pointer]:
+                      - generic [ref=e1451]: Show original
+                  - generic [ref=e1452]:
+                    - generic [ref=e1453]: Written July 1, 2025
+                    - generic [ref=e1455]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1456] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1457]:
+                  - generic [ref=e1458]:
+                    - generic [ref=e1459]:
+                      - link [ref=e1466] [cursor=pointer]:
+                        - /url: /Profile/MonicaAsti1971
+                      - generic [ref=e1469]:
+                        - link "Monica C" [ref=e1471] [cursor=pointer]:
+                          - /url: /Profile/MonicaAsti1971
+                        - generic [ref=e1475]: 19 contributions
+                    - generic [ref=e1476]:
+                      - button "Click to add helpful vote" [ref=e1477] [cursor=pointer]:
+                        - img [ref=e1478]
+                        - generic [ref=e1480]: "1"
+                      - button "Open Options Menu" [ref=e1483] [cursor=pointer]:
+                        - img [ref=e1484]
+                  - generic [ref=e1486]:
+                    - img "5 of 5 bubbles" [ref=e1491]
+                    - heading "Excellent confirmation" [level=3] [ref=e1497]:
+                      - link "Excellent confirmation" [ref=e1500] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1008138065-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1502]: May 2025 • Couples
+                    - generic [ref=e1507]: We returned after several years, we found the same care and attention to the dishes prepared and served. Excellent really all the proposals, from appetizers to desserts. Difficult to choose a dish over all, perhaps the tagliolini with aromatic herbs... spectacular. We will definitely return, and recommend it to those who like good food
+                  - generic [ref=e1508]:
+                    - generic [ref=e1511]: Machine Translated
+                    - button "Show original" [ref=e1513] [cursor=pointer]:
+                      - generic [ref=e1514]: Show original
+                  - generic [ref=e1515]:
+                    - generic [ref=e1516]: Written May 18, 2025
+                    - generic [ref=e1518]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1519] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1520]:
+                  - generic [ref=e1521]:
+                    - generic [ref=e1522]:
+                      - link [ref=e1529] [cursor=pointer]:
+                        - /url: /Profile/Paolobg61
+                      - generic [ref=e1532]:
+                        - link "Paolob" [ref=e1534] [cursor=pointer]:
+                          - /url: /Profile/Paolobg61
+                        - generic [ref=e1538]: 12 contributions
+                    - generic [ref=e1539]:
+                      - button "Click to add helpful vote" [ref=e1540] [cursor=pointer]:
+                        - img [ref=e1541]
+                        - generic [ref=e1543]: "0"
+                      - button "Open Options Menu" [ref=e1546] [cursor=pointer]:
+                        - img [ref=e1547]
+                  - generic [ref=e1549]:
+                    - img "5 of 5 bubbles" [ref=e1554]
+                    - heading "Family management and right innovation" [level=3] [ref=e1560]:
+                      - link "Family management and right innovation" [ref=e1563] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1007956938-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1565]: May 2025 • Couples
+                    - generic [ref=e1570]: We return after reopening finding the quality in the kitchen and courtesy that has always distinguished them. Traditional dishes, but with a non-trivial personal touch, which knows how to make the menu interesting. Balanced portions and wines of their production. Farm price for a lunch I would say, not discounted.
+                  - generic [ref=e1571]:
+                    - button "See full review image" [ref=e1572] [cursor=pointer]
+                    - button "See full review image" [ref=e1574] [cursor=pointer]
+                    - button "See full review image" [ref=e1576] [cursor=pointer]
+                    - button "See full review image" [ref=e1578] [cursor=pointer]
+                    - button "See full review image" [ref=e1580] [cursor=pointer]
+                    - button "See full review image" [ref=e1582] [cursor=pointer]
+                    - button "See full review image" [ref=e1584] [cursor=pointer]
+                    - button "See full review image" [ref=e1586] [cursor=pointer]
+                  - generic [ref=e1588]:
+                    - generic [ref=e1591]: Machine Translated
+                    - button "Show original" [ref=e1593] [cursor=pointer]:
+                      - generic [ref=e1594]: Show original
+                  - generic [ref=e1595]:
+                    - generic [ref=e1596]: Written May 17, 2025
+                    - generic [ref=e1598]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1599] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1600]:
+                  - generic [ref=e1601]:
+                    - generic [ref=e1602]:
+                      - link [ref=e1609] [cursor=pointer]:
+                        - /url: /Profile/nicolas2015
+                      - generic [ref=e1612]:
+                        - link "Nicola S" [ref=e1614] [cursor=pointer]:
+                          - /url: /Profile/nicolas2015
+                        - generic [ref=e1616]:
+                          - text: Milan, Italy
+                          - generic [ref=e1617]:
+                            - text: •
+                            - generic [ref=e1618]: 169 contributions
+                    - generic [ref=e1619]:
+                      - button "Click to add helpful vote" [ref=e1620] [cursor=pointer]:
+                        - img [ref=e1621]
+                        - generic [ref=e1623]: "0"
+                      - button "Open Options Menu" [ref=e1626] [cursor=pointer]:
+                        - img [ref=e1627]
+                  - generic [ref=e1629]:
+                    - img "5 of 5 bubbles" [ref=e1634]
+                    - heading "Easter lunch in the countryside of Montegrosso" [level=3] [ref=e1640]:
+                      - link "Easter lunch in the countryside of Montegrosso" [ref=e1643] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r1005121011-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1645]: Apr 2025 • Couples
+                    - generic [ref=e1647]:
+                      - generic [ref=e1650] [cursor=pointer]: The location is located along a narrow country road, on top of a hill, in a typical farmhouse of Monferrato, well preserved. It is run by two brothers, one is a cook, the other speaks at tables and serves the wine they produce. They prepare raw materials, such as tagliolini and agnolotti. They serve a menu with three appetizers, two first courses and a second course, dessert. I recommend the excellent barbera Amormio. Excellent value for money, 40 euros per person including water and a bottle of wine. The only flaw is the timing of the service, however thoughtful and precise. Being Easter lunch two and a half hours were acceptable. I'll be back.
+                      - button "Read more" [ref=e1652] [cursor=pointer]:
+                        - generic [ref=e1653]: Read more
+                        - img [ref=e1655]
+                  - generic [ref=e1657]:
+                    - generic [ref=e1660]: Machine Translated
+                    - button "Show original" [ref=e1662] [cursor=pointer]:
+                      - generic [ref=e1663]: Show original
+                  - generic [ref=e1664]:
+                    - generic [ref=e1665]: Written April 29, 2025
+                    - generic [ref=e1667]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1668] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1669]:
+                  - generic [ref=e1670]:
+                    - generic [ref=e1671]:
+                      - link [ref=e1678] [cursor=pointer]:
+                        - /url: /Profile/alessandroaV6440TO
+                      - generic [ref=e1681]:
+                        - link "Alessandro A" [ref=e1683] [cursor=pointer]:
+                          - /url: /Profile/alessandroaV6440TO
+                        - generic [ref=e1687]: 2 contributions
+                    - generic [ref=e1688]:
+                      - button "Click to add helpful vote" [ref=e1689] [cursor=pointer]:
+                        - img [ref=e1690]
+                        - generic [ref=e1692]: "1"
+                      - button "Open Options Menu" [ref=e1695] [cursor=pointer]:
+                        - img [ref=e1696]
+                  - generic [ref=e1698]:
+                    - img "5 of 5 bubbles" [ref=e1703]
+                    - heading "That's great." [level=3] [ref=e1709]:
+                      - link "That's great." [ref=e1712] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r988488398-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1714]: Aug 2024 • Couples
+                    - generic [ref=e1716]:
+                      - generic [ref=e1719] [cursor=pointer]: Nestled in the hills of the Asti area among beautiful Barbera vineyards that seem to have just come out of the beautician, there is this wonderful Restaurant. Everything is taken care of in detail. The exterior recalls the old farmhouses of our grandparents where much of life took place outdoors between the farmyard and the barn. Inside the atmosphere is always very warm and welcoming but also very well cared for and elegant. It really feels like home. All immersed in the beautiful vineyards of Barbera. We had dinner outside under the beautiful porch. The atmosphere and the atmosphere helped to create a friendly situation even with the other diners to the point that at the end of the meal we uncorked a bottle and drank all together. The well-kept dishes, presented very well, very tasty with a look at tradition but revisited and updated in a modern key. A highly recommended place and absolutely to try.
+                      - button "Read more" [ref=e1721] [cursor=pointer]:
+                        - generic [ref=e1722]: Read more
+                        - img [ref=e1724]
+                  - generic [ref=e1726]:
+                    - generic [ref=e1727]:
+                      - generic [ref=e1728]: Value
+                      - img "5 of 5 bubbles" [ref=e1732]
+                    - generic [ref=e1738]:
+                      - generic [ref=e1739]: Service
+                      - img "5 of 5 bubbles" [ref=e1743]
+                    - generic [ref=e1749]:
+                      - generic [ref=e1750]: Food
+                      - img "5 of 5 bubbles" [ref=e1754]
+                    - generic [ref=e1760]:
+                      - generic [ref=e1761]: Atmosphere
+                      - img "5 of 5 bubbles" [ref=e1765]
+                  - generic [ref=e1771]:
+                    - generic [ref=e1774]: Machine Translated
+                    - button "Show original" [ref=e1776] [cursor=pointer]:
+                      - generic [ref=e1777]: Show original
+                  - generic [ref=e1778]:
+                    - generic [ref=e1779]: Written January 11, 2025
+                    - generic [ref=e1781]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1782] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1783]:
+                  - generic [ref=e1784]:
+                    - generic [ref=e1785]:
+                      - link [ref=e1792] [cursor=pointer]:
+                        - /url: /Profile/alicedL2949WW
+                        - img [ref=e1794]
+                      - generic [ref=e1798]:
+                        - link "Alice D" [ref=e1800] [cursor=pointer]:
+                          - /url: /Profile/alicedL2949WW
+                        - generic [ref=e1802]:
+                          - text: Province of Alessandria, Italy
+                          - generic [ref=e1803]:
+                            - text: •
+                            - generic [ref=e1804]: 1 contribution
+                    - generic [ref=e1805]:
+                      - button "Click to add helpful vote" [ref=e1806] [cursor=pointer]:
+                        - img [ref=e1807]
+                        - generic [ref=e1809]: "0"
+                      - button "Open Options Menu" [ref=e1812] [cursor=pointer]:
+                        - img [ref=e1813]
+                  - generic [ref=e1815]:
+                    - img "5 of 5 bubbles" [ref=e1820]
+                    - heading "Romantic evening" [level=3] [ref=e1826]:
+                      - link "Romantic evening" [ref=e1829] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r947703748-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1831]: Apr 2024 • Couples
+                    - generic [ref=e1836]: We were in this place last week, we were welcomed with warmth and courtesy, advised on wines and informed about the history of the place. The 6 course dinner was magnificent, every dish cooked with care and attention! I personally don't like pork but the stew in barbera placed on polenta made me think again! The idea of sautéing the spinach in the grappa and serving it on the omelette is also delicious... Highly recommended!
+                  - generic [ref=e1837]:
+                    - generic [ref=e1838]:
+                      - generic [ref=e1839]: Value
+                      - img "5 of 5 bubbles" [ref=e1843]
+                    - generic [ref=e1849]:
+                      - generic [ref=e1850]: Service
+                      - img "5 of 5 bubbles" [ref=e1854]
+                    - generic [ref=e1860]:
+                      - generic [ref=e1861]: Food
+                      - img "5 of 5 bubbles" [ref=e1865]
+                    - generic [ref=e1871]:
+                      - generic [ref=e1872]: Atmosphere
+                      - img "5 of 5 bubbles" [ref=e1876]
+                  - generic [ref=e1882]:
+                    - img "Google" [ref=e1885]
+                    - button "Show original" [ref=e1887] [cursor=pointer]:
+                      - generic [ref=e1888]: Show original
+                  - generic [ref=e1889]:
+                    - generic [ref=e1890]: Written April 21, 2024
+                    - generic [ref=e1892]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1893] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+                - generic [ref=e1894]:
+                  - generic [ref=e1895]:
+                    - generic [ref=e1896]:
+                      - link [ref=e1903] [cursor=pointer]:
+                        - /url: /Profile/Vijk01
+                      - generic [ref=e1906]:
+                        - link "Vijk01" [ref=e1908] [cursor=pointer]:
+                          - /url: /Profile/Vijk01
+                        - generic [ref=e1910]:
+                          - text: Waregem, Belgium
+                          - generic [ref=e1911]:
+                            - text: •
+                            - generic [ref=e1912]: 227 contributions
+                    - generic [ref=e1913]:
+                      - button "Click to add helpful vote" [ref=e1914] [cursor=pointer]:
+                        - img [ref=e1915]
+                        - generic [ref=e1917]: "2"
+                      - button "Open Options Menu" [ref=e1920] [cursor=pointer]:
+                        - img [ref=e1921]
+                  - generic [ref=e1923]:
+                    - img "5 of 5 bubbles" [ref=e1928]
+                    - heading "The very best gastronomic experience!" [level=3] [ref=e1934]:
+                      - link "The very best gastronomic experience!" [ref=e1937] [cursor=pointer]:
+                        - /url: /ShowUserReviews-g1574945-d2238938-r762348918-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e1939]: Jul 2020
+                    - generic [ref=e1944]: What a fantastic place, and what a treat by il cuoco. One course after the other, food kept coming in. Local food, but sometimes with an innovative touch. Very gentle service. 4 antipasti, 2 primi, 1 secondo, 1 dolce, caffè and the great Merum wine grown by brother Antonio. It was delicious and we strongly recommend! Call ahead if you want to enjoy this experience too.
+                  - generic [ref=e1945]:
+                    - text: Review collected in partnership with this restaurant
+                    - button [ref=e1947] [cursor=pointer]:
+                      - generic:
+                        - generic:
+                          - img
+                  - generic [ref=e1948]:
+                    - generic [ref=e1949]: Written July 31, 2020
+                    - generic [ref=e1951]:
+                      - text: This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC. Tripadvisor performs checks on reviews as part of our industry-leading trust & safety standards. Read our
+                      - link "transparency report" [ref=e1952] [cursor=pointer]:
+                        - /url: /TransparencyReport2025
+                      - text: to learn more.
+              - generic [ref=e1953]:
+                - generic [ref=e1955]:
+                  - link "Next page" [ref=e1959] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d2238938-Reviews-or15-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - img [ref=e1960]
+                  - generic [ref=e1963]:
+                    - button "1" [disabled] [ref=e1965]:
+                      - generic [ref=e1966]: "1"
+                    - link "2" [ref=e1968] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g1574945-d2238938-Reviews-or15-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                      - generic [ref=e1969]: "2"
+                - generic [ref=e1972]: Showing results 1-15 of 21
+      - generic [ref=e1979]:
+        - generic [ref=e1982]:
+          - generic [ref=e1983]:
+            - generic [ref=e1984]: Best moderately priced restaurants
+            - link "See all" [ref=e1985] [cursor=pointer]:
+              - /url: /Restaurants-g1574945-zfp10955-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+              - generic [ref=e1986]: See all
+          - generic [ref=e1987]:
+            - generic [ref=e1988]:
+              - generic [ref=e1991]:
+                - generic [ref=e1993]:
+                  - link [ref=e1995] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d2028054-Reviews-Ristorante_della_Locanda_del_Boscogrande-Montegrosso_d_Asti_Province_of_Asti_Pie.html
+                  - button "Save to a trip" [ref=e2000] [cursor=pointer]:
+                    - img [ref=e2001]
+                - generic [ref=e2004]:
+                  - link "Ristorante della Locanda del Boscogrande" [ref=e2005] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d2028054-Reviews-Ristorante_della_Locanda_del_Boscogrande-Montegrosso_d_Asti_Province_of_Asti_Pie.html
+                    - generic [ref=e2006]: Ristorante della Locanda del Boscogrande
+                  - generic [ref=e2008]:
+                    - generic [ref=e2010]: "4.4"
+                    - generic [ref=e2011]:
+                      - img "4.4 of 5 bubbles" [ref=e2012]
+                      - link "(321 reviews)" [ref=e2019] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d2028054-Reviews-Ristorante_della_Locanda_del_Boscogrande-Montegrosso_d_Asti_Province_of_Asti_Pie.html#REVIEWS
+                        - generic [ref=e2021]: (321 reviews)
+                - generic [ref=e2022]:
+                  - generic [ref=e2023]: Italian • $$ - $$$
+                  - generic [ref=e2025]: Closed now
+              - generic [ref=e2028]:
+                - generic [ref=e2030]:
+                  - link [ref=e2032] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d4310699-Reviews-Ristorante_Centrale-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - button "Save to a trip" [ref=e2037] [cursor=pointer]:
+                    - img [ref=e2038]
+                - generic [ref=e2041]:
+                  - link "Ristorante Centrale" [ref=e2042] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d4310699-Reviews-Ristorante_Centrale-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2043]: Ristorante Centrale
+                  - generic [ref=e2045]:
+                    - generic [ref=e2047]: "4.2"
+                    - generic [ref=e2048]:
+                      - img "4.2 of 5 bubbles" [ref=e2049]
+                      - link "(236 reviews)" [ref=e2056] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d4310699-Reviews-Ristorante_Centrale-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html#REVIEWS
+                        - generic [ref=e2058]: (236 reviews)
+                - generic [ref=e2059]:
+                  - generic [ref=e2060]: Italian • $$ - $$$
+                  - generic [ref=e2062]: Open now
+              - generic [ref=e2065]:
+                - generic [ref=e2067]:
+                  - link [ref=e2069] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d3576847-Reviews-Ristorante_Antonio_e_Maria-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - button "Save to a trip" [ref=e2074] [cursor=pointer]:
+                    - img [ref=e2075]
+                - generic [ref=e2078]:
+                  - link "Ristorante Antonio e Maria" [ref=e2079] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d3576847-Reviews-Ristorante_Antonio_e_Maria-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2080]: Ristorante Antonio e Maria
+                  - generic [ref=e2082]:
+                    - generic [ref=e2084]: "3.9"
+                    - generic [ref=e2085]:
+                      - img "3.9 of 5 bubbles" [ref=e2086]
+                      - link "(270 reviews)" [ref=e2093] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d3576847-Reviews-Ristorante_Antonio_e_Maria-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html#REVIEWS
+                        - generic [ref=e2095]: (270 reviews)
+                - generic [ref=e2096]:
+                  - generic [ref=e2097]: Italian • $$ - $$$
+                  - generic [ref=e2099]: Open now
+              - generic [ref=e2102]:
+                - generic [ref=e2104]:
+                  - link [ref=e2106] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d6109693-Reviews-Hotel_Ristorante_Il_Borgovecchio-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - button "Save to a trip" [ref=e2111] [cursor=pointer]:
+                    - img [ref=e2112]
+                - generic [ref=e2115]:
+                  - link "Hotel Ristorante Il Borgovecchio" [ref=e2116] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d6109693-Reviews-Hotel_Ristorante_Il_Borgovecchio-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2117]: Hotel Ristorante Il Borgovecchio
+                  - generic [ref=e2119]:
+                    - generic [ref=e2121]: "4.5"
+                    - generic [ref=e2122]:
+                      - img "4.5 of 5 bubbles" [ref=e2123]
+                      - link "(59 reviews)" [ref=e2130] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d6109693-Reviews-Hotel_Ristorante_Il_Borgovecchio-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html#REVIEWS
+                        - generic [ref=e2132]: (59 reviews)
+                - generic [ref=e2134]: Italian • $$ - $$$
+              - generic [ref=e2137]:
+                - generic [ref=e2139]:
+                  - link [ref=e2141] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d23651332-Reviews-La_Gioia_Del_Palato-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - button "Save to a trip" [ref=e2146] [cursor=pointer]:
+                    - img [ref=e2147]
+                - generic [ref=e2150]:
+                  - link "La Gioia Del Palato" [ref=e2151] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d23651332-Reviews-La_Gioia_Del_Palato-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2152]: La Gioia Del Palato
+                  - generic [ref=e2154]:
+                    - generic [ref=e2156]: "4.7"
+                    - generic [ref=e2157]:
+                      - img "4.7 of 5 bubbles" [ref=e2158]
+                      - link "(22 reviews)" [ref=e2165] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d23651332-Reviews-La_Gioia_Del_Palato-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html#REVIEWS
+                        - generic [ref=e2167]: (22 reviews)
+                - generic [ref=e2168]:
+                  - generic [ref=e2169]: Italian • $$ - $$$
+                  - generic [ref=e2171]: Closed today
+              - generic [ref=e2174]:
+                - generic [ref=e2176]:
+                  - link [ref=e2178] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d8854783-Reviews-Hostaria_Lo_Spaiato-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - button "Save to a trip" [ref=e2183] [cursor=pointer]:
+                    - img [ref=e2184]
+                - generic [ref=e2187]:
+                  - link "Hostaria Lo Spaiato" [ref=e2188] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d8854783-Reviews-Hostaria_Lo_Spaiato-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2189]: Hostaria Lo Spaiato
+                  - generic [ref=e2191]:
+                    - generic [ref=e2193]: "4.3"
+                    - generic [ref=e2194]:
+                      - img "4.3 of 5 bubbles" [ref=e2195]
+                      - link "(31 reviews)" [ref=e2202] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d8854783-Reviews-Hostaria_Lo_Spaiato-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html#REVIEWS
+                        - generic [ref=e2204]: (31 reviews)
+                - generic [ref=e2205]:
+                  - generic [ref=e2206]: Italian • $$ - $$$
+                  - generic [ref=e2208]: Closed now
+              - generic [ref=e2211]:
+                - generic [ref=e2213]:
+                  - link [ref=e2215] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d7711816-Reviews-Agriturismo_Da_Elvira-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - button "Save to a trip" [ref=e2220] [cursor=pointer]:
+                    - img [ref=e2221]
+                - generic [ref=e2224]:
+                  - link "Agriturismo Da Elvira" [ref=e2225] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1574945-d7711816-Reviews-Agriturismo_Da_Elvira-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2226]: Agriturismo Da Elvira
+                  - generic [ref=e2228]:
+                    - generic [ref=e2230]: "4.1"
+                    - generic [ref=e2231]:
+                      - img "4.1 of 5 bubbles" [ref=e2232]
+                      - link "(57 reviews)" [ref=e2239] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g1574945-d7711816-Reviews-Agriturismo_Da_Elvira-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html#REVIEWS
+                        - generic [ref=e2241]: (57 reviews)
+                - generic [ref=e2243]: Italian • $$ - $$$
+            - button "Next" [ref=e2245] [cursor=pointer]:
+              - img [ref=e2246]
+        - generic [ref=e2249]:
+          - generic [ref=e2250]:
+            - generic [ref=e2251]:
+              - text: Best nearby
+              - button "We rank these hotels, restaurants, and attractions by balancing reviews from our members with how close they are to this location." [ref=e2253] [cursor=pointer]:
+                - img [ref=e2255]
+            - button [ref=e2260] [cursor=pointer]
+            - generic [ref=e2263]:
+              - generic [ref=e2264]:
+                - generic [ref=e2265]: Best nearby hotels
+                - link "See all" [ref=e2266] [cursor=pointer]:
+                  - /url: /HotelsNear-g1574945-d2238938-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - generic [ref=e2267]: See all
+              - generic [ref=e2268]:
+                - generic [ref=e2269]:
+                  - generic [ref=e2270]:
+                    - link [ref=e2271] [cursor=pointer]:
+                      - /url: /Hotel_Review-g1928103-d5971277-Reviews-Naturalmente_Wine_Resort-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2275] [cursor=pointer]:
+                      - img [ref=e2276]
+                  - link "Naturalmente Wine Resort 4.9 of 5 bubbles (287) 1.9 miles away" [ref=e2278] [cursor=pointer]:
+                    - /url: /Hotel_Review-g1928103-d5971277-Reviews-Naturalmente_Wine_Resort-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2279]:
+                      - generic [ref=e2280]: Naturalmente Wine Resort
+                      - generic [ref=e2283]:
+                        - generic [ref=e2285]: "4.9"
+                        - generic [ref=e2286]:
+                          - img "4.9 of 5 bubbles" [ref=e2287]
+                          - generic [ref=e2295]: (287)
+                      - generic [ref=e2296]: 1.9 miles away
+                - generic [ref=e2297]:
+                  - generic [ref=e2298]:
+                    - link [ref=e2299] [cursor=pointer]:
+                      - /url: /Hotel_Review-g1928103-d7196362-Reviews-Villa_Fontana_Relais_Suite_Spa-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2303] [cursor=pointer]:
+                      - img [ref=e2304]
+                  - link "Villa Fontana Relais Suite & Spa 4.9 of 5 bubbles (341) 0.95 miles away" [ref=e2306] [cursor=pointer]:
+                    - /url: /Hotel_Review-g1928103-d7196362-Reviews-Villa_Fontana_Relais_Suite_Spa-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2307]:
+                      - generic [ref=e2308]: Villa Fontana Relais Suite & Spa
+                      - generic [ref=e2311]:
+                        - generic [ref=e2313]: "4.9"
+                        - generic [ref=e2314]:
+                          - img "4.9 of 5 bubbles" [ref=e2315]
+                          - generic [ref=e2323]: (341)
+                      - generic [ref=e2324]: 0.95 miles away
+                - generic [ref=e2325]:
+                  - generic [ref=e2326]:
+                    - link [ref=e2327] [cursor=pointer]:
+                      - /url: /Hotel_Review-g1574946-d3595634-Reviews-La_Cascina_della_Musica-Costigliole_d_Asti_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2331] [cursor=pointer]:
+                      - img [ref=e2332]
+                  - link "La Cascina della Musica 5 of 5 bubbles (136) 3 miles away" [ref=e2334] [cursor=pointer]:
+                    - /url: /Hotel_Review-g1574946-d3595634-Reviews-La_Cascina_della_Musica-Costigliole_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2335]:
+                      - generic [ref=e2336]: La Cascina della Musica
+                      - generic [ref=e2339]:
+                        - generic [ref=e2341]: "5.0"
+                        - generic [ref=e2342]:
+                          - img "5 of 5 bubbles" [ref=e2343]
+                          - generic [ref=e2351]: (136)
+                      - generic [ref=e2352]: 3 miles away
+                - generic [ref=e2353]:
+                  - generic [ref=e2354]:
+                    - link [ref=e2355] [cursor=pointer]:
+                      - /url: /Hotel_Review-g1574945-d26499223-Reviews-Sotto_La_Vigna-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2359] [cursor=pointer]:
+                      - img [ref=e2360]
+                  - link "Sotto La Vigna 4.9 of 5 bubbles (63) 1.34 miles away" [ref=e2362] [cursor=pointer]:
+                    - /url: /Hotel_Review-g1574945-d26499223-Reviews-Sotto_La_Vigna-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2363]:
+                      - generic [ref=e2364]: Sotto La Vigna
+                      - generic [ref=e2367]:
+                        - generic [ref=e2369]: "4.9"
+                        - generic [ref=e2370]:
+                          - img "4.9 of 5 bubbles" [ref=e2371]
+                          - generic [ref=e2379]: (63)
+                      - generic [ref=e2380]: 1.34 miles away
+            - generic [ref=e2381]:
+              - generic [ref=e2382]:
+                - generic [ref=e2383]: Best nearby restaurants
+                - link "See all" [ref=e2384] [cursor=pointer]:
+                  - /url: /RestaurantsNear-g1574945-d2238938-Agriturismo_Assiuolo-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - generic [ref=e2385]: See all
+              - generic [ref=e2386]:
+                - generic [ref=e2387]:
+                  - generic [ref=e2388]:
+                    - link "Travelers' Choice 2025 Winner" [ref=e2389] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g1928103-d24080862-Reviews-Agriturismo_La_Geppina-Agliano_Terme_Province_of_Asti_Piedmont.html
+                      - img "Travelers' Choice 2025 Winner" [ref=e2392]:
+                        - img [ref=e2393]
+                    - button "Save to a trip" [ref=e2395] [cursor=pointer]:
+                      - img [ref=e2396]
+                  - link "Agriturismo La Géppina 4.8 of 5 bubbles (124) 0.7 miles away" [ref=e2398] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1928103-d24080862-Reviews-Agriturismo_La_Geppina-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2399]:
+                      - generic [ref=e2400]: Agriturismo La Géppina
+                      - generic [ref=e2403]:
+                        - generic [ref=e2405]: "4.8"
+                        - generic [ref=e2406]:
+                          - img "4.8 of 5 bubbles" [ref=e2407]
+                          - generic [ref=e2415]: (124)
+                      - generic [ref=e2416]: 0.7 miles away
+                - generic [ref=e2417]:
+                  - generic [ref=e2418]:
+                    - link [ref=e2419] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g1928103-d3512557-Reviews-Osteria_La_Milonga-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2423] [cursor=pointer]:
+                      - img [ref=e2424]
+                  - link "Osteria La Milonga 4.5 of 5 bubbles (485) 1.26 miles away" [ref=e2426] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1928103-d3512557-Reviews-Osteria_La_Milonga-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2427]:
+                      - generic [ref=e2428]: Osteria La Milonga
+                      - generic [ref=e2431]:
+                        - generic [ref=e2433]: "4.5"
+                        - generic [ref=e2434]:
+                          - img "4.5 of 5 bubbles" [ref=e2435]
+                          - generic [ref=e2443]: (485)
+                      - generic [ref=e2444]: 1.26 miles away
+                - generic [ref=e2445]:
+                  - generic [ref=e2446]:
+                    - link [ref=e2447] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g3642472-d23483351-Reviews-Ristorante_Ca_Del_Profeta-Montaldo_Scarampi_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2451] [cursor=pointer]:
+                      - img [ref=e2452]
+                  - link "Ristorante Ca' Del Profeta 4.9 of 5 bubbles (50) 1.26 miles away" [ref=e2454] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g3642472-d23483351-Reviews-Ristorante_Ca_Del_Profeta-Montaldo_Scarampi_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2455]:
+                      - generic [ref=e2456]: Ristorante Ca' Del Profeta
+                      - generic [ref=e2459]:
+                        - generic [ref=e2461]: "4.9"
+                        - generic [ref=e2462]:
+                          - img "4.9 of 5 bubbles" [ref=e2463]
+                          - generic [ref=e2471]: (50)
+                      - generic [ref=e2472]: 1.26 miles away
+                - generic [ref=e2473]:
+                  - generic [ref=e2474]:
+                    - link [ref=e2475] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g1928103-d21015025-Reviews-Ristorante_Villa_Fontana-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2479] [cursor=pointer]:
+                      - img [ref=e2480]
+                  - link "Ristorante Villa Fontana 4.8 of 5 bubbles (21) 0.91 miles away" [ref=e2482] [cursor=pointer]:
+                    - /url: /Restaurant_Review-g1928103-d21015025-Reviews-Ristorante_Villa_Fontana-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2483]:
+                      - generic [ref=e2484]: Ristorante Villa Fontana
+                      - generic [ref=e2487]:
+                        - generic [ref=e2489]: "4.8"
+                        - generic [ref=e2490]:
+                          - img "4.8 of 5 bubbles" [ref=e2491]
+                          - generic [ref=e2499]: (21)
+                      - generic [ref=e2500]: 0.91 miles away
+            - generic [ref=e2501]:
+              - generic [ref=e2502]:
+                - generic [ref=e2503]: Best nearby attractions
+                - link "See all" [ref=e2504] [cursor=pointer]:
+                  - /url: /Attractions-g1574945-Activities-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+                  - generic [ref=e2505]: See all
+              - generic [ref=e2506]:
+                - generic [ref=e2507]:
+                  - generic [ref=e2508]:
+                    - link [ref=e2509] [cursor=pointer]:
+                      - /url: /Attraction_Review-g1928103-d24173630-Reviews-BAart_Agliano-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2513] [cursor=pointer]:
+                      - img [ref=e2514]
+                  - link "BAart Agliano 5 of 5 bubbles (3) 1.13 miles away" [ref=e2516] [cursor=pointer]:
+                    - /url: /Attraction_Review-g1928103-d24173630-Reviews-BAart_Agliano-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2517]:
+                      - generic [ref=e2518]: BAart Agliano
+                      - generic [ref=e2521]:
+                        - generic [ref=e2523]: "5.0"
+                        - generic [ref=e2524]:
+                          - img "5 of 5 bubbles" [ref=e2525]
+                          - generic [ref=e2533]: (3)
+                      - generic [ref=e2534]: 1.13 miles away
+                - generic [ref=e2535]:
+                  - generic [ref=e2536]:
+                    - link [ref=e2537] [cursor=pointer]:
+                      - /url: /Attraction_Review-g1928103-d23789518-Reviews-Bar_Pasticceria_Da_Renzo-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2541] [cursor=pointer]:
+                      - img [ref=e2542]
+                  - link "Bar Pasticceria Da Renzo 5 of 5 bubbles (3) 1.17 miles away" [ref=e2544] [cursor=pointer]:
+                    - /url: /Attraction_Review-g1928103-d23789518-Reviews-Bar_Pasticceria_Da_Renzo-Agliano_Terme_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2545]:
+                      - generic [ref=e2546]: Bar Pasticceria Da Renzo
+                      - generic [ref=e2549]:
+                        - generic [ref=e2551]: "5.0"
+                        - generic [ref=e2552]:
+                          - img "5 of 5 bubbles" [ref=e2553]
+                          - generic [ref=e2561]: (3)
+                      - generic [ref=e2562]: 1.17 miles away
+                - generic [ref=e2563]:
+                  - generic [ref=e2564]:
+                    - link [ref=e2565] [cursor=pointer]:
+                      - /url: /Attraction_Review-g1954795-d19004563-Reviews-Chiesa_di_San_Biagio-Mombercelli_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2569] [cursor=pointer]:
+                      - img [ref=e2570]
+                  - link "Chiesa di San Biagio 4 of 5 bubbles (1) 1.8 miles away" [ref=e2572] [cursor=pointer]:
+                    - /url: /Attraction_Review-g1954795-d19004563-Reviews-Chiesa_di_San_Biagio-Mombercelli_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2573]:
+                      - generic [ref=e2574]: Chiesa di San Biagio
+                      - generic [ref=e2577]:
+                        - generic [ref=e2579]: "4.0"
+                        - generic [ref=e2580]:
+                          - img "4 of 5 bubbles" [ref=e2581]
+                          - generic [ref=e2589]: (1)
+                      - generic [ref=e2590]: 1.8 miles away
+                - generic [ref=e2591]:
+                  - generic [ref=e2592]:
+                    - link [ref=e2593] [cursor=pointer]:
+                      - /url: /Attraction_Review-g7848616-d26133981-Reviews-Art_classes_in_Monferrato-Vigliano_d_Asti_Province_of_Asti_Piedmont.html
+                    - button "Save to a trip" [ref=e2597] [cursor=pointer]:
+                      - img [ref=e2598]
+                  - link "Art classes in Monferrato 5 of 5 bubbles (6) 2.35 miles away" [ref=e2600] [cursor=pointer]:
+                    - /url: /Attraction_Review-g7848616-d26133981-Reviews-Art_classes_in_Monferrato-Vigliano_d_Asti_Province_of_Asti_Piedmont.html
+                    - generic [ref=e2601]:
+                      - generic [ref=e2602]: Art classes in Monferrato
+                      - generic [ref=e2605]:
+                        - generic [ref=e2607]: "5.0"
+                        - generic [ref=e2608]:
+                          - img "5 of 5 bubbles" [ref=e2609]
+                          - generic [ref=e2617]: (6)
+                      - generic [ref=e2618]: 2.35 miles away
+          - generic [ref=e2619]:
+            - generic [ref=e2620]: Is This Your Listing?
+            - generic [ref=e2621]: Own or manage this property? Claim your listing for free to respond to reviews, update your profile and much more.
+            - link "Claim Your Free Listing" [ref=e2622] [cursor=pointer]:
+              - /url: /Owners-d2238938-aClaimForm
+          - heading "AGRITURISMO ASSIUOLO, Montegrosso d'Asti - Restaurant Reviews, Photos & Phone Number - Tripadvisor" [level=1] [ref=e2624]
+  - generic [ref=e2632]:
+    - button "Montegrosso d'Asti" [ref=e2633] [cursor=pointer]:
+      - generic [ref=e2634]: Montegrosso d'Asti
+      - img [ref=e2636]
+    - button "Hotels" [ref=e2638] [cursor=pointer]:
+      - generic [ref=e2639]: Hotels
+      - img [ref=e2641]
+    - link "Things to Do" [ref=e2643] [cursor=pointer]:
+      - /url: /Attractions-g1574945-Activities-Montegrosso_d_Asti_Province_of_Asti_Piedmont.html
+      - generic [ref=e2644]: Things to Do
+    - button "Restaurants" [ref=e2645] [cursor=pointer]:
+      - generic [ref=e2646]: Restaurants
+      - img [ref=e2648]
+    - link "Travel Stories" [ref=e2650] [cursor=pointer]:
+      - /url: /Articles
+      - generic [ref=e2651]: Travel Stories
+    - link "Cruises" [ref=e2652] [cursor=pointer]:
+      - /url: /Cruises
+      - generic [ref=e2653]: Cruises
+    - button "More" [ref=e2654] [cursor=pointer]:
+      - generic [ref=e2655]: More
+      - img [ref=e2657]
+  - contentinfo [ref=e2659]:
+    - generic [ref=e2661]:
+      - generic [ref=e2662]:
+        - generic [ref=e2663]:
+          - img "Tripadvisor" [ref=e2665]
+          - generic [ref=e2666]:
+            - generic [ref=e2668]: © 2026 Tripadvisor LLC All rights reserved.
+            - generic [ref=e2669]:
+              - link "Terms of Use" [ref=e2670] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/us-terms-of-use
+                - generic [ref=e2671]: Terms of Use
+              - link "Privacy and Cookies Statement" [ref=e2672] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/us-privacy-policy
+                - generic [ref=e2673]: Privacy and Cookies Statement
+              - button "Cookie consent" [ref=e2674] [cursor=pointer]:
+                - generic [ref=e2675]: Cookie consent
+              - link "How the site works" [ref=e2676] [cursor=pointer]:
+                - /url: /pages/serviceEN.html
+                - generic [ref=e2677]: How the site works
+              - link "Contact us" [ref=e2678] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/US-contact-us
+                - generic [ref=e2679]: Contact us
+              - link "Accessibility Statement" [ref=e2680] [cursor=pointer]:
+                - /url: /Trust-lgF5hKLTqw3U.html
+                - generic [ref=e2681]: Accessibility Statement
+        - generic [ref=e2682]:
+          - generic [ref=e2685]:
+            - paragraph [ref=e2686]: This is the version of our website addressed to speakers of English in the United States. If you are a resident of another country or region, please select the appropriate version of Tripadvisor for your country or region in the drop-down menu.
+            - paragraph [ref=e2687]: Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Tripadvisor LLC is not responsible for any content on external web sites that are not owned or operated by Tripadvisor . Indicative hotel prices displayed on our “Explore” pages are estimates extrapolated from historic pricing data.
+            - paragraph [ref=e2688]: Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
+          - button "Read more" [ref=e2690] [cursor=pointer]:
+            - generic [ref=e2691]: Read more
+            - img [ref=e2693]
+      - generic [ref=e2695]:
+        - 'button "Currency: $ USD" [ref=e2697] [cursor=pointer]':
+          - generic [ref=e2698]: $ USD
+          - img [ref=e2699]
+        - 'button "Region: United States" [ref=e2702] [cursor=pointer]':
+          - generic [ref=e2703]: United States
+          - img [ref=e2704]

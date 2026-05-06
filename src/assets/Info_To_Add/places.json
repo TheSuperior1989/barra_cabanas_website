@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Branko's",
+    "type": "Restaurant",
+    "links": "https://www.google.com/search?q=Brankos+Tofo"
+  },
+  {
+    "name": "Sumi Bar & Kitchen",
+    "type": "Restaurant",
+    "links": "https://www.google.com/search?q=Sumi+Bar+Tofo"
+  },
+  {
+    "name": "What You Want",
+    "type": "Restaurant",
+    "links": "https://www.google.com/search?q=What+You+Want+Tofo"
+  },
+  {
+    "name": "Tiki Bar",
+    "type": "Bar",
+    "links": "https://www.google.com/search?q=Tiki+Bar+Tofo"
+  },
+  {
+    "name": "Maracuja",
+    "type": "Restaurant",
+    "links": "https://www.google.com/search?q=Maracuja+Tofo"
+  },
+  {
+    "name": "Mango Beach",
+    "type": "Lodge/Restaurant",
+    "links": "https://www.facebook.com/mangobeachtofo"
+  },
+  {
+    "name": "Datongo",
+    "type": "Restaurant",
+    "links": "https://www.google.com/search?q=Datongo+Tofo"
+  },
+  {
+    "name": "Taco & Friends",
+    "type": "Restaurant",
+    "links": "https://www.google.com/search?q=Taco+Friends+Tofo"
+  },
+  {
+    "name": "Kumba Lodge",
+    "type": "Lodge",
+    "links": "https://www.google.com/search?q=Kumba+Lodge+Tofo"
+  },
+  {
+    "name": "Cabana Lodge",
+    "type": "Lodge",
+    "links": "https://www.google.com/search?q=Cabana+Lodge+Tofo"
+  }
+]

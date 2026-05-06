@@ -1,0 +1,369 @@
+- generic [ref=e2]:
+  - button "Skip to main content" [ref=e4] [cursor=pointer]:
+    - generic [ref=e5]: Skip to main content
+  - banner [ref=e8]:
+    - navigation [ref=e10]:
+      - link "Tripadvisor" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - img "Tripadvisor" [ref=e14]
+      - search [ref=e18]:
+        - generic [ref=e20]:
+          - button "Search" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+          - searchbox "Search" [ref=e26]
+      - generic [ref=e27]:
+        - button "Plan with AI" [ref=e29] [cursor=pointer]:
+          - generic [ref=e31]: Plan with AI
+        - generic [ref=e34]:
+          - link "Rewards" [ref=e36] [cursor=pointer]:
+            - /url: /Rewards
+          - button "Discover" [ref=e39] [cursor=pointer]
+          - button "Review" [ref=e42] [cursor=pointer]
+        - generic [ref=e43]:
+          - button "Select region or currency, currently United States and USD" [ref=e45] [cursor=pointer]:
+            - generic "Select region or currency, currently United States and USD" [ref=e47]:
+              - img [ref=e48]
+              - text: USD
+          - link "Sign in" [ref=e52] [cursor=pointer]:
+            - /url: /RegistrationController?flow=sign_up_and_save&returnTo=%2FRestaurants-g469382-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html&fullscreen=true&flowOrigin=login&hideNavigation=true&isLithium=true
+            - generic [ref=e54]: Sign in
+    - generic [ref=e60]:
+      - tablist [ref=e63]:
+        - tab "Addo Elephant National Park" [ref=e64] [cursor=pointer]:
+          - link "Addo Elephant National Park" [ref=e66]:
+            - /url: /Tourism-g469382-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape-Vacations.html
+            - img [ref=e67]
+            - text: Addo Elephant National Park
+        - tab "Hotels" [ref=e70] [cursor=pointer]:
+          - link "Hotels" [ref=e72]:
+            - /url: /Hotels-g469382-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape-Hotels.html
+        - tab "Things to Do" [ref=e73] [cursor=pointer]:
+          - link "Things to Do" [ref=e75]:
+            - /url: /Attractions-g469382-Activities-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+        - tab "Restaurants" [selected] [ref=e76] [cursor=pointer]:
+          - link "Restaurants" [ref=e78]:
+            - /url: /Restaurants-g469382-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+        - tab "Cruises" [ref=e79] [cursor=pointer]:
+          - link "Cruises" [ref=e81]:
+            - /url: /Cruises
+        - tab "Forums" [ref=e82] [cursor=pointer]:
+          - link "Forums" [ref=e84]:
+            - /url: /ShowForum-g469382-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+      - generic:
+        - generic:
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - button:
+              - img
+  - main [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - link "Africa" [ref=e92] [cursor=pointer]:
+              - /url: /Tourism-g6-Africa-Vacations.html
+              - generic [ref=e93]: Africa
+            - img [ref=e95]
+          - generic [ref=e97]:
+            - link "South Africa" [ref=e98] [cursor=pointer]:
+              - /url: /Tourism-g293740-South_Africa-Vacations.html
+              - generic [ref=e99]: South Africa
+            - img [ref=e101]
+          - generic [ref=e103]:
+            - link "Eastern Cape" [ref=e104] [cursor=pointer]:
+              - /url: /Tourism-g312554-Eastern_Cape-Vacations.html
+              - generic [ref=e105]: Eastern Cape
+            - img [ref=e107]
+          - generic [ref=e109]:
+            - link "Greater Addo" [ref=e110] [cursor=pointer]:
+              - /url: /Tourism-g1940835-Greater_Addo_Eastern_Cape-Vacations.html
+              - generic [ref=e111]: Greater Addo
+            - img [ref=e113]
+          - generic [ref=e115]:
+            - link "Addo Elephant National Park" [ref=e116] [cursor=pointer]:
+              - /url: /Tourism-g469382-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape-Vacations.html
+              - generic [ref=e117]: Addo Elephant National Park
+            - img [ref=e119]
+          - generic [ref=e122]: Addo Elephant National Park Restaurants
+        - heading "THE BEST Restaurants in Addo Elephant National Park" [level=1] [ref=e123]
+      - generic [ref=e124]:
+        - heading "Restaurants in Addo Elephant National Park" [level=2] [ref=e127]
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - text: Top restaurants in Addo Elephant National Park
+            - button "Restaurants ranked according to page views, reviews and individual attributes such as price range, cuisine and location, as well as aggregated Tripadvisor data comparing user interactions with all the other restaurant pages for this locale." [ref=e132] [cursor=pointer]:
+              - img [ref=e133]
+          - button "View map" [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]:
+              - img [ref=e140]
+              - generic [ref=e142]: Map
+        - generic [ref=e144]:
+          - generic [ref=e147]:
+            - group [ref=e150]:
+              - generic [ref=e151]:
+                - heading "Establishment type" [level=3] [ref=e152]
+                - button [expanded] [ref=e153] [cursor=pointer]:
+                  - img [ref=e154]
+              - menu [ref=e158]:
+                - generic [ref=e159]:
+                  - checkbox "Restaurants" [checked] [ref=e161] [cursor=pointer]
+                  - generic [ref=e165] [cursor=pointer]: Restaurants
+            - group [ref=e168]:
+              - generic [ref=e169]:
+                - heading "Meal type" [level=3] [ref=e170]
+                - button [expanded] [ref=e171] [cursor=pointer]:
+                  - img [ref=e172]
+              - menu [ref=e176]:
+                - generic [ref=e177]:
+                  - checkbox "Breakfast" [ref=e179] [cursor=pointer]
+                  - generic [ref=e183] [cursor=pointer]: Breakfast
+                - generic [ref=e184]:
+                  - checkbox "Brunch" [ref=e186] [cursor=pointer]
+                  - generic [ref=e190] [cursor=pointer]: Brunch
+                - generic [ref=e191]:
+                  - checkbox "Lunch" [ref=e193] [cursor=pointer]
+                  - generic [ref=e197] [cursor=pointer]: Lunch
+                - generic [ref=e198]:
+                  - checkbox "Dinner" [ref=e200] [cursor=pointer]
+                  - generic [ref=e204] [cursor=pointer]: Dinner
+            - group [ref=e207]:
+              - generic [ref=e208]:
+                - heading "Cuisines" [level=3] [ref=e209]
+                - button [expanded] [ref=e210] [cursor=pointer]:
+                  - img [ref=e211]
+              - menu [ref=e215]:
+                - generic [ref=e216]:
+                  - checkbox "Steakhouse" [ref=e218] [cursor=pointer]
+                  - generic [ref=e222] [cursor=pointer]: Steakhouse
+                - generic [ref=e223]:
+                  - checkbox "Seafood" [ref=e225] [cursor=pointer]
+                  - generic [ref=e229] [cursor=pointer]: Seafood
+                - generic [ref=e230]:
+                  - checkbox "Grill" [ref=e232] [cursor=pointer]
+                  - generic [ref=e236] [cursor=pointer]: Grill
+                - generic [ref=e237]:
+                  - checkbox "Contemporary" [ref=e239] [cursor=pointer]
+                  - generic [ref=e243] [cursor=pointer]: Contemporary
+            - group [ref=e246]:
+              - generic [ref=e247]:
+                - heading "Dishes" [level=3] [ref=e248]
+                - button [expanded] [ref=e249] [cursor=pointer]:
+                  - img [ref=e250]
+              - generic [ref=e253]:
+                - menu [ref=e254]:
+                  - generic [ref=e255]:
+                    - checkbox "Burger" [ref=e257] [cursor=pointer]
+                    - generic [ref=e261] [cursor=pointer]: Burger
+                  - generic [ref=e262]:
+                    - checkbox "Porterhouse Steak" [ref=e264] [cursor=pointer]
+                    - generic [ref=e268] [cursor=pointer]: Porterhouse Steak
+                  - generic [ref=e269]:
+                    - checkbox "Ribs" [ref=e271] [cursor=pointer]
+                    - generic [ref=e275] [cursor=pointer]: Ribs
+                  - generic [ref=e276]:
+                    - checkbox "Schnitzel" [ref=e278] [cursor=pointer]
+                    - generic [ref=e282] [cursor=pointer]: Schnitzel
+                - button "Show all" [ref=e284] [cursor=pointer]:
+                  - generic [ref=e285]: Show all
+            - group [ref=e288]:
+              - generic [ref=e289]:
+                - heading "Price" [level=3] [ref=e290]
+                - button [expanded] [ref=e291] [cursor=pointer]:
+                  - img [ref=e292]
+              - menu [ref=e296]:
+                - generic [ref=e297]:
+                  - checkbox "Mid-range" [ref=e299] [cursor=pointer]
+                  - generic [ref=e303] [cursor=pointer]: Mid-range
+                - generic [ref=e304]:
+                  - checkbox "Fine Dining" [ref=e306] [cursor=pointer]
+                  - generic [ref=e310] [cursor=pointer]: Fine Dining
+            - group [ref=e313]:
+              - generic [ref=e314]:
+                - heading "Traveler rating" [level=3] [ref=e315]
+                - button [expanded] [ref=e316] [cursor=pointer]:
+                  - img [ref=e317]
+              - menu [ref=e321]:
+                - generic [ref=e322]:
+                  - checkbox "3 of 5 bubbles & up" [ref=e324] [cursor=pointer]
+                  - generic [ref=e329] [cursor=pointer]:
+                    - img "3 of 5 bubbles" [ref=e333]
+                    - text: "& up"
+                - generic [ref=e339]:
+                  - checkbox "4 of 5 bubbles & up" [ref=e341] [cursor=pointer]
+                  - generic [ref=e346] [cursor=pointer]:
+                    - img "4 of 5 bubbles" [ref=e350]
+                    - text: "& up"
+            - group [ref=e358]:
+              - generic [ref=e359]:
+                - heading "Open now" [level=3] [ref=e360]
+                - button [ref=e361] [cursor=pointer]:
+                  - img [ref=e362]
+            - group [ref=e366]:
+              - generic [ref=e367]:
+                - heading "Dietary restrictions" [level=3] [ref=e368]
+                - button [ref=e369] [cursor=pointer]:
+                  - img [ref=e370]
+            - group [ref=e374]:
+              - generic [ref=e375]:
+                - heading "Great for" [level=3] [ref=e376]
+                - button [ref=e377] [cursor=pointer]:
+                  - img [ref=e378]
+            - group [ref=e382]:
+              - generic [ref=e383]:
+                - heading "Features" [level=3] [ref=e384]
+                - button [ref=e385] [cursor=pointer]:
+                  - img [ref=e386]
+          - generic [ref=e391]:
+            - generic [ref=e392]:
+              - generic [ref=e393]: 2 results
+              - generic [ref=e396]:
+                - generic [ref=e397]: "Sort:"
+                - button "Featured" [ref=e399] [cursor=pointer]:
+                  - generic [ref=e400]: Featured
+                  - img [ref=e402]
+                - button "Restaurants ranked according to page views, reviews and individual attributes such as price range, cuisine and location, as well as aggregated Tripadvisor data comparing user interactions with all the other restaurant pages for this locale." [ref=e405] [cursor=pointer]:
+                  - img [ref=e406]
+            - generic [ref=e410]:
+              - generic [ref=e412]:
+                - link "Save to a trip" [ref=e415] [cursor=pointer]:
+                  - /url: /Restaurant_Review-g469382-d6563659-Reviews-Addo_Cattle_Baron-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                  - generic [ref=e417]:
+                    - list [ref=e422]:
+                      - listitem [ref=e423]
+                      - listitem
+                      - listitem
+                    - button "Save to a trip" [ref=e434]:
+                      - img [ref=e435]
+                - generic [ref=e437]:
+                  - generic [ref=e441]:
+                    - generic [ref=e444]:
+                      - link "1. Addo Cattle Baron" [ref=e445] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g469382-d6563659-Reviews-Addo_Cattle_Baron-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                        - generic [ref=e446]: 1. Addo Cattle Baron
+                      - generic [ref=e449]:
+                        - generic [ref=e451]: "4.1"
+                        - generic [ref=e452]:
+                          - img "4.1 of 5 bubbles" [ref=e453]
+                          - link "(1,112 reviews)" [ref=e460] [cursor=pointer]:
+                            - /url: /Restaurant_Review-g469382-d6563659-Reviews-Addo_Cattle_Baron-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html#REVIEWS
+                            - generic [ref=e462]: (1,112 reviews)
+                    - generic [ref=e465]:
+                      - generic [ref=e466]:
+                        - img [ref=e467]
+                        - generic [ref=e469]: Steakhouse, Seafood
+                      - generic [ref=e470]: ·$$ - $$$
+                      - generic [ref=e471]:
+                        - text: ·
+                        - generic [ref=e472]:
+                          - img [ref=e473]
+                          - generic [ref=e476]: Closes in 25 min
+                  - generic [ref=e480]:
+                    - link "“It’s the perfect set up to have breakfast between your game sighting adventures...”" [ref=e481] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g469382-d6563659-Reviews-Addo_Cattle_Baron-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                      - generic [ref=e482]: “It’s the perfect set up to have breakfast between your game sighting adventures...”
+                    - link "“Great Service - excellent calamari”" [ref=e483] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g469382-d6563659-Reviews-Addo_Cattle_Baron-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                      - generic [ref=e485]: “Great Service - excellent calamari”
+              - generic [ref=e487]:
+                - link "Save to a trip" [ref=e490] [cursor=pointer]:
+                  - /url: /Restaurant_Review-g469382-d8066644-Reviews-River_Bend_Lodge-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                  - generic [ref=e492]:
+                    - list [ref=e497]:
+                      - listitem [ref=e498]
+                      - listitem
+                      - listitem
+                    - button "Save to a trip" [ref=e509]:
+                      - img [ref=e510]
+                - generic [ref=e512]:
+                  - generic [ref=e516]:
+                    - generic [ref=e519]:
+                      - link "2. River Bend Lodge" [ref=e520] [cursor=pointer]:
+                        - /url: /Restaurant_Review-g469382-d8066644-Reviews-River_Bend_Lodge-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                        - generic [ref=e521]: 2. River Bend Lodge
+                      - generic [ref=e524]:
+                        - generic [ref=e526]: "4.8"
+                        - generic [ref=e527]:
+                          - img "4.8 of 5 bubbles" [ref=e528]
+                          - link "(13 reviews)" [ref=e535] [cursor=pointer]:
+                            - /url: /Restaurant_Review-g469382-d8066644-Reviews-River_Bend_Lodge-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html#REVIEWS
+                            - generic [ref=e537]: (13 reviews)
+                    - generic [ref=e540]:
+                      - generic [ref=e541]:
+                        - img [ref=e542]
+                        - generic [ref=e544]: Contemporary
+                      - generic [ref=e545]: ·$$$$
+                  - generic [ref=e549]:
+                    - link "“The food was delicious, and the game drives, especially the night drive were so...”" [ref=e550] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g469382-d8066644-Reviews-River_Bend_Lodge-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                      - generic [ref=e551]: “The food was delicious, and the game drives, especially the night drive were so...”
+                    - link "“A paradise for relaxation, fascinating game drives, culinary masterpieces, beautiful locale and extraordinary service.”" [ref=e552] [cursor=pointer]:
+                      - /url: /Restaurant_Review-g469382-d8066644-Reviews-River_Bend_Lodge-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+                      - generic [ref=e553]: “A paradise for relaxation, fascinating game drives, culinary masterpieces, beautiful locale and extraordinary service.”
+              - button "1" [disabled] [ref=e559]:
+                - generic [ref=e560]: "1"
+              - generic [ref=e563]: Showing results 1-2 of 2
+  - generic [ref=e569]:
+    - button "Addo Elephant National Park" [ref=e570] [cursor=pointer]:
+      - generic [ref=e571]: Addo Elephant National Park
+      - img [ref=e573]
+    - button "Hotels" [ref=e575] [cursor=pointer]:
+      - generic [ref=e576]: Hotels
+      - img [ref=e578]
+    - link "Things to Do" [ref=e580] [cursor=pointer]:
+      - /url: /Attractions-g469382-Activities-Addo_Elephant_National_Park_Greater_Addo_Eastern_Cape.html
+      - generic [ref=e581]: Things to Do
+    - button "Restaurants" [ref=e582] [cursor=pointer]:
+      - generic [ref=e583]: Restaurants
+      - img [ref=e585]
+    - link "Travel Stories" [ref=e587] [cursor=pointer]:
+      - /url: /Articles
+      - generic [ref=e588]: Travel Stories
+    - link "Cruises" [ref=e589] [cursor=pointer]:
+      - /url: /Cruises
+      - generic [ref=e590]: Cruises
+    - button "More" [ref=e591] [cursor=pointer]:
+      - generic [ref=e592]: More
+      - img [ref=e594]
+  - contentinfo [ref=e596]:
+    - generic [ref=e598]:
+      - generic [ref=e599]:
+        - generic [ref=e600]:
+          - img "Tripadvisor" [ref=e602]
+          - generic [ref=e603]:
+            - generic [ref=e605]: © 2026 Tripadvisor LLC All rights reserved.
+            - generic [ref=e606]:
+              - link "Terms of Use" [ref=e607] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/us-terms-of-use
+                - generic [ref=e608]: Terms of Use
+              - link "Privacy and Cookies Statement" [ref=e609] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/us-privacy-policy
+                - generic [ref=e610]: Privacy and Cookies Statement
+              - button "Cookie consent" [ref=e611] [cursor=pointer]:
+                - generic [ref=e612]: Cookie consent
+              - link "How the site works" [ref=e613] [cursor=pointer]:
+                - /url: /pages/serviceEN.html
+                - generic [ref=e614]: How the site works
+              - link "Contact us" [ref=e615] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/US-contact-us
+                - generic [ref=e616]: Contact us
+              - link "Accessibility Statement" [ref=e617] [cursor=pointer]:
+                - /url: /Trust-lgF5hKLTqw3U.html
+                - generic [ref=e618]: Accessibility Statement
+        - generic [ref=e619]:
+          - generic [ref=e622]:
+            - paragraph [ref=e623]: This is the version of our website addressed to speakers of English in the United States. If you are a resident of another country or region, please select the appropriate version of Tripadvisor for your country or region in the drop-down menu.
+            - paragraph [ref=e624]: Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Tripadvisor LLC is not responsible for any content on external web sites that are not owned or operated by Tripadvisor . Indicative hotel prices displayed on our “Explore” pages are estimates extrapolated from historic pricing data.
+            - paragraph [ref=e625]: Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
+          - button "Read more" [ref=e627] [cursor=pointer]:
+            - generic [ref=e628]: Read more
+            - img [ref=e630]
+      - generic [ref=e632]:
+        - 'button "Currency: $ USD" [ref=e634] [cursor=pointer]':
+          - generic [ref=e635]: $ USD
+          - img [ref=e636]
+        - 'button "Region: United States" [ref=e639] [cursor=pointer]':
+          - generic [ref=e640]: United States
+          - img [ref=e641]

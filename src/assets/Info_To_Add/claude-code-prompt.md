@@ -1,0 +1,1 @@
+Import places.json and generate a clean responsive website listing all places with cards, images placeholders, and links.

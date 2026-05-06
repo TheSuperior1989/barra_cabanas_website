@@ -1,0 +1,75 @@
+- generic [ref=e2]:
+  - button "Skip to main content" [ref=e4] [cursor=pointer]:
+    - generic [ref=e5]: Skip to main content
+  - banner [ref=e7]:
+    - navigation [ref=e9]:
+      - link "Tripadvisor" [ref=e11] [cursor=pointer]:
+        - /url: /
+        - img "Tripadvisor" [ref=e13]
+      - generic [ref=e14]:
+        - button "Ask AI assistant" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+        - generic [ref=e23]:
+          - link "Rewards" [ref=e25] [cursor=pointer]:
+            - /url: /Rewards
+          - button "Discover" [ref=e28] [cursor=pointer]
+          - button "Review" [ref=e31] [cursor=pointer]
+          - button "More" [ref=e34] [cursor=pointer]
+        - generic [ref=e35]:
+          - button "Select region or currency, currently United States and USD" [ref=e37] [cursor=pointer]:
+            - generic "Select region or currency, currently United States and USD" [ref=e39]:
+              - img [ref=e40]
+              - text: USD
+          - link "Sign in" [ref=e44] [cursor=pointer]:
+            - /url: /RegistrationController?flow=sign_up_and_save&returnTo=%2FSearch%3Fq%3DBranko%2527s%2BTofo%2BMozambique%26searchNearby%3Dfalse&fullscreen=true&flowOrigin=login&hideNavigation=true&isLithium=true
+            - generic [ref=e46]: Sign in
+  - main [ref=e47]:
+    - generic [ref=e48]:
+      - search [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - button "Search" [ref=e58] [cursor=pointer]:
+              - img [ref=e59]
+            - searchbox "Search" [disabled] [ref=e63]: Branko's Tofo Mozambique
+          - button "Search" [ref=e65] [cursor=pointer]
+      - progressbar [ref=e67]
+  - contentinfo [ref=e68]:
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - img "Tripadvisor" [ref=e74]
+          - generic [ref=e75]:
+            - generic [ref=e77]: © 2026 Tripadvisor LLC All rights reserved.
+            - generic [ref=e78]:
+              - link "Terms of Use" [ref=e79] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/us-terms-of-use
+                - generic [ref=e80]: Terms of Use
+              - link "Privacy and Cookies Statement" [ref=e81] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/us-privacy-policy
+                - generic [ref=e82]: Privacy and Cookies Statement
+              - button "Cookie consent" [ref=e83] [cursor=pointer]:
+                - generic [ref=e84]: Cookie consent
+              - link "How the site works" [ref=e85] [cursor=pointer]:
+                - /url: /pages/serviceEN.html
+                - generic [ref=e86]: How the site works
+              - link "Contact us" [ref=e87] [cursor=pointer]:
+                - /url: https://tripadvisor.mediaroom.com/US-contact-us
+                - generic [ref=e88]: Contact us
+              - link "Accessibility Statement" [ref=e89] [cursor=pointer]:
+                - /url: /Trust-lgF5hKLTqw3U.html
+                - generic [ref=e90]: Accessibility Statement
+        - generic [ref=e91]:
+          - generic [ref=e94]:
+            - paragraph [ref=e95]: This is the version of our website addressed to speakers of English in the United States. If you are a resident of another country or region, please select the appropriate version of Tripadvisor for your country or region in the drop-down menu.
+            - paragraph [ref=e96]: Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Tripadvisor LLC is not responsible for any content on external web sites that are not owned or operated by Tripadvisor . Indicative hotel prices displayed on our “Explore” pages are estimates extrapolated from historic pricing data.
+            - paragraph [ref=e97]: Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
+          - button "Read more" [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]: Read more
+            - img [ref=e102]
+      - generic [ref=e104]:
+        - 'button "Currency: $ USD" [ref=e106] [cursor=pointer]':
+          - generic [ref=e107]: $ USD
+          - img [ref=e108]
+        - 'button "Region: United States" [ref=e111] [cursor=pointer]':
+          - generic [ref=e112]: United States
+          - img [ref=e113]

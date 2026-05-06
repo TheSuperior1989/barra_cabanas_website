@@ -1,0 +1,229 @@
+- generic [ref=e5]:
+  - banner:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - generic:
+          - button [disabled]:
+            - img
+        - button "Facebook" [ref=e12] [cursor=pointer]:
+          - img "Facebook" [ref=e13]
+      - generic [ref=e18]:
+        - textbox "Email or phone" [ref=e21]
+        - textbox "Password" [ref=e24]
+        - button "Log in" [ref=e27] [cursor=pointer]:
+          - generic [ref=e31]: Log in
+        - link "Forgotten account?" [ref=e34] [cursor=pointer]:
+          - /url: https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+  - main [ref=e41]:
+    - generic [ref=e42]:
+      - link [ref=e53] [cursor=pointer]:
+        - /url: https://www.facebook.com/photo/?fbid=922256153233472&set=a.506470924811999
+      - generic [ref=e61]:
+        - link [ref=e64] [cursor=pointer]:
+          - /url: https://www.facebook.com/photo/?fbid=922256529900101&set=a.506470948145330&__tn__=%3C
+          - img [ref=e66]
+        - generic [ref=e72]:
+          - heading [level=1] [ref=e77]: Mango Beach Tofo
+          - generic [ref=e79]:
+            - link [ref=e80] [cursor=pointer]:
+              - /url: https://www.facebook.com/mangobeachtofo/followers/
+              - strong [ref=e81]: 4K
+              - text: followers
+            - text: •
+            - link [ref=e82] [cursor=pointer]:
+              - /url: https://www.facebook.com/mangobeachtofo/following/
+              - strong [ref=e83]: "87"
+              - text: following
+    - generic [ref=e91]:
+      - tablist [ref=e99]:
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]: More
+            - img [ref=e105]
+          - tab [selected] [ref=e108] [cursor=pointer]:
+            - generic [ref=e110]: Posts
+          - tab [ref=e112] [cursor=pointer]:
+            - generic [ref=e114]: About
+          - tab [ref=e116] [cursor=pointer]:
+            - generic [ref=e118]: Reels
+          - tab [ref=e120] [cursor=pointer]:
+            - generic [ref=e122]: Photos
+      - button [ref=e126] [cursor=pointer]:
+        - img [ref=e128]
+    - generic [ref=e134]:
+      - generic [ref=e137]:
+        - generic [ref=e141]:
+          - heading [level=2] [ref=e150]:
+            - generic [ref=e152]: Intro
+          - generic [ref=e153]:
+            - generic [ref=e157]: Family friendly lodge and restaurant on the beach in Mozambique. Opens Mon-Fri 10:00, Sat-Sun 09:00.
+            - list [ref=e160]:
+              - button [ref=e168] [cursor=pointer]:
+                - generic [ref=e169]:
+                  - strong [ref=e170]: Page
+                  - text: · Hotel resort
+              - button [ref=e174] [cursor=pointer]:
+                - generic [ref=e175]: Mango Beach Lodge, Praia do Tofo, Mozambique
+              - generic [ref=e181]: +258 84 729 9561
+              - generic [ref=e187]: info@mangobeachtofo.co.za
+              - link [ref=e192] [cursor=pointer]:
+                - /url: https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.mangobeachtofo.com%2F&h=AUBID4rcCxMW5X0014kAmjI3UJOMnB7G4YLT7zqboGvYJsyjJt2s1DPPTQE3naOOYebsl58cQkbB0iG6rK6bVFpPrUQ6QJ-v4GhrWMAQdkE8d3vp_dwbng3IjhmwG-9KLYwxCA-280ItglmX8us1cA
+                - generic [ref=e195]: mangobeachtofo.com
+              - generic [ref=e201]: Price range · ££
+              - link [ref=e205] [cursor=pointer]:
+                - /url: https://www.facebook.com/mangobeachtofo/reviews
+                - generic [ref=e208]:
+                  - text: 100% recommend (41 reviews)
+                  - button [ref=e209]:
+                    - img [ref=e210]
+        - generic [ref=e215]:
+          - generic [ref=e222]:
+            - heading [level=2] [ref=e224]:
+              - link [ref=e227] [cursor=pointer]:
+                - /url: https://www.facebook.com/mangobeachtofo/photos
+                - text: Photos
+            - link [ref=e232] [cursor=pointer]:
+              - /url: https://www.facebook.com/mangobeachtofo/photos
+              - generic [ref=e233]: See All Photos
+          - generic [ref=e237]:
+            - link [ref=e240] [cursor=pointer]:
+              - /url: /photo/?fbid=1475443171248098&set=pb.100063472871259.-2207520000
+            - link [ref=e245] [cursor=pointer]:
+              - /url: /photo/?fbid=1470805051711910&set=pb.100063472871259.-2207520000
+            - link [ref=e250] [cursor=pointer]:
+              - /url: /photo/?fbid=1462530495872699&set=pb.100063472871259.-2207520000
+            - link [ref=e255] [cursor=pointer]:
+              - /url: /photo/?fbid=1430300182429064&set=pb.100063472871259.-2207520000
+            - link [ref=e260] [cursor=pointer]:
+              - /url: /photo/?fbid=1413213884137694&set=pb.100063472871259.-2207520000
+            - link [ref=e265] [cursor=pointer]:
+              - /url: /photo/?fbid=1402159951909754&set=pb.100063472871259.-2207520000
+            - link [ref=e270] [cursor=pointer]:
+              - /url: /photo/?fbid=1387349646724118&set=pb.100063472871259.-2207520000
+            - link [ref=e275] [cursor=pointer]:
+              - /url: /photo/?fbid=1387349610057455&set=pb.100063472871259.-2207520000
+            - link [ref=e280] [cursor=pointer]:
+              - /url: /photo/?fbid=1387349596724123&set=pb.100063472871259.-2207520000
+        - contentinfo [ref=e283]:
+          - list [ref=e285]:
+            - listitem [ref=e286]:
+              - link [ref=e287] [cursor=pointer]:
+                - /url: /privacy/policy/?entry_point=comet_dropdown
+                - text: Privacy
+              - generic [ref=e288]: ·
+            - listitem [ref=e290]:
+              - link [ref=e291] [cursor=pointer]:
+                - /url: /policies?ref=pf
+                - text: Terms
+              - generic [ref=e292]: ·
+            - listitem [ref=e294]:
+              - link [ref=e295] [cursor=pointer]:
+                - /url: /business/
+                - text: Advertising
+              - generic [ref=e296]: ·
+            - listitem [ref=e298]:
+              - link [ref=e299] [cursor=pointer]:
+                - /url: /help/568137493302217
+                - text: Ad choices
+                - img [ref=e301]
+              - generic [ref=e304]: ·
+            - listitem [ref=e306]:
+              - link [ref=e307] [cursor=pointer]:
+                - /url: /policies/cookies/
+                - text: Cookies
+              - generic [ref=e308]: ·
+            - listitem [ref=e310]:
+              - button [ref=e311] [cursor=pointer]: More
+      - generic [ref=e313]:
+        - article [ref=e320]:
+          - generic [ref=e328]:
+            - generic [ref=e330]:
+              - link [ref=e334] [cursor=pointer]:
+                - /url: https://www.facebook.com/mangobeachtofo?__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=%3C%3C%2CP-R
+                - img [ref=e336]
+              - generic [ref=e341]:
+                - heading [level=2] [ref=e345]:
+                  - link [ref=e350] [cursor=pointer]:
+                    - /url: https://www.facebook.com/mangobeachtofo?__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=-UC%2CP-R
+                    - generic [ref=e351]: Mango Beach Tofo
+                - generic [ref=e354]:
+                  - link [ref=e358] [cursor=pointer]:
+                    - /url: https://www.facebook.com/mangobeachtofo/posts/pfbid0ujyNTzAp97r7bJeT3bKX57zSuT72GDeX3ds2BYEQ3kyGQSDEQ1eFJdeq8TRmNqQfl?__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=%2CO%2CP-R
+                    - text: 26 December 2025
+                  - generic [ref=e360]: ·
+                  - img [ref=e365]
+            - generic [ref=e371]:
+              - generic [ref=e380]:
+                - text: Our beach is right downstairs from the restaurant, with a beautiful reef for snorkeling and swimming. And we offer free beach umbrellas for your enjoyment!
+                - img [ref=e382]
+                - img [ref=e384]
+              - link [ref=e387] [cursor=pointer]:
+                - /url: https://www.facebook.com/photo/?fbid=1475443171248098&set=a.506470941478664&__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=EH-R
+                - img [ref=e392]
+            - generic [ref=e395]:
+              - generic [ref=e397]:
+                - generic [ref=e399]:
+                  - generic [ref=e400]:
+                    - toolbar [ref=e401]:
+                      - generic [ref=e402]:
+                        - button [ref=e406] [cursor=pointer]
+                        - button [ref=e410] [cursor=pointer]
+                    - generic [ref=e411]: "All reactions:"
+                    - generic [ref=e413]: "66"
+                  - generic [ref=e414]:
+                    - button [ref=e417] [cursor=pointer]:
+                      - generic [ref=e420]: "5"
+                    - button [ref=e425] [cursor=pointer]:
+                      - generic [ref=e428]: "6"
+                - generic [ref=e432]:
+                  - button [ref=e434] [cursor=pointer]:
+                    - generic [ref=e439]: Like
+                  - button [ref=e441] [cursor=pointer]:
+                    - generic [ref=e446]: Comment
+              - button [ref=e450] [cursor=pointer]:
+                - generic [ref=e452]: View more comments
+              - article [ref=e455]:
+                - link [ref=e459] [cursor=pointer]:
+                  - /url: https://www.facebook.com/freek.prinsloo.1?comment_id=Y29tbWVudDoxNDc1NDQzMjc0NTgxNDIxXzcyODg4NzU5OTg0NTg0NA%3D%3D&__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=R-R
+                  - img [ref=e461]
+                - generic [ref=e465]:
+                  - generic [ref=e469]:
+                    - link [ref=e472] [cursor=pointer]:
+                      - /url: https://www.facebook.com/freek.prinsloo.1?comment_id=Y29tbWVudDoxNDc1NDQzMjc0NTgxNDIxXzcyODg4NzU5OTg0NTg0NA%3D%3D&__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=R-R
+                      - generic [ref=e474]: Freek Prinsloo
+                    - generic [ref=e478]:
+                      - text: We had a unforgettable Seafood platter on the 20th December Highly Recommended
+                      - img [ref=e480]
+                      - img [ref=e482]
+                  - generic [ref=e483]:
+                    - list [ref=e484]:
+                      - listitem [ref=e485]:
+                        - link [ref=e488] [cursor=pointer]:
+                          - /url: https://www.facebook.com/mangobeachtofo/posts/pfbid0ujyNTzAp97r7bJeT3bKX57zSuT72GDeX3ds2BYEQ3kyGQSDEQ1eFJdeq8TRmNqQfl?comment_id=728887599845844&__cft__[0]=AZYOUpSpTF4hbDVVfYCyndVrpKHV0GF7Nchddd8Fsr_MkwvstN8w7Qk21TbHrwd20rlcTs3YQV9uqXoH0HO0y2MiC4G08Xp22gx99o041iwHEnPn8nZ8uipjNa9s9wg-t4Df_sleyUbSJiU0AVwAxWE7ImVEMdojMUmzZVGNEk4kMhh2L_nxN260EhqkwNS4mwE&__tn__=R-R
+                          - text: 18w
+                    - button [ref=e493] [cursor=pointer]:
+                      - generic [ref=e495]: "1"
+        - generic [ref=e499]:
+          - article [ref=e500]:
+            - status [ref=e501]
+          - article [ref=e513]:
+            - status [ref=e514]
+  - dialog [ref=e534]:
+    - button "Close" [ref=e536] [cursor=pointer]
+    - generic [ref=e543]:
+      - img [ref=e547]
+      - generic [ref=e554]: See more from Mango Beach Tofo | Praia do Tofo
+      - generic [ref=e559]:
+        - generic: Email address or phone number
+        - textbox "Email address or phone number" [active] [ref=e560]
+      - generic [ref=e565]:
+        - generic: Password
+        - textbox "Password" [ref=e566]
+      - button "Log in to Facebook" [ref=e568] [cursor=pointer]:
+        - generic [ref=e571]: Log in
+      - link "Forgotten password?" [ref=e573] [cursor=pointer]:
+        - /url: https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+        - generic [ref=e574]: Forgotten password?
+      - generic [ref=e580]: or
+      - button "Create new account" [ref=e584] [cursor=pointer]:
+        - generic [ref=e587]: Create new account

@@ -1,0 +1,327 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Turn off continuous scrolling" [ref=e3] [cursor=pointer]:
+        - /url: "#"
+      - link "Accessibility help" [ref=e4] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en-ZA
+      - link "Accessibility feedback" [ref=e5] [cursor=pointer]
+  - generic [ref=e10]:
+    - search [ref=e11]:
+      - generic [ref=e13]:
+        - link "Go to Google Home" [ref=e15] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQPAgK
+          - img [ref=e16]
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - combobox "Search" [ref=e27]: Branko's restaurant Tofo Mozambique Branko's restaurant Tofo Mozambique
+            - generic [ref=e28]:
+              - button "Clear" [ref=e30] [cursor=pointer]:
+                - img [ref=e32]
+              - generic [ref=e35]:
+                - button "Search by voice" [ref=e36] [cursor=pointer]:
+                  - img [ref=e37]
+                - button "Search by image" [ref=e39] [cursor=pointer]:
+                  - img [ref=e40]
+          - button "Search" [ref=e42] [cursor=pointer]:
+            - img [ref=e45]
+    - generic [ref=e47]:
+      - button "Settings" [ref=e49] [cursor=pointer]:
+        - img [ref=e52]
+      - generic [ref=e55]:
+        - button "Google apps" [ref=e57] [cursor=pointer]:
+          - img [ref=e58]
+        - link "Sign in" [ref=e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fq%3DBranko%2527s%2Brestaurant%2BTofo%2BMozambique%26udm%3D2%26sei%3DdfT4acmAELuM9u8P5eLFwAQ&ec=futura_srp_og_si_72236_p
+  - generic [ref=e64]:
+    - navigation [ref=e69]:
+      - generic [ref=e70]:
+        - list [ref=e71]:
+          - listitem [ref=e72]:
+            - link "AI Mode" [ref=e75] [cursor=pointer]:
+              - /url: /search?q=Branko%27s+restaurant+Tofo+Mozambique&sca_esv=8c24cb2666462953&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1U4Z6Yq0xAU8tFlmuJvKXCsINjFxHEx_8fz7FUtRiLjLGGa1Eu-LmubmVJ9MA2dtsU_TFYTXyGuyB4018VsQt9-HrEs3Ku2-UpiDEOHa736Cpr_YZQg02101ai7zP_BS3hYkFTWeGod4fvQYCrIex1-9xbFNrXVIQPGhe-JUocGl-LxuBQ&aep=1&ntc=1&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQ2J8OegQICRAD
+              - generic [ref=e78]: AI Mode
+          - listitem [ref=e79]:
+            - link "All" [ref=e80] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=Branko%27s+restaurant+Tofo+Mozambique&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1U4Z6Yq0xAU8tFlmuJvKXCsINjFxHEx_8fz7FUtRiLjLGGa1Eu-LmubmVJ9MA2dtsU_TFYTXyGuyB4018VsQt9-HrEs3Ku2-UpiDEOHa736Cpr_YZQg02101ai7zP_BS3hYkFTWeGod4fvQYCrIex1-9xbFNrXVIQPGhe-JUocGl-LxuBQ&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQ0pQJegQICxAB
+              - generic [ref=e82]: All
+          - listitem [ref=e83]:
+            - link "Maps" [ref=e84] [cursor=pointer]:
+              - /url: https://maps.google.com/maps?sca_esv=8c24cb2666462953&output=search&q=Branko's+restaurant+Tofo+Mozambique&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1U4Z6Yq0xAU8tFlmuJvKXCsINjFxHEx_8fz7FUtRiLjLGGa1Eu-LmubmVJ9MA2dtsU_TFYTXyGuyB4018VsQt9-HrEs3Ku2-UpiDEOHa736Cpr_YZQg02101ai7zP_BS3hYkFTWeGod4fvQYCrIex1-9xbFNrXVIQPGhe-JUocGl-LxuBQ&entry=mc&ved=1t:200715&ictx=111
+              - generic [ref=e86]: Maps
+          - listitem [ref=e87]:
+            - link "Images" [disabled] [ref=e88]:
+              - generic [ref=e90]: Images
+          - listitem [ref=e91]:
+            - link "Forums" [ref=e92] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&udm=18&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1U4Z6Yq0xAU8tFlmuJvKXCsINjFxHEx_8fz7FUtRiLjLGGa1Eu-LmubmVJ9MA2dtsU_TFYTXyGuyB4018VsQt9-HrEs3Ku2-UpiDEOHa736Cpr_YZQg02101ai7zP_BS3hYkFTWeGod4fvQYCrIex1-9xbFNrXVIQPGhe-JUocGl-LxuBQ&q=Branko%27s+restaurant+Tofo+Mozambique&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQs6gLegQIDRAB
+              - generic [ref=e94]: Forums
+          - listitem [ref=e95]:
+            - link "Short videos" [ref=e96] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&udm=39&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1U4Z6Yq0xAU8tFlmuJvKXCsINjFxHEx_8fz7FUtRiLjLGGa1Eu-LmubmVJ9MA2dtsU_TFYTXyGuyB4018VsQt9-HrEs3Ku2-UpiDEOHa736Cpr_YZQg02101ai7zP_BS3hYkFTWeGod4fvQYCrIex1-9xbFNrXVIQPGhe-JUocGl-LxuBQ&q=Branko%27s+restaurant+Tofo+Mozambique&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQs6gLegQIDBAB
+              - generic [ref=e98]: Short videos
+          - listitem [ref=e99]:
+            - link "Web" [ref=e100] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&udm=web&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1U4Z6Yq0xAU8tFlmuJvKXCsINjFxHEx_8fz7FUtRiLjLGGa1Eu-LmubmVJ9MA2dtsU_TFYTXyGuyB4018VsQt9-HrEs3Ku2-UpiDEOHa736Cpr_YZQg02101ai7zP_BS3hYkFTWeGod4fvQYCrIex1-9xbFNrXVIQPGhe-JUocGl-LxuBQ&q=Branko%27s+restaurant+Tofo+Mozambique&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQs6gLegQIChAB
+              - generic [ref=e102]: Web
+          - listitem [ref=e103]:
+            - button "More filters" [ref=e104] [cursor=pointer]:
+              - generic "More filters" [ref=e105]:
+                - generic [ref=e106]:
+                  - generic [ref=e107]: More
+                  - img [ref=e109]
+        - button "Tools" [ref=e112] [cursor=pointer]:
+          - generic [ref=e114]:
+            - generic [ref=e115]: Tools
+            - img [ref=e117]
+    - navigation [ref=e120]:
+      - navigation [ref=e123]:
+        - list [ref=e131]:
+          - listitem [ref=e132]:
+            - link "Add Best attractions" [ref=e133] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=best+attractions+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-KV7hWfxLE_Vp1DUBDsK6sqnKAxD5YW6Tb3Xs8HhIbiJEy9WHR91Q4hLpceSU4ufbcyFZbox4Fp2prQ_ioT_UKwi8q0dDS0c9ag2wG04u1u2OJ2AP3RR8EGmbuUrWKWQkxlhjN4rbgpiNWegfcmgM5kjQvGhw_6N-6RS2gq_tWsc_InQB&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAB6BAgREAE&ictx=0
+              - generic [ref=e139]: Best attractions
+          - listitem [ref=e140]:
+            - link "Add Pizza" [ref=e141] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=pizza+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-3_x93TMVYgu3qSTq_X9v4LHrtVYk3xqUyHYPXEB8myzIDzSXRLfLSvS_ryKWVb27QdjYmJQCuDXjI4XUf83mgPK_AmkBaeLqG-dGMXRqYpm3WjrFrhxo0LrEYUByVP4taI87nxPi8tJcdnxWQ6tUx4m9WbY8YcizU_jIy4Ny-z1X24tG&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAF6BAgSEAE&ictx=0
+              - generic [ref=e147]: Pizza
+          - listitem [ref=e148]:
+            - link "Add Mango beach" [ref=e149] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=mango+beach+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-54N_J9HHOiH1gvqy-gkV7Ne-aLACaRzmFO5Q_zrrHUSxb_nvrRul3pQxOZ8pwF7GAW7U45CD4KzKceIuBzVKNtXwSGCHx9-ap6A9UXvJP-9YEP08u6IlA5bqKA2DVVFn-_yx68tKpLFZ8L7VizglbyV3hP_Qu53PH_6ABO8dDnJK0NCx&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAJ6BAgQEAE&ictx=0
+              - generic [ref=e155]: Mango beach
+          - listitem [ref=e156]:
+            - link "Add Visiting tofo" [ref=e157] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=visiting+tofo+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-p2edqP4ik7v2FPRwJbsSBMy73oy9AOUfydWNCh9_nTNGS1AjnVfyl9qK-jWoB08wVMQ3W1hG5uZL9FuHHI3hy1h-SrLFEKuPxXxdFuPUQyzoU4ia5nJ1RXBBoKBxE0X3mbHNfWdCsDmNn3EGCrr3pS0oS7iHdf_knvzioTGQuHPw2kZ7&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAN6BAgUEAE&ictx=0
+              - generic [ref=e163]: Visiting tofo
+          - listitem [ref=e164]:
+            - link "Add Seafood" [ref=e165] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=seafood+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ii7VtfXZnR55IuglcdQbH2fd50hGdDK91YLWG6kjyeXMmpWSQuojkM6HeMIkRrmMK73OpN75aFFiDCaTBYX8n2u9rccw_dMPm431q4nCOg4CBwNMr8pTgW3gyHwrSeD_FqlyLE74fpUYSQjkWh1NpY7B2XC1xTncxokAekafMAdug99c&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAR6BAgTEAE&ictx=0
+              - generic [ref=e171]: Seafood
+          - listitem [ref=e172]:
+            - link "Add Food" [ref=e173] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=food+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WmOwtJVbdB-3e02pBdeMWRe1P7TxRpVIrgBkodIgVdxtNbHeG76cyEwY53aizGdFN69Y-mI_UhH2HFYr-OgaapFlnvitjqrwy0pw6s98mnKTzB445KIwk-95uEc2SEZ4Lb4DVguf6E_vHYUaUwPnkoxh1VE&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAV6BQiFARAB&ictx=0
+              - generic [ref=e179]: Food
+          - listitem [ref=e180]:
+            - link "Add Tripadvisor llc" [ref=e181] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=tripadvisor+llc+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-lZXy4WXjCBs-WMfCmu8tISjcatuyaG0nCXEpeXQwEea4jJkqsh4STGlhSRRmotnHfH5ay988wAJjPUhGL7ndiQo-Avb9pr1Z4HpbMfIUN2vWadnxYhcQsFzb5WRAA4CCx7X1G5eT8QHEu186TNngf5a5wnLg9P6okpuBb0ngp42fd6wG&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAZ6BQiAARAB&ictx=0
+              - generic [ref=e187]: Tripadvisor llc
+          - listitem [ref=e188]:
+            - link "Add Best restaurants" [ref=e189] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=best+restaurants+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-KV7hWfxLE_Vp1DUBDsK6sqnKAxD5YW6Tb3Xs8HhIbiJEy9WHR91Q4hLpceSU4ufbl9UWzZDWapvQc_f9MTlh_gq2_8q7qSP49HSUk66EEFjSsSOI4ducLW6IGmtminoaJ1xEZtcs5iqTTol_U6WiKFxCbeDdz3LtoLkvTk5wnpXVxqFH&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAd6BQiEARAB&ictx=0
+              - generic [ref=e195]: Best restaurants
+          - listitem [ref=e196]:
+            - link "Add Beach resort" [ref=e197] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=beach+resort+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-C2wfRk_WPCwv56JaUFp85g3ciJkBGSlZBldi1ErLLoKvD_j27UDNixR3CQsXx009ndqRuPT4Yy8HRRS2AYRQBIK2VrPUgLBmFLYJfUsKpz3QIQlaKc_BjrGRxO0CCmP8cD_C2nU6sE0kJFtWeWm3jOwOgGAq2NZjR-VExGh_N4FJalpJ&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAh6BQiDARAB&ictx=0
+              - generic [ref=e203]: Beach resort
+          - listitem [ref=e204]:
+            - link "Add Bar" [ref=e205] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=bar+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-JW9A32m8YJ2vcpHFEEnaY6YYjptBIYJBb1zf3LYnfd4RTefocIqAtxaLnNeYT0Yk80Qy4rIIfQg9dKagoI7dK2u-Ulnc0VdHQKwd4zhXzEyLnFtl4xXXMo01gcbg7NJ3JfbXJ7G_4GWutdEt1NoB04FJzac&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAl6BQiBARAB&ictx=0
+              - generic [ref=e211]: Bar
+          - listitem [ref=e212]:
+            - link "Add Review" [ref=e213] [cursor=pointer]:
+              - /url: /search?sca_esv=8c24cb2666462953&q=review+Branko%27s+restaurant+Tofo+Mozambique&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-1SJLs6PR4i_l8aWdSowUAbqRBztWA_jW6dcLIwxK8mHhyG7YRiM1F2lgiqPbEGM14vQKi2TSMkLQ4Oi8Y_lVY_av2CcJQu76AFOwAf-5K72IULQoQ8GUk8gfuyNMTbfVRl4EQOQCXjnwBVHwn_iQXSn4hMMZ3VsFxQekzKJ71gGKF4qJ&udm=2&sa=X&ved=2ahUKEwi4zq2BsKCUAxUMgf0HHSVcDWQQxKsJKAp6BQiCARAB&ictx=0
+              - generic [ref=e219]: Review
+    - heading "Search Results" [level=1] [ref=e220]
+    - main [ref=e222]:
+      - generic [ref=e228]:
+        - generic [ref=e231]:
+          - generic [ref=e232] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e234]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e236]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e239]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e241]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e246]: Tripadvisor
+              - generic [ref=e248]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e249] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e251]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e253]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e256]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e258]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e263]: Tripadvisor
+              - generic [ref=e265]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e266] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e268]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e270]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e273]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e275]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e280]: Tripadvisor
+              - generic [ref=e282]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e283] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e285]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e287]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e290]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e292]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e297]: Tripadvisor
+              - generic [ref=e299]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e300] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e302]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e304]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e307]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e309]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e314]: Tripadvisor
+              - generic [ref=e316]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e317] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e319]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e321]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e324]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e326]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e331]: Tripadvisor
+              - generic [ref=e333]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e334] [cursor=pointer]:
+            - heading "BRANKO'S, Tofo - Restaurant Reviews ..." [level=3] [ref=e336]:
+              - button "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e338]:
+                - img "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e341]
+            - link "Tripadvisor BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e343]:
+              - /url: https://www.tripadvisor.com/Restaurant_Review-g1794229-d7009213-Reviews-or15-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e348]: Tripadvisor
+              - generic [ref=e350]: BRANKO'S, Tofo - Restaurant Reviews ...
+          - generic [ref=e351] [cursor=pointer]:
+            - heading "BRANKO'S, Tofo - Restaurant Reviews ..." [level=3] [ref=e353]:
+              - button "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e355]:
+                - img "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e358]
+            - link "Tripadvisor BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e360]:
+              - /url: https://www.tripadvisor.com/Restaurant_Review-g1794229-d7009213-Reviews-or15-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e365]: Tripadvisor
+              - generic [ref=e367]: BRANKO'S, Tofo - Restaurant Reviews ...
+          - generic [ref=e368] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e370]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e372]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e375]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e377]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e382]: Tripadvisor
+              - generic [ref=e384]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e385] [cursor=pointer]:
+            - 'heading "Branko''s: A Culinary Gem on Tofo Beach" [level=3] [ref=e387]':
+              - 'button "Branko''s: A Culinary Gem on Tofo Beach" [ref=e389]':
+                - 'img "Branko''s: A Culinary Gem on Tofo Beach" [ref=e392]'
+            - 'link "Evendo Branko''s: A Culinary Gem on Tofo Beach" [ref=e394]':
+              - /url: https://evendo.com/locations/mozambique/tofo-beach/landmark/branko-s
+              - generic [ref=e399]: Evendo
+              - generic [ref=e401]: "Branko's: A Culinary Gem on Tofo Beach"
+          - generic [ref=e402] [cursor=pointer]:
+            - heading "Brankos - Tofo, Inhambane ..." [level=3] [ref=e404]:
+              - button "Brankos - Tofo, Inhambane ..." [ref=e406]:
+                - img "Brankos - Tofo, Inhambane ..." [ref=e409]
+            - link "Instagram Brankos - Tofo, Inhambane ..." [ref=e411]:
+              - /url: https://www.instagram.com/p/CujVO5mI4Lc/
+              - generic [ref=e416]: Instagram
+              - generic [ref=e418]: Brankos - Tofo, Inhambane ...
+          - generic [ref=e419] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e421]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e423]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e426]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e428]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e433]: Tripadvisor
+              - generic [ref=e435]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e436] [cursor=pointer]:
+            - heading "Brankos - Tofo, Inhambane ..." [level=3] [ref=e438]:
+              - button "Brankos - Tofo, Inhambane ..." [ref=e440]:
+                - img "Brankos - Tofo, Inhambane ..." [ref=e443]
+            - link "Instagram Brankos - Tofo, Inhambane ..." [ref=e445]:
+              - /url: https://www.instagram.com/p/CujVO5mI4Lc/
+              - generic [ref=e450]: Instagram
+              - generic [ref=e452]: Brankos - Tofo, Inhambane ...
+          - generic [ref=e453] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e455]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e457]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e460]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e462]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e467]: Tripadvisor
+              - generic [ref=e469]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e470] [cursor=pointer]:
+            - heading "The ever popular Branko's in Tofo." [level=3] [ref=e472]:
+              - button "The ever popular Branko's in Tofo." [ref=e474]:
+                - img "The ever popular Branko's in Tofo." [ref=e477]
+            - link "Facebook The ever popular Branko's in Tofo." [ref=e479]:
+              - /url: https://www.facebook.com/groups/mozambique4all/posts/1134221540045614/
+              - generic [ref=e484]: Facebook
+              - generic [ref=e486]: The ever popular Branko's in Tofo.
+          - generic [ref=e487] [cursor=pointer]:
+            - heading "The ever popular Branko's in Tofo." [level=3] [ref=e489]:
+              - button "The ever popular Branko's in Tofo." [ref=e491]:
+                - img "The ever popular Branko's in Tofo." [ref=e494]
+            - link "Facebook The ever popular Branko's in Tofo." [ref=e496]:
+              - /url: https://www.facebook.com/groups/mozambique4all/posts/1134221540045614/
+              - generic [ref=e501]: Facebook
+              - generic [ref=e503]: The ever popular Branko's in Tofo.
+          - generic [ref=e504] [cursor=pointer]:
+            - heading "prawns in Tofo beach! Branko&Lucia ..." [level=3] [ref=e506]:
+              - button "prawns in Tofo beach! Branko&Lucia ..." [ref=e508]:
+                - img "prawns in Tofo beach! Branko&Lucia ..." [ref=e511]
+            - link "Tripadvisor prawns in Tofo beach! Branko&Lucia ..." [ref=e513]:
+              - /url: https://www.tripadvisor.com/LocationPhotoDirectLink-g1794229-d7009213-i138880122-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e518]: Tripadvisor
+              - generic [ref=e520]: prawns in Tofo beach! Branko&Lucia ...
+          - generic [ref=e521] [cursor=pointer]:
+            - heading "BRANKO'S, Tofo - Restaurant Reviews ..." [level=3] [ref=e523]:
+              - button "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e525]:
+                - img "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e528]
+            - link "Tripadvisor BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e530]:
+              - /url: https://www.tripadvisor.com/Restaurant_Review-g1794229-d7009213-Reviews-or15-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e535]: Tripadvisor
+              - generic [ref=e537]: BRANKO'S, Tofo - Restaurant Reviews ...
+          - generic [ref=e538] [cursor=pointer]:
+            - heading "Branko's, Tofo - Restaurant Reviews ..." [level=3] [ref=e540]:
+              - button "Branko's, Tofo - Restaurant Reviews ..." [ref=e542]:
+                - img "Branko's, Tofo - Restaurant Reviews ..." [ref=e545]
+            - link "Tripadvisor Branko's, Tofo - Restaurant Reviews ..." [ref=e547]:
+              - /url: https://www.tripadvisor.co.za/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e552]: Tripadvisor
+              - generic [ref=e554]: Branko's, Tofo - Restaurant Reviews ...
+          - generic [ref=e555] [cursor=pointer]:
+            - 'heading "Branko''s: A Culinary Gem on Tofo Beach" [level=3] [ref=e557]':
+              - 'button "Branko''s: A Culinary Gem on Tofo Beach" [ref=e559]':
+                - 'img "Branko''s: A Culinary Gem on Tofo Beach" [ref=e562]'
+            - 'link "Evendo Branko''s: A Culinary Gem on Tofo Beach" [ref=e564]':
+              - /url: https://evendo.com/locations/mozambique/tofo-beach/landmark/branko-s
+              - generic [ref=e569]: Evendo
+              - generic [ref=e571]: "Branko's: A Culinary Gem on Tofo Beach"
+          - generic [ref=e572] [cursor=pointer]:
+            - heading "Brankos - Tofo, Inhambane ..." [level=3] [ref=e574]:
+              - button "Brankos - Tofo, Inhambane ..." [ref=e576]:
+                - img "Brankos - Tofo, Inhambane ..." [ref=e579]
+            - link "Instagram Brankos - Tofo, Inhambane ..." [ref=e581]:
+              - /url: https://www.instagram.com/p/CujVO5mI4Lc/
+              - generic [ref=e586]: Instagram
+              - generic [ref=e588]: Brankos - Tofo, Inhambane ...
+          - generic [ref=e589] [cursor=pointer]:
+            - heading "The 10 best attractions near Branko's ..." [level=3] [ref=e591]:
+              - button "The 10 best attractions near Branko's ..." [ref=e593]:
+                - img "The 10 best attractions near Branko's ..." [ref=e596]
+            - link "Evendo The 10 best attractions near Branko's ..." [ref=e598]:
+              - /url: https://evendo.com/locations/mozambique/tofo-beach/landmark/branko-s/best-attractions
+              - generic [ref=e603]: Evendo
+              - generic [ref=e605]: The 10 best attractions near Branko's ...
+          - generic [ref=e606] [cursor=pointer]:
+            - heading "BRANKO'S, Tofo - Restaurant Reviews ..." [level=3] [ref=e608]:
+              - button "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e610]:
+                - img "BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e613]
+            - link "Tripadvisor BRANKO'S, Tofo - Restaurant Reviews ..." [ref=e615]:
+              - /url: https://www.tripadvisor.com/Restaurant_Review-g1794229-d7009213-Reviews-Branko_s-Tofo_Inhambane_Province.html
+              - generic [ref=e620]: Tripadvisor
+              - generic [ref=e622]: BRANKO'S, Tofo - Restaurant Reviews ...
+          - generic [ref=e623] [cursor=pointer]:
+            - heading "Brankos - Tofo, Inhambane ..." [level=3] [ref=e625]:
+              - button "Brankos - Tofo, Inhambane ..." [ref=e627]:
+                - img "Brankos - Tofo, Inhambane ..." [ref=e630]
+            - link "Instagram Brankos - Tofo, Inhambane ..." [ref=e632]:
+              - /url: https://www.instagram.com/p/CujVO5mI4Lc/
+              - generic [ref=e637]: Instagram
+              - generic [ref=e639]: Brankos - Tofo, Inhambane ...
+        - generic [ref=e642]:
+          - heading "Page Navigation" [level=1] [ref=e643]
+          - generic [ref=e644]:
+            - text: The rest of the results might not be what you're looking for.
+            - link "See more anyway" [ref=e645] [cursor=pointer]:
+              - /url: "#"
+      - navigation
