@@ -1,9 +1,9 @@
-import { Resend } from 'resend'
+const { Resend } = require('resend')
 
 const BOOKINGS_EMAIL = 'bookings@barracabanas.com'
 const JIGALOUW_EMAIL = 'jigalouw@barracabanas.com'
 
-export default async function handler(req: any, res: any) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
@@ -15,12 +15,12 @@ export default async function handler(req: any, res: any) {
   }
 
   const resend = new Resend(apiKey)
-  const FROM = process.env.RESEND_FROM_EMAIL ?? 'Barra Cabanas <onboarding@resend.dev>'
+  const FROM = process.env.RESEND_FROM_EMAIL || 'Barra Cabanas <onboarding@resend.dev>'
 
-  let body: any = {}
+  let body = {}
   try {
-    body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body ?? {})
-  } catch {
+    body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {})
+  } catch (e) {
     return res.status(400).json({ success: false, message: 'Invalid request body.' })
   }
 
@@ -38,7 +38,7 @@ export default async function handler(req: any, res: any) {
     ? `Fishing Charter Enquiry — ${name}`
     : isQuote
       ? `Quote Request from ${name}`
-      : `New Enquiry: ${subject ?? 'Website Contact Form'} — ${name}`
+      : `New Enquiry: ${subject || 'Website Contact Form'} — ${name}`
 
   const adminHtml = isFishing
     ? fishingAdminHtml({ name, email, phone, subject, message })
@@ -87,7 +87,9 @@ export default async function handler(req: any, res: any) {
   }
 }
 
-function shell(title: string, accent: string, body: string): string {
+// ─── HTML helpers ─────────────────────────────────────────────────────────────
+
+function shell(title, accent, body) {
   return `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
 <body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif">
 <div style="max-width:600px;margin:32px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)">
@@ -102,7 +104,7 @@ function shell(title: string, accent: string, body: string): string {
 </div></body></html>`
 }
 
-function row(label: string, value: string | undefined | null): string {
+function row(label, value) {
   if (!value) return ''
   return `<tr>
     <td style="padding:6px 12px;font-weight:600;width:130px;vertical-align:top;color:#555;white-space:nowrap">${label}</td>
@@ -110,38 +112,38 @@ function row(label: string, value: string | undefined | null): string {
   </tr>`
 }
 
-function tbl(rows: string): string {
-  return `<table style="border-collapse:collapse;width:100%;border:1px solid #eee;border-radius:6px">${rows}</table>`
+function tbl(rows) {
+  return `<table style="border-collapse:collapse;width:100%;border:1px solid #eee">${rows}</table>`
 }
 
-function contactAdminHtml(d: any): string {
+function contactAdminHtml(d) {
   return shell('New Contact Enquiry', '#1a6b4a', tbl(
     row('Name', d.name) + row('Email', d.email) + row('Phone', d.phone) +
     row('Subject', d.subject) + row('Accommodation', d.service) + row('Message', d.message)
   ))
 }
 
-function quoteAdminHtml(d: any): string {
+function quoteAdminHtml(d) {
   const serviceList = Array.isArray(d.services)
-    ? d.services.map((s: any) => `${s.name} x${s.quantity} — R${(s.price * s.quantity).toLocaleString()}`).join('<br>')
-    : undefined
+    ? d.services.map(s => `${s.name} x${s.quantity} — R${(s.price * s.quantity).toLocaleString()}`).join('<br>')
+    : ''
   return shell('New Quote Request', '#1a6b4a', tbl(
     row('Name', d.name) + row('Email', d.email) + row('Phone', d.phone) +
     row('Company', d.company) + row('Services', serviceList) +
-    row('Total', d.totalAmount != null ? `R${Number(d.totalAmount).toLocaleString()}` : undefined) +
+    row('Total', d.totalAmount != null ? `R${Number(d.totalAmount).toLocaleString()}` : '') +
     row('Message', d.message)
   ))
 }
 
-function fishingAdminHtml(d: any): string {
+function fishingAdminHtml(d) {
   return shell('New Fishing Charter Enquiry', '#0e4f7a', tbl(
     row('Name', d.name) + row('Email', d.email) + row('Phone', d.phone) +
     row('Subject', d.subject) + row('Details', d.message)
   ))
 }
 
-function autoReplyHtml(name: string, kind: 'contact' | 'quote' | 'fishing'): string {
-  const lines: Record<string, string[]> = {
+function autoReplyHtml(name, kind) {
+  const lines = {
     contact: [
       `Thank you for reaching out, ${name}!`,
       `We have received your message and will get back to you within 24 hours.`,
@@ -159,6 +161,8 @@ function autoReplyHtml(name: string, kind: 'contact' | 'quote' | 'fishing'): str
     ],
   }
   const accent = kind === 'fishing' ? '#0e4f7a' : '#1a6b4a'
-  const body = lines[kind].map(l => `<p style="margin:0 0 14px;color:#333;line-height:1.7">${l}</p>`).join('')
+  const body = (lines[kind] || lines.contact)
+    .map(l => `<p style="margin:0 0 14px;color:#333;line-height:1.7">${l}</p>`)
+    .join('')
   return shell('We received your enquiry', accent, body)
 }
