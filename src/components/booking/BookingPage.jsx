@@ -222,7 +222,7 @@ const BookingPage = () => {
                 <h3>Need Help?</h3>
                 <p>Contact us directly:</p>
                 <p className="contact-detail">
-                  <strong>Email:</strong> info@barracabanas.com
+                  <strong>Email:</strong> bookings@barracabanas.com
                 </p>
                 <p className="contact-detail">
                   <strong>Phone:</strong> +27 66 205 7229

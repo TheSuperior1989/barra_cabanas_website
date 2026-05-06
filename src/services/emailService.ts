@@ -143,13 +143,13 @@ export class EmailService {
             
             <p>We look forward to welcoming you to Barra Cabanas. If you have any questions, please don't hesitate to contact us.</p>
             
-            <a href="mailto:info@barracabanas.com" class="button">Contact Us</a>
+            <a href="mailto:bookings@barracabanas.com" class="button">Contact Us</a>
           </div>
           
           <div class="footer">
             <p>Barra Cabanas<br>
             Inhambane, Mozambique<br>
-            +27 83 379 3741 | info@barracabanas.com</p>
+            +27 66 205 7229 | bookings@barracabanas.com</p>
           </div>
         </div>
       </body>
@@ -246,13 +246,13 @@ export class EmailService {
             
             <p>We would be happy to help you find alternative dates or accommodations. Please feel free to contact us to discuss other options.</p>
             
-            <a href="mailto:info@barracabanas.com" class="button">Contact Us for Alternatives</a>
+            <a href="mailto:bookings@barracabanas.com" class="button">Contact Us for Alternatives</a>
           </div>
           
           <div class="footer">
             <p>Barra Cabanas<br>
             Inhambane, Mozambique<br>
-            +27 83 379 3741 | info@barracabanas.com</p>
+            +27 66 205 7229 | bookings@barracabanas.com</p>
           </div>
         </div>
       </body>
@@ -347,7 +347,7 @@ export class EmailService {
           <div class="footer">
             <p>Barra Cabanas<br>
             Inhambane, Mozambique<br>
-            +27 83 379 3741 | info@barracabanas.com</p>
+            +27 66 205 7229 | bookings@barracabanas.com</p>
           </div>
         </div>
       </body>

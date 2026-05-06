@@ -201,7 +201,7 @@ class EnvironmentValidator {
     const config = this.getConfig()
     return {
       companyName: config.COMPANY_NAME || 'Barra Cabanas',
-      companyEmail: config.COMPANY_EMAIL || 'info@barracabanas.com',
+      companyEmail: config.COMPANY_EMAIL || 'bookings@barracabanas.com',
       vatRate: parseFloat(config.VAT_RATE || '0.15'),
       currency: config.CURRENCY || 'ZAR'
     }
