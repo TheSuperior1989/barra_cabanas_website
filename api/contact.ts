@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-const FROM = process.env.RESEND_FROM_EMAIL ?? 'Barra Cabanas <onboarding@resend.dev>'
 const BOOKINGS_EMAIL = 'bookings@barracabanas.com'
 const JIGALOUW_EMAIL = 'jigalouw@barracabanas.com'
 
@@ -10,10 +8,23 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const {
-    name, email, phone, subject, message, service,
-    type, company, services, totalAmount,
-  } = req.body ?? {}
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    console.error('RESEND_API_KEY is not set')
+    return res.status(500).json({ success: false, message: 'Email service not configured.' })
+  }
+
+  const resend = new Resend(apiKey)
+  const FROM = process.env.RESEND_FROM_EMAIL ?? 'Barra Cabanas <onboarding@resend.dev>'
+
+  let body: any = {}
+  try {
+    body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body ?? {})
+  } catch {
+    return res.status(400).json({ success: false, message: 'Invalid request body.' })
+  }
+
+  const { name, email, phone, subject, message, service, type, company, services, totalAmount } = body
 
   if (!name || !email || !message) {
     return res.status(400).json({ success: false, message: 'Name, email and message are required.' })
@@ -52,7 +63,7 @@ export default async function handler(req: any, res: any) {
       })
     }
 
-    await resend.emails.send({
+    resend.emails.send({
       from: FROM,
       to: email,
       subject: isFishing
@@ -76,8 +87,6 @@ export default async function handler(req: any, res: any) {
   }
 }
 
-// ─── HTML helpers ────────────────────────────────────────────────────────────
-
 function shell(title: string, accent: string, body: string): string {
   return `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
 <body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif">
@@ -97,47 +106,37 @@ function row(label: string, value: string | undefined | null): string {
   if (!value) return ''
   return `<tr>
     <td style="padding:6px 12px;font-weight:600;width:130px;vertical-align:top;color:#555;white-space:nowrap">${label}</td>
-    <td style="padding:6px 12px;color:#333">${value.replace(/\n/g, '<br>')}</td>
+    <td style="padding:6px 12px;color:#333">${String(value).replace(/\n/g, '<br>')}</td>
   </tr>`
 }
 
-function table(rows: string): string {
+function tbl(rows: string): string {
   return `<table style="border-collapse:collapse;width:100%;border:1px solid #eee;border-radius:6px">${rows}</table>`
 }
 
 function contactAdminHtml(d: any): string {
-  return shell('New Contact Enquiry', '#1a6b4a', table(
-    row('Name', d.name) +
-    row('Email', d.email) +
-    row('Phone', d.phone) +
-    row('Subject', d.subject) +
-    row('Accommodation', d.service) +
-    row('Message', d.message)
+  return shell('New Contact Enquiry', '#1a6b4a', tbl(
+    row('Name', d.name) + row('Email', d.email) + row('Phone', d.phone) +
+    row('Subject', d.subject) + row('Accommodation', d.service) + row('Message', d.message)
   ))
 }
 
 function quoteAdminHtml(d: any): string {
   const serviceList = Array.isArray(d.services)
-    ? d.services.map((s: any) => `${s.name} &times;${s.quantity} — R${(s.price * s.quantity).toLocaleString()}`).join('<br>')
+    ? d.services.map((s: any) => `${s.name} x${s.quantity} — R${(s.price * s.quantity).toLocaleString()}`).join('<br>')
     : undefined
-  return shell('New Quote Request', '#1a6b4a', table(
-    row('Name', d.name) +
-    row('Email', d.email) +
-    row('Phone', d.phone) +
-    row('Company', d.company) +
-    row('Services', serviceList) +
+  return shell('New Quote Request', '#1a6b4a', tbl(
+    row('Name', d.name) + row('Email', d.email) + row('Phone', d.phone) +
+    row('Company', d.company) + row('Services', serviceList) +
     row('Total', d.totalAmount != null ? `R${Number(d.totalAmount).toLocaleString()}` : undefined) +
     row('Message', d.message)
   ))
 }
 
 function fishingAdminHtml(d: any): string {
-  return shell('New Fishing Charter Enquiry', '#0e4f7a', table(
-    row('Name', d.name) +
-    row('Email', d.email) +
-    row('Phone', d.phone) +
-    row('Subject', d.subject) +
-    row('Details', d.message)
+  return shell('New Fishing Charter Enquiry', '#0e4f7a', tbl(
+    row('Name', d.name) + row('Email', d.email) + row('Phone', d.phone) +
+    row('Subject', d.subject) + row('Details', d.message)
   ))
 }
 
@@ -145,23 +144,21 @@ function autoReplyHtml(name: string, kind: 'contact' | 'quote' | 'fishing'): str
   const lines: Record<string, string[]> = {
     contact: [
       `Thank you for reaching out, ${name}!`,
-      `We've received your message and will get back to you within 24 hours.`,
+      `We have received your message and will get back to you within 24 hours.`,
       `For urgent queries call <strong>+27 66 205 7229</strong> or email <a href="mailto:bookings@barracabanas.com">bookings@barracabanas.com</a>.`,
     ],
     quote: [
       `Thank you for your quote request, ${name}!`,
-      `We've received your enquiry and will respond within 24 hours.`,
+      `We have received your enquiry and will respond within 24 hours.`,
       `For urgent queries call <strong>+27 66 205 7229</strong>.`,
     ],
     fishing: [
       `Thank you for your fishing charter enquiry, ${name}!`,
-      `We've forwarded your request to the Jigalouw team and they will be in touch shortly.`,
+      `We have forwarded your request to the Jigalouw team and they will be in touch shortly.`,
       `For urgent queries contact us on <strong>+27 66 205 7229</strong>.`,
     ],
   }
   const accent = kind === 'fishing' ? '#0e4f7a' : '#1a6b4a'
-  const body = lines[kind]
-    .map(l => `<p style="margin:0 0 14px;color:#333;line-height:1.7">${l}</p>`)
-    .join('')
+  const body = lines[kind].map(l => `<p style="margin:0 0 14px;color:#333;line-height:1.7">${l}</p>`).join('')
   return shell('We received your enquiry', accent, body)
 }

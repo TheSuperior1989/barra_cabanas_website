@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-const FROM = process.env.RESEND_FROM_EMAIL ?? 'Barra Cabanas <onboarding@resend.dev>'
 const BOOKINGS_EMAIL = 'bookings@barracabanas.com'
 
 export default async function handler(req: any, res: any) {
@@ -9,7 +7,23 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { bookingData, customerData } = req.body ?? {}
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    console.error('RESEND_API_KEY is not set')
+    return res.status(500).json({ success: false, message: 'Email service not configured.' })
+  }
+
+  const resend = new Resend(apiKey)
+  const FROM = process.env.RESEND_FROM_EMAIL ?? 'Barra Cabanas <onboarding@resend.dev>'
+
+  let body: any = {}
+  try {
+    body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body ?? {})
+  } catch {
+    return res.status(400).json({ success: false, message: 'Invalid request body.' })
+  }
+
+  const { bookingData, customerData } = body
 
   if (!customerData?.email || !bookingData?.checkIn || !bookingData?.checkOut) {
     return res.status(400).json({ success: false, message: 'Missing required booking fields.' })
@@ -35,7 +49,7 @@ export default async function handler(req: any, res: any) {
       })
     }
 
-    await resend.emails.send({
+    resend.emails.send({
       from: FROM,
       to: customerData.email,
       subject: 'Booking Request Received — Barra Cabanas',
@@ -54,8 +68,6 @@ export default async function handler(req: any, res: any) {
     })
   }
 }
-
-// ─── HTML helpers ────────────────────────────────────────────────────────────
 
 function shell(title: string, body: string): string {
   return `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
@@ -87,28 +99,28 @@ function adminHtml({ bookingData: b, customerData: c, bookingRef }: any): string
     b.infants && `${b.infants} infant${b.infants > 1 ? 's' : ''}`,
   ].filter(Boolean).join(', ')
 
-  const rows = `<table style="border-collapse:collapse;width:100%;border:1px solid #eee">
-    <tr><td colspan="2" style="padding:8px 12px;background:#f0f7f4;font-weight:700;color:#1a6b4a">Booking Details</td></tr>
-    ${row('Reference', bookingRef)}
-    ${row('Property', b.propertyName)}
-    ${row('Check-in', b.checkIn)}
-    ${row('Check-out', b.checkOut)}
-    ${row('Nights', b.nights)}
-    ${row('Guests', guestStr)}
-    ${row('Total', b.totalAmount ? `R${Number(b.totalAmount).toLocaleString()}` : undefined)}
-    ${row('Notes', b.specialRequests || b.notes)}
-    <tr><td colspan="2" style="padding:8px 12px;background:#f0f7f4;font-weight:700;color:#1a6b4a">Customer Details</td></tr>
-    ${row('Name', `${c.firstName} ${c.lastName ?? ''}`.trim())}
-    ${row('Email', c.email)}
-    ${row('Phone', c.phone)}
-    ${row('Country', c.country)}
-  </table>`
-
-  return shell('New Booking Request', rows)
+  return shell('New Booking Request', `
+    <table style="border-collapse:collapse;width:100%;border:1px solid #eee">
+      <tr><td colspan="2" style="padding:8px 12px;background:#f0f7f4;font-weight:700;color:#1a6b4a">Booking Details</td></tr>
+      ${row('Reference', bookingRef)}
+      ${row('Property', b.propertyName)}
+      ${row('Check-in', b.checkIn)}
+      ${row('Check-out', b.checkOut)}
+      ${row('Nights', b.nights)}
+      ${row('Guests', guestStr)}
+      ${row('Total', b.totalAmount ? `R${Number(b.totalAmount).toLocaleString()}` : undefined)}
+      ${row('Notes', b.specialRequests || b.notes)}
+      <tr><td colspan="2" style="padding:8px 12px;background:#f0f7f4;font-weight:700;color:#1a6b4a">Customer Details</td></tr>
+      ${row('Name', `${c.firstName ?? ''} ${c.lastName ?? ''}`.trim())}
+      ${row('Email', c.email)}
+      ${row('Phone', c.phone)}
+      ${row('Country', c.country)}
+    </table>
+  `)
 }
 
 function customerHtml({ bookingData: b, customerData: c, bookingRef }: any): string {
-  const body = `
+  return shell('Booking Request Received', `
     <p style="color:#333;line-height:1.7">Dear ${c.firstName},</p>
     <p style="color:#333;line-height:1.7">Thank you for your booking request at Barra Cabanas! We have received your enquiry and will confirm availability within 24 hours.</p>
     <table style="border-collapse:collapse;width:100%;border:1px solid #eee;margin:16px 0">
@@ -120,7 +132,6 @@ function customerHtml({ bookingData: b, customerData: c, bookingRef }: any): str
       ${row('Reference', bookingRef)}
     </table>
     <p style="color:#555;font-size:13px;line-height:1.7"><strong>Note:</strong> This is a booking request, not a confirmed reservation. No payment is required until your booking is confirmed.</p>
-    <p style="color:#333;line-height:1.7">If you have any questions, contact us at <a href="mailto:bookings@barracabanas.com">bookings@barracabanas.com</a> or call <strong>+27 66 205 7229</strong>.</p>
-  `
-  return shell('Booking Request Received', body)
+    <p style="color:#333;line-height:1.7">Questions? Email <a href="mailto:bookings@barracabanas.com">bookings@barracabanas.com</a> or call <strong>+27 66 205 7229</strong>.</p>
+  `)
 }
