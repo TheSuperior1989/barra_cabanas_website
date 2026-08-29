@@ -13,12 +13,11 @@
  */
 
 import { execFile } from 'node:child_process';
-import { mkdir, readdir, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, stat } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import sharp from 'sharp';
-import ffmpegPath from 'ffmpeg-static';
 
 const execFileAsync = promisify(execFile);
 
@@ -149,6 +148,10 @@ async function optimizeVideo() {
     console.log(`Hero video not found at ${VIDEO_SOURCE}, skipping.`);
     return;
   }
+
+  // Imported lazily: the deploy build runs images only, and should not
+  // depend on ffmpeg-static having downloaded its binary.
+  const { default: ffmpegPath } = await import('ffmpeg-static');
 
   console.log(`Re-encoding ${VIDEO_SOURCE}`);
   await execFileAsync(ffmpegPath, [

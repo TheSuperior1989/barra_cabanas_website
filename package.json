@@ -18,7 +18,7 @@
     "dev-website": "vite --port 5173",
     "validate:env": "echo 'Environment validation skipped for Vite build'",
     "prebuild-disabled": "npm run validate:env",
-    "vercel-build": "vite build",
+    "vercel-build": "npm run optimize:images && vite build",
     "analyze": "cross-env ANALYZE=true next build",
     "build:analyze": "npm run analyze",
     "optimize": "node scripts/optimize-media.mjs all",

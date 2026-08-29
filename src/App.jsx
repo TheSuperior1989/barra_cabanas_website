@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout';
 import HomePage from './components/home/HomePage';
 import ScrollToTop from './components/common/ScrollToTop';
 import PageLoader from './components/common/PageLoader';
+import PageMeta from './components/common/PageMeta';
 import './App.css';
 
 // The home page ships in the main bundle because it is the most common entry
@@ -22,6 +23,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <PageMeta />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
