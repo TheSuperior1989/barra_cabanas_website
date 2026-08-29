@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import HouseRules from './HouseRules';
 import BorderCrossing from './BorderCrossing';
-import InfoSheetDownload from '../common/InfoSheetDownload';
 import floorPlan from '../../assets/images/floor_plan.jpeg';
 import beachAccessPhoto from '../../assets/images/beach_access_photo.jpeg';
 import sv01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
@@ -234,7 +233,6 @@ const ServicesPage = () => {
       </section>
 
       {/* Info Sheet Download Section */}
-      <InfoSheetDownload />
 
       {/* House Rules Section */}
       <HouseRules />

@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.barracabanas.com/faq</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.barracabanas.com/activities/fishing</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>

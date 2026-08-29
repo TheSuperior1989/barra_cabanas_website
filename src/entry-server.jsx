@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout';
 import HomePage from './components/home/HomePage';
 import ServicesPage from './components/services/ServicesPage';
 import AboutPage from './components/about/AboutPage';
+import FaqPage from './components/faq/FaqPage';
 import PortfolioPage from './components/portfolio/PortfolioPage';
 import ActivitiesPage from './components/activities/ActivitiesPage';
 import FishingPage from './components/activities/FishingPage';
@@ -33,6 +34,7 @@ export const PRERENDER_ROUTES = [
   '/activities',
   '/activities/fishing',
   '/about',
+  '/faq',
   '/contact',
   '/booking',
 ];
@@ -49,6 +51,7 @@ export function render(url) {
             <Route path="activities" element={<ActivitiesPage />} />
             <Route path="activities/fishing" element={<FishingPage />} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="faq" element={<FaqPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="booking" element={<BookingPage />} />
           </Route>

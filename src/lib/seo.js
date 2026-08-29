@@ -52,6 +52,11 @@ export const PAGE_META = {
     description:
       'The story behind Barra Cabanas, our beach houses at Barra, Inhambane, and the guest services we run on site. Who we are and what to expect when you stay.',
   },
+  '/faq': {
+    title: 'FAQs | Barra Cabanas Beach Houses, Barra Mozambique',
+    description:
+      'Answers on sleeping capacity, check-in times, what to bring, the Mozambique border crossing, laundry and house rules for your stay at Barra Cabanas.',
+  },
   '/contact': {
     title: 'Contact & Directions | Barra Cabanas, Barra Beach Mozambique',
     description:

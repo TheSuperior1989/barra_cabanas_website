@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Internal pages with no value in search results.
-Disallow: /test
-Disallow: /quote
-
 Sitemap: https://www.barracabanas.com/sitemap.xml

@@ -13,13 +13,12 @@ import './App.css';
 // downloads the code for pages they may never open.
 const ServicesPage = lazy(() => import('./components/services/ServicesPage'));
 const AboutPage = lazy(() => import('./components/about/AboutPage'));
+const FaqPage = lazy(() => import('./components/faq/FaqPage'));
 const PortfolioPage = lazy(() => import('./components/portfolio/PortfolioPage'));
 const ActivitiesPage = lazy(() => import('./components/activities/ActivitiesPage'));
 const FishingPage = lazy(() => import('./components/activities/FishingPage'));
 const ContactPage = lazy(() => import('./components/contact/ContactPage'));
-const QuotingPage = lazy(() => import('./components/quoting/QuotingPage'));
 const BookingPage = lazy(() => import('./components/booking/BookingPage'));
-const SupabaseTest = lazy(() => import('./components/test/SupabaseTest'));
 
 function App() {
   return (
@@ -35,10 +34,9 @@ function App() {
             <Route path="activities" element={<ActivitiesPage />} />
             <Route path="activities/fishing" element={<FishingPage />} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="faq" element={<FaqPage />} />
             <Route path="contact" element={<ContactPage />} />
-            <Route path="quote" element={<QuotingPage />} />
             <Route path="booking" element={<BookingPage />} />
-            <Route path="test" element={<SupabaseTest />} />
 
             {/* Renamed routes. Vercel issues a 301 for direct hits; these
                 cover in-app navigation from any older cached page. */}
