@@ -160,7 +160,7 @@ const Hero = () => {
             Experience barefoot luxury at its finest. Nestled on the pristine shores of Mozambique, Barra Cabanas offers exclusive beachside accomodation with panoramic ocean views, elegant design, and unmatched comfort — your ultimate tropical escape awaits.
           </p>
           <div className="hero-buttons">
-            <Link to="/services" className="btn btn-primary">
+            <Link to="/accommodation" className="btn btn-primary">
               View Our Properties
             </Link>
             <Link to="/booking" className="btn btn-secondary">

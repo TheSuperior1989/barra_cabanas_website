@@ -69,7 +69,7 @@ const ContactCTA = () => {
             <Link to="/booking" className="btn btn-primary">
               Request a Quotation
             </Link>
-            <Link to="/services" className="btn btn-secondary">
+            <Link to="/accommodation" className="btn btn-secondary">
               View Properties
             </Link>
           </div>

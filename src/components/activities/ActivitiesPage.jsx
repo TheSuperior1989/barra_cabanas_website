@@ -304,7 +304,7 @@ const ActivitiesPage = () => {
       <div className="activities-hero">
         <div className="activities-hero-overlay"></div>
         <div className="container">
-          <h1 className="activities-hero-title">Activities & Experiences</h1>
+          <h1 className="activities-hero-title">Activities in Barra &amp; Tofo</h1>
           <p className="activities-hero-subtitle">
             Discover amazing adventures at your doorstep in Barra, Mozambique
           </p>

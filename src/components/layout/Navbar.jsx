@@ -66,12 +66,12 @@ const Navbar = () => {
             </Link>
           </li>
 <li className="nav-item">
-            <Link to="/services" className={location.pathname === '/services' ? 'nav-link active' : 'nav-link'}>
+            <Link to="/accommodation" className={location.pathname === '/accommodation' ? 'nav-link active' : 'nav-link'}>
               Accommodation
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'nav-link active' : 'nav-link'}>
+            <Link to="/gallery" className={location.pathname === '/gallery' ? 'nav-link active' : 'nav-link'}>
               Gallery
             </Link>
           </li>
@@ -83,6 +83,11 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/booking" className={location.pathname === '/booking' ? 'nav-link active' : 'nav-link'}>
               Request a Quotation
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className={location.pathname === '/about' ? 'nav-link active' : 'nav-link'}>
+              About
             </Link>
           </li>
           <li className="nav-item">

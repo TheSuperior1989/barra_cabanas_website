@@ -188,7 +188,7 @@ const ServicesPage = () => {
       <div className="services-hero">
         <div className="services-hero-overlay"></div>
         <div className="container">
-          <h1 className="services-hero-title">Our Accommodation</h1>
+          <h1 className="services-hero-title">Beach House Accommodation in Barra, Mozambique</h1>
           <p className="services-hero-subtitle">
             Luxury Beachfront Living – Tailored for Your Perfect Escape
           </p>

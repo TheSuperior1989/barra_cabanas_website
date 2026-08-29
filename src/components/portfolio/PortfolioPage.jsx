@@ -176,7 +176,7 @@ const PortfolioPage = () => {
       <div className="portfolio-hero">
         <div className="portfolio-hero-overlay"></div>
         <div className="container">
-          <h1 className="portfolio-hero-title">Gallery</h1>
+          <h1 className="portfolio-hero-title">Gallery — Barra Beach, Mozambique</h1>
           <p className="portfolio-hero-subtitle">
             Step inside paradise — a visual journey through Barra Cabanas
           </p>

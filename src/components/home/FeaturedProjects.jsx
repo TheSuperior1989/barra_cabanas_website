@@ -98,7 +98,7 @@ const FeaturedProjects = () => {
         </motion.div>
 
         <div className="projects-cta">
-          <Link to="/services" className="btn btn-primary">
+          <Link to="/accommodation" className="btn btn-primary">
             View All Houses
           </Link>
         </div>

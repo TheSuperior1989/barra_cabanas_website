@@ -27,12 +27,12 @@ export const PAGE_META = {
     description:
       'Self-catering luxury beach houses on the shore at Barra, Inhambane, Mozambique. Ocean views, private balconies and direct beach access. Enquire about availability and rates.',
   },
-  '/services': {
+  '/accommodation': {
     title: 'Accommodation & Rates | Beachfront Holiday Houses, Barra Mozambique',
     description:
       'Fully equipped self-catering beach houses at Barra Cabanas, Mozambique. See what each house includes, the facilities on site, and the add-on services available to guests.',
   },
-  '/portfolio': {
+  '/gallery': {
     title: 'Photo Gallery | Barra Cabanas Beach Houses, Barra Mozambique',
     description:
       'Photographs of Barra Cabanas: the beach houses, interiors, balconies, pool and the beachfront at Barra, Inhambane. See the property before you book.',
@@ -46,6 +46,11 @@ export const PAGE_META = {
     title: 'Deep Sea Fishing Charters in Barra, Mozambique | Barra Cabanas',
     description:
       'Deep sea and fly fishing charters out of Barra, Mozambique, with Jigalouw Fishing Adventures. Marlin, sailfish and game fish seasons, boats, rates and how to book.',
+  },
+  '/about': {
+    title: 'About Barra Cabanas | Beach House Owners in Barra, Mozambique',
+    description:
+      'The story behind Barra Cabanas, our beach houses at Barra, Inhambane, and the guest services we run on site. Who we are and what to expect when you stay.',
   },
   '/contact': {
     title: 'Contact & Directions | Barra Cabanas, Barra Beach Mozambique',

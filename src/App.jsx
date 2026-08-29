@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './components/home/HomePage';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -11,6 +11,7 @@ import './App.css';
 // point. Every other route is split out so a first-time visitor no longer
 // downloads the code for pages they may never open.
 const ServicesPage = lazy(() => import('./components/services/ServicesPage'));
+const AboutPage = lazy(() => import('./components/about/AboutPage'));
 const PortfolioPage = lazy(() => import('./components/portfolio/PortfolioPage'));
 const ActivitiesPage = lazy(() => import('./components/activities/ActivitiesPage'));
 const FishingPage = lazy(() => import('./components/activities/FishingPage'));
@@ -28,14 +29,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="services" element={<ServicesPage />} />
-            <Route path="portfolio" element={<PortfolioPage />} />
+            <Route path="accommodation" element={<ServicesPage />} />
+            <Route path="gallery" element={<PortfolioPage />} />
             <Route path="activities" element={<ActivitiesPage />} />
             <Route path="activities/fishing" element={<FishingPage />} />
+            <Route path="about" element={<AboutPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="quote" element={<QuotingPage />} />
             <Route path="booking" element={<BookingPage />} />
             <Route path="test" element={<SupabaseTest />} />
+
+            {/* Renamed routes. Vercel issues a 301 for direct hits; these
+                cover in-app navigation from any older cached page. */}
+            <Route path="services" element={<Navigate to="/accommodation" replace />} />
+            <Route path="portfolio" element={<Navigate to="/gallery" replace />} />
           </Route>
         </Routes>
       </Suspense>

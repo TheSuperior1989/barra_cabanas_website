@@ -96,7 +96,10 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1.5rem;
+  /* nowrap keeps "Request a Quotation" on one line; the tighter padding
+     buys back the width the extra nav item needs. */
+  white-space: nowrap;
+  padding: 0 1.15rem;
   height: 100%;
   font-weight: 500;
   font-family: var(--font-primary);

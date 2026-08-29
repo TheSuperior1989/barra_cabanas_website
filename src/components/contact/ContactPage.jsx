@@ -91,7 +91,7 @@ const ContactPage = () => {
       <div className="contact-hero">
         <div className="contact-hero-overlay"></div>
         <div className="container">
-          <h1 className="contact-hero-title">Contact Us</h1>
+          <h1 className="contact-hero-title">Contact Barra Cabanas</h1>
           <p className="contact-hero-subtitle">
             Get in touch with us to book your perfect beach getaway
           </p>
