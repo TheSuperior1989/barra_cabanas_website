@@ -105,6 +105,7 @@ const Hero = () => {
           loop
           playsInline
           preload="metadata"
+          poster="/videos/barra-cabanas-hero-poster.jpg"
           onCanPlay={handleVideoCanPlay}
           style={{
             opacity: videoCanPlay ? 1 : 0,
