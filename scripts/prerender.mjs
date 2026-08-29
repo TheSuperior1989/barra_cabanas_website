@@ -41,8 +41,8 @@ async function main() {
     process.exit(1);
   }
 
-  const { render, PRERENDER_ROUTES } = await import(`file://${SSR_ENTRY}`);
-  const { PAGE_META, DEFAULT_META, canonicalUrl } = await import('../src/lib/seo.js');
+  const { render, PRERENDER_ROUTES, NOT_FOUND_ROUTE } = await import(`file://${SSR_ENTRY}`);
+  const { PAGE_META, DEFAULT_META, NOT_FOUND_META, canonicalUrl } = await import('../src/lib/seo.js');
 
   const template = await readFile(TEMPLATE, 'utf-8');
   if (!template.includes('<div id="root"></div>')) {
@@ -93,8 +93,29 @@ async function main() {
     console.log(`  ${route.padEnd(21)} ${String(appHtml.length).padStart(7)} chars markup  ->  ${outPath} (${kb} KB)`);
   }
 
+  // Static 404 document. Vercel serves dist/404.html with a real 404 status
+  // for any unmatched path. Without it the SPA catch-all would hand crawlers
+  // the prerendered home page at every junk URL -- a duplicate of the whole
+  // site, marked indexable.
+  const notFoundHtml = render(NOT_FOUND_ROUTE);
+  let html404 = template.replace(
+    '<div id="root"></div>',
+    `<div id="root">${notFoundHtml}</div>`
+  );
+  html404 = html404.replace(
+    /<title>[^<]*<\/title>/i,
+    `<title>${escapeHtml(NOT_FOUND_META.title)}</title>`
+  );
+  html404 = setMeta(html404, 'name', 'description', NOT_FOUND_META.description);
+  html404 = setMeta(html404, 'name', 'robots', 'noindex, follow');
+  // A 404 is not a canonical page; pointing it at the home page would merge
+  // every junk URL into the home page's signals.
+  html404 = html404.replace(/\s*<link rel="canonical" href="[^"]*" \/>/i, '');
+  await writeFile(path.join(DIST, '404.html'), html404, 'utf-8');
+  console.log(`  ${'404'.padEnd(21)} ${String(notFoundHtml.length).padStart(7)} chars markup  ->  dist\\404.html`);
+
   await rm('dist-ssr', { recursive: true, force: true });
-  console.log(`\nPrerendered ${written} routes.`);
+  console.log(`\nPrerendered ${written} routes plus a static 404.`);
 }
 
 main().catch((err) => {

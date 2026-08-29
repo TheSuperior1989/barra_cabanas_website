@@ -13,11 +13,5 @@
       "destination": "/gallery",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
   ]
 }

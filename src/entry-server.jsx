@@ -10,6 +10,7 @@ import ActivitiesPage from './components/activities/ActivitiesPage';
 import FishingPage from './components/activities/FishingPage';
 import ContactPage from './components/contact/ContactPage';
 import BookingPage from './components/booking/BookingPage';
+import NotFoundPage from './components/common/NotFoundPage';
 import { Routes, Route, StaticRouter } from 'react-router-dom';
 import './App.css';
 
@@ -39,6 +40,9 @@ export const PRERENDER_ROUTES = [
   '/booking',
 ];
 
+/** Path used only to render the static 404 document. */
+export const NOT_FOUND_ROUTE = '/__not-found__';
+
 export function render(url) {
   return renderToString(
     <StrictMode>
@@ -54,6 +58,7 @@ export function render(url) {
             <Route path="faq" element={<FaqPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="booking" element={<BookingPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </StaticRouter>
