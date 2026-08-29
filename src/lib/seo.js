@@ -70,6 +70,16 @@ export function canonicalUrl(pathname) {
   return `${SITE_URL}${clean}`;
 }
 
+/** True when the path is a real page rather than an unknown URL. */
+export function isKnownRoute(pathname) {
+  return Object.prototype.hasOwnProperty.call(PAGE_META, pathname);
+}
+
+export const NOT_FOUND_META = {
+  title: 'Page Not Found | Barra Cabanas',
+  description: 'This page could not be found. Browse our beach house accommodation at Barra, Inhambane, Mozambique, or get in touch with us directly.',
+};
+
 export function metaForPath(pathname) {
-  return PAGE_META[pathname] ?? DEFAULT_META;
+  return PAGE_META[pathname] ?? NOT_FOUND_META;
 }

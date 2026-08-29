@@ -5,6 +5,7 @@ import HomePage from './components/home/HomePage';
 import ScrollToTop from './components/common/ScrollToTop';
 import PageLoader from './components/common/PageLoader';
 import PageMeta from './components/common/PageMeta';
+import NotFoundPage from './components/common/NotFoundPage';
 import './App.css';
 
 // The home page ships in the main bundle because it is the most common entry
@@ -43,6 +44,9 @@ function App() {
                 cover in-app navigation from any older cached page. */}
             <Route path="services" element={<Navigate to="/accommodation" replace />} />
             <Route path="portfolio" element={<Navigate to="/gallery" replace />} />
+
+            {/* Anything else. Kept last so it only matches unknown paths. */}
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Suspense>

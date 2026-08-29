@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run optimize:images && vite build",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "dist",
   "framework": null,
   "redirects": [

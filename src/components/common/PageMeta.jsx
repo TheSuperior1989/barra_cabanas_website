@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { canonicalUrl, metaForPath, SITE_NAME } from '../../lib/seo';
+import { canonicalUrl, metaForPath, isKnownRoute, SITE_NAME } from '../../lib/seo';
 import { initAnalytics, trackPageView } from '../../lib/analytics';
 
 /** Creates the tag on first use, then reuses it on later route changes. */
@@ -57,6 +57,10 @@ const PageMeta = () => {
     document.title = title;
     setMetaByName('description', description);
     setCanonical(canonical);
+
+    // Unknown URLs render the 404 page; keep them out of the index rather than
+    // letting Google collect endless thin duplicates.
+    setMetaByName('robots', isKnownRoute(pathname) ? 'index, follow' : 'noindex, follow');
 
     setMetaByProperty('og:title', title);
     setMetaByProperty('og:description', description);
