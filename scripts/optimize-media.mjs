@@ -1,6 +1,7 @@
 /**
  * Generates web-sized WebP versions of every source image, plus a small
- * thumbnail for grid tiles, and re-encodes the hero video.
+ * thumbnail for grid tiles and narrower srcset renditions, and re-encodes
+ * the hero video.
  *
  * The originals under src/assets/images stay untouched and remain the master
  * copies. Nothing in src/ imports the generated files directly -- the Vite
@@ -13,7 +14,7 @@
  */
 
 import { execFile } from 'node:child_process';
-import { mkdir, readdir, stat } from 'node:fs/promises';
+import { mkdir, readdir, stat, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -38,6 +39,12 @@ const FULL_MAX_EDGE = 2000;
 const THUMB_MAX_EDGE = 700;
 const FULL_QUALITY = 82;
 const THUMB_QUALITY = 78;
+
+// Narrower copies for srcset, so a phone fetches a 480 or 960 px file instead
+// of the 2000 px master. Each is written as <name>.w<width>.webp and listed,
+// with the full image's dimensions, in <name>.meta.json for the Vite plugin's
+// `?responsive` import (see vite.config.js).
+const RENDITION_WIDTHS = [480, 960, 1600];
 
 // Hero video is a muted background loop, so the audio track is dropped and
 // 1080p is ample -- it sits behind a dark overlay and a headline.
@@ -71,37 +78,62 @@ async function isUpToDate(source, target) {
   return targetStat.mtimeMs >= sourceStat.mtimeMs;
 }
 
-async function optimizeImage(source) {
-  const relative = path.relative(IMAGE_SOURCE_DIR, source);
-  const base = path.join(IMAGE_OUTPUT_DIR, relative);
-  const fullTarget = `${base}.webp`;
-  const thumbTarget = `${base}.thumb.webp`;
+/** Every file written for one source image. */
+function targetsFor(source) {
+  const base = path.join(IMAGE_OUTPUT_DIR, path.relative(IMAGE_SOURCE_DIR, source));
+  return {
+    full: `${base}.webp`,
+    thumb: `${base}.thumb.webp`,
+    renditions: RENDITION_WIDTHS.map((key) => ({ key, file: `${base}.w${key}.webp` })),
+    meta: `${base}.meta.json`,
+  };
+}
 
-  await mkdir(path.dirname(fullTarget), { recursive: true });
+async function optimizeImage(source) {
+  const targets = targetsFor(source);
+  const allFiles = [targets.full, targets.thumb, targets.meta, ...targets.renditions.map((r) => r.file)];
+
+  await mkdir(path.dirname(targets.full), { recursive: true });
 
   const sourceBytes = (await stat(source)).size;
-  let writtenBytes = 0;
-  let skipped = true;
+  const current = await Promise.all(allFiles.map((file) => isUpToDate(source, file)));
+  const skipped = current.every(Boolean);
 
-  if (!(await isUpToDate(source, fullTarget))) {
-    skipped = false;
-    await sharp(source)
+  if (!skipped) {
+    // Decode the (often 20 MB) original once, at the full output size, and
+    // derive every smaller copy from that in-memory master.
+    const master = await sharp(source)
       .rotate()
       .resize({ width: FULL_MAX_EDGE, height: FULL_MAX_EDGE, fit: 'inside', withoutEnlargement: true })
-      .webp({ quality: FULL_QUALITY })
-      .toFile(fullTarget);
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+
+    const encode = (file, maxEdge, quality) =>
+      sharp(master.data, { raw: master.info })
+        .resize({ width: maxEdge, height: maxEdge, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality })
+        .toFile(file);
+
+    const [full, , ...renditions] = await Promise.all([
+      encode(targets.full, FULL_MAX_EDGE, FULL_QUALITY),
+      encode(targets.thumb, THUMB_MAX_EDGE, THUMB_QUALITY),
+      ...targets.renditions.map((r) => encode(r.file, r.key, FULL_QUALITY)),
+    ]);
+
+    // A small source produces copies no narrower than the full image; those
+    // add nothing to a srcset, so only genuinely smaller widths are listed.
+    const meta = {
+      width: full.width,
+      height: full.height,
+      renditions: targets.renditions
+        .map((r, i) => ({ key: r.key, width: renditions[i].width, height: renditions[i].height }))
+        .filter((r, i, all) => r.width < full.width && all.findIndex((o) => o.width === r.width) === i),
+    };
+    await writeFile(targets.meta, JSON.stringify(meta));
   }
 
-  if (!(await isUpToDate(source, thumbTarget))) {
-    skipped = false;
-    await sharp(source)
-      .rotate()
-      .resize({ width: THUMB_MAX_EDGE, height: THUMB_MAX_EDGE, fit: 'inside', withoutEnlargement: true })
-      .webp({ quality: THUMB_QUALITY })
-      .toFile(thumbTarget);
-  }
-
-  writtenBytes = (await stat(fullTarget)).size + (await stat(thumbTarget)).size;
+  const written = await Promise.all(allFiles.map((file) => stat(file)));
+  const writtenBytes = written.reduce((sum, s) => sum + s.size, 0);
   return { sourceBytes, writtenBytes, skipped };
 }
 
@@ -138,7 +170,7 @@ async function optimizeImages() {
   const skipped = results.filter((r) => r.skipped).length;
 
   console.log(`\n  originals   ${formatMb(sourceTotal)}`);
-  console.log(`  generated   ${formatMb(outputTotal)}  (full + thumbnail)`);
+  console.log(`  generated   ${formatMb(outputTotal)}  (full, thumbnail and srcset renditions)`);
   console.log(`  reduction   ${(100 - (outputTotal / sourceTotal) * 100).toFixed(1)}%`);
   if (skipped) console.log(`  unchanged   ${skipped} already current`);
 }

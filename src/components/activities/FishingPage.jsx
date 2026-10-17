@@ -5,25 +5,25 @@ import { Link } from 'react-router-dom';
 import { sendContactForm } from '../../services/emailService';
 import fishingTimelapse from '../../assets/Videos/Fishing_Timelapse.mp4';
 import fishingRatesPDF from '../../assets/documents/Jigalouw ZAR rates_20260430_123951_0000.pdf';
-import fish01 from '../../assets/Fishing/20250820_152800.jpg';
-import fish02 from '../../assets/Fishing/20250820_152945.jpg';
-import fish03 from '../../assets/Fishing/IMG-20210514-WA0027 (1).jpg';
-import fish04 from '../../assets/Fishing/IMG-20241124-WA0043.jpg';
-import fish05 from '../../assets/Fishing/IMG-20250409-WA0083.jpg';
-import fish06 from '../../assets/Fishing/IMG-20250409-WA0084.jpg';
-import fish07 from '../../assets/Fishing/IMG-20250409-WA0097.jpg';
-import fish08 from '../../assets/Fishing/IMG-20250409-WA0098.jpg';
-import fish09 from '../../assets/Fishing/IMG-20250427-WA0045(1).jpg';
-import fish10 from '../../assets/Fishing/IMG-20250612-WA0161(1).jpg';
-import fish11 from '../../assets/Fishing/IMG-20250612-WA0162(1).jpg';
-import fish12 from '../../assets/Fishing/IMG-20250612-WA0164.jpg';
-import fish13 from '../../assets/Fishing/IMG-20250930-WA0164.jpg';
-import fish14 from '../../assets/Fishing/IMG-20260216-WA0040.jpg';
-import fish15 from '../../assets/Fishing/IMG-20260216-WA0042(1).jpg';
-import fish16 from '../../assets/Fishing/IMG-20260216-WA0043(1).jpg';
-import fish17 from '../../assets/Fishing/IMG-20260216-WA0046.jpg';
-import fish18 from '../../assets/Fishing/IMG-20260216-WA0047(1).jpg';
-import fish19 from '../../assets/Fishing/IMG-20260428-WA0073.jpg';
+import fish01 from '../../assets/Fishing/20250820_152800.jpg?responsive';
+import fish02 from '../../assets/Fishing/20250820_152945.jpg?responsive';
+import fish03 from '../../assets/Fishing/IMG-20210514-WA0027 (1).jpg?responsive';
+import fish04 from '../../assets/Fishing/IMG-20241124-WA0043.jpg?responsive';
+import fish05 from '../../assets/Fishing/IMG-20250409-WA0083.jpg?responsive';
+import fish06 from '../../assets/Fishing/IMG-20250409-WA0084.jpg?responsive';
+import fish07 from '../../assets/Fishing/IMG-20250409-WA0097.jpg?responsive';
+import fish08 from '../../assets/Fishing/IMG-20250409-WA0098.jpg?responsive';
+import fish09 from '../../assets/Fishing/IMG-20250427-WA0045(1).jpg?responsive';
+import fish10 from '../../assets/Fishing/IMG-20250612-WA0161(1).jpg?responsive';
+import fish11 from '../../assets/Fishing/IMG-20250612-WA0162(1).jpg?responsive';
+import fish12 from '../../assets/Fishing/IMG-20250612-WA0164.jpg?responsive';
+import fish13 from '../../assets/Fishing/IMG-20250930-WA0164.jpg?responsive';
+import fish14 from '../../assets/Fishing/IMG-20260216-WA0040.jpg?responsive';
+import fish15 from '../../assets/Fishing/IMG-20260216-WA0042(1).jpg?responsive';
+import fish16 from '../../assets/Fishing/IMG-20260216-WA0043(1).jpg?responsive';
+import fish17 from '../../assets/Fishing/IMG-20260216-WA0046.jpg?responsive';
+import fish18 from '../../assets/Fishing/IMG-20260216-WA0047(1).jpg?responsive';
+import fish19 from '../../assets/Fishing/IMG-20260428-WA0073.jpg?responsive';
 import './FishingPage.css';
 
 const GALLERY_SLIDES = [
@@ -243,7 +243,7 @@ const FishingPage = () => {
                 className={`fp-slide ${i === currentSlide ? 'fp-slide--active' : ''}`}
               >
                 {slide.type === 'image' ? (
-                  <img src={slide.src} alt={slide.caption} className="fp-slide-img" />
+                  <img {...slide.src} sizes="(max-width: 1140px) 100vw, 1060px" alt={slide.caption} className="fp-slide-img" loading={i === 0 ? undefined : 'lazy'} decoding="async" />
                 ) : (
                   <div className="fp-slide-placeholder" style={{ background: slide.bg }}>
                     <span className="fp-slide-emoji">{slide.emoji}</span>
@@ -267,7 +267,7 @@ const FishingPage = () => {
                 aria-label={`Slide ${i + 1}`}
               >
                 {slide.type === 'image' ? (
-                  <img src={slide.src} alt={slide.caption} />
+                  <img {...slide.src} sizes="100px" alt={slide.caption} loading="lazy" decoding="async" />
                 ) : (
                   <div className="fp-thumb-placeholder" style={{ background: slide.bg }}>
                     <span>{slide.emoji}</span>

@@ -9,30 +9,30 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import HouseRules from './HouseRules';
 import BorderCrossing from './BorderCrossing';
-import floorPlan from '../../assets/images/floor_plan.jpeg';
-import beachAccessPhoto from '../../assets/images/beach_access_photo.jpeg';
-import sv01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
-import sv02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg';
-import sv03 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg';
-import sv04 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg';
-import sv05 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg';
-import sv06 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg';
-import sv07 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg';
-import sv08 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg';
-import sv09 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg';
-import sv10 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg';
-import sv11 from '../../assets/images/Newest/NewestPhotosToUse/DSC05426.jpg';
-import sv12 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg';
-import sv13 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg';
-import sv14 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
-import sv15 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg';
-import sv16 from '../../assets/images/Newest/NewestPhotosToUse/DSC05433.jpg';
-import sv17 from '../../assets/images/Newest/NewestPhotosToUse/DSC05437.jpg';
-import sv18 from '../../assets/images/Newest/NewestPhotosToUse/DSC05441.jpg';
-import sv19 from '../../assets/images/Newest/NewestPhotosToUse/DSC05442.jpg';
-import sv20 from '../../assets/images/Newest/NewestPhotosToUse/DSC05445.jpg';
-import sv21 from '../../assets/images/Newest/NewestPhotosToUse/DSC05451.jpg';
-import sv22 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg';
+import floorPlan from '../../assets/images/floor_plan.jpeg?responsive';
+import beachAccessPhoto from '../../assets/images/beach_access_photo.jpeg?responsive';
+import sv01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg?responsive';
+import sv02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg?responsive';
+import sv03 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg?responsive';
+import sv04 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg?responsive';
+import sv05 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg?responsive';
+import sv06 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg?responsive';
+import sv07 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg?responsive';
+import sv08 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg?responsive';
+import sv09 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg?responsive';
+import sv10 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg?responsive';
+import sv11 from '../../assets/images/Newest/NewestPhotosToUse/DSC05426.jpg?responsive';
+import sv12 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg?responsive';
+import sv13 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg?responsive';
+import sv14 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg?responsive';
+import sv15 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg?responsive';
+import sv16 from '../../assets/images/Newest/NewestPhotosToUse/DSC05433.jpg?responsive';
+import sv17 from '../../assets/images/Newest/NewestPhotosToUse/DSC05437.jpg?responsive';
+import sv18 from '../../assets/images/Newest/NewestPhotosToUse/DSC05441.jpg?responsive';
+import sv19 from '../../assets/images/Newest/NewestPhotosToUse/DSC05442.jpg?responsive';
+import sv20 from '../../assets/images/Newest/NewestPhotosToUse/DSC05445.jpg?responsive';
+import sv21 from '../../assets/images/Newest/NewestPhotosToUse/DSC05451.jpg?responsive';
+import sv22 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg?responsive';
 import './ServicesPage.css';
 
 // Separate component for service items to fix React Hooks violation
@@ -111,7 +111,7 @@ const ServiceItem = ({ service, index }) => {
         </a>
       </motion.div>
       <motion.div className="service-image" variants={itemVariants}>
-        <img src={service.images[currentImageIndex]} alt={service.title} />
+        <img {...service.images[currentImageIndex]} sizes="(max-width: 768px) 100vw, 50vw" alt={service.title} decoding="async" />
         {service.images && service.images.length > 1 && (
           <div className="service-image-indicators">
             {service.images.map((_, index) => (
@@ -209,7 +209,7 @@ const ServicesPage = () => {
             Explore the layout of our modern beachfront cabanas
           </p>
           <div className="floor-plan-container">
-            <img src={floorPlan} alt="Barra Cabanas Floor Plan" className="floor-plan-image" />
+            <img {...floorPlan} sizes="(max-width: 640px) 100vw, 600px" alt="Barra Cabanas Floor Plan" className="floor-plan-image" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -221,7 +221,7 @@ const ServicesPage = () => {
             Private gate access to pristine Barra Beach
           </p>
           <div className="beach-access-container">
-            <img src={beachAccessPhoto} alt="Direct beach access gate" className="beach-access-image" />
+            <img {...beachAccessPhoto} sizes="(max-width: 640px) 100vw, 600px" alt="Direct beach access gate" className="beach-access-image" loading="lazy" decoding="async" />
             <div className="beach-access-description">
               <p>
                 Each cabana features exclusive access to the beach through our private gate,
@@ -244,18 +244,18 @@ const ServicesPage = () => {
         {/* Scrolling Images Background */}
         <div className="scrolling-images">
           <div className="image-track">
-            <img src={sv13} alt="Aerial view" />
-            <img src={sv14} alt="Drone beachfront" />
-            <img src={sv15} alt="Top view" />
-            <img src={sv16} alt="Property interior" />
-            <img src={sv17} alt="Living space" />
-            <img src={sv18} alt="Accommodation" />
-            <img src={sv19} alt="Interior detail" />
-            <img src={sv20} alt="Property room" />
-            <img src={sv21} alt="Luxury interior" />
-            <img src={sv22} alt="Outdoor area" />
-            <img src={sv01} alt="Aerial drone" />
-            <img src={sv02} alt="Overhead view" />
+            <img {...sv13} sizes="(max-width: 768px) 300px, 400px" alt="Aerial view" decoding="async" />
+            <img {...sv14} sizes="(max-width: 768px) 300px, 400px" alt="Drone beachfront" decoding="async" />
+            <img {...sv15} sizes="(max-width: 768px) 300px, 400px" alt="Top view" decoding="async" />
+            <img {...sv16} sizes="(max-width: 768px) 300px, 400px" alt="Property interior" decoding="async" />
+            <img {...sv17} sizes="(max-width: 768px) 300px, 400px" alt="Living space" decoding="async" />
+            <img {...sv18} sizes="(max-width: 768px) 300px, 400px" alt="Accommodation" decoding="async" />
+            <img {...sv19} sizes="(max-width: 768px) 300px, 400px" alt="Interior detail" decoding="async" />
+            <img {...sv20} sizes="(max-width: 768px) 300px, 400px" alt="Property room" decoding="async" />
+            <img {...sv21} sizes="(max-width: 768px) 300px, 400px" alt="Luxury interior" decoding="async" />
+            <img {...sv22} sizes="(max-width: 768px) 300px, 400px" alt="Outdoor area" decoding="async" />
+            <img {...sv01} sizes="(max-width: 768px) 300px, 400px" alt="Aerial drone" decoding="async" />
+            <img {...sv02} sizes="(max-width: 768px) 300px, 400px" alt="Overhead view" decoding="async" />
           </div>
         </div>
 

@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './ContactCTA.css';
-import cta01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
-import cta02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg';
-import cta03 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg';
-import cta04 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
-import cta05 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg';
-import cta06 from '../../assets/images/Newest/NewestPhotosToUse/20260123_124540.jpg';
-import cta07 from '../../assets/images/Newest/NewestPhotosToUse/20260123_124556.jpg';
-import cta08 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164201.jpg';
-import cta09 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164223.jpg';
-import cta10 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164432.jpg';
-import cta11 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428008107.jpg';
-import cta12 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428010370.jpg';
+import cta01 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg?responsive';
+import cta02 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0118.jpg?responsive';
+import cta03 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg?responsive';
+import cta04 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg?responsive';
+import cta05 from '../../assets/images/Newest/NewestPhotosToUse/Top_View.jpg?responsive';
+import cta06 from '../../assets/images/Newest/NewestPhotosToUse/20260123_124540.jpg?responsive';
+import cta07 from '../../assets/images/Newest/NewestPhotosToUse/20260123_124556.jpg?responsive';
+import cta08 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164201.jpg?responsive';
+import cta09 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164223.jpg?responsive';
+import cta10 from '../../assets/images/Newest/NewestPhotosToUse/20260123_164432.jpg?responsive';
+import cta11 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428008107.jpg?responsive';
+import cta12 from '../../assets/images/Newest/NewestPhotosToUse/FB_IMG_1774428010370.jpg?responsive';
 
 const ContactCTA = () => {
   const [ref, inView] = useInView({
@@ -36,18 +36,18 @@ const ContactCTA = () => {
       {/* Scrolling Images Background */}
       <div className="scrolling-images">
         <div className="image-track">
-          <img src={cta01} alt="Aerial drone view" />
-          <img src={cta02} alt="Aerial resort view" />
-          <img src={cta03} alt="Overhead aerial shot" />
-          <img src={cta04} alt="Drone beachfront view" />
-          <img src={cta05} alt="Top aerial view" />
-          <img src={cta06} alt="Barra Cabanas exterior" />
-          <img src={cta07} alt="Beachfront property" />
-          <img src={cta08} alt="Interior living space" />
-          <img src={cta09} alt="Accommodation interior" />
-          <img src={cta10} alt="Property outdoor area" />
-          <img src={cta11} alt="Barra Cabanas" />
-          <img src={cta12} alt="Barra Cabanas property" />
+          <img {...cta01} sizes="(max-width: 768px) 300px, 400px" alt="Aerial drone view" decoding="async" />
+          <img {...cta02} sizes="(max-width: 768px) 300px, 400px" alt="Aerial resort view" decoding="async" />
+          <img {...cta03} sizes="(max-width: 768px) 300px, 400px" alt="Overhead aerial shot" decoding="async" />
+          <img {...cta04} sizes="(max-width: 768px) 300px, 400px" alt="Drone beachfront view" decoding="async" />
+          <img {...cta05} sizes="(max-width: 768px) 300px, 400px" alt="Top aerial view" decoding="async" />
+          <img {...cta06} sizes="(max-width: 768px) 300px, 400px" alt="Barra Cabanas exterior" decoding="async" />
+          <img {...cta07} sizes="(max-width: 768px) 300px, 400px" alt="Beachfront property" decoding="async" />
+          <img {...cta08} sizes="(max-width: 768px) 300px, 400px" alt="Interior living space" decoding="async" />
+          <img {...cta09} sizes="(max-width: 768px) 300px, 400px" alt="Accommodation interior" decoding="async" />
+          <img {...cta10} sizes="(max-width: 768px) 300px, 400px" alt="Property outdoor area" decoding="async" />
+          <img {...cta11} sizes="(max-width: 768px) 300px, 400px" alt="Barra Cabanas" decoding="async" />
+          <img {...cta12} sizes="(max-width: 768px) 300px, 400px" alt="Barra Cabanas property" decoding="async" />
         </div>
       </div>
 

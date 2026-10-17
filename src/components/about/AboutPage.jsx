@@ -3,9 +3,9 @@ import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faUserTie, faBed, faWater, faPersonSwimming, faWifi, faTv, faFire, faAnchor, faBroom } from '@fortawesome/free-solid-svg-icons';
 import './AboutPage.css';
-import loungeBalconyOceanview from '../../assets/images/Houses/lounge-balcony-oceanview.jpg';
-import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg';
-import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg';
+import loungeBalconyOceanview from '../../assets/images/Houses/lounge-balcony-oceanview.jpg?responsive';
+import bedroomSuiteInterior from '../../assets/images/Houses/bedroom-suite-interior.jpg?responsive';
+import kitchenGalleyWhite from '../../assets/images/Houses/kitchen-galley-white.jpg?responsive';
 
 const propertyStats = [
   { icon: faBed, number: '6', label: 'En-Suite Bedrooms', desc: 'Air-conditioned & fully furnished' },
@@ -115,19 +115,19 @@ const AboutPage = () => {
             <motion.div className="story-gallery" variants={itemVariants}>
               <div className="gallery-grid">
                 <div className="gallery-item gallery-large">
-                  <img src={loungeBalconyOceanview} alt="Covered lounge area with panoramic ocean views" />
+                  <img {...loungeBalconyOceanview} sizes="(max-width: 768px) 100vw, 50vw" alt="Covered lounge area with panoramic ocean views" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
                     <span className="gallery-caption">Ocean View Lounge</span>
                   </div>
                 </div>
                 <div className="gallery-item">
-                  <img src={bedroomSuiteInterior} alt="En-suite bedroom with air-conditioning and queen bed" />
+                  <img {...bedroomSuiteInterior} sizes="(max-width: 768px) 100vw, 25vw" alt="En-suite bedroom with air-conditioning and queen bed" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
                     <span className="gallery-caption">En-Suite Bedrooms</span>
                   </div>
                 </div>
                 <div className="gallery-item">
-                  <img src={kitchenGalleyWhite} alt="Fully equipped modern kitchen with gas stove and appliances" />
+                  <img {...kitchenGalleyWhite} sizes="(max-width: 768px) 100vw, 25vw" alt="Fully equipped modern kitchen with gas stove and appliances" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
                     <span className="gallery-caption">Modern Kitchen</span>
                   </div>

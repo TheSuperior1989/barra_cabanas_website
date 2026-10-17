@@ -5,29 +5,29 @@ import { useInView } from 'react-intersection-observer';
 import './ActivitiesPage.css';
 import { sendContactForm } from '../../services/emailService';
 
-import activityScubaDiving from '../../assets/images/Activities/activity-scuba-diving.jpg';
-import activityDeepSeaFishing from '../../assets/images/Activities/activity-deep-sea-fishing.jpg';
-import activityWatersports from '../../assets/images/Activities/watersports-and-activities.jpeg';
-import activityBarraVida from '../../assets/images/Activities/barra-vida-boat-tours.jpeg';
-import activityCocoVillage from '../../assets/images/Activities/coco-adventure-village.jpeg';
-import activityKapeKape from '../../assets/images/Activities/kape-kape-tours.jpeg';
+import activityScubaDiving from '../../assets/images/Activities/activity-scuba-diving.jpg?responsive';
+import activityDeepSeaFishing from '../../assets/images/Activities/activity-deep-sea-fishing.jpg?responsive';
+import activityWatersports from '../../assets/images/Activities/watersports-and-activities.jpeg?responsive';
+import activityBarraVida from '../../assets/images/Activities/barra-vida-boat-tours.jpeg?responsive';
+import activityCocoVillage from '../../assets/images/Activities/coco-adventure-village.jpeg?responsive';
+import activityKapeKape from '../../assets/images/Activities/kape-kape-tours.jpeg?responsive';
 
-import restThirstyParrot from '../../assets/images/Activities/Restaurants/thirsty-parrot.jpeg';
-import restCaptainsTable from '../../assets/images/Activities/Restaurants/the-captains-table.jpeg';
-import restTikiBar from '../../assets/images/Activities/Restaurants/tiki-bar.jpeg';
-import restPaladar from '../../assets/images/Activities/Restaurants/paladar-restaurant-bar.jpeg';
-import restNeptunes from '../../assets/images/Activities/Restaurants/neptunes-lodge-beach-bar.jpeg';
-import restWhiteSands from '../../assets/images/Activities/Restaurants/white-sands.jpg';
-import restBrankos from '../../assets/images/Activities/Restaurants/brankos-new.jpeg';
-import restKumbaLodge from '../../assets/images/Activities/Restaurants/kumba-lodge-new.jpeg';
-import restMangoBeach from '../../assets/images/Activities/Restaurants/mango-beach-new.jpeg';
-import restSumiBar from '../../assets/images/Activities/Restaurants/sumi-new.jpeg';
-import restCabanaLodge from '../../assets/images/Activities/Restaurants/cabana-lodge-tofo.jpeg';
-import restDatango from '../../assets/images/Activities/Restaurants/datonga.jpeg';
-import restFarawayLodge from '../../assets/images/Activities/Restaurants/faraway-lodge.jpeg';
-import restMaracuja from '../../assets/images/Activities/Restaurants/maracuja.jpeg';
-import restTacosAndFriends from '../../assets/images/Activities/Restaurants/tacos-and-friends.jpeg';
-import restWhatYouWant from '../../assets/images/Activities/Restaurants/what-you-want.jpeg';
+import restThirstyParrot from '../../assets/images/Activities/Restaurants/thirsty-parrot.jpeg?responsive';
+import restCaptainsTable from '../../assets/images/Activities/Restaurants/the-captains-table.jpeg?responsive';
+import restTikiBar from '../../assets/images/Activities/Restaurants/tiki-bar.jpeg?responsive';
+import restPaladar from '../../assets/images/Activities/Restaurants/paladar-restaurant-bar.jpeg?responsive';
+import restNeptunes from '../../assets/images/Activities/Restaurants/neptunes-lodge-beach-bar.jpeg?responsive';
+import restWhiteSands from '../../assets/images/Activities/Restaurants/white-sands.jpg?responsive';
+import restBrankos from '../../assets/images/Activities/Restaurants/brankos-new.jpeg?responsive';
+import restKumbaLodge from '../../assets/images/Activities/Restaurants/kumba-lodge-new.jpeg?responsive';
+import restMangoBeach from '../../assets/images/Activities/Restaurants/mango-beach-new.jpeg?responsive';
+import restSumiBar from '../../assets/images/Activities/Restaurants/sumi-new.jpeg?responsive';
+import restCabanaLodge from '../../assets/images/Activities/Restaurants/cabana-lodge-tofo.jpeg?responsive';
+import restDatango from '../../assets/images/Activities/Restaurants/datonga.jpeg?responsive';
+import restFarawayLodge from '../../assets/images/Activities/Restaurants/faraway-lodge.jpeg?responsive';
+import restMaracuja from '../../assets/images/Activities/Restaurants/maracuja.jpeg?responsive';
+import restTacosAndFriends from '../../assets/images/Activities/Restaurants/tacos-and-friends.jpeg?responsive';
+import restWhatYouWant from '../../assets/images/Activities/Restaurants/what-you-want.jpeg?responsive';
 
 const activities = [
   {
@@ -238,7 +238,7 @@ const RestaurantCard = ({ r }) => (
     {r.highlight && <div className="restaurant-badge">Guest Favourite</div>}
     {r.image && (
       <div className="restaurant-photo">
-        <img src={r.image} alt={r.name} />
+        <img {...r.image} sizes="(max-width: 768px) 100vw, 360px" alt={r.name} loading="lazy" decoding="async" />
       </div>
     )}
     <div className="restaurant-header">
@@ -321,10 +321,10 @@ const ActivitiesPage = () => {
             animate={inView ? 'visible' : 'hidden'}
             className="activities-grid"
           >
-            {activities.map((activity) => (
+            {activities.map((activity, index) => (
               <motion.div key={activity.id} className={`activity-card${activity.lodgeBadge ? ' activity-card--featured' : ''}`} variants={itemVariants}>
                 <div className="activity-image">
-                  <img src={activity.image} alt={activity.name} />
+                  <img {...activity.image} sizes="(max-width: 768px) 100vw, 400px" alt={activity.name} loading={index === 0 ? undefined : 'lazy'} decoding="async" />
                   <div className="activity-image-overlay">
                     <span className="activity-emoji">{activity.emoji}</span>
                   </div>

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -11,18 +11,52 @@ const ASSET_OUTPUT_DIR = path.resolve(rootDir, 'src/assets/optimized')
 const RASTER_IMAGE = /\.(jpe?g|png)$/i
 const CSS_URL = /url\(\s*(['"]?)([^'")]+?\.(?:jpe?g|png))\1\s*\)/gi
 
+const RESPONSIVE_PREFIX = '\0barra-responsive:'
+
+/** Suffix of the generated file an import query asks for: `?thumb`, `?w=480`, or none. */
+function suffixFor(query) {
+  if (query === 'thumb') return '.thumb.webp'
+  const width = /^w=(\d+)$/.exec(query ?? '')
+  return width ? `.w${width[1]}.webp` : '.webp'
+}
+
 /**
- * Maps an absolute path to a source image onto its generated WebP, or returns
- * null when the file sits outside src/assets or has not been generated yet.
+ * Maps an absolute path to a source image onto a generated file beside it, or
+ * returns null when the file sits outside src/assets.
  */
-function resolveGenerated(absolute, wantThumb) {
+function generatedPath(absolute, suffix) {
   const relative = path.relative(ASSET_SOURCE_DIR, absolute)
   if (relative.startsWith('..') || path.isAbsolute(relative)) return null
   // Never rewrite a path that already points into the generated output.
   if (!path.relative(ASSET_OUTPUT_DIR, absolute).startsWith('..')) return null
+  return path.join(ASSET_OUTPUT_DIR, relative + suffix)
+}
 
-  const generated = path.join(ASSET_OUTPUT_DIR, relative + (wantThumb ? '.thumb.webp' : '.webp'))
-  return existsSync(generated) ? generated : null
+/** Like generatedPath, but null when the file has not been generated yet. */
+function resolveGenerated(absolute, suffix) {
+  const generated = generatedPath(absolute, suffix)
+  return generated && existsSync(generated) ? generated : null
+}
+
+/**
+ * Module source for a `?responsive` import: an object ready to spread onto an
+ * <img>, with the srcset built from the renditions optimize-media.mjs listed
+ * in the image's .meta.json. Each rendition is imported through this same
+ * plugin (`?w=480` and so on) so it is hashed and emitted like any asset.
+ */
+function responsiveModule(absolute, meta) {
+  const rootRelative = `/${path.relative(rootDir, absolute).split(path.sep).join('/')}`
+  const candidates = [
+    ...meta.renditions.map((r) => ({ width: r.width, query: `?w=${r.key}` })),
+    { width: meta.width, query: '' },
+  ]
+  const imports = candidates.map((c, i) => `import u${i} from ${JSON.stringify(rootRelative + c.query)};`)
+  const srcSet = candidates.map((c, i) => `u${i} + ' ${c.width}w'`).join(', ')
+  const full = `u${candidates.length - 1}`
+  return [
+    ...imports,
+    `export default { src: ${full}, srcSet: [${srcSet}].join(', '), width: ${meta.width}, height: ${meta.height} };`,
+  ].join('\n')
 }
 
 /**
@@ -36,6 +70,10 @@ function resolveGenerated(absolute, wantThumb) {
  *
  * Add `?thumb` to a JS import to get the small grid-tile version:
  *   import tile from '../../assets/images/Houses/beach.jpg?thumb'
+ *
+ * Add `?responsive` to get { src, srcSet, width, height } for a sized <img>:
+ *   import photo from '../../assets/images/Houses/beach.jpg?responsive'
+ *   <img {...photo} sizes="(max-width: 768px) 100vw, 400px" alt="..." />
  *
  * A missing generated file falls back to the original with a warning, so a
  * forgotten `npm run optimize:images` produces a large build, not a broken one.
@@ -60,7 +98,9 @@ function optimizedImages() {
 
       if (path.relative(ASSET_SOURCE_DIR, absolute).startsWith('..')) return null
 
-      const generated = resolveGenerated(absolute, query === 'thumb')
+      if (query === 'responsive') return RESPONSIVE_PREFIX + absolute
+
+      const generated = resolveGenerated(absolute, suffixFor(query))
       if (generated) return generated
 
       this.warn(
@@ -68,6 +108,24 @@ function optimizedImages() {
         `Run "npm run optimize:images".`
       )
       return null
+    },
+
+    load(id) {
+      if (!id.startsWith(RESPONSIVE_PREFIX)) return null
+      const absolute = id.slice(RESPONSIVE_PREFIX.length)
+      const metaPath = generatedPath(absolute, '.meta.json')
+
+      if (!metaPath || !existsSync(metaPath)) {
+        // Same fallback as a plain import: one image, no srcset, but a working page.
+        this.warn(
+          `No srcset renditions for ${path.relative(rootDir, absolute)} - serving one size. ` +
+          `Run "npm run optimize:images".`
+        )
+        const rootRelative = `/${path.relative(rootDir, absolute).split(path.sep).join('/')}`
+        return `import src from ${JSON.stringify(rootRelative)};\nexport default { src };`
+      }
+
+      return responsiveModule(absolute, JSON.parse(readFileSync(metaPath, 'utf8')))
     },
 
     transform(code, id) {
@@ -86,7 +144,7 @@ function optimizedImages() {
           ? path.resolve(rootDir, `.${url}`)
           : path.resolve(cssDir, url)
 
-        const generated = resolveGenerated(absolute, false)
+        const generated = resolveGenerated(absolute, '.webp')
         if (!generated) return match
 
         let next = path.relative(cssDir, generated).split(path.sep).join('/')

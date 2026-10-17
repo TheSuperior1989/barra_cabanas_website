@@ -5,23 +5,23 @@ import { useInView } from 'react-intersection-observer';
 import './HouseFeatures.css';
 
 // Beachfront / Outdoor
-import hf_pool1 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg';
-import hf_pool2 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg';
-import hf_pool3 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg';
-import hf_pool4 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg';
+import hf_pool1 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0116.jpg?responsive';
+import hf_pool2 from '../../assets/images/Newest/NewestPhotosToUse/DJI_0144.jpg?responsive';
+import hf_pool3 from '../../assets/images/Newest/NewestPhotosToUse/20260123_162449.jpg?responsive';
+import hf_pool4 from '../../assets/images/Newest/NewestPhotosToUse/20260123_163922.jpg?responsive';
 
 // Bedrooms
-import hf_bed1 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg';
-import hf_bed2 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg';
-import hf_bed3 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg';
-import hf_bed4 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg';
-import hf_bed5 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg';
-import hf_bed6 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg';
+import hf_bed1 from '../../assets/images/Newest/NewestPhotosToUse/DSC05343.jpg?responsive';
+import hf_bed2 from '../../assets/images/Newest/NewestPhotosToUse/DSC05351.jpg?responsive';
+import hf_bed3 from '../../assets/images/Newest/NewestPhotosToUse/DSC05355.jpg?responsive';
+import hf_bed4 from '../../assets/images/Newest/NewestPhotosToUse/DSC05361.jpg?responsive';
+import hf_bed5 from '../../assets/images/Newest/NewestPhotosToUse/DSC05376.jpg?responsive';
+import hf_bed6 from '../../assets/images/Newest/NewestPhotosToUse/DSC05382.jpg?responsive';
 
 // Bathrooms / Interior
-import hf_bath1 from '../../assets/images/Newest/NewestPhotosToUse/DSC05386.jpg';
-import hf_bath2 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg';
-import hf_bath3 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg';
+import hf_bath1 from '../../assets/images/Newest/NewestPhotosToUse/DSC05386.jpg?responsive';
+import hf_bath2 from '../../assets/images/Newest/NewestPhotosToUse/DSC05397.jpg?responsive';
+import hf_bath3 from '../../assets/images/Newest/NewestPhotosToUse/DSC05412.jpg?responsive';
 
 const features = [
   {
@@ -111,9 +111,12 @@ const HouseFeatures = () => {
           {features.map((feature, featureIndex) => (
             <motion.div key={feature.id} className="feature-card" variants={itemVariants}>
               <div className="feature-image">
-                <img 
-                  src={feature.images[currentImageIndexes[featureIndex]]} 
-                  alt={`${feature.title} - Image ${currentImageIndexes[featureIndex] + 1}`} 
+                <img
+                  {...feature.images[currentImageIndexes[featureIndex]]}
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt={`${feature.title} - Image ${currentImageIndexes[featureIndex] + 1}`}
+                  loading={featureIndex === 0 ? undefined : 'lazy'}
+                  decoding="async"
                 />
                 <div className="feature-overlay">
                   <Link to={feature.link} className="feature-link">
