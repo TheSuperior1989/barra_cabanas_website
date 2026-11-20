@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeXmark, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import './Hero.css';
+
+// Narrower screens get the poster alone, so a phone never requests the
+// 11.9 MB video. Hiding the tag with CSS would still download it.
+const VIDEO_MIN_WIDTH_QUERY = '(min-width: 768px)';
+const VIDEO_MOUNT_DELAY_MS = 500;
 
 const Hero = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -26,11 +30,15 @@ const Hero = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Load video after component mounts (now works on mobile too)
+  // Mount the video after first paint, on wide screens only. It is mounted
+  // from an effect, so the prerendered HTML never contains a <video> tag and
+  // nothing is fetched before the width has been checked.
   useEffect(() => {
+    if (!window.matchMedia(VIDEO_MIN_WIDTH_QUERY).matches) return;
+
     const timer = setTimeout(() => {
       setVideoLoaded(true);
-    }, 500); // Small delay for smooth page load
+    }, VIDEO_MOUNT_DELAY_MS); // Small delay for smooth page load
 
     return () => clearTimeout(timer);
   }, []);
@@ -66,17 +74,6 @@ const Hero = () => {
     }
   }, [isMobile, audioLoaded]);
 
-  // Lazy load video after component mounts
-  useEffect(() => {
-    if (!isMobile) {
-      const timer = setTimeout(() => {
-        setVideoLoaded(true);
-      }, 500); // Small delay to ensure smooth initial render
-
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile]);
-
   // Load audio
   useEffect(() => {
     if (!isMobile) {
@@ -94,7 +91,23 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      {/* Video Background - Now works on mobile too */}
+      {/* Poster - part of the prerendered HTML, so it paints before any
+          script runs. Phones show only this; on wide screens the video fades
+          in over it. Lowercase fetchpriority: React 18 passes it through. */}
+      <picture>
+        <source
+          media="(max-width: 767px) and (orientation: portrait)"
+          srcSet="/videos/barra-cabanas-hero-poster-portrait.webp"
+        />
+        <img
+          className="hero-poster"
+          src="/videos/barra-cabanas-hero-poster.webp"
+          alt=""
+          fetchpriority="high"
+        />
+      </picture>
+
+      {/* Video Background - wide screens only */}
       {videoLoaded && (
         <video
           ref={videoRef}
@@ -104,7 +117,6 @@ const Hero = () => {
           loop
           playsInline
           preload="metadata"
-          poster="/videos/barra-cabanas-hero-poster.jpg"
           onCanPlay={handleVideoCanPlay}
           style={{
             opacity: videoCanPlay ? 1 : 0,
@@ -146,12 +158,9 @@ const Hero = () => {
       {/* Overlay for better text readability */}
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="hero-text"
-        >
+        {/* Plain markup, no entrance animation: the heading and paragraph
+            must be visible in the prerendered HTML, before any script runs. */}
+        <div className="hero-text">
           <h1 className="hero-title">
             Experience Luxury <span className="highlight beige">Beach Houses</span>
           </h1>
@@ -166,7 +175,7 @@ const Hero = () => {
               Request a Quotation
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
