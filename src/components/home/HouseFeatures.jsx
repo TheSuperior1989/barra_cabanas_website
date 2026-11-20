@@ -30,7 +30,8 @@ const features = [
     category: 'Outdoor Living',
     images: [hf_pool1, hf_pool2, hf_pool3, hf_pool4],
     description: 'Private splash pool with ocean views, perfect for relaxing under the African sun. Direct beach access for morning swims.',
-    link: '/services#barra-cabanas-house'
+    link: '/accommodation#barra-cabanas-house',
+    linkText: 'See the beach house'
   },
   {
     id: 2,
@@ -38,7 +39,8 @@ const features = [
     category: 'Comfortable Accommodation',
     images: [hf_bed1, hf_bed2, hf_bed3, hf_bed4, hf_bed5, hf_bed6],
     description: 'Spacious en-suite bedrooms with air-conditioning. Mix of queen and twin beds to accommodate families and groups up to 12 guests.',
-    link: '/services#barra-cabanas-house'
+    link: '/accommodation#barra-cabanas-house',
+    linkText: 'See the beach house'
   },
   {
     id: 3,
@@ -46,7 +48,8 @@ const features = [
     category: 'Modern Amenities',
     images: [hf_bath1, hf_bath2, hf_bath3],
     description: 'Every bedroom features a private en-suite bathroom with modern fixtures, showers, and elegant coastal design.',
-    link: '/services#barra-cabanas-house'
+    link: '/accommodation#barra-cabanas-house',
+    linkText: 'See the beach house'
   }
 ];
 
@@ -120,7 +123,7 @@ const HouseFeatures = () => {
                 />
                 <div className="feature-overlay">
                   <Link to={feature.link} className="feature-link">
-                    View Details
+                    {feature.linkText}
                   </Link>
                 </div>
                 <div className="image-indicator">

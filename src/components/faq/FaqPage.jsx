@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FAQ_SECTIONS, faqSchema } from '../../lib/faq';
+import { FAQ_SECTIONS, faqSchema, borderCrossingHowToSchema } from '../../lib/faq';
 import './FaqPage.css';
 
 /**
@@ -17,6 +17,10 @@ const FaqPage = () => (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema()) }}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(borderCrossingHowToSchema()) }}
     />
 
     <div className="faq-hero">

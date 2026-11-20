@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons';
 import './Testimonials.css';
 
+// Same Google Maps place link as the "Open in Google Maps" button on /contact.
+const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gl/bVWy8sWu5vnhugQj8?g_st=aw';
+
 const testimonials = [
   {
     id: 1,
@@ -118,7 +121,7 @@ const Testimonials = () => {
     <section className="testimonials" id="testimonials">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Luxury Guest Experiences</h2>
+          <h2 className="section-title">Guest Reviews of Barra Cabanas</h2>
           <p className="section-subtitle">
             Discover why discerning travelers from around the world choose Barra Cabanas for their most memorable luxury escapes.
           </p>
@@ -131,38 +134,46 @@ const Testimonials = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="testimonials-slider"
         >
-          <div className="testimonial-card">
-            <div className="testimonial-header">
-              <div className="quote-icon">
-                <FontAwesomeIcon icon={faQuoteLeft} />
-              </div>
-              <div className="rating">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <FontAwesomeIcon key={i} icon={faStar} className="star" />
-                ))}
-              </div>
-            </div>
-
-            <p className="testimonial-content">{testimonials[currentIndex].content}</p>
-
-            <div className="testimonial-author">
-              <div className="author-image">
-                <div className="avatar-initial">
-                  {testimonials[currentIndex].initial}
+          {/* Every review is rendered, and the inactive ones are hidden by a
+              stylesheet class, so all eight are in the prerendered HTML for
+              crawlers that do not run JavaScript. */}
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={testimonial.id}
+              className={`testimonial-card ${index === currentIndex ? '' : 'testimonial-card--inactive'}`}
+            >
+              <div className="testimonial-header">
+                <div className="quote-icon">
+                  <FontAwesomeIcon icon={faQuoteLeft} />
+                </div>
+                <div className="rating" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <FontAwesomeIcon key={i} icon={faStar} className="star" />
+                  ))}
                 </div>
               </div>
-              <div className="author-info">
-                <h4 className="author-name">{testimonials[currentIndex].name}</h4>
-                <p className="author-position">{testimonials[currentIndex].position}</p>
-                {testimonials[currentIndex].occasion && (
-                  <p className="author-occasion">{testimonials[currentIndex].occasion}</p>
-                )}
+
+              <p className="testimonial-content">{testimonial.content}</p>
+
+              <div className="testimonial-author">
+                <div className="author-image">
+                  <div className="avatar-initial">
+                    {testimonial.initial}
+                  </div>
+                </div>
+                <div className="author-info">
+                  <p className="author-name">{testimonial.name}</p>
+                  <p className="author-position">{testimonial.position}</p>
+                  {testimonial.occasion && (
+                    <p className="author-occasion">{testimonial.occasion}</p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          ))}
 
           <div className="testimonial-controls">
-            <button className="control-btn prev" onClick={handlePrev}>
+            <button className="control-btn prev" onClick={handlePrev} aria-label="Previous review">
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <div className="testimonial-dots">
@@ -174,11 +185,17 @@ const Testimonials = () => {
                 ></span>
               ))}
             </div>
-            <button className="control-btn next" onClick={handleNext}>
+            <button className="control-btn next" onClick={handleNext} aria-label="Next review">
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </div>
         </motion.div>
+
+        <p className="testimonials-google-link">
+          <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
+            Read our reviews on Google
+          </a>
+        </p>
       </div>
     </section>
   );

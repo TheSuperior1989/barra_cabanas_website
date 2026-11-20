@@ -61,7 +61,7 @@ const ContactCTA = () => {
         className="container"
       >
         <div className="cta-content">
-          <h2 className="cta-title">Experience Luxury Beach Houses</h2>
+          <div className="cta-title">Experience Luxury Beach Houses</div>
           <p className="cta-subtitle">
             Welcome to our collection of nine modern beachfront cabanas, designed for memorable seaside stays. Each cabana features six en-suite, air-conditioned bedrooms, a private pool, and relaxed modern interiors—perfect for families and groups. From sunrise over the ocean to sunset by the pool, there's space for everyone to truly unwind, with easy access—no 4x4 needed.
           </p>

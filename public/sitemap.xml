@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- The lastmod dates below are placeholders: scripts/prerender.mjs sets every one to the build date in dist/sitemap.xml. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.barracabanas.com/</loc>

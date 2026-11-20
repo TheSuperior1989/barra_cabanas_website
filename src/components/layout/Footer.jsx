@@ -43,7 +43,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="footer-section footer-brand">
               <div className="footer-logo">
-                <h3 className="footer-brand-title">BARRA CABANAS</h3>
+                <p className="footer-brand-title">BARRA CABANAS</p>
                 <p className="footer-tagline">Simply #1 Beach Resort Experience</p>
               </div>
               <div className="social-icons">
@@ -61,7 +61,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="footer-section footer-links-col">
-              <h3 className="footer-title">Quick Links</h3>
+              <p className="footer-title">Quick Links</p>
               <ul className="footer-links">
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/'); }}>Home</a></li>
 <li><a href="#" onClick={(e) => { e.preventDefault(); handleLinkClick('/accommodation'); }}>Accommodation</a></li>
@@ -72,7 +72,7 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="footer-section footer-links-col">
-              <h3 className="footer-title">Contact Us</h3>
+              <p className="footer-title">Contact Us</p>
               <ul className="footer-links">
                 <li><a href="mailto:Bookings@barracabanas.com">Bookings@barracabanas.com</a></li>
                 <li><a href="tel:+27662057229">+27 66 205 7229</a></li>
@@ -83,7 +83,7 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div className="footer-section footer-newsletter">
-              <h3 className="footer-title">Remain Updated</h3>
+              <p className="footer-title">Remain Updated</p>
               <form onSubmit={handleEmailSubmit} className="newsletter-form">
                 <input
                   type="email"

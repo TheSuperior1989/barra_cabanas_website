@@ -8,6 +8,9 @@
  * Deliberately omitted:
  *  - the WiFi password, which must not be published
  *  - nightly rates, which are still to be confirmed by the owner
+ *
+ * An item with a `step` is also one step of the border-crossing HowTo
+ * (see borderCrossingHowToSchema). The step text is the answer itself.
  */
 
 export const FAQ_SECTIONS = [
@@ -80,22 +83,27 @@ export const FAQ_SECTIONS = [
         a: 'No. A 4x4 is not needed to reach Barra Cabanas. There is under-cover parking for cars and boats, and a boat launch right next to the houses.',
       },
       {
+        step: 'Bring your passport, licence and third-party insurance',
         q: 'What do I need to cross the border into Mozambique?',
         a: 'Bring your passport and driver’s licence. You need compulsory third-party insurance, which can be bought online through the DriveMoz Facebook page or at the Engen garage about 4 km from the Lebombo border as you turn towards Komatipoort, and costs roughly R250 to R300. Do not let anyone help you stamp passports or fill in car papers on the Mozambican side.',
       },
       {
+        step: 'Carry the vehicle paperwork',
         q: 'What vehicle paperwork do I need?',
         a: 'You need your green licence (MR1) paper, from which your licence disc was cut, to present at the Mozambican side. If the vehicle is financed you need a letter from the bank authorising you to take it across the border. If you are not the owner you need a certified letter from the owner. You also need a letter from your insurer confirming the vehicle is insured and for which countries.',
       },
       {
+        step: 'Display the ZA and trailer stickers',
         q: 'What stickers do I need on my car and trailer?',
         a: 'A black and white ZA sticker must be displayed in plain sight, preferably on the back of the vehicle. If you are towing a trailer, display a sticker with a yellow triangle on a blue square on both the front of the vehicle and the rear of the trailer. Stickers are available at the border, but are much cheaper at Outdoor Warehouse.',
       },
       {
+        step: 'Exchange rands for meticais at the Engen garage',
         q: 'Where should I exchange money?',
         a: 'Exchange rands for meticais at the Engen garage for the best rate -- do not exchange money at the border. Meticais can also be drawn from ATMs inside Mozambique, and most shops and restaurants accept cards.',
       },
       {
+        step: 'Enable roaming or buy a local SIM card',
         q: 'Will my phone work in Mozambique?',
         a: 'You can enable roaming, which is expensive, or buy a local SIM card and airtime at the garage on your right just after the border on the Mozambican side. Movitel and Vodacom are both available, and a SIM costs around R30.',
       },
@@ -134,6 +142,29 @@ export function faqSchema() {
       '@type': 'Question',
       name: item.q,
       acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+}
+
+/**
+ * schema.org HowTo for driving across the border, built from the answers
+ * marked with `step` above, in page order. Each step's text is the visible
+ * answer word for word, so the markup cannot drift from what guests read.
+ */
+export function borderCrossingHowToSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': 'https://www.barracabanas.com/faq#border-crossing',
+    name: 'How to cross the border into Mozambique by car',
+    description:
+      'What guests driving to Barra Cabanas need for the border: passport, licence and third-party insurance, vehicle paperwork, stickers, money and a phone SIM.',
+    step: FAQ_ITEMS.filter((item) => item.step).map((item, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: item.step,
+      text: item.a,
+      url: 'https://www.barracabanas.com/faq#getting-there',
     })),
   };
 }

@@ -27,6 +27,11 @@
   backdrop-filter: blur(10px);
 }
 
+/* All eight reviews are in the DOM; only the current slide is shown. */
+.testimonial-card--inactive {
+  display: none;
+}
+
 .testimonial-header {
   display: flex;
   justify-content: space-between;
@@ -110,6 +115,7 @@
   font-size: 1.3rem;
   font-weight: 700;
   font-family: var(--font-primary);
+  line-height: 1.2;
   margin-bottom: 5px;
   color: var(--color-text-dark);
 }
@@ -180,6 +186,20 @@
   transform: scale(1.4);
   border-color: var(--color-shell-white);
   box-shadow: 0 0 0 2px var(--color-primary-beige);
+}
+
+.testimonials-google-link {
+  text-align: center;
+  margin: 30px 0 0;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+/* Dark text, not the site's sage link colour: sage is 2.8:1 on this
+   background and fails WCAG AA. */
+.testimonials-google-link a {
+  color: var(--color-text-dark);
+  text-decoration: underline;
 }
 
 /* Responsive Design */
