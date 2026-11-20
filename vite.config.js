@@ -9,7 +9,7 @@ const ASSET_SOURCE_DIR = path.resolve(rootDir, 'src/assets')
 const ASSET_OUTPUT_DIR = path.resolve(rootDir, 'src/assets/optimized')
 
 const RASTER_IMAGE = /\.(jpe?g|png)$/i
-const CSS_URL = /url\(\s*(['"]?)([^'")]+?\.(?:jpe?g|png))\1\s*\)/gi
+const CSS_URL = /url\(\s*(['"]?)([^'")?]+?\.(?:jpe?g|png))(?:\?(w=\d+))?\1\s*\)/gi
 
 const RESPONSIVE_PREFIX = '\0barra-responsive:'
 
@@ -75,6 +75,11 @@ function responsiveModule(absolute, meta) {
  *   import photo from '../../assets/images/Houses/beach.jpg?responsive'
  *   <img {...photo} sizes="(max-width: 768px) 100vw, 400px" alt="..." />
  *
+ * Add `?w=960` to a CSS url() to get one rendition instead of the full-size
+ * file, for example a phone-sized banner inside a media query. The number is
+ * the longest edge, so on a portrait photo it is the height:
+ *   background-image: url('../../assets/images/Houses/beach.jpg?w=960');
+ *
  * A missing generated file falls back to the original with a warning, so a
  * forgotten `npm run optimize:images` produces a large build, not a broken one.
  */
@@ -137,14 +142,14 @@ function optimizedImages() {
       const cssDir = path.dirname(filePath)
       let changed = false
 
-      const rewritten = code.replace(CSS_URL, (match, quote, url) => {
+      const rewritten = code.replace(CSS_URL, (match, quote, url, query) => {
         if (/^(https?:|data:|\/\/)/i.test(url)) return match
 
         const absolute = url.startsWith('/')
           ? path.resolve(rootDir, `.${url}`)
           : path.resolve(cssDir, url)
 
-        const generated = resolveGenerated(absolute, '.webp')
+        const generated = resolveGenerated(absolute, suffixFor(query))
         if (!generated) return match
 
         let next = path.relative(cssDir, generated).split(path.sep).join('/')

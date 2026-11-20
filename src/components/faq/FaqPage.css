@@ -191,6 +191,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  .faq-hero { background-image: url('../../assets/images/Houses/balcony-deck-oceanview.jpg?w=960'); }
   .faq-hero-title { font-size: 2rem; }
   .faq-hero-subtitle { font-size: 1rem; }
   .faq-content { padding: 50px 0 70px; }
