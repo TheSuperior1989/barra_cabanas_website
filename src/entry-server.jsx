@@ -40,6 +40,24 @@ export const PRERENDER_ROUTES = [
   '/booking',
 ];
 
+/**
+ * Source module of every route that App.jsx loads with lazy(), named as Vite's
+ * build manifest names it. The prerender script looks each one up to link the
+ * route's own stylesheet and chunk from the static HTML; without that the
+ * page has no styles of its own until the main bundle has run. The home page
+ * is not listed because it ships in the main bundle.
+ */
+export const ROUTE_SOURCES = {
+  '/accommodation': 'src/components/services/ServicesPage.jsx',
+  '/gallery': 'src/components/portfolio/PortfolioPage.jsx',
+  '/activities': 'src/components/activities/ActivitiesPage.jsx',
+  '/activities/fishing': 'src/components/activities/FishingPage.jsx',
+  '/about': 'src/components/about/AboutPage.jsx',
+  '/faq': 'src/components/faq/FaqPage.jsx',
+  '/contact': 'src/components/contact/ContactPage.jsx',
+  '/booking': 'src/components/booking/BookingPage.jsx',
+};
+
 /** Path used only to render the static 404 document. */
 export const NOT_FOUND_ROUTE = '/__not-found__';
 

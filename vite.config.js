@@ -166,6 +166,12 @@ function optimizedImages() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [optimizedImages(), react()],
+  build: {
+    // dist/.vite/manifest.json maps every source module to its hashed chunk
+    // and stylesheet. scripts/prerender.mjs reads it to link each route's own
+    // CSS from the static HTML, then deletes it so it is never deployed.
+    manifest: true,
+  },
   server: {
     proxy: {
       '/api': {
