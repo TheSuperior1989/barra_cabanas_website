@@ -387,6 +387,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .services-hero {
+    background-image: url('../../assets/images/Houses/exterior-balconies-pools.jpg?w=960');
+  }
+
   .services-hero-title {
     font-size: 2.5rem;
   }

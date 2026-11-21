@@ -319,6 +319,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .portfolio-hero {
+    background-image: url('../../assets/images/Newest/NewestPhotosToUse/DJI_0141.jpg?w=960');
+  }
+
   .portfolio-hero-title {
     font-size: 2.5rem;
   }

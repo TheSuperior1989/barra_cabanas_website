@@ -632,6 +632,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .about-hero {
+    background-image: url('../../assets/images/Houses/aerial-beachfront-resort.jpg?w=960');
+  }
+
   .about-hero-title {
     font-size: 2.5rem;
   }

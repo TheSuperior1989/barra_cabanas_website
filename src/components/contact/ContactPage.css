@@ -261,6 +261,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .contact-hero {
+    background-image: url('../../assets/images/Houses/reception-lobby-interior.jpg?w=960');
+  }
+
   .contact-hero-title {
     font-size: 2.5rem;
   }

@@ -111,6 +111,9 @@ const STATS = [
 
 const EMPTY_FORM = { name: '', email: '', phone: '', charter: '', dates: '', guests: '', message: '' };
 
+// How many slides either side of the active one keep their photo mounted.
+const SLIDE_IMAGE_REACH = 1;
+
 const FishingPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -135,6 +138,14 @@ const FishingPage = () => {
     const timer = setInterval(nextSlide, 3800);
     return () => clearInterval(timer);
   }, [isPaused, nextSlide]);
+
+  // Only the active slide and its neighbours carry an <img>, so a visitor
+  // downloads three slide photos instead of all of them. The neighbours are
+  // already loaded when the crossfade to the next or previous slide starts.
+  const hasSlideImage = i => {
+    const distance = Math.abs(i - currentSlide);
+    return distance <= SLIDE_IMAGE_REACH || distance >= GALLERY_SLIDES.length - SLIDE_IMAGE_REACH;
+  };
 
   const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -243,7 +254,9 @@ const FishingPage = () => {
                 className={`fp-slide ${i === currentSlide ? 'fp-slide--active' : ''}`}
               >
                 {slide.type === 'image' ? (
-                  <img {...slide.src} sizes="(max-width: 1140px) 100vw, 1060px" alt={slide.caption} className="fp-slide-img" loading={i === 0 ? undefined : 'lazy'} decoding="async" />
+                  hasSlideImage(i) && (
+                    <img {...slide.src} sizes="(max-width: 1140px) 100vw, 1060px" alt={slide.caption} className="fp-slide-img" loading={i === 0 ? undefined : 'lazy'} decoding="async" />
+                  )
                 ) : (
                   <div className="fp-slide-placeholder" style={{ background: slide.bg }}>
                     <span className="fp-slide-emoji">{slide.emoji}</span>
