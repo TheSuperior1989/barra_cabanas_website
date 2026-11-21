@@ -9,13 +9,16 @@
  * originals are kept in the repo but never shipped to visitors.
  *
  *   npm run optimize:images   -- images only
- *   npm run optimize:video    -- hero video only
+ *   npm run optimize:video    -- hero video and its posters
  *   npm run optimize          -- both
+ *   node scripts/optimize-media.mjs poster
+ *                             -- hero posters only, video left as it is
  */
 
 import { execFile } from 'node:child_process';
-import { mkdir, readdir, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import sharp from 'sharp';
@@ -30,7 +33,13 @@ const IMAGE_OUTPUT_DIR = 'src/assets/optimized';
 // original filename so Hero.jsx needs no change.
 const VIDEO_SOURCE = 'media-src/barra-cabanas-hero-master.mp4';
 const VIDEO_OUTPUT = 'public/videos/barra-cabanas-hero.mp4';
-const VIDEO_POSTER = 'public/videos/barra-cabanas-hero-poster.jpg';
+const VIDEO_POSTER = 'public/videos/barra-cabanas-hero-poster.webp';
+// The hero is full height with object-fit: cover, so a phone held upright
+// only ever shows the middle of the frame. It gets that middle slice at full
+// height instead of the whole 1920 px wide frame.
+const VIDEO_POSTER_PORTRAIT = 'public/videos/barra-cabanas-hero-poster-portrait.webp';
+const POSTER_PORTRAIT_ASPECT = 9 / 16;
+const POSTER_QUALITY = 72;
 
 // Longest edge in pixels. The lightbox never displays more than ~1600px, and
 // the grid tiles render at 350x250, so these carry a comfortable margin for
@@ -175,15 +184,61 @@ async function optimizeImages() {
   if (skipped) console.log(`  unchanged   ${skipped} already current`);
 }
 
-async function optimizeVideo() {
+/**
+ * Writes the still the hero shows before the video starts and, on phones,
+ * instead of it. ffmpeg pulls one lossless frame into a temp file and sharp
+ * encodes both WebP posters from that.
+ */
+async function writePosters(ffmpegPath) {
+  console.log(`Extracting poster frame`);
+  const frame = path.join(tmpdir(), `barra-hero-poster-${process.pid}.png`);
+  await execFileAsync(ffmpegPath, [
+    '-y', '-loglevel', 'error',
+    '-ss', POSTER_TIMESTAMP,
+    '-i', VIDEO_SOURCE,
+    '-frames:v', '1',
+    '-vf', `scale=-2:'min(${VIDEO_MAX_HEIGHT},ih)'`,
+    frame,
+  ]);
+
+  try {
+    const { width, height } = await sharp(frame).metadata();
+    const portraitWidth = Math.min(width, Math.round(height * POSTER_PORTRAIT_ASPECT));
+    await Promise.all([
+      sharp(frame).webp({ quality: POSTER_QUALITY }).toFile(VIDEO_POSTER),
+      sharp(frame)
+        .extract({ left: Math.floor((width - portraitWidth) / 2), top: 0, width: portraitWidth, height })
+        .webp({ quality: POSTER_QUALITY })
+        .toFile(VIDEO_POSTER_PORTRAIT),
+    ]);
+  } finally {
+    await rm(frame, { force: true });
+  }
+
+  const [poster, portrait] = await Promise.all([stat(VIDEO_POSTER), stat(VIDEO_POSTER_PORTRAIT)]);
+  console.log(`  poster      ${(poster.size / 1024).toFixed(0)} KB, upright phones ${(portrait.size / 1024).toFixed(0)} KB`);
+}
+
+async function loadFfmpeg() {
   if (!existsSync(VIDEO_SOURCE)) {
     console.log(`Hero video not found at ${VIDEO_SOURCE}, skipping.`);
-    return;
+    return null;
   }
 
   // Imported lazily: the deploy build runs images only, and should not
   // depend on ffmpeg-static having downloaded its binary.
   const { default: ffmpegPath } = await import('ffmpeg-static');
+  return ffmpegPath;
+}
+
+async function optimizePosters() {
+  const ffmpegPath = await loadFfmpeg();
+  if (ffmpegPath) await writePosters(ffmpegPath);
+}
+
+async function optimizeVideo() {
+  const ffmpegPath = await loadFfmpeg();
+  if (!ffmpegPath) return;
 
   console.log(`Re-encoding ${VIDEO_SOURCE}`);
   await execFileAsync(ffmpegPath, [
@@ -200,26 +255,16 @@ async function optimizeVideo() {
     VIDEO_OUTPUT,
   ]);
 
-  console.log(`Extracting poster frame`);
-  await execFileAsync(ffmpegPath, [
-    '-y', '-loglevel', 'error',
-    '-ss', POSTER_TIMESTAMP,
-    '-i', VIDEO_SOURCE,
-    '-frames:v', '1',
-    '-vf', `scale=-2:'min(${VIDEO_MAX_HEIGHT},ih)'`,
-    '-q:v', '4',
-    VIDEO_POSTER,
-  ]);
+  await writePosters(ffmpegPath);
 
   const before = (await stat(VIDEO_SOURCE)).size;
   const after = (await stat(VIDEO_OUTPUT)).size;
-  const poster = (await stat(VIDEO_POSTER)).size;
   console.log(`\n  before      ${formatMb(before)}`);
   console.log(`  after       ${formatMb(after)}`);
-  console.log(`  poster      ${formatMb(poster)}`);
   console.log(`  reduction   ${(100 - (after / before) * 100).toFixed(1)}%`);
 }
 
 const mode = process.argv[2] ?? 'all';
 if (mode === 'images' || mode === 'all') await optimizeImages();
 if (mode === 'video' || mode === 'all') await optimizeVideo();
+if (mode === 'poster') await optimizePosters();
