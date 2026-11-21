@@ -161,12 +161,12 @@
   border-color: var(--color-primary-beige);
 }
 
-/* Audio Toggle Button */
+/* Audio Toggle Button - bottom-left corner. Centred on the left edge it sat
+   on top of the paragraph on every screen narrower than about 1310px. */
 .audio-toggle-btn {
   position: absolute;
   left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 30px;
   width: 50px;
   height: 50px;
   background: rgba(245, 230, 211, 0.9);
@@ -183,12 +183,12 @@
 
 .audio-toggle-btn:hover {
   background: rgba(245, 230, 211, 1);
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .audio-toggle-btn:active {
-  transform: translateY(-50%) scale(0.95);
+  transform: scale(0.95);
 }
 
 @media screen and (max-width: 768px) {
